@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temel HTML Etiketleri</title>
+    <style>
+        *{
+            text-align: justify;
+        }
+
+        div.example{
+            border: 1px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr>
+    <h1>Temel HTML Etiketleri</h1>
+    <div><strong>&lt;!DOCTYPE&gt; : </strong>Html sayfasının html 5 standartlarını takip eden bir döküman olduğunu belirtir.</div>
+
+    <div><strong>&lt;html&gt;...&lt;/html&gt; : </strong>Html sayfalarının tüm içerikleri mutlaka <html> … </html> etiketi arasına gelmelidir. Html etiketinin 2 alt öğesi vardır. Bunlar <head> ve <body> etiketleridir.</div>
+
+    <div><strong>&lt;head&gt;...&lt;/head&gt; : </strong>Html sayfasının kullandığı harici kaynakların (css ve javascript dosyaları) sayfaya tanıtıldığı kısımdır. Ayrıca sayfanın arama motorları tarafından ulaşılabilir olması için sayfayı tanımlayan özet bilgilerin (meta etiketleri) eklendiği kısımdır. Head etiketinin alt öğeleri title ve meta etiketleridir.</div>
+
+    <div><strong>&lt;title&gt;...&lt;/title&gt; : </strong>Sayfa başlığını temsil eder.</div>
+
+    <div><strong>&lt;body&gt;...&lt;/body&gt; : </strong>Belgenin gövdesini tanımlar. Yani bir HTML belgesindeki içerikler; bağlantılar, resimler, tablolar vd. bu etiket içerisinde bulunur.</div>
+
+    <div><strong>&lt;h1&gt;...&lt;/h1&gt; ...... &lt;h6&gt;...&lt;/h6&gt; : </strong>Başlık etiketleri &lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt; olmak üzere 6 tanedir. Tarayıcılar başlık etiketlerine varsayılan olarak bir font büyüklüğü atarlar ancak buradaki font büyüklüğü önemli değildir çünkü her bir h etiketine atanan font büyüklüğünü css ile değiştirebiliriz. Burada önemli olan h etiketlerine yüklenen anlamlardır. Çünkü sitemizi ziyaret eden arama motorları kullanılan h etiketlerine göre yazılara anlam yüklerler. Örneğin; h1 etiketi her bir html sayfasında bir tane olmalıdır ve sayfanın amacını özetleyen en önemli başlık türüdür.</div>
+
+    <!-- <h1>...</h1> ...... <h6>...</h6> Etiketleri Örnek -->
+    <div class="example">
+        <h1>Başlık 1</h1>
+        <h2>Başlık 2</h2>
+        <h3>Başlık 3</h3>
+        <h4>Başlık 4</h4>
+        <h5>Başlık 5</h5>
+        <h6>Başlık 6</h6>
+    </div>
+
+    <div><strong>&lt;p&gt;...&lt;/p&gt; : </strong>Paragraf oluşturmak için kullanılır. İçeriğinde bir yazı içeriği olmalıdır.</div>
+
+    <!-- <p>...</p> Etiketi Örnek -->
+    <div class="example">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reprehenderit, neque voluptatem quidem consequatur vitae eius saepe est aperiam quisquam sapiente quod tempora praesentium perferendis! Minus debitis mollitia neque nam.</p>
+    </div>
+
+    <div><strong>&lt;br/&gt; : </strong>Bir satır sonu tanımlar ve kapanış etiketi olmayan boş bir etikettir.</div>
+
+    <!-- <br/> Etiketi Örnek -->
+    <div class="example">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br/>Harum reprehenderit, neque voluptatem quidem consequatur vitae eius saepe est aperiam quisquam sapiente quod tempora praesentium perferendis! <br/>Minus debitis mollitia neque nam.</p>
+    </div>
+
+
+</body>
+</html>

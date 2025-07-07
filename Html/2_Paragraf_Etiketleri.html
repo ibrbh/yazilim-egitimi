@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paragraf Etiketleri</title>
+    <style>
+        *{
+            text-align: justify;
+        }
+
+        div.example{
+            border: 1px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr>
+    <h1>Paragraf Etiketleri</h1>
+
+    <div><strong>&lt;p&gt;...&lt;/p&gt; : </strong>Paragraf oluşturmak için kullanılır. İçeriğinde bir yazı içeriği olmalıdır.</div>
+
+    <!-- <p>...</p> Etiketi Örnek -->
+    <div class="example">
+        <p>
+            Karanlık aydınlıktan, yalan doğrudan kaçar.
+            Güneş yalnız da olsa, etrafa ışık saçar.
+            Üzülme, doğruların kaderidir yalnızlık.
+            Kargalar sürüyle, kartallar yalnız uçar.
+        </p>
+    </div>
+
+    <div><strong>&lt;pre&gt;...&lt;/pre&gt; : </strong>Önceden biçimlendirilmiş metin tanımlar. İçerisindeki metin sabit genişlikli yazı tipleri (genellikle Courier) ile görüntülenir. Satır sonları ve boşluklar korunur.</div>
+
+    <!-- <pre>...</pre> Etiketi Örnek -->
+    <div class="example">
+        <pre>
+            Karanlık aydınlıktan, yalan doğrudan kaçar.
+            Güneş yalnız da olsa, etrafa ışık saçar.
+            Üzülme, doğruların kaderidir yalnızlık.
+            Kargalar sürüyle, kartallar yalnız uçar.
+        </pre>
+    </div>
+
+    <div><strong>&lt;hr/&gt; : </strong>HTML belgesinde konu sonu tanımlar. Belgede ayrı bir içeriği tanımlamak (değişiklik tanımlamak) için kullanılır.</div>
+
+    <!-- <hr> Etiketi Örnek -->
+    <div class="example">
+        <h3>Heading 1</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <hr/>
+        <h3>Heading 2</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>
