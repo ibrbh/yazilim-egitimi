@@ -1,60 +1,130 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Paragraf Etiketleri</title>
-    <style>
-        *{
-            text-align: justify;
-        }
-
-        div.example{
-            border: 1px solid black;
-            margin: 5px;
-            padding: 5px;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+  </head>
+  <body>
     <a href="index.html">Ana Sayfa</a>
-    <hr>
+    <hr />
     <h1>Paragraf Etiketleri</h1>
 
-    <div><strong>&lt;p&gt;...&lt;/p&gt; : </strong>Paragraf oluşturmak için kullanılır. İçeriğinde bir yazı içeriği olmalıdır.</div>
-
-    <!-- <p>...</p> Etiketi Örnek -->
-    <div class="example">
-        <p>
-            Karanlık aydınlıktan, yalan doğrudan kaçar.
-            Güneş yalnız da olsa, etrafa ışık saçar.
-            Üzülme, doğruların kaderidir yalnızlık.
-            Kargalar sürüyle, kartallar yalnız uçar.
-        </p>
+    <!-- <p> etiketi -->
+    <div>
+      <strong>&lt;p&gt; :</strong> Paragraf oluşturmak için kullanılır.
+      İçeriğinde bir yazı içeriği olmalıdır.
     </div>
 
-    <div><strong>&lt;pre&gt;...&lt;/pre&gt; : </strong>Önceden biçimlendirilmiş metin tanımlar. İçerisindeki metin sabit genişlikli yazı tipleri (genellikle Courier) ile görüntülenir. Satır sonları ve boşluklar korunur.</div>
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <h2>KARGALAR SÜRÜYLE, KARTALLAR YALNIZ UÇAR</h2>
+        <p>
+            Karanlık aydınlıktan, yalan doğrudan kaçar. <br>
+            Güneş yalnız da olsa, etrafa ışık saçar. <br>
+            Üzülme, doğruların kaderidir yalnızlık. <br>
+            Kargalar sürüyle, kartallar yalnız uçar. <br> 
+        </p>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
 
-    <!-- <pre>...</pre> Etiketi Örnek -->
-    <div class="example">
+    <!-- <pre> etiketi -->
+    <div>
+      <strong>&lt;pre&gt; :</strong> Önceden biçimlendirilmiş metinleri
+      göstermek için kullanılır. Bu etiket içindeki boşluklar ve satır sonları
+      tarayıcıda olduğu gibi korunur. Genellikle kod blokları veya düzenli metin
+      yapıları için kullanılır.
+    </div>
+
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <h2>KARGALAR SÜRÜYLE, KARTALLAR YALNIZ UÇAR</h2>
         <pre>
             Karanlık aydınlıktan, yalan doğrudan kaçar.
             Güneş yalnız da olsa, etrafa ışık saçar.
             Üzülme, doğruların kaderidir yalnızlık.
             Kargalar sürüyle, kartallar yalnız uçar.
         </pre>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
     </div>
 
-    <div><strong>&lt;hr/&gt; : </strong>HTML belgesinde konu sonu tanımlar. Belgede ayrı bir içeriği tanımlamak (değişiklik tanımlamak) için kullanılır.</div>
-
-    <!-- <hr> Etiketi Örnek -->
-    <div class="example">
-        <h3>Heading 1</h3>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <hr/>
-        <h3>Heading 2</h3>
-        <p>Lorem ipsum dolor sit amet.</p>
+    <!-- <hr> etiketi -->
+    <div>
+      <strong>&lt;hr&gt; :</strong> Yatay bir çizgi oluşturur. Sayfa içeriğinde
+      konular arasında görsel bir ayırıcı olarak kullanılır. Boş bir etikettir,
+      yani kapanış etiketi yoktur.
     </div>
-</body>
+
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <h2>KARGALAR SÜRÜYLE, KARTALLAR YALNIZ UÇAR</h2>
+        <p>
+            Karanlık aydınlıktan, yalan doğrudan kaçar. <br>
+            Güneş yalnız da olsa, etrafa ışık saçar. <br>
+            Üzülme, doğruların kaderidir yalnızlık. <br>
+            Kargalar sürüyle, kartallar yalnız uçar. <br> 
+        </p>
+        <hr>
+        <h2>KARGALAR SÜRÜYLE, KARTALLAR YALNIZ UÇAR</h2>
+        <pre>
+            Karanlık aydınlıktan, yalan doğrudan kaçar.
+            Güneş yalnız da olsa, etrafa ışık saçar.
+            Üzülme, doğruların kaderidir yalnızlık.
+            Kargalar sürüyle, kartallar yalnız uçar.
+        </pre>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
+  </body>
 </html>

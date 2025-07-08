@@ -1,64 +1,170 @@
 <!DOCTYPE html>
 <html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Temel HTML Etiketleri</title>
-    <style>
-        *{
-            text-align: justify;
-        }
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  </head>
 
-        div.example{
-            border: 1px solid black;
-            margin: 5px;
-            padding: 5px;
-        }
-    </style>
-</head>
-
-<body>
+  <body>
     <a href="index.html">Ana Sayfa</a>
-    <hr>
+    <hr />
     <h1>Temel HTML Etiketleri</h1>
-    <div><strong>&lt;!DOCTYPE&gt; : </strong>Html sayfasının html 5 standartlarını takip eden bir döküman olduğunu belirtir.</div>
 
-    <div><strong>&lt;html&gt;...&lt;/html&gt; : </strong>Html sayfalarının tüm içerikleri mutlaka <html> … </html> etiketi arasına gelmelidir. Html etiketinin 2 alt öğesi vardır. Bunlar <head> ve <body> etiketleridir.</div>
+    <!-- !DOCTYPE Etiketi -->
+    <div>
+      <strong>&lt;!DOCTYPE&gt; :</strong> Html sayfasının html 5 standartlarını
+      takip eden bir döküman olduğunu belirtir.
+    </div>
+    <br />
 
-    <div><strong>&lt;head&gt;...&lt;/head&gt; : </strong>Html sayfasının kullandığı harici kaynakların (css ve javascript dosyaları) sayfaya tanıtıldığı kısımdır. Ayrıca sayfanın arama motorları tarafından ulaşılabilir olması için sayfayı tanımlayan özet bilgilerin (meta etiketleri) eklendiği kısımdır. Head etiketinin alt öğeleri title ve meta etiketleridir.</div>
+    <!-- <html> Etiketi -->
+    <div>
+      <strong>&lt;html&gt; :</strong> Html sayfalarının tüm içerikleri mutlaka
+      &lt;html&gt; … &lt;/html&gt; etiketi arasına gelmelidir. Html etiketinin 2
+      alt öğesi vardır. Bunlar &lt;head&gt; ve &lt;body&gt; etiketleridir.
+    </div>
+    <br />
 
-    <div><strong>&lt;title&gt;...&lt;/title&gt; : </strong>Sayfa başlığını temsil eder.</div>
+    <!-- <head> Etiketi -->
+    <div>
+      <strong>&lt;head&gt; :</strong> Html sayfasının kullandığı harici
+      kaynakların (css ve javascript dosyaları) sayfaya tanıtıldığı kısımdır.
+      Ayrıca sayfanın arama motorları tarafından ulaşılabilir olması için
+      sayfayı tanımlayan özet bilgilerin (meta etiketleri) eklendiği kısımdır.
+      Head etiketinin alt öğeleri title ve meta etiketleridir.
+    </div>
+    <br />
 
-    <div><strong>&lt;body&gt;...&lt;/body&gt; : </strong>Belgenin gövdesini tanımlar. Yani bir HTML belgesindeki içerikler; bağlantılar, resimler, tablolar vd. bu etiket içerisinde bulunur.</div>
+    <!-- <title> Etiketi -->
+    <div><strong>&lt;title&gt; :</strong> Sayfa başlığını temsil eder.</div>
+    <br />
 
-    <div><strong>&lt;h1&gt;...&lt;/h1&gt; ...... &lt;h6&gt;...&lt;/h6&gt; : </strong>Başlık etiketleri &lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt; olmak üzere 6 tanedir. Tarayıcılar başlık etiketlerine varsayılan olarak bir font büyüklüğü atarlar ancak buradaki font büyüklüğü önemli değildir çünkü her bir h etiketine atanan font büyüklüğünü css ile değiştirebiliriz. Burada önemli olan h etiketlerine yüklenen anlamlardır. Çünkü sitemizi ziyaret eden arama motorları kullanılan h etiketlerine göre yazılara anlam yüklerler. Örneğin; h1 etiketi her bir html sayfasında bir tane olmalıdır ve sayfanın amacını özetleyen en önemli başlık türüdür.</div>
+    <!-- <body> Etiketi -->
+    <div>
+      <strong>&lt;body&gt; :</strong> Belgenin gövdesini tanımlar. Yani bir HTML
+      belgesindeki içerikler; bağlantılar, resimler, tablolar vd. bu etiket
+      içerisinde bulunur.
+    </div>
+    <br />
 
-    <!-- <h1>...</h1> ...... <h6>...</h6> Etiketleri Örnek -->
-    <div class="example">
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+    </head>
+    <body>
+        Bu kısımda yazılan etiketler sayfada görünecek...
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <!-- <h> Etiketkeri -->
+    <div>
+      <strong>&lt;h1&gt;...&lt;h6&gt; :</strong> Başlık etiketleri
+      &lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt; olmak
+      üzere 6 tanedir. Tarayıcılar başlık etiketlerine varsayılan olarak bir
+      font büyüklüğü atarlar ancak buradaki font büyüklüğü önemli değildir çünkü
+      her bir h etiketine atanan font büyüklüğünü css ile değiştirebiliriz.
+      Burada önemli olan h etiketlerine yüklenen anlamlardır. Çünkü sitemizi
+      ziyaret eden arama motorları kullanılan h etiketlerine göre yazılara anlam
+      yüklerler. Örneğin; h1 etiketi her bir html sayfasında bir tane olmalıdır
+      ve sayfanın amacını özetleyen en önemli başlık türüdür.
+    </div>
+
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
         <h1>Başlık 1</h1>
         <h2>Başlık 2</h2>
         <h3>Başlık 3</h3>
         <h4>Başlık 4</h4>
         <h5>Başlık 5</h5>
         <h6>Başlık 6</h6>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
     </div>
 
-    <div><strong>&lt;p&gt;...&lt;/p&gt; : </strong>Paragraf oluşturmak için kullanılır. İçeriğinde bir yazı içeriği olmalıdır.</div>
-
-    <!-- <p>...</p> Etiketi Örnek -->
-    <div class="example">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reprehenderit, neque voluptatem quidem consequatur vitae eius saepe est aperiam quisquam sapiente quod tempora praesentium perferendis! Minus debitis mollitia neque nam.</p>
+    <!-- <p> Etiketi -->
+    <div>
+      <strong>&lt;p&gt; :</strong> Paragraf oluşturmak için kullanılır.
+      İçeriğinde bir yazı içeriği olmalıdır.
     </div>
 
-    <div><strong>&lt;br/&gt; : </strong>Bir satır sonu tanımlar ve kapanış etiketi olmayan boş bir etikettir.</div>
-
-    <!-- <br/> Etiketi Örnek -->
-    <div class="example">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br/>Harum reprehenderit, neque voluptatem quidem consequatur vitae eius saepe est aperiam quisquam sapiente quod tempora praesentium perferendis! <br/>Minus debitis mollitia neque nam.</p>
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatem corrupti minus optio dolorem facere quos odio eos necessitatibus quia. Provident unde itaque sed, cum earum exercitationem delectus? Eaque veritatis eveniet labore tempora quae dolore possimus, deleniti laudantium porro? Odio iste officia distinctio placeat, maxime id delectus asperiores, dolore debitis eum adipisci quis assumenda sed laborum et harum dicta. Possimus corporis inventore numquam cumque rem, modi quo, ab amet tempore minus reprehenderit aliquid veniam magnam? Vero, dolorem dignissimos tenetur nihil possimus exercitationem odio id velit rem. Temporibus iusto, saepe laborum alias veritatis harum obcaecati perferendis ab quae, voluptatibus inventore cumque!</p>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
     </div>
 
+    <!-- <br> Etiketi -->
+    <div>
+      <strong>&lt;br&gt; :</strong> Bir satır sonu tanımlar ve kapanış etiketi
+      olmayan boş bir etikettir.
+    </div>
 
-</body>
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Ea voluptatem corrupti minus optio dolorem facere quos odio eos necessitatibus quia.<br>Provident unde itaque sed, cum earum exercitationem delectus?<br>Eaque veritatis eveniet labore tempora quae dolore possimus, deleniti laudantium porro?<br>Odio iste officia distinctio placeat, maxime id delectus asperiores, dolore debitis eum adipisci quis assumenda sed laborum et harum dicta.<br>Possimus corporis inventore numquam cumque rem, modi quo, ab amet tempore minus reprehenderit aliquid veniam magnam?<br>Vero, dolorem dignissimos tenetur nihil possimus exercitationem odio id velit rem.<br>Temporibus iusto, saepe laborum alias veritatis harum obcaecati perferendis ab quae, voluptatibus inventore cumque!</p>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
+  </body>
 </html>

@@ -1,13 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+  </head>
+  <body>
     <a href="index.html">Ana Sayfa</a>
-    <hr>
-</body>
+    <hr />
+    <h1>Biçimlendirme Etiketleri</h1>
+
+    <!-- <b> Etiketi -->
+    <div>
+      <strong>&lt;b&gt; :</strong> Metni kalın (bold) gösterir. Görsel olarak
+      kalınlaştırır ancak vurgulama amacı taşımaz.
+    </div>
+
+    <!-- <strong> Etiketi -->
+    <div>
+      <strong>&lt;strong&gt; :</strong> Metni kalın gösterir ve aynı zamanda
+      semantik olarak önemli olduğunu belirtir. Ekran okuyucular tarafından da
+      vurgulu okunur.
+    </div>
+
+    <!-- <i> Etiketi -->
+    <div>
+      <strong>&lt;i&gt; :</strong> Metni italik (eğik) yapar. Genelde teknik
+      terimler, yabancı kelimeler veya düşünce belirtmek için kullanılır.
+    </div>
+
+    <!-- <em> Etiketi -->
+    <div>
+      <strong>&lt;em&gt; :</strong> Metni italik yapar ve semantik olarak
+      vurgular. Anlam olarak önem vurgusu taşır. Ekran okuyucular tarafından da
+      vurgulu okunur.
+    </div>
+
+    <!-- <u> Etiketi -->
+    <div>
+      <strong>&lt;u&gt; :</strong> Metni altı çizili yapar. Genelde özel dikkat
+      gerektiren içerikler için kullanılır ama modern HTML'de çok tercih
+      edilmez.
+    </div>
+
+    <!-- <ins> Etiketi -->
+    <div>
+      <strong>&lt;ins&gt; :</strong> Eklenmiş (inserted) metni temsil eder.
+      Genelde altı çizili olarak görüntülenir. Belgeye sonradan eklendiği
+      anlamına gelir.
+    </div>
+
+    <!-- <del> Etiketi -->
+    <div>
+      <strong>&lt;del&gt; :</strong> Silinmiş (deleted) metni belirtir. Üzeri
+      çizili olarak görünür ve metnin artık geçerli olmadığını ifade eder.
+    </div>
+
+    <!-- <sub Etiketi -->
+    <div>
+      <strong>&lt;sub&gt; :</strong> Alt simge oluşturur (örneğin kimyasal
+      formüllerde H<sub>2</sub>O gibi).
+    </div>
+
+    <!-- <sup> Etiketi -->
+    <div>
+      <strong>&lt;sup&gt; :</strong> Üst simge oluşturur (örneğin matematiksel
+      ifadelerde x<sup>2</sup> gibi).
+    </div>
+
+    <!-- <mark> Etiketi -->
+    <div>
+      <strong>&lt;mark&gt; :</strong> Metni fosforlu kalemle işaretlenmiş gibi
+      vurgular. Genellikle arama sonuçlarında geçen kelimeleri vurgulamak için
+      kullanılır.
+    </div>
+
+    <!-- <small> Etiketi -->
+    <div>
+      <strong>&lt;small&gt; :</strong> Daha küçük puntolu metin oluşturur.
+      Genellikle dipnotlar veya açıklamalar için kullanılır.
+    </div>
+
+    <!-- Toplu Örnekler -->
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <b>This text is bold</b><br>
+        <strong>This text is important!</strong><br>
+        <i>This text is italic</i><br>
+        <em>This text is emphasized</em><br>
+        <u>This text is underlined</u><br>
+        <ins>This text is underlined</ins><br>
+        <del>This text is overlined.</del>
+        <p>This is <sub>subscripted</sub> text.</p>
+        <p>This is <sup>superscripted</sup> text.</p>
+        <small>This is some smaller text.</small><br>
+        <mark>This text is marked</mark>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+    <!-- <dfn> Etiketi -->
+    <div>
+      <strong>&lt;dfn&gt; :</strong> Bir terimin ilk geçtiği yerde tanımını
+      yapmak için kullanılır. Tarayıcılar genellikle italik stil uygular.
+    </div>
+
+    <!-- <code> Etiketi -->
+    <div>
+      <strong>&lt;code&gt; :</strong> Kod parçacıklarını belirtmek için
+      kullanılır. Tarayıcı genellikle monospace (sabit genişlikte) yazı tipi ile
+      gösterir.
+    </div>
+
+    <!-- <samp> Etiketi -->
+    <div>
+      <strong>&lt;samp&gt; :</strong> Çıktı örneklerini (örneğin bir programdan
+      gelen yanıtlar) göstermek için kullanılır. Monospace yazı tipi ile
+      gösterilir.
+    </div>
+
+    <!-- <kbd> Etiketi -->
+    <div>
+      <strong>&lt;kbd&gt; :</strong> Klavye ile girilen bir metni belirtmek için
+      kullanılır. Genellikle bir tuş veya tuş kombinasyonunu ifade eder (örneğin
+      <kbd>Ctrl</kbd> + <kbd>C</kbd>).
+    </div>
+
+    <!-- <var> Etiketi -->
+    <div>
+      <strong>&lt;var&gt; :</strong> Değişken isimlerini belirtmek için
+      kullanılır. Genellikle italik yazı tipi ile gösterilir.
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
+  </body>
 </html>
