@@ -89,8 +89,8 @@
 
     <!-- Toplu Örnekler -->
     <div class="editor" data-editor>
-  <div class="editorTextareaGroup">
-    <textarea class="editorTextarea">
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
 <!DOCTYPE html>
   <html lang="tr">
     <head>
@@ -110,11 +110,12 @@
         <mark>This text is marked</mark>
     </body>
   </html>
-    </textarea>
-    <button class="editorButton">Çalıştır</button>
-  </div>
-  <iframe class="editorIframe"></iframe>
-</div>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
 
     <!-- <dfn> Etiketi -->
     <div>
@@ -147,6 +148,29 @@
     <div>
       <strong>&lt;var&gt; :</strong> Değişken isimlerini belirtmek için
       kullanılır. Genellikle italik yazı tipi ile gösterilir.
+    </div>
+
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
+      <p>The HTML <code>button</code> tag defines a clickable button.</p>
+      <p><samp>File not found.<br>Press F1 to continue</samp></p>
+      <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+      <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>

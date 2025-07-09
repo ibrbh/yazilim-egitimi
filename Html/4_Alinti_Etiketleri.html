@@ -1,13 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+  </head>
+  <body>
     <a href="index.html">Ana Sayfa</a>
-    <hr>
-</body>
+    <hr />
+    <h1>Alıntı Etiketleri</h1>
+
+    <!-- <abbr> Etiketi -->
+    <div>
+      <strong>&lt;abbr&gt; :</strong> Bir kısaltmayı (abbreviation) tanımlamak
+      için kullanılır. Üzerine gelindiğinde tam açıklaması gösterilir. Arama
+      motorları ve ekran okuyucular için anlamı artırır.
+    </div>
+
+    <!-- <address> Etiketi -->
+    <div>
+      <strong>&lt;address&gt; :</strong> İletişim bilgilerini belirtmek için
+      kullanılır. Genellikle yazının sahibinin e-posta adresi, fiziksel adresi
+      veya telefon numarası gibi bilgiler yer alır. Tarayıcı genellikle italik
+      stil uygular.
+    </div>
+
+    <!-- <bdo> Etiketi -->
+    <div>
+      <strong>&lt;bdo&gt; :</strong> Metin yönünü (sağdan sola veya soldan sağa)
+      belirlemek için kullanılır. Özellikle sağdan sola yazılan diller (Arapça,
+      İbranice gibi) için kullanışlıdır. `dir` özelliği ile yön ayarlanır.
+    </div>
+
+    <!-- <bdo> Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">
+            &nbsp;&nbsp;&nbsp;<br />&lt;bdo&gt;&nbsp;&nbsp;&nbsp;Özellikleri ve
+            Değerleri&nbsp;&nbsp;&nbsp;
+          </th>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;<br />Özellik&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Tanım&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Değer&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Tanım&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;<br />dir&nbsp;&nbsp;&nbsp;</td>
+          <td rowspan="2">
+            &nbsp;&nbsp;&nbsp;<br />Metnin yönünü belirtir.&nbsp;&nbsp;&nbsp;
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;<br />ltr&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            &nbsp;&nbsp;&nbsp;<br />Metnin yönünü soldan
+            sağa&nbsp;&nbsp;&nbsp;tanımlar. Varsayılan
+            değerdir.&nbsp;&nbsp;&nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;<br />rtl&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            &nbsp;&nbsp;&nbsp;<br />Metnin yönünü sağdan
+            sola&nbsp;&nbsp;&nbsp;tanımlar.&nbsp;&nbsp;&nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <q> Etiketi -->
+    <div>
+      <strong>&lt;q&gt; :</strong> Kısa bir alıntı yapmak için kullanılır.
+      Tarayıcılar genellikle otomatik olarak çift tırnak ("") içine alır.
+    </div>
+
+    <!-- <q> Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">
+            &nbsp;&nbsp;&nbsp;<br />&lt;q&gt;&nbsp;&nbsp;&nbsp;Özellikleri ve
+            Değerleri&nbsp;&nbsp;&nbsp;
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;<br />Özellik&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Tanım&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Değer&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Tanım&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;<br />cite&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            &nbsp;&nbsp;&nbsp;<br />Alıntı yapılan
+            kaynak&nbsp;&nbsp;&nbsp;URL'unu belirtir.&nbsp;&nbsp;&nbsp;
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;<br /><em>url</em>&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            &nbsp;&nbsp;&nbsp;<br />Alıntı&nbsp;&nbsp;&nbsp;kaynağının URL' ini
+            belirtir.&nbsp;&nbsp;&nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <blockquote> Etiketi -->
+    <div>
+      <strong>&lt;blockquote&gt; :</strong> Uzun alıntılar için kullanılır.
+      Alıntılanan metni diğer içeriklerden ayırmak için genellikle girintili
+      biçimde gösterilir. Genellikle `cite` özniteliğiyle kaynağı da
+      belirtilebilir.
+    </div>
+
+    <!-- <blockquote> Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">
+            &nbsp;&nbsp;&nbsp;<br />&lt;blockquote&gt;&nbsp;&nbsp;&nbsp;Özellikleri
+            ve Değerleri&nbsp;&nbsp;&nbsp;
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;<br />Özellik&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Tanım&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Değer&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;<br />Tanım&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;<br />cite&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            &nbsp;&nbsp;&nbsp;<br />Alıntı yapılan
+            kaynak&nbsp;&nbsp;&nbsp;URL'unu belirtir.&nbsp;&nbsp;&nbsp;
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;<br /><em>url</em>&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            &nbsp;&nbsp;&nbsp;<br />Alıntı&nbsp;&nbsp;&nbsp;kaynağının URL' ini
+            belirtir.&nbsp;&nbsp;&nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Toplu Örnekler -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <p>My favorite markup language is <abbr title="HyperText Markup Language">HTML</abbr></p>
+        <address>Written by John Doe. Contact: john@example.com</address>
+        <bdo dir="rtl">This text will go right-to-left</bdo><br>
+        <bdo dir="ltr">This text will go left-to-right</bdo>
+        <p>He said, <q>This is amazing!</q></p>
+        <blockquote cite="https://www.example.com">The only limit to our realization of tomorrow is our doubts of today.</blockquote>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
+  </body>
 </html>

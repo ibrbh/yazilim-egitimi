@@ -5,9 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
 </head>
 <body>
     <a href="index.html">Ana Sayfa</a>
     <hr>
+    <h1>Resim Etiketleri : &lt;img&gt;</h1>
+
+    <!-- <img> Etiketi -->
+    <div><strong>&lt;img&gt; :</strong> Sayfaya görsel (resim) eklemek için kullanılır. Boş (self-closing) bir etikettir, yani kapanış etiketi yoktur.
+
+    <!-- <img> Özellik Tablosu  -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">&lt;img&gt; Özellikleri ve Değerleri</th>
+            </tr>
+            <tr>
+                <td>Özellik</td>
+                <td>Tanım</td>
+                <td>Değer</td>
+                <td>Tanım</td>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>src</td>
+            <td>Görüntünün URL adresini belirtir.</td>
+            <td><em>URL</em></td>
+            <td>Görüntünün URL adresini belirtir.</td>
+        </tr>
+        <tr>
+            <td>alt</td>
+            <td>Görüntü yerine alternatif metin belirtir.</td>
+            <td><em>text</em></td>
+            <td>Görüntü yerine alternatif metin belirtir.</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>Görüntünün pikselcinsinden yüksekliğini belirtir.</td>
+            <td><em>pixels</em></td>
+            <td>Görüntünün pikselcinsinden yüksekliğini belirtir.</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>Görüntünün piksel cinsinden genişliğini belirtir.</td>
+            <td><em>pixels</em></td>
+            <td>Görüntünün pikselcinsinden genişliğini belirtir.</td>
+        </tr>
+        <tr>
+            <td>usemap</td>
+            <td>İstemci taraflı resim haritası olduğunu belirtir.</td>
+            <td><em>#mapname</em></td>
+            <td>&lt;map&gt; etiketinin name veya id özelliğini belirtir.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <img src="https://images.pexels.com/photos/30482701/pexels-photo-30482701.jpeg" alt="Kedi Fotoğrafı" width="250" height="250">
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
 </body>
 </html>
