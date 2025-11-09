@@ -1,0 +1,416 @@
+#html
+
+<div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+#css
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML + CSS Editör</title>
+  <style>
+    .editor {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .editorTextareaGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      resize: vertical;
+    }
+
+    .editorButton {
+      padding: 10px 15px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .editorButton:hover {
+      background: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editor" data-editor>
+    <div class="editorTextareaGroup">
+      <label>HTML Kodları:</label>
+      <textarea class="htmlTextarea">
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <title>Başlık</title>
+  </head>
+  <body>
+    <h1>Merhaba Dünya</h1>
+    <p>Bu HTML kısmıdır.</p>
+  </body>
+</html>
+      </textarea>
+
+      <label>CSS Kodları:</label>
+      <textarea class="cssTextarea">
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Arial;
+  text-align: center;
+}
+h1 {
+  color: darkblue;
+}
+      </textarea>
+
+      <button class="editorButton">Çalıştır</button>
+    </div>
+
+    <iframe class="editorIframe"></iframe>
+  </div>
+
+  <script>
+    const button = document.querySelector('.editorButton');
+    const htmlTextarea = document.querySelector('.htmlTextarea');
+    const cssTextarea = document.querySelector('.cssTextarea');
+    const iframe = document.querySelector('.editorIframe');
+
+    button.addEventListener('click', () => {
+      const htmlCode = htmlTextarea.value;
+      const cssCode = `<style>${cssTextarea.value}</style>`;
+      const output = htmlCode.replace('</head>', cssCode + '</head>');
+      iframe.srcdoc = output;
+    });
+  </script>
+</body>
+</html>
+
+#javascript
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML + CSS + JS Editör</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .editor {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .editorTextareaGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      resize: vertical;
+      background-color: white;
+    }
+
+    .editorButton {
+      padding: 10px 15px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background 0.3s;
+      align-self: flex-start;
+    }
+
+    .editorButton:hover {
+      background: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: white;
+    }
+
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="editor" data-editor>
+    <div class="editorTextareaGroup">
+      <label>HTML Kodları:</label>
+      <textarea class="htmlTextarea">
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <title>Merhaba</title>
+  </head>
+  <body>
+    <h1>Merhaba Dünya!</h1>
+    <button id="myBtn">Tıkla</button>
+  </body>
+</html>
+      </textarea>
+
+      <label>CSS Kodları:</label>
+      <textarea class="cssTextarea">
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Arial;
+  text-align: center;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: #0056b3;
+}
+      </textarea>
+
+      <label>JavaScript Kodları:</label>
+      <textarea class="jsTextarea">
+document.getElementById("myBtn").addEventListener("click", () => {
+  alert("Butona tıkladın!");
+});
+      </textarea>
+
+      <button class="editorButton">Çalıştır</button>
+    </div>
+
+    <iframe class="editorIframe"></iframe>
+  </div>
+
+  <script>
+    const button = document.querySelector('.editorButton');
+    const htmlTextarea = document.querySelector('.htmlTextarea');
+    const cssTextarea = document.querySelector('.cssTextarea');
+    const jsTextarea = document.querySelector('.jsTextarea');
+    const iframe = document.querySelector('.editorIframe');
+
+    button.addEventListener('click', () => {
+      const htmlCode = htmlTextarea.value;
+      const cssCode = `<style>${cssTextarea.value}</style>`;
+      const jsCode = `<script>${jsTextarea.value}<\/script>`;
+
+      // CSS ve JS’yi <head> içine ekle
+      let output = htmlCode;
+      if (output.includes('</head>')) {
+        output = output.replace('</head>', `${cssCode}</head>`);
+      } else {
+        output = cssCode + output;
+      }
+
+      if (output.includes('</body>')) {
+        output = output.replace('</body>', `${jsCode}</body>`);
+      } else {
+        output += jsCode;
+      }
+
+      iframe.srcdoc = output;
+    });
+  </script>
+</body>
+</html>
+
+#react js
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>React Playground</title>
+
+  <!-- React ve Babel CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    .editor-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .editor-box {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .editor-box label {
+      background: #007bff;
+      color: #fff;
+      padding: 8px 10px;
+      font-weight: bold;
+    }
+
+    textarea {
+      flex: 1;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      resize: vertical;
+      min-height: 200px;
+    }
+
+    button {
+      margin: 10px 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      background: white;
+      display: block;
+      border-top: 2px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="editor-container">
+    <div class="editor-box">
+      <label>App.jsx</label>
+      <textarea id="appCode">
+function App() {
+  return (
+    <div>
+      <Header title="React Playground" />
+      <p>Bu, App bileşenidir 🎨</p>
+      <Footer />
+    </div>
+  );
+}
+      </textarea>
+    </div>
+
+    <div class="editor-box">
+      <label>Header.jsx</label>
+      <textarea id="headerCode">
+function Header(props) {
+  return (
+    <header style={{ background: '#007bff', color: 'white', padding: '10px' }}>
+      <h2>{props.title}</h2>
+    </header>
+  );
+}
+      </textarea>
+    </div>
+
+    <div class="editor-box">
+      <label>Footer.jsx</label>
+      <textarea id="footerCode">
+function Footer() {
+  return (
+    <footer style={{ marginTop: '20px', padding: '10px', color: '#555' }}>
+      <hr />
+      <small>© 2025 React Playground</small>
+    </footer>
+  );
+}
+      </textarea>
+    </div>
+  </div>
+
+  <button id="runButton">Çalıştır</button>
+
+  <iframe id="preview"></iframe>
+
+  <script>
+    const runButton = document.getElementById('runButton');
+    const iframe = document.getElementById('preview');
+
+    runButton.addEventListener('click', () => {
+      const appCode
+

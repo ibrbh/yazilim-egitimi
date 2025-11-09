@@ -1,13 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Resim Etiketleri : &lt;map&gt; ve &lt;area&gt;</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+  </head>
+  <body>
     <a href="index.html">Ana Sayfa</a>
-    <hr>
-</body>
+    <hr />
+    <h1>Resim Etiketleri : &lt;map&gt; ve &lt;area&gt;</h1>
+
+    <!-- <map> Etiketi -->
+    <div>
+      <strong>&lt;map&gt; :</strong>Resim haritası oluşturmak için
+      kullanılır.(Resim haritaları görüntüye tıklanabilir alanlar tanımlar.)
+      &lt;map&gt; name özelliği ile &lt;img&gt; usemap özellikleri eşitlenerek
+      görüntü ve resim haritası arasında bir ilişki oluşturulur. &lt;map&gt;
+      etiketi alanları &lt;area&gt; etiketleri ile tanımlanır.
+    </div>
+
+    <!-- <map> Etiketi Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;map&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Gereklidir. Resim haritasının ismini belirtir.</td>
+          <td><em>mapname</em></td>
+          <td>Resim haritasının ismini belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <area> Etiketi -->
+    <div>
+      <strong>&lt;area&gt; :</strong>Resim haritası oluşturmak için bir alan
+      (bölge) tanımlar. &lt;area&gt; etiketi herzaman &lt;map&gt; etiketi
+      içerisinde olmalıdır. &lt;img&gt; etiketinin usemap özelliği ile
+      &lt;map&gt; etiketinin name özellikleri eşitlenerek aralarında bir ilişki
+      oluşturulur.
+    </div>
+
+    <!-- <area> Etiketi Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;area&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>alt</td>
+          <td>
+            Belirlenen alan için alternatif metin belirtir. Href özelliği
+            tanımlanmış olmalıdır.
+          </td>
+          <td><em>text</em></td>
+          <td>
+            Görüntü yüklenmez ise resim yerine gösterilecek alternatif metni
+            belirtir.
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">coords</td>
+          <td rowspan="3">Resim için konum ve boyut değerlerini belirtir.</td>
+          <td><em>x1,y1,x2,y2</em></td>
+          <td>
+            Shape özelliği rect (dikdörtgen) ise üst-sol ve alt-sağ köşe
+            koordinatlarını belirtir.
+          </td>
+        </tr>
+        <tr>
+          <td><em>x,y,radius</em></td>
+          <td>
+            Shape özelliği circle (daire) ise dairenin merkez koordinatını ve
+            yarıçapını belirtir.
+          </td>
+        </tr>
+        <tr>
+          <td><em>x1,y1,x2,y2,...</em><br /><em>xn,yn</em></td>
+          <td>
+            Shape özelliği poly (poligon) ise her köşe için sıralı koordinatlar
+            tanımlanır. İlk köşe ile son köşe aynı olmak zorunda değildir.
+            Tarayıcı otomatik tamamlar.
+          </td>
+        </tr>
+        <tr>
+          <td>href</td>
+          <td>Bağlantı verilen alanın URL adresini belirtir.</td>
+          <td><em>URL</em></td>
+          <td>Bağlantının URL'ını belirtir.</td>
+        </tr>
+        <tr>
+          <td rowspan="4">shape</td>
+          <td rowspan="4">Resim haritası için bir şekli belirtir.</td>
+          <td>default</td>
+          <td>Tüm bölgeyi belirtir.</td>
+        </tr>
+        <tr>
+          <td>rect</td>
+          <td>Dikdörtgen bölgeyi belirtir.</td>
+        </tr>
+        <tr>
+          <td>circle</td>
+          <td>Dairesel bölgeyi belirtir.</td>
+        </tr>
+        <tr>
+          <td>poly</td>
+          <td>Poligon (çok kenarlı) bölgeyi belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Örnek Uygulama -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <img src="https://hitglobal.com.tr/wp-content/uploads/2022/05/Dis-Ticaret-Uzmanligi-1024x683.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+        
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://tr.wikipedia.org/wiki/Bilgisayar" target="_blank">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://tr.wikipedia.org/wiki/Telefon" target="_blank">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="https://tr.wikipedia.org/wiki/Kahve" target="_blank">
+        </map>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
+  </body>
 </html>

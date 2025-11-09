@@ -1,0 +1,29 @@
+<div class="editor-block" data-editor>
+  <h2>HTML + CSS + JS Editör 1</h2>
+  <div class="editor-panels">
+    <div class="panel">
+      <div class="label">HTML</div>
+      <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html>
+</textarea>
+    </div>
+    <div class="panel">
+      <div class="label">CSS</div>
+      <textarea class="cssCode"></textarea>
+    </div>
+    <div class="panel">
+      <div class="label">JavaScript</div>
+      <textarea class="jsCode"></textarea>
+    </div>
+  </div>
+  <div class="button-bar">
+    <button class="run-btn">Çalıştır</button>
+  </div>
+  <iframe class="output"></iframe>
+</div>

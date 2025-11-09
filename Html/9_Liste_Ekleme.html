@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Liste Ekleme</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+  </head>
+  <body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr />
+    <h1>Liste Ekleme</h1>
+
+    <!-- <ul> Etiketi -->
+    <div>
+      <strong>&lt;ul&gt; :</strong> Sırasız (numarasız) liste oluşturmak için
+      kullanılır. İçinde sadece &lt;li&gt; (liste öğesi) etiketleri bulunur.
+      Madde işaretleri (●, ■ gibi) ile gösterilir.
+    </div>
+
+    <!-- <ol> Etiketi -->
+    <div>
+      <strong>&lt;ol&gt; :</strong> Sıralı (numaralı) liste oluşturmak için
+      kullanılır. İçinde sadece &lt;li&gt; etiketleri bulunur. Öğeler 1, 2, 3…
+      şeklinde sıralanır.
+    </div>
+
+    <!-- <ol> Özellikleri -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;ol&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>compact</td>
+          <td>Listeyi normalden daha küçük bir hale getirir.</td>
+          <td>compact</td>
+          <td>Listeyi normalden daha küçük bir hale getirir.</td>
+        </tr>
+        <tr>
+          <td>reversed</td>
+          <td>
+            Bu özellik tanımlandığında liste sıralaması büyükten küçüğe doğru
+            yapılır. 1,2,3 yerine 3,2,1 gibi.
+          </td>
+          <td>reversed</td>
+          <td>
+            Bu özellik tanımlandığında liste sıralaması büyükten küçüğe doğru
+            yapılır. 1,2,3 yerine 3,2,1 gibi.
+          </td>
+        </tr>
+        <tr>
+          <td>start</td>
+          <td>Birinci liste öğesinin başlangıç değerini belirtir.</td>
+          <td><em>number</em></td>
+          <td>Birinci liste öğesinin başlangıç değerini belirtir.</td>
+        </tr>
+        <tr>
+          <td rowspan="5">type</td>
+          <td rowspan="5">Listenin türünü belirtir.</td>
+          <td>1</td>
+          <td>Sayısal sıralı liste. (Varsayılan) 1, 2, 3, 4</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>Büyük harf alfabetik sıralı liste. A, B, C, D</td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>Küçük harf alfabetik sıralı liste. a, b, c, d</td>
+        </tr>
+        <tr>
+          <td>I</td>
+          <td>Büyük roman rakamı sıralı liste. I, II, III, IV</td>
+        </tr>
+        <tr>
+          <td>i</td>
+          <td>Küçük roman rakamı sıralı liste. i, ii, iii, iv</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <li> Etiketi -->
+    <div>
+      <strong>&lt;li&gt; :</strong> Liste öğesi anlamına gelir. Hem &lt;ul&gt;
+      hem de &lt;ol&gt; listelerinde madde olarak kullanılır.
+    </div>
+
+    <!-- <li> Özellikleri -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;li&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>value</td>
+          <td>Başlığın nasıl hizalanacağını belirtir.</td>
+          <td><em>number</em></td>
+          <td>Liste öğesinin değerini belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Toplu Örnek -->
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Mil</li>
+      </ul>
+
+      <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Mil</li>
+      </ol>
+
+      <ol reversed="reversed">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Mil</li>
+      </ol>
+
+      <ol start="50">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Mil</li>
+      </ol>
+
+      <ol type="I">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Mil</li>
+      </ol>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+    </div>
+
+    <!-- <dl> Etiketi -->
+    <div>
+      <strong>&lt;dl&gt; :</strong> Tanımlama listesi (description list)
+      oluşturur. Genelde terim ve açıklama eşleşmeleri için kullanılır. İçinde
+      &lt;dt&gt; ve &lt;dd&gt; etiketleri yer alır.
+    </div>
+
+    <!-- <dt> Etiketi -->
+    <div>
+      <strong>&lt;dt&gt; :</strong> Tanımlama listesi içinde tanımlanacak terimi
+      belirtir. (dt = definition term)
+    </div>
+
+    <!-- <dd> Etiketi -->
+    <div>
+      <strong>&lt;dd&gt; :</strong> Tanım (açıklama) kısmını belirtir. (dd =
+      definition description)
+    </div>
+
+    <!-- Toplu Örnek -->
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+      </dl>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
+  </body>
+</html>

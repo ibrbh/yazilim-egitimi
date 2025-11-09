@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resim Ekleme</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+</head>
+<body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr>
+    <h1>Resim Etiketleri</h1>
+
+    <!-- <img> Etiketi -->
+    <div><strong>&lt;img&gt; :</strong> Sayfaya görsel (resim) eklemek için kullanılır. Boş (self-closing) bir etikettir, yani kapanış etiketi yoktur.
+
+    <!-- <img> Özellik Tablosu  -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">&lt;img&gt; Özellikleri ve Değerleri</th>
+            </tr>
+            <tr>
+                <td>Özellik</td>
+                <td>Tanım</td>
+                <td>Değer</td>
+                <td>Tanım</td>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>src</td>
+            <td>Görüntünün URL adresini belirtir.</td>
+            <td><em>URL</em></td>
+            <td>Görüntünün URL adresini belirtir.</td>
+        </tr>
+        <tr>
+            <td>alt</td>
+            <td>Görüntü yerine alternatif metin belirtir.</td>
+            <td><em>text</em></td>
+            <td>Görüntü yerine alternatif metin belirtir.</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>Görüntünün piksel cinsinden yüksekliğini belirtir.</td>
+            <td><em>pixels</em></td>
+            <td>Görüntünün piksel cinsinden yüksekliğini belirtir.</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>Görüntünün piksel cinsinden genişliğini belirtir.</td>
+            <td><em>pixels</em></td>
+            <td>Görüntünün piksel cinsinden genişliğini belirtir.</td>
+        </tr>
+        <tr>
+            <td>usemap</td>
+            <td>İstemci taraflı resim haritası olduğunu belirtir.</td>
+            <td><em>#mapname</em></td>
+            <td>&lt;map&gt; etiketinin name veya id özelliğini belirtir.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- <img> Örnek -->
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <img src="https://images.pexels.com/photos/30482701/pexels-photo-30482701.jpeg" alt="Kedi Fotoğrafı" width="250" height="250">
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+    </div>
+
+    <!-- <map> Etiketi -->
+    <div><strong>&lt;map&gt; :</strong> Bir görselin farklı alanlarına tıklanabilir bağlantılar eklemek için kullanılır. Bu etiket, bir `<img>` etiketi ile birlikte çalışır ve görselde tanımlı alanlara farklı bağlantılar verilmesini sağlar. İçinde bir veya daha fazla &lt;area&gt; etiketi bulunur.</div>
+
+    <!-- <map> Özellik Tablosu -->
+    <table>
+        <thead>
+            <tr>
+        <th colspan="4">&lt;map&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+        </tr>
+        </thead>
+    <tbody>
+        <tr>
+        <td>name</td>
+        <td>Gereklidir. Resim haritasının ismini belirtir.</td>
+        <td><em>mapname</em></td>
+        <td>Resim haritasının ismini belirtir.</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <!-- <area> Etiketi -->
+    <div><strong>&lt;area&gt; :</strong> `<map>` etiketi içinde kullanılır ve görselin belirli bir alanını tıklanabilir hale getirir. `shape` (şekil), `coords` (koordinatlar), `href` (bağlantı), `alt` gibi özniteliklerle tanımlanır.</div>
+
+    <!-- <area> Özellik Tablosu -->
+    <table>
+        <thead>
+            <tr>
+      <th colspan="4">&lt;area&gt; Özellikleri ve Değerleri</th>
+    </tr>
+    <tr>
+      <td>Özellik</td>
+      <td>Tanım</td>
+      <td>Değer</td>
+      <td>Tanım</td>
+    </tr>
+
+        </thead>
+  <tbody>
+    
+    <tr>
+      <td>alt</td>
+      <td>Belirlenen alan için alternatif metin belirtir. Href özelliği tanımlanmış olmalıdır.</td>
+      <td><em>text</em></td>
+      <td>Görüntü yüklenmez ise, resim yerine gösterilecek alternatif metini belirtir.</td>
+    </tr>
+    <tr>
+      <td rowspan="3">coords</td>
+      <td rowspan="3">Resim için konum ve boyut değerlerini belirtir.</td>
+      <td><em>x1,y1,x2,y2</em></td>
+      <td>Shape özelliği rect (dikdörtgen) olarak tanımlıysa üst-sol ve alt-sağ köşe koordinatlarını belirtir.</td>
+    </tr>
+    <tr>
+      <td><em>x,y,radius</em></td>
+      <td>Shape özelliği circle (daire) olarak tanımlıysa dairenin merkez koordinatını ve yarıçapını belirtir.</td>
+    </tr>
+    <tr>
+      <td><em>x1,y1,x2,y2,...</em><br><em>xn,yn</em></td>
+      <td>Shape özelliği poly (poligon) olarak tanımlıysa her köşe için sıralı olarak koordinatlar tanımlanmalıdır. Poligon'un ilk köşe koordinatları ile son köşe koordinatları aynı olmamalıdır. Tarayıcı poligonu otomatik olarak tamamlar.</td>
+    </tr>
+    <tr>
+      <td>href</td>
+      <td>Bağlantı verilen alanın URL adresini belirtir.</td>
+      <td><em>URL</em></td>
+      <td>Bağlantının URL'ını belirtir.</td>
+    </tr>
+    <tr>
+      <td rowspan="4">shape</td>
+      <td rowspan="4">Resim haritası için bir şekli belirtir.</td>
+      <td>default</td>
+      <td>Tüm bölgeyi belirtir.</td>
+    </tr>
+    <tr>
+      <td>rect</td>
+      <td>Dikdörtgen bir bölgeyi belirtir.</td>
+    </tr>
+    <tr>
+      <td>circle</td>
+      <td>Dairesel bir bölgeyi belirtir.</td>
+    </tr>
+    <tr>
+      <td>poly</td>
+      <td>Poligon (çok kenarlı) bir bölgeyi belirtir.</td>
+    </tr>
+  </tbody>
+    </table>
+
+    <!-- <map> ve <area> Örnek -->
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <img src="https://www.w3schools.com/tags/workplace.jpg" title="Masa" alt="Masa" usemap="#workmap" width="400" height="379">
+      <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" title="Telefon" alt="Bilgisayar" href="https://tr.wikipedia.org/wiki/Bilgisayar" target="_blank">
+        <area shape="rect" coords="290,172,333,250" title="Telefon" alt="Telefon" href="https://tr.wikipedia.org/wiki/Telefon">
+        <area shape="circle" coords="337,300,44" title="Kahve" alt="Kahve" href="https://tr.wikipedia.org/wiki/Kahve">
+      </map>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+    <!-- <picture> Etiketi -->
+    <div><strong>&lt;picture&gt; :</strong> Cihazın ekran çözünürlüğüne veya format desteğine göre farklı görseller göstermek için kullanılır. Genellikle `<source>` etiketleriyle birlikte kullanılır. En son seçenek olarak bir `<img>` etiketi eklenir (desteklenmeyen tarayıcılar için).</div>
+
+    <!-- <picture> Örnek -->
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+        <picture>
+            <source media="(min-width:175px)" srcset="https://upload.wikimedia.org/wikipedia/tr/8/86/Fenerbah%C3%A7e_SK.png">
+            <source media="(min-width:150px)" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Galatasaray_Sports_Club_Logo.png/1200px-Galatasaray_Sports_Club_Logo.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Be%C5%9Fikta%C5%9F_Logo_Be%C5%9Fikta%C5%9F_Amblem_Be%C5%9Fikta%C5%9F_Arma.png" style="width:auto;" height="100" width="100">
+        </picture>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>

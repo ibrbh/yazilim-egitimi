@@ -1,0 +1,25 @@
+<div class="editor-wrapper" data-editor>
+  <div class="editor-header">
+    Editör 1
+    <button class="run-btn">Çalıştır</button>
+  </div>
+  <div class="editor-panels">
+    <div class="panel">
+      <div class="panel-label">HTML</div>
+      <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html>
+        </textarea>
+    </div>
+    <div class="panel">
+      <div class="panel-label">CSS</div>
+      <textarea class="css-code"></textarea>
+    </div>
+  </div>
+  <iframe class="output"></iframe>
+</div>

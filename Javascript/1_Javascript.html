@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
+    />
+  </head>
+
+  <body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr />
+    <h1>Javascript</h1>
+
+    <div class="editor-block" data-editor>
+      <h2>HTML + CSS + JS Editör 1</h2>
+      <div class="editor-panels">
+        <div class="panel">
+          <div class="label">HTML</div>
+          <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><h1 id="demo">Merhaba Dünya!</h1></body>
+  </html>
+</textarea
+          >
+        </div>
+        <div class="panel">
+          <div class="label">CSS</div>
+          <textarea class="cssCode">
+h1 { color: red; text-align: center; }</textarea
+          >
+        </div>
+        <div class="panel">
+          <div class="label">JavaScript</div>
+          <textarea class="jsCode">
+document.getElementById("demo").onclick = () => alert("Tıkladın!");</textarea
+          >
+        </div>
+      </div>
+      <div class="button-bar">
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <iframe class="output"></iframe>
+    </div>
+
+    <div class="editor-block" data-editor>
+      <h2>HTML + CSS + JS Editör 2</h2>
+      <div class="editor-panels">
+        <div class="panel">
+          <div class="label">HTML</div>
+          <textarea class="htmlCode"><button id="btn">Bas</button></textarea>
+        </div>
+        <div class="panel">
+          <div class="label">CSS</div>
+          <textarea class="cssCode">
+button { background: blue; color: white; padding: 10px; border: none; }</textarea
+          >
+        </div>
+        <div class="panel">
+          <div class="label">JavaScript</div>
+          <textarea class="jsCode">
+document.getElementById("btn").addEventListener("click", ()=>alert("Butona bastın!"));</textarea
+          >
+        </div>
+      </div>
+      <div class="button-bar">
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <iframe class="output"></iframe>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+    <script src="editor.js"></script>
+  </body>
+</html>

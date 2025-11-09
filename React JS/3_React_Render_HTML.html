@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>React Render HTML</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr />
+    <h1>React Render HTML</h1>
+
+    <!-- index.html -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        index.html
+        <button class="run-btn hide">Çalıştır</button>
+      </div>
+
+      <textarea class="react-code">
+<!doctype html>
+  <html lang="tr">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Vite + React</title>
+    </head>
+    <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.jsx"></script>
+    </body>
+  </html></textarea
+      >
+      <iframe class="output hide"></iframe>
+    </div>
+
+    <!-- main.jsx -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        main.jsx
+        <button class="run-btn hide">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(<App />)</textarea
+      >
+      <iframe class="output hide"></iframe>
+    </div>
+
+    <!-- App.jsx -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        App.jsx
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+function App() {
+  return (
+    <div>
+      <h2>Merhaba React!</h2>
+    </div>
+  );
+}
+ReactDOM.render(<App />, document.getElementById('root'));</textarea
+      >
+      <iframe class="output"></iframe>
+    </div>
+
+    <script src="editor.js"></script>
+  </body>
+</html>

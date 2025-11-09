@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tablo Ekleme</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+  </head>
+  <body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr />
+    <h1>Tablo Ekleme</h1>
+
+    <!-- <table> Etiketi -->
+    <div>
+      <strong>&lt;table&gt; :</strong> HTML'de tablo oluşturmak için kullanılır.
+      Satırlar ve sütunlardan oluşur. Tablolar genellikle veri düzenlemek için
+      tercih edilir.
+    </div>
+
+    <!-- <table> Özellikleri -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;table&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>border</td>
+          <td>Tablonun kalınlığını belirtir.</td>
+          <td><em>text</em></td>
+          <td>Tablonun kalınlığını belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <tr> Etiketi -->
+    <div>
+      <strong>&lt;tr&gt; :</strong> Table row yani tablo satırını tanımlar. Her
+      &lt;tr&gt; etiketi, içinde hücreler (&lt;td&gt; veya &lt;th&gt;)
+      barındırır.
+    </div>
+
+    <!-- <td> Etiketi -->
+    <div>
+      <strong>&lt;td&gt; :</strong> Table data yani tablo veri hücresini
+      tanımlar. Normal veri hücreleridir.
+    </div>
+
+    <!-- <td> Özellikleri -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;td&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>colspan</td>
+          <td>Kaç sütunun birleşeceğini belirtir.</td>
+          <td><em>number</em></td>
+          <td>Sütunda birleştirilecek hücre sayısını belirtir.</td>
+        </tr>
+        <tr>
+          <td>rowspan</td>
+          <td>Kaç satırın birleşeceğini belirtir.</td>
+          <td><em>number</em></td>
+          <td>Satırda birleştirilecek hücre sayısını belirtir.</td>
+        </tr>
+        <tr>
+          <td>headers</td>
+          <td>Hücre içeriğinin bağlı olduğu başlığı belirtir.</td>
+          <td><em>header_id</em></td>
+          <td>
+            Hücre içeriğinin bağlı olduğu bir veya daha fazla başlığın id
+            değerini belirtir.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <th> Etiketi -->
+    <div>
+      <strong>&lt;th&gt; :</strong> Table header yani tablo başlık hücresidir.
+      Kalın ve ortalanmış olarak görünür. Genellikle bir sütunun başlığını
+      belirtir.
+    </div>
+
+    <!-- <th> Özellikleri -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;th&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>colspan</td>
+          <td>Kaç sütunun birleşeceğini belirtir.</td>
+          <td><em>number</em></td>
+          <td>Sütunda birleştirilecek hücre sayısını belirtir.</td>
+        </tr>
+        <tr>
+          <td>rowspan</td>
+          <td>Kaç satırın birleşeceğini belirtir.</td>
+          <td><em>number</em></td>
+          <td>Satırda birleştirilecek hücre sayısını belirtir.</td>
+        </tr>
+        <tr>
+          <td>headers</td>
+          <td>Hücre içeriğinin bağlı olduğu başlığı belirtir.</td>
+          <td><em>header_id</em></td>
+          <td>
+            Hücre içeriğinin bağlı olduğu bir veya daha fazla başlığın id
+            değerini belirtir.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Toplu Örnek -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <table border="1">
+        <tr>
+          <th>Ad</th>
+          <th>Soyad</th>
+          <th>Yaş</th>
+        </tr>
+        <tr>
+          <td>Ahmet</td>
+          <td>Yılmaz</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Ayşe</td>
+          <td>Kara</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Mehmet</td>
+          <td>Demir</td>
+          <td>28</td>
+        </tr>
+      </table>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <!-- <thead> Etiketi -->
+    <div>
+      <strong>&lt;thead&gt; :</strong> Tablo başlık kısmını gruplar. İçinde
+      genellikle &lt;tr&gt; ve &lt;th&gt; etiketleri bulunur. Tablo yapısını
+      daha anlamlı hale getirir.
+    </div>
+
+    <!-- <tbody> Etiketi -->
+    <div>
+      <strong>&lt;tbody&gt; :</strong> Tablonun ana veri kısmını gruplar.
+      &lt;thead&gt; ve &lt;tfoot&gt; dışında kalan tüm &lt;tr&gt;’leri içerir.
+    </div>
+
+    <!-- <tfoot> Etiketi -->
+    <div>
+      <strong>&lt;tfoot&gt; :</strong> Tabloya ait dipnot, toplam gibi verilerin
+      bulunduğu alt kısmı tanımlar. Görsel olarak altta görünse de kodda
+      &lt;thead&gt; ve &lt;tbody&gt;’den önce yazılması önerilir.
+    </div>
+
+    <!-- Toplu Örnek -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <table border="1">
+        <thead>
+          <tr>
+            <th colspan="3">Öğrenci Bilgileri</th>
+          </tr>
+          <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Not</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td>Ali</td>
+            <td>Yılmaz</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>Ayşe</td>
+            <td>Demir</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Mehmet</td>
+            <td>Can</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>Koç</td>
+            <td>80</td>
+          </tr>
+        </tbody>
+        
+        <tfoot>
+          <tr>
+            <td colspan="2">Ortalama</td>
+            <td>82.5</td>
+          </tr>
+        </tfoot>
+      </table>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <!-- <caption> Etiketi -->
+    <div>
+      <strong>&lt;caption&gt; :</strong> Tablonun başlığıdır. &lt;table&gt;
+      etiketinin hemen içinde ve en üstte yer almalıdır. Tabloya açıklayıcı bir
+      başlık verir.
+    </div>
+
+    <!-- <caption> Özellikleri -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;caption&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="4">align</td>
+          <td rowspan="4">Başlığın hizalanmasını belirtir.</td>
+          <td>left</td>
+          <td>Başlığın tablonun solunda olduğunu belirtir.</td>
+        </tr>
+        <tr>
+          <td>right</td>
+          <td>Başlığın tablonun sağında olduğunu belirtir.</td>
+        </tr>
+        <tr>
+          <td>top</td>
+          <td>Başlığın tablonun üstünde olduğunu belirtir.</td>
+        </tr>
+        <tr>
+          <td>bottom</td>
+          <td>Başlığın tablonun altında olduğunu belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <colgroup> Etiketi -->
+    <div>
+      <strong>&lt;colgroup&gt; :</strong> Tablodaki sütunları gruplayıp topluca
+      stil veya genişlik atamak için kullanılır.
+    </div>
+
+    <!-- <colgroup> Özellikleri -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;colgroup&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>span</td>
+          <td>Birleşecek sütun sayısını belirtir.</td>
+          <td><em>number</em></td>
+          <td>Birleşecek sütun sayısını belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <col> Etiketi -->
+    <div>
+      <strong>&lt;col&gt; :</strong> Tablodaki tek bir sütunu temsil eder.
+      Genellikle &lt;colgroup&gt; içinde kullanılır ve stil vermek için tercih
+      edilir.
+    </div>
+
+    <!-- <col> Özellikleri -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;col&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>span</td>
+          <td>Birleşecek sütun sayısını belirtir.</td>
+          <td><em>number</em></td>
+          <td>Birleşecek sütun sayısını belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Toplu Örnek -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <table border="1">
+        <caption align="top">Person Information</caption>
+        <colgroup>
+          <col span="1" style="background-color: pink;">
+          <col span="2" style="background-color: aqua;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Person 1</th>
+            <th>Person 2</th>
+            <th>Person 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Emil</td>
+            <td>Tobias</td>
+            <td>Linus</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>14</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="editor.js"></script>
+  </body>
+</html>

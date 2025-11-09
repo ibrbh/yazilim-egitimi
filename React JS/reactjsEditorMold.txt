@@ -1,0 +1,17 @@
+<div class="react-editor" data-editor>
+  <div class="editor-header">
+    Editör 1
+    <button class="run-btn">Çalıştır</button>
+  </div>
+  <textarea class="react-code">
+function App() {
+  return (
+    <div className="App">
+    </div>
+  );
+}
+ReactDOM.render(<App />, document.getElementById('root'));
+    </textarea
+  >
+  <iframe class="output"></iframe>
+</div>
