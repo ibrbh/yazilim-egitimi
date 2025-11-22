@@ -1,20 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Link Ekleme</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
     />
   </head>
+
   <body>
     <a href="index.html">Ana Sayfa</a>
     <hr />
-    <h1></h1>
+    <h1>Link Ekleme</h1>
+
+    <!-- <a> Etiketi -->
+    <div>
+      <strong>&lt;a&gt; : </strong>Bağlantı metinleri oluşturmak için
+      kullanılır, bağlantılar başka sayfalara geçiş için kullanılır. Bu etiketin
+      en önemli özelliği href özelliğidir. Bu özellik ile bağlantı oluşturmak
+      istediğimiz sayfanın URL'u belirtilir. Varsayılan olarak, tüm
+      tarayıcılarda linkler şu şekilde gözükür; ziyaret edilmemiş linkler mavi
+      renkte ve altı çizili, ziyaret edilmiş linkler mor ve altı çizili, link
+      aktifken kırmızı renkte ve altı çizili gözükür.
+    </div>
+
+    <!-- <a> Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">&lt;a&gt; Özellikleri ve Değerleri</th>
+        </tr>
+        <tr>
+          <td>Özellik</td>
+          <td>Tanım</td>
+          <td>Değer</td>
+          <td>Tanım</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>download</td>
+          <td>
+            Kullanıcı bağlantıya tıkladığında hedefin indirileceğini belirtir
+          </td>
+          <td><em>filename</em></td>
+          <td>İndirilecek dosyanın ismini belirtir.</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">href</td>
+          <td rowspan="2">Bağlantı verilen sayfanın URL adresini belirtir.</td>
+          <td><em>URL</em></td>
+          <td>Bağlantının URL’ ını belirtir.</td>
+        </tr>
+        <tr>
+          <td><em>#</em></td>
+          <td>Mevcut sayfanın üst kısmına bağlantı vermek için kullanılır.</td>
+        </tr>
+
+        <tr>
+          <td>hreflang</td>
+          <td>Bağlantı verilen sayfanın dil kodlamasını belirtir.</td>
+          <td><em>language_code</em></td>
+          <td>
+            Bağlantı oluşturulan sayfanın iki karakterli dil kodunu belirtir.
+          </td>
+        </tr>
+
+        <tr>
+          <td>media</td>
+          <td>
+            Bağlantı verilen adresin hangi medya / cihaz için optimize
+            edildiğini tanımlar.
+          </td>
+          <td><em>media_query</em></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td rowspan="12">rel</td>
+          <td rowspan="12">
+            Geçerli sayfa ile bağlantı verilmiş sayfa arasındaki ilişkiyi
+            belirtir.
+          </td>
+          <td>alternate</td>
+          <td>
+            Sayfanın farklı versiyonlarını belirtir. (Örn: Yazdırma, çevrilmiş
+            sayfa vb.)
+          </td>
+        </tr>
+        <tr>
+          <td>author</td>
+          <td>Sayfanın yazarını belirtir.</td>
+        </tr>
+        <tr>
+          <td>bookmark</td>
+          <td>Yer imi için kalıcı URL belirtir.</td>
+        </tr>
+        <tr>
+          <td>help</td>
+          <td>Yardım belgesini belirtir.</td>
+        </tr>
+        <tr>
+          <td>license</td>
+          <td>Belgenin telif hakkı bilgilerini belirtir.</td>
+        </tr>
+        <tr>
+          <td>next</td>
+          <td>Bir sonraki sayfayı belirtir.</td>
+        </tr>
+        <tr>
+          <td>nofollow</td>
+          <td>Bağlantının takip edilmeyeceğini belirtir.</td>
+        </tr>
+        <tr>
+          <td>noreferrer</td>
+          <td>
+            Kullanıcı bağlantıyı takip ederse tarayıcının HTTP referer başlığını
+            göndermemesini belirtir.
+          </td>
+        </tr>
+        <tr>
+          <td>prefetch</td>
+          <td>Hedef sayfanın ön belleğe alınmasını belirtir.</td>
+        </tr>
+        <tr>
+          <td>prev</td>
+          <td>Bir önceki sayfayı belirtir.</td>
+        </tr>
+        <tr>
+          <td>search</td>
+          <td>Belgenin arama aracı olduğunu belirtir.</td>
+        </tr>
+        <tr>
+          <td>tag</td>
+          <td>Geçerli belge için anahtar kelime belirtir.</td>
+        </tr>
+
+        <tr>
+          <td rowspan="5">target</td>
+          <td rowspan="5">Bağlantının nerede açılacağını belirtir.</td>
+          <td>_blank</td>
+          <td>Belgeyi yeni bir pencerede veya sekmede açar.</td>
+        </tr>
+        <tr>
+          <td>_parent</td>
+          <td>Belgeyi aynı çerçeve içerisinde açar. (Varsayılan)</td>
+        </tr>
+        <tr>
+          <td>_self</td>
+          <td>Belgeyi ana frame'de açar.</td>
+        </tr>
+        <tr>
+          <td>_top</td>
+          <td>Belgeyi pencerenin gövdesinde açar.</td>
+        </tr>
+        <tr>
+          <td><em>framename</em></td>
+          <td>Belgeyi ismi belirten frame üzerinde açar.</td>
+        </tr>
+
+        <tr>
+          <td>type</td>
+          <td>Bağlantının MIME tipini belirtir.</td>
+          <td><em>media_type</em></td>
+          <td>Bağlantının MIME tipini belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Link Örnek -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <a href="https://www.google.com/" target="_parent">Google</a> <!-- Varsayılan -->
+      <a href="https://www.google.com/" target="_blank">Google</a>
+      <a href="https://www.google.com/" target="_self">Google</a>
+      <a href="https://www.google.com/" target="_top">Google</a>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>

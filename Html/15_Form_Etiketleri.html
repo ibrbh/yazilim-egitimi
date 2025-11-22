@@ -1,26 +1,1674 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
-    />
-  </head>
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1></h1>
+<html lang="tr">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Form Etiketleri</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Form Etiketleri</h1>
+
+  <!-- <form> Etiketi -->
+  <div>
+    <strong>&lt;form&gt; : </strong>Kullanıcı girişleri oluşturmak için HTML
+    formları oluşturur.
+  </div>
+
+  <!-- <form> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;form&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>accept-charset</td>
+        <td>
+          Form göndermek için kullanılacak karakter kodlamasını belirtir.
+        </td>
+        <td><em>character_set</em></td>
+        <td>
+          Form gönderilirken kullanılacak bir veya daha fazla karakter
+          kodlamasını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>action</td>
+        <td>Form verilerinin nereye gönderileceğini belirtir.</td>
+        <td><em>URL</em></td>
+        <td>Verilerin gönderileceği URL adresini belirtir.</td>
+      </tr>
+      <tr>
+        <td rowspan="2">autocomplete</td>
+        <td rowspan="2">
+          Otomatik tamamlama özelliğinin açık veya kapalı olacağını belirtir.
+        </td>
+        <td>on</td>
+        <td>
+          Varsayılan. Tarayıcı daha önceden girilmiş verileri açılır şekilde
+          gösterir.
+        </td>
+      </tr>
+      <tr>
+        <td>off</td>
+        <td>
+          Kullanıcı alanı kendisi doldurmak zorundadır. Tarayıcı açılır liste
+          göstermez.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">enctype</td>
+        <td rowspan="3">
+          Form verilerinin sunucuya gönderilirken nasıl kodlanacağını
+          belirtir.
+        </td>
+        <td>application/x-www-form-urlencoded</td>
+        <td>
+          Varsayılan. Tüm karakterlerin gönderilmeden önce kodlanacağını
+          belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>multipart/form-data</td>
+        <td>
+          ASCII olmayan verilerin gönderilmesi için kullanılır. (Dosya yükleme
+          vb.)
+        </td>
+      </tr>
+      <tr>
+        <td>text/plain</td>
+        <td>
+          Boşluk tuşlarının "+" sembolüne, diğer karakterlerin
+          kodlanmayacağını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">method</td>
+        <td rowspan="2">
+          Form verilerinin gönderilirken hangi http yönteminin kullanılacağını
+          belirtir.
+        </td>
+        <td>get</td>
+        <td>Form verileri URL'a ekler: URL?isim=deger&isim=deger</td>
+      </tr>
+      <tr>
+        <td>post</td>
+        <td>Form verilerini Http mesajı olarak gönderir.</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>Formun ismini belirtir.</td>
+        <td><em>text</em></td>
+        <td>Formun ismini belirtir.</td>
+      </tr>
+      <tr>
+        <td>novalidate</td>
+        <td>Form verilerinin doğrulanmamasını belirtir.</td>
+        <td>novalidate</td>
+        <td>
+          Novalidate özelliği boolean türünde bir özelliktir. Tanımlandığında
+          form verilerinin doğrulanması gerektiğini belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="10">rel</td>
+        <td rowspan="10">
+          Bağlı bir kaynak ile geçerli belge arasındaki ilişkiyi belirtir.
+        </td>
+        <td>external</td>
+        <td>
+          Başvurulan belgenin geçerli sitenin bir parçası olmadığını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>help</td>
+        <td>Yardım belgesine bağlantılar.</td>
+      </tr>
+      <tr>
+        <td>license</td>
+        <td>Belgenin telif hakkı bilgilerine bağlantılar.</td>
+      </tr>
+      <tr>
+        <td>next</td>
+        <td>Seçimdeki sonraki belge.</td>
+      </tr>
+      <tr>
+        <td>nofollow</td>
+        <td>
+          Ücretli bir bağlantı gibi onaylanmamış bir belgeye bağlantılar
+          ("nofollow" Google tarafından bağlantının takip edilmemesi için
+          kullanılır).
+        </td>
+      </tr>
+      <tr>
+        <td>noopener</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>noreferrer</td>
+        <td>
+          Kullanıcı bağlantıyı takip ederse tarayıcının bir HTTP yönlendirme
+          başlığı göndermemesi gerektiğini belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>opener</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>prev</td>
+        <td>Seçimdeki önceki belge.</td>
+      </tr>
+      <tr>
+        <td>search</td>
+        <td>Belge için bir arama aracına bağlantılar.</td>
+      </tr>
+      <tr>
+        <td rowspan="5">target</td>
+        <td rowspan="5">
+          Form verileri gönderildikten sonra yanıtın nerede görüntüleneceğini
+          belirtir.
+        </td>
+        <td>_blank</td>
+        <td>Yanıtı yeni bir pencerede veya sekmede açar.</td>
+      </tr>
+      <tr>
+        <td>_self</td>
+        <td>Yanıtı aynı çerçeve içerisinde açar. (Varsayılan)</td>
+      </tr>
+      <tr>
+        <td>_parent</td>
+        <td>Yanıtı ana frame'de açar.</td>
+      </tr>
+      <tr>
+        <td>_top</td>
+        <td>Yanıtı pencerenin gövdesinde açar.</td>
+      </tr>
+      <tr>
+        <td><em>framename</em></td>
+        <td>Yanıtı ismi belirten frame üzerinde açar.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <input> Etiketi -->
+  <div>
+    <strong>&lt;input&gt; : </strong>Kullanıcının veri girişi yapabileceği
+    giriş alanı tanımlar. &lt;input&gt; etiketi &lt;form&gt; etiketi
+    içerisinde kullanılır. Giriş alanları, type özelliğine bağlı olarak
+    çeşitli şekillerde olabilir.
+  </div>
+
+  <!-- <input> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;input&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="23">type</td>
+        <td rowspan="23">Giriş alanının görüntülenme türünü belirtir.</td>
+        <td>button</td>
+        <td>Tıklanabilir düğme tanımlar.</td>
+      </tr>
+      <tr>
+        <td>checkbox</td>
+        <td>Onay kutusu tanımlar.</td>
+      </tr>
+      <tr>
+        <td>color</td>
+        <td>Renk seçici tanımlar.</td>
+      </tr>
+      <tr>
+        <td>date</td>
+        <td>Tarih kontrolü tanımlar. (Saat hariç)</td>
+      </tr>
+      <tr>
+        <td>datetime</td>
+        <td>Tarih ve saat kontrolü tanımlar.</td>
+      </tr>
+      <tr>
+        <td>datetime-local</td>
+        <td>Tarih ve saat kontrolü tanımlar.</td>
+      </tr>
+      <tr>
+        <td>email</td>
+        <td>E-posta adresi tanımlar.</td>
+      </tr>
+      <tr>
+        <td>file</td>
+        <td>Bir dosya seçin (Gözat) tanımlar. (Dosya yüklemeleri için)</td>
+      </tr>
+      <tr>
+        <td>hidden</td>
+        <td>Gizli giriş alanı tanımlar.</td>
+      </tr>
+      <tr>
+        <td>image</td>
+        <td>Submit için bir görüntü tanımlar.</td>
+      </tr>
+      <tr>
+        <td>month</td>
+        <td>Ay ve yıl kontrolü tanımlar.</td>
+      </tr>
+      <tr>
+        <td>number</td>
+        <td>Sayı girilmesi için bir alan tanımlar.</td>
+      </tr>
+      <tr>
+        <td>password</td>
+        <td>Parola alanı tanımlar. (Girilen karakterler gizlenir.)</td>
+      </tr>
+      <tr>
+        <td>radio</td>
+        <td>Radyo düğmesi tanımlar.</td>
+      </tr>
+      <tr>
+        <td>range</td>
+        <td>Kaydırma çubuğu (slider) tanımlar.</td>
+      </tr>
+      <tr>
+        <td>reset</td>
+        <td>Sıfırla düğmesi tanımlar. (reset)</td>
+      </tr>
+      <tr>
+        <td>search</td>
+        <td>Arama için metin alanı tanımlar.</td>
+      </tr>
+      <tr>
+        <td>submit</td>
+        <td>Gönder butonu tanımlar. (submit)</td>
+      </tr>
+      <tr>
+        <td>tel</td>
+        <td>Telefon numarası girmek için bir alan tanımlar.</td>
+      </tr>
+      <tr>
+        <td>text</td>
+        <td>
+          Varsayılan. Tek satırlık metin alanı tanımlar. (Varsayılan genişlik
+          20)
+        </td>
+      </tr>
+      <tr>
+        <td>time</td>
+        <td>Saat dilimi tanımlar.</td>
+      </tr>
+      <tr>
+        <td>url</td>
+        <td>URL girmek için bir alan tanımlar.</td>
+      </tr>
+      <tr>
+        <td>week</td>
+        <td>Hafta ve yıl kontrolü tanımlar.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <input> Örnek 1 -->
+  <div class="editor" data-editor>
+    <div class="editorTextareaGroup">
+      <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        1-<input type="button"><br>
+        2-<input type="checkbox"><br>
+        3-<input type="color"><br>
+        4-<input type="date"><br>
+        5-<input type="datetime"><br>
+        6-<input type="datetime-local"><br>
+        7-<input type="email"><br>
+        8-<input type="file"><br>
+        9-<input type="hidden"><br>
+        10-<input type="image"><br>
+        11-<input type="month"><br>
+        12-<input type="number"><br>
+        13-<input type="password"><br>
+        14-<input type="radio"><br>
+        15-<input type="range"><br>
+        16-<input type="reset"><br>
+        17-<input type="search"><br>
+        18-<input type="submit"><br>
+        19-<input type="tel"><br>
+        20-<input type="text"><br>
+        21-<input type="time"><br>
+        22-<input type="url"><br>
+        23-<input type="week"><br>
+      </form>
+    </body>
+  </html>
+    </textarea>
+      <button class="editorButton">Çalıştır</button>
+    </div>
+    <iframe class="editorIframe"></iframe>
+  </div>
+
+  <!-- Diğer <input> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Diğer &lt;input&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">accept</td>
+        <td rowspan="4">Sunucunun kabul ettiği dosya türlerini belirtir.</td>
+        <td>audio/*</td>
+        <td>Tüm ses dosyaları kabul edilir.</td>
+      </tr>
+      <tr>
+        <td>video/*</td>
+        <td>Tüm video dosyaları kabul edilir.</td>
+      </tr>
+      <tr>
+        <td>image/*</td>
+        <td>Tüm resim dosyaları kabul edilir.</td>
+      </tr>
+      <tr>
+        <td><em>media_type</em></td>
+        <td>Gönderilen, yüklenen verinin MIME türünü belirtir.</td>
+      </tr>
+      <tr>
+        <td rowspan="5">align</td>
+        <td rowspan="5">
+          Etrafındaki nesnelere göre nasıl hizalanacağını belirtir.
+        </td>
+        <td>left</td>
+        <td>Görüntü sola hizalanır. (Varsayılan)</td>
+      </tr>
+      <tr>
+        <td>right</td>
+        <td>Görüntü sağa hizalanır.</td>
+      </tr>
+      <tr>
+        <td>middle</td>
+        <td>Görüntü ortalanır.</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>Görüntü yukarı hizalanır.</td>
+      </tr>
+      <tr>
+        <td>bottom</td>
+        <td>Görüntü aşağı hizalanır.</td>
+      </tr>
+      <tr>
+        <td>alt</td>
+        <td>Görüntü yerine alternatif metin belirtir.</td>
+        <td><em>text</em></td>
+        <td>
+          Görüntü yüklenmez ise, resim yerine gösterilecek alternatif metni
+          belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">autocomplete</td>
+        <td rowspan="2">
+          Otomatik tamamlama özelliğinin açık veya kapalı olacağını belirtir.
+        </td>
+        <td>on</td>
+        <td>
+          Varsayılan. Otomatik tamamlamanın açık olduğunu belirtir. (etkin)
+        </td>
+      </tr>
+      <tr>
+        <td>off</td>
+        <td>Otomatik tamamlamanın kapalı olduğunu belirtir. (etkin değil)</td>
+      </tr>
+      <tr>
+        <td>autofocus</td>
+        <td>Nesneye otomatik olarak odaklanılacağını belirtir.</td>
+        <td>autofocus</td>
+        <td>
+          Autofocus özelliği boolean türünde bir özelliktir. Bu özellik
+          tanımlandığında sayfa yüklendikten sonra tanımlanan nesnenin
+          odaklanacağını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>checked</td>
+        <td>
+          Seçilmesi istenen nesnelerin sayfa yüklendikten sonra seçileceğini
+          belirtir.
+        </td>
+        <td>checked</td>
+        <td>
+          Checked özelliği boolean türünde bir özelliktir. Bu özellik
+          tanımlandığında, sayfa yüklendikten sonra seçilmesi istenen nesneler
+          seçilir. Checked özelliği type="checkbox" veya type="radio" ile
+          kullanılabilir. Checked özelliği sayfa yüklendikten sonra JavaScript
+          kullanarakta seçili hale getirilebilir.
+        </td>
+      </tr>
+      <tr>
+        <td>dirname</td>
+        <td>Metin yönünün gönderileceğini belirtir.</td>
+        <td><em>inputname.dir</em></td>
+        <td>Giriş alanının metin yönünün gönderileceğini belirtir.</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>Nesnenin devre dışı bırakılacağını belirtir.</td>
+        <td>disabled</td>
+        <td>
+          Disabled özelliği boolean türünde bir özelliktir. Bu özellik
+          tanımlandıysa, giriş alanı devre dışı bırakılır. Giriş alanına
+          disabled özelliği tanımlanmış ise, kullanılamaz ve tıklanamaz.
+          Disabled özelliği giriş alanında gerekli yerlerin doldurulması veya
+          seçilmesinden sonra, JavaScript ile kullanılabilir duruma
+          getirilebilir. Form verileri gönderilirken disabled özelliğini
+          kullanan giriş elemanlarının verileri gönderilmez. Disabled özelliği
+          type="hidden" tanımlaması ile çalışmaz (kullanılmaz).
+        </td>
+      </tr>
+      <tr>
+        <td>form</td>
+        <td>
+          Giriş alanının ait olduğu form veya birden fazla formu belirtir.
+        </td>
+        <td><em>form-id</em></td>
+        <td>
+          Giriş alanının ait olduğu bir veya aralarında boşluk bırakarak daha
+          fazla form tanımlanmasını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>formaction</td>
+        <td>Form verilerinin nereye gönderileceğini belirtir.</td>
+        <td><em>URL</em></td>
+        <td>Form verilerinin gönderileceği URL'u belirtir.</td>
+      </tr>
+      <tr>
+        <td rowspan="3">formenctype</td>
+        <td rowspan="3">
+          Form verilerinin sunucuya gönderilmeden önce nasıl kodlanacağını
+          belirtir.
+        </td>
+        <td>application/x-www-form-urlencoded</td>
+        <td>
+          Varsayılan. Tüm karakterlerin gönderilmeden önce kodlanacağını
+          belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>multipart/form-data</td>
+        <td>
+          ASCII olmayan verilerin gönderilmesi için kullanılır. (Dosya yükleme
+          vb.)
+        </td>
+      </tr>
+      <tr>
+        <td>text/plain</td>
+        <td>
+          Boşluk tuşlarının "+" sembolüne, diğer karakterlerin
+          kodlanmayacağını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">formmethod</td>
+        <td rowspan="2">
+          Form verileri gönderilirken hangi HTTP yönteminin kullanılacağını
+          belirtir.
+        </td>
+        <td>get</td>
+        <td>Form verilerini URL'a ekler: URL?isim=deger&amp;isim=deger</td>
+      </tr>
+      <tr>
+        <td>post</td>
+        <td>Form verilerini Http mesajı olarak gönderir.</td>
+      </tr>
+      <tr>
+        <td>formnovalidate</td>
+        <td>Form verileri gönderilirken doğrulama gerekmediğini belirtir.</td>
+        <td>formnovalidate</td>
+        <td>
+          Formnovalidate özelliği boolean türünde bir özelliktir. Bu özellik
+          tanımlandıysa, form verileri gönderilirken doğrulama gerekmediğini
+          tanımlar. Bu özellik formun novalidate özelliğini geçersiz kılar.
+          Formnovalidate özelliği sadece type="submit" değeri tanımlanmış
+          giriş alanları için kullanılabilir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">formtarget</td>
+        <td rowspan="5">
+          Form verileri gönderildikten sonra yanıtın nerede görüntüleneceğini
+          belirtir.
+        </td>
+        <td>_blank</td>
+        <td>Yanıtı yeni bir pencerede veya sekmede açar.</td>
+      </tr>
+      <tr>
+        <td>_self</td>
+        <td>Yanıtı aynı çerçeve içerisinde açar. (Varsayılan)</td>
+      </tr>
+      <tr>
+        <td>_parent</td>
+        <td>Yanıtı ana frame'de açar.</td>
+      </tr>
+      <tr>
+        <td>_top</td>
+        <td>Yanıtı pencerenin gövdesinde açar.</td>
+      </tr>
+      <tr>
+        <td><em>framename</em></td>
+        <td>Yanıtı ismi belirten frame üzerinde açar.</td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>Giriş alanının yüksekliğini belirtir.</td>
+        <td><em>pixels</em></td>
+        <td>Yüksekliği piksel cinsinden belirtir. 100px = 100</td>
+      </tr>
+      <tr>
+        <td>list</td>
+        <td>Açılır liste ile eşleştiricek değeri belirtir.</td>
+        <td><em>datalist-id</em></td>
+        <td>
+          &lt;datalist&gt; ile oluşturulmuş açılır listenin id değerini
+          belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">max</td>
+        <td rowspan="2">
+          Giriş alanının alabileceği maksimum değeri belirtir.
+        </td>
+        <td><em>number</em></td>
+        <td>Giriş alanı için maksimum değeri belirtir.</td>
+      </tr>
+      <tr>
+        <td><em>date</em></td>
+        <td>Giriş alanı için maksimum tarihi belirtir.</td>
+      </tr>
+      <tr>
+        <td>maxlength</td>
+        <td>
+          Giriş alanının alabileceği maksimum karakter sayısını belirtir.
+        </td>
+        <td><em>number</em></td>
+        <td>
+          Giriş alanının alabileceği maksimum karakter sayısını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">min</td>
+        <td rowspan="2">
+          Giriş alanının alabileceği minimum değeri belirtir.
+        </td>
+        <td><em>number</em></td>
+        <td>Giriş alanı için minimum değeri belirtir.</td>
+      </tr>
+      <tr>
+        <td><em>date</em></td>
+        <td>Giriş alanı için minimum tarihi belirtir.</td>
+      </tr>
+      <tr>
+        <td>multiple</td>
+        <td>Giriş alanına birden fazla değer girilebileceğini belirtir.</td>
+        <td>multiple</td>
+        <td>
+          Multiple özelliği boolean türünde bir özelliktir. Tanımlandığında
+          giriş alanı için birden fazla değer girebilmeyi belirtir. Bu özellik
+          şu giriş alanları ile çalışır: email ve file.
+        </td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>Giriş alanının ismini belirtir.</td>
+        <td><em>text</em></td>
+        <td>&lt;input&gt; etiketinin adını belirtir.</td>
+      </tr>
+      <tr>
+        <td>pattern</td>
+        <td>
+          Giriş alanına girilen değer ile regexp değerinin denetleneceğini
+          belirtir.
+        </td>
+        <td><em>regexp</em></td>
+        <td>
+          Giriş alanı ile karşılaştırılmak istenen düzeni belirtir. A-Z] Büyük
+          harfler kullanılabilir. [a-z] Küçük harfler kullanılabilir. [0-9]
+          Rakamlar kullanılabilir. Büyük ve küçük harfler ile sadece üç
+          karakterden oluşan bir girişin yapılabilmesi; pattern="[A-Za-z]{3}"
+        </td>
+      </tr>
+      <tr>
+        <td>placeholder</td>
+        <td>
+          Giriş alanına girilmesi düşünülen değer ile ilgili ipucu belirtir.
+        </td>
+        <td><em>text</em></td>
+        <td>
+          Giriş alanına girilmesi istenen değer için bir ipucu belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>popovertarget</td>
+        <td>
+          Hangi açılır öğenin çağrılacağını belirtir (yalnızca type='button'
+          için)
+        </td>
+        <td><em>element_id</em></td>
+        <td>Bu butonla ilgili açılır öğenin kimliğidir.</td>
+      </tr>
+      <tr>
+        <td rowspan="3">popovertargetaction</td>
+        <td rowspan="3">
+          Düğmeye tıkladığınızda açılır öğeye ne olacağını belirtir (yalnızca
+          type="button" için)
+        </td>
+        <td>hide</td>
+        <td>Butona tıkladığınızda açılır öğe gizlenir.</td>
+      </tr>
+      <tr>
+        <td>show</td>
+        <td>Butona tıkladığınızda açılır öğe gösterilir.</td>
+      </tr>
+      <tr>
+        <td>toggle</td>
+        <td>
+          Varsayılan değer. Popover öğesi, butona tıkladığınızda gizleme ve
+          gösterme arasında geçiş yapar.
+        </td>
+      </tr>
+      <tr>
+        <td>readonly</td>
+        <td>Bir giriş alanının salt okunur olduğunu belirtir.</td>
+        <td>readonly</td>
+        <td>
+          Readonly özelliği boolean türünde bir özelliktir. Tanımlandıysa,
+          giriş alanının salt okunur olduğunu belirtir. Salt okunur içerikler
+          değiştirilemez. (TAB tuşu ile öğeler gezilirken seçili duruma gelir
+          ve kopyalanabilir.) Readonly özelliği giriş alanında gerekli
+          yerlerin doldurulması veya seçilmesinden sonra, JavaScript ile
+          değiştirilebilir duruma getirilebilir.
+        </td>
+      </tr>
+      <tr>
+        <td>required</td>
+        <td>Giriş alanının doldurulması gerektiğini belirtir.</td>
+        <td>required</td>
+        <td>
+          Required özelliği boolean türünde bir özelliktir. Bu özellik
+          tanımlandığında form gönderilmeden önce giriş alanının doldurulması
+          gerektiğini belirtir. Required özelliği şu giriş alanlar ile
+          çalışabilir: text, search, url, tel, email, password, date pickers,
+          number, checkbox, radio ve file.
+        </td>
+      </tr>
+      <tr>
+        <td>size</td>
+        <td>Giriş alanının doldurulması gerektiğini belirtir.</td>
+        <td><em>number</em></td>
+        <td>
+          Giriş alanının genişliğini karakter sayısı olarak belirtir.
+          (Varsayılan 20'dir.)
+        </td>
+      </tr>
+      <tr>
+        <td>src</td>
+        <td>
+          Gönder düğmesi olarak kullanılacak görüntünün URL adresini belirtir.
+        </td>
+        <td><em>URL</em></td>
+        <td>Görüntünün URL'ını belirtir.</td>
+      </tr>
+      <tr>
+        <td rowspan="2">step</td>
+        <td rowspan="2">Giriş alanı için artış eksiliş sayısı belirtir.</td>
+        <td><em>number</em></td>
+        <td>Giriş alanı için artış / eksiliş sayısı belirtir.</td>
+      </tr>
+      <tr>
+        <td>any</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>Giriş alanının değerini belirtir.</td>
+        <td><em>text</em></td>
+        <td>Giriş alanı için artış / eksiliş sayısı belirtir.</td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>Giriş alanının genişliğini belirtir.</td>
+        <td><em>pixels</em></td>
+        <td>Genişliği piksel cinsinden belirtir. 100px = 100</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <input> Örnek 2 -->
+  <div class="editor" data-editor>
+    <div class="editorTextareaGroup">
+      <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        1-<input type="text" value="John"><br>
+        2-<input type="text" value="John" readonly><br>
+        3-<input type="text" value="John" disabled><br>
+        4-<input type="text" size="30"><br>
+        5-<input type="text" size="30" maxlength="3"><br>
+        6-<input type="date" min="2000-01-02"><br>
+        7-<input type="number" min="1" max="5"><br>
+        8-<input type="file" multiple><br>
+        9-<input type="text" pattern="[A-Za-z]{3}"><br>
+        10-<input type="tel" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+        11-<input type="text" required><br>
+        12-<input type="number" step="3"><br>
+        13-<input type="text" autofocus><br>
+      </form>
+    </body>
+  </html>
+    </textarea>
+      <button class="editorButton">Çalıştır</button>
+    </div>
+    <iframe class="editorIframe"></iframe>
+  </div>
+
+  <!-- <label> Etiketi -->
+  <div>
+    <strong>&lt;label&gt; : </strong>&lt;input&gt; etiketi için bir başlık
+    tanımlar. &lt;label&gt; etiketi tarayıcılarda özel bir şekilde
+    gösterilmez. Label etiketine tıklandığında giriş alanındaki kontrol
+    değişir, kullanıcılar için kolaylık sağlar. &lt;label&gt; etiketinin for
+    özelliği ile &lt;input&gt; etiketinin id özellikleri eşitlenmelidir.
+  </div>
+
+  <!-- <label> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;label&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>for</td>
+        <td>
+          For özelliği başlığın hangi form etiketine bağlı olduğunu belirtir.
+        </td>
+        <td><em>input-id</em></td>
+        <td>Ait olduğu giriş alanının id değerini belirtir.</td>
+      </tr>
+      <tr>
+        <td>form</td>
+        <td>Başlığın ait olduğu bir veya daha fazla form tanımlar.</td>
+        <td><em>form-id</em></td>
+        <td>
+          Başlığın ait olduğu bir veya aralarında boşluk bırakarak daha fazla
+          form tanımlanmasını belirtir.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <label> Örnek -->
+  <div class="editor" data-editor>
+    <div class="editorTextareaGroup">
+      <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        <input type="radio" name="fav_langueage" id="html" value="HTML">
+        <label for="html">HTML</label>
+        <input type="radio" name="fav_langueage" id="css" value="CSS">
+        <label for="css">CSS</label>
+        <input type="radio" name="fav_langueage" id="javascript" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+      </form>
+    </body>
+  </html>
+    </textarea>
+      <button class="editorButton">Çalıştır</button>
+    </div>
+    <iframe class="editorIframe"></iframe>
+  </div>
+
+  <!-- <textarea> Etiketi -->
+  <div>
+    <strong>&lt;textarea&gt; : </strong>Çok satırlı metin giriş alanları
+    tanımlar. Metin giriş alanına sınırsız karakter yazılabilir ve sabit
+    genişlikli yazı tipi(Courier) ile görüntülenir. Metin alanının boyutu cols
+    ve rows özellikleri ile belirtilebilir, CSS height ve width özellikleri
+    daha kullanışlıdır.
+  </div>
+
+  <!-- <textarea> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;textarea&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>autofocus</td>
+        <td>Metin alanının odaklanacağını belirtir.</td>
+        <td>autofocus</td>
+        <td>
+          Autofocus özelliği boolean türünde bir özelliktir. Sayfa
+          yüklendikten sonra metin alanı odaklanır.
+        </td>
+      </tr>
+      <tr>
+        <td>cols</td>
+        <td>Metin alanının görünen genişliğini belirtir.</td>
+        <td><em>number</em></td>
+        <td>
+          Metin alanının genişliği (ortalama karakter genişliği). Varsayılan
+          20.
+        </td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>Metin alanının devre dışı bırakılacağını belirtir.</td>
+        <td>disabled</td>
+        <td>
+          Boolean türünde bir özelliktir. Tanımlandığında alan kullanılamaz ve
+          tıklanamaz.
+        </td>
+      </tr>
+      <tr>
+        <td>form</td>
+        <td>Metin alanının ait olduğu bir veya daha fazla formu belirtir.</td>
+        <td><em>form-id</em></td>
+        <td>Bir veya birden fazla form tanımlanabilir.</td>
+      </tr>
+      <tr>
+        <td>maxlength</td>
+        <td>Maksimum karakter sayısını belirtir.</td>
+        <td><em>number</em></td>
+        <td>Metin alanına girilebilecek maksimum karakter sayısı.</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>Metin alanının ismini belirtir.</td>
+        <td><em>text</em></td>
+        <td>Alan adı.</td>
+      </tr>
+      <tr>
+        <td>placeholder</td>
+        <td>İpucu belirtir.</td>
+        <td><em>text</em></td>
+        <td>Metin alanına girilmesi istenen değer için ipucu.</td>
+      </tr>
+      <tr>
+        <td>readonly</td>
+        <td>Salt okunur olduğunu belirtir.</td>
+        <td>readonly</td>
+        <td>Boolean türünde. İçerik değiştirilemez ama kopyalanabilir.</td>
+      </tr>
+      <tr>
+        <td>required</td>
+        <td>Form gönderilmeden önce doldurulması gerektiğini belirtir.</td>
+        <td>required</td>
+        <td>Boolean türünde. Form gönderilmeden alan doldurulmalıdır.</td>
+      </tr>
+      <tr>
+        <td>rows</td>
+        <td>Metin alanının görünen yüksekliğini belirtir.</td>
+        <td><em>number</em></td>
+        <td>
+          Metin alanının yüksekliği (ortalama karakter yüksekliği). Varsayılan
+          2.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">wrap</td>
+        <td rowspan="2">Metin alanının nasıl paketleneceğini belirtir.</td>
+        <td>hard</td>
+        <td>Form gönderildiğinde metin alanı paketlenmez. Varsayılan.</td>
+      </tr>
+      <tr>
+        <td>soft</td>
+        <td>
+          Satır sonları içeren metin alanı paketlenir. Cols ile birlikte
+          kullanılmalıdır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <textarea> Örnek -->
+  <div class="editor" data-editor>
+    <div class="editorTextareaGroup">
+      <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        <textarea rows="4" cols="50">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dolores dicta explicabo ullam similique excepturi vero eos recusandae, ea porro temporibus sapiente qui odio delectus maiores, totam cum sint! Rerum?
+        </textarea>
+      </form>
+</body>
+
+</html>
+</textarea>
+<button class="editorButton">Çalıştır</button>
+</div>
+<iframe class="editorIframe"></iframe>
+</div>
+
+<!-- <option> Etiketi -->
+<div>
+  <strong>&lt;option&gt; : </strong>Seçim listesinde bir seçenek tanımlar.
+  &lt;option&gt; etiketi &lt;select&gt; veya &lt;datalist&gt; etiketleri
+  içerisinde kullanılmalıdır.
+</div>
+
+<!-- <option> Özellik Tablosu -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">&lt;option&gt; Özellikleri ve Değerleri</th>
+    </tr>
+    <tr>
+      <td>Özellik</td>
+      <td>Tanım</td>
+      <td>Değer</td>
+      <td>Tanım</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>disabled</td>
+      <td>Bir seçeneğin devre dışı bırakılacağını belirtir.</td>
+      <td>disabled</td>
+      <td>
+        Boolean türünde. Tanımlandığında öğe kullanılamaz ve tıklanamaz.
+        JavaScript ile sonradan aktif hâle getirilebilir.
+      </td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>Daha kısa bir etiket belirtir.</td>
+      <td><em>text</em></td>
+      <td>Seçim öğesi için görünür başlık tanımlar.</td>
+    </tr>
+    <tr>
+      <td>selected</td>
+      <td>Sayfa yüklendiğinde önceden seçili olacağını belirtir.</td>
+      <td>selected</td>
+      <td>
+        Boolean türünde. Tanımlandığında öğe sayfa yüklenince seçili olur.
+        JavaScript ile sonradan da seçilebilir.
+      </td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>Sunucuya gönderilecek değeri belirtir.</td>
+      <td><em>text</em></td>
+      <td>Sunucuya gönderilecek bilgiyi belirler.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <select> Etiketi -->
+<div>
+  <strong>&lt;select&gt; : </strong>Açılır listeler oluşturmak için
+  kullanılır. &lt;option&gt; etiketi &lt;select&gt; etiketi içerisinde
+  kullanılarak liste öğeleri tanımlamak için kullanılır.
+</div>
+
+<!-- <select> Özellik Tablosu -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">&lt;select&gt; Özellikleri ve Değerleri</th>
+    </tr>
+    <tr>
+      <td>Özellik</td>
+      <td>Tanım</td>
+      <td>Değer</td>
+      <td>Tanım</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>autofocus</td>
+      <td>
+        Sayfa yüklendiğinde açılır listenin otomatik olarak odaklanacağını
+        belirtir.
+      </td>
+      <td>autofocus</td>
+      <td>
+        Boolean türünde. Tanımlandığında açılır liste sayfa yüklenince
+        otomatik odaklanır.
+      </td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>Açılır listenin devre dışı bırakılacağını belirtir.</td>
+      <td>disabled</td>
+      <td>
+        Boolean türünde. Tanımlandığında liste kullanılamaz ve tıklanamaz.
+        JavaScript ile sonradan aktif hâle getirilebilir.
+      </td>
+    </tr>
+    <tr>
+      <td>form</td>
+      <td>Açılır listenin ait olduğu formu belirtir.</td>
+      <td><em>form_id</em></td>
+      <td>Bir veya birden fazla form tanımlanabilir.</td>
+    </tr>
+    <tr>
+      <td>multiple</td>
+      <td>Aynı anda birden fazla seçeneğin seçilebileceğini belirtir.</td>
+      <td>multiple</td>
+      <td>
+        Boolean türünde. Ctrl (Windows) veya Command (Mac) ile birden fazla
+        seçim yapılabilir. Çoklu seçim için checkbox kullanımı önerilir.
+      </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>Açılır liste için bir ad tanımlar.</td>
+      <td><em>name</em></td>
+      <td>Listenin adını belirtir.</td>
+    </tr>
+    <tr>
+      <td>required</td>
+      <td>
+        Kullanıcının formu göndermeden önce bir değer seçmesi gerektiğini
+        belirtir.
+      </td>
+      <td>required</td>
+      <td>
+        Boolean türünde. Tanımlandığında kullanıcı değer seçmeden form
+        gönderemez.
+      </td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>Görünür seçenek sayısını tanımlar.</td>
+      <td><em>number</em></td>
+      <td>Varsayılan 1. Multiple özelliği varsa varsayılan 4'tür.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <option>,<select> Örnek -->
+<div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="seat">Seat</option>
+          <option value="bmw">BMW</option>
+          <option value="audi">Audi</option>
+        </select>
+      </form>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+<!-- <datalist> Etiketi -->
+<div>
+  <strong>&lt;datalist&gt; : </strong>&lt;input&gt; etiketi için önceden
+  tanımlanmış açılabilir liste tanımlar. &lt;datalist&gt; etiketi "otomatik
+  tamamlama" özelliğini tanımlar. Kullanıcı veri girişi yaptığında önceden
+  tanımlanmış açılabilir liste gözükecektir. &lt;datalist&gt; etiketi
+  &lt;input&gt; etiketine bağlanırken input etiketinin list özelliği
+  kullanılır.
+</div>
+
+<!-- <datalist> Örnek -->
+<div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+          <option value="Edge"></option>
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+          <option value="Opera"></option>
+        </datalist>
+      </form>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+<!-- <optgroup> Etiketi -->
+<div>
+  <strong>&lt;optgroup&gt; : </strong>Açılır listede bulunan öğelerin
+  gruplanacağını tanımlar. Uzun bir açılır listeye sahipseniz ilgili
+  seçenekleri gruplamak kullanım açısından yararlıdır.
+</div>
+
+<!-- <optgroup> Özellik Tablosu -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">&lt;optgroup&gt; Özellikleri ve Değerleri</th>
+    </tr>
+    <tr>
+      <td>Özellik</td>
+      <td>Tanım</td>
+      <td>Değer</td>
+      <td>Tanım</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>disabled</td>
+      <td>
+        Boolean türünde. Tanımlandığında gruplanan öğeler devre dışı
+        bırakılır. JavaScript ile sonradan aktif hâle getirilebilir.
+      </td>
+      <td>disabled</td>
+      <td>
+        Boolean türünde. Tanımlandığında gruplanan öğeler devre dışı
+        bırakılır.
+      </td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>
+        Gruplanan öğeler için başlık tanımlar ve liste öğelerine göre koyu
+        renkte gösterilir.
+      </td>
+      <td><em>text</em></td>
+      <td>Grup için görünür bir başlık tanımlar.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <optgroup> Örnek -->
+<div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+          <optgroup label="Swedish Cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+          </optgroup>
+          <optgroup label="German Cars">
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </optgroup>
+        </select>
+      </form>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+<!-- <button> Etiketi -->
+<div>
+  <strong>&lt;button&gt; : </strong>Düğme tanımlar. &lt;button&gt; etiketi
+  içerisine resim veya metinler eklenebilir, &lt;input&gt; etiketi ile
+  oluşturulan düğmelerden en önemli farkı bu özelliktir. Her zaman
+  &lt;button&gt; etiketinin type özelliğini tanımlayın. Farklı tarayıcılar
+  varsayılan olarak başka bir değer atayabilir.
+</div>
+
+<!-- <button> Özellik Tablosu -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">
+        <strong>&lt;button&gt; Özellikleri ve Değerleri</strong>
+      </th>
+    </tr>
+    <tr>
+      <td><strong>Özellik</strong></td>
+      <td><strong>Tanım</strong></td>
+      <td><strong>Değer</strong></td>
+      <td><strong>Tanım</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>autofocus</td>
+      <td>
+        Sayfa yüklendiğinde bir düğmenin otomatik olarak odaklanması
+        gerektiğini belirtir.
+      </td>
+      <td>autofocus</td>
+      <td>
+        Sayfa yüklendiğinde bir düğmenin otomatik olarak odaklanması
+        gerektiğini belirtir.
+      </td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>Bir düğmenin devre dışı bırakılması gerektiğini belirtir.</td>
+      <td>disabled</td>
+      <td>Bir düğmenin devre dışı bırakılması gerektiğini belirtir.</td>
+    </tr>
+    <tr>
+      <td>form</td>
+      <td>Düğmenin hangi forma ait olduğunu belirtir.</td>
+      <td><em>form_id</em></td>
+      <td>
+        Düğmenin ait olduğu bir veya aralarında boşluk bırakarak daha fazla
+        form tanımlanmasını belirtir.
+      </td>
+    </tr>
+    <tr>
+      <td>formaction</td>
+      <td>
+        Bir form gönderildiğinde form verilerinin nereye gönderileceğini
+        belirtir. Yalnızca type="submit" için.
+      </td>
+      <td><em>URL</em></td>
+      <td>Form verilerinin gönderileceği URL'u belirtir.</td>
+    </tr>
+    <tr>
+      <td rowspan="3">formenctype</td>
+      <td rowspan="3">
+        Form verilerinin sunucuya gönderilmeden önce nasıl kodlanması
+        gerektiğini belirtir. Yalnızca type="submit" için.
+      </td>
+      <td>application/x-www-form-urlencoded</td>
+      <td>
+        Varsayılan. Tüm karakterlerin gönderilmeden önce kodlanacağını
+        belirtir.
+      </td>
+    </tr>
+    <tr>
+      <td>multipart/form-data</td>
+      <td>
+        ASCII olmayan verilerin gönderilmesi için kullanılır. (Dosya yükleme
+        vb.)
+      </td>
+    </tr>
+    <tr>
+      <td>text/plain</td>
+      <td>
+        Boşluk tuşlarının "+" sembolüne, diğer karakterlerin
+        kodlanmayacağını belirtir.
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">formmethod</td>
+      <td rowspan="2">
+        Form verilerinin nasıl gönderileceğini (hangi HTTP yönteminin
+        kullanılacağını) belirtir. Yalnızca type="submit" için.
+      </td>
+      <td>get</td>
+      <td>Form verileri URL'a ekler: URL?isim=deger&amp;isim=deger</td>
+    </tr>
+    <tr>
+      <td>post</td>
+      <td>Form verilerini Http mesajı olarak gönderir.</td>
+    </tr>
+    <tr>
+      <td>formnovalidate</td>
+      <td>
+        Form verilerinin gönderim sırasında doğrulanmaması gerektiğini
+        belirtir. Yalnızca type="submit" için.
+      </td>
+      <td>formnovalidate</td>
+      <td>
+        Form verilerinin gönderim sırasında doğrulanmaması gerektiğini
+        belirtir. Yalnızca type="submit" için.
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="5">formtarget</td>
+      <td rowspan="5">
+        Formu gönderdikten sonra yanıtın nerede görüntüleneceğini belirtir.
+        Yalnızca type="submit" için.
+      </td>
+      <td>_blank</td>
+      <td>Yanıtı yeni bir pencerede veya sekmede açar.</td>
+    </tr>
+    <tr>
+      <td>_self</td>
+      <td>Yanıtı aynı çerçeve içerisinde açar. (Varsayılan)</td>
+    </tr>
+    <tr>
+      <td>_parent</td>
+      <td>Yanıtı ana frame'de açar.</td>
+    </tr>
+    <tr>
+      <td>_top</td>
+      <td>Yanıtı pencerenin gövdesinde açar.</td>
+    </tr>
+    <tr>
+      <td><em>framename</em></td>
+      <td>Yanıtı ismi belirten frame üzerinde açar.</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>Düğme için bir ad belirtir.</td>
+      <td><em>name</em></td>
+      <td>Düğmenin ismini belirtir.</td>
+    </tr>
+    <tr>
+      <td rowspan="3">type</td>
+      <td rowspan="3">Düğmenin türünü belirtir.</td>
+      <td>button</td>
+      <td>Tıklanabilir düğme olduğunu belirtir.</td>
+    </tr>
+    <tr>
+      <td>reset</td>
+      <td>
+        Reset (sıfırla) düğmesi olduğunu belirtir. Form verilerini temizler.
+      </td>
+    </tr>
+    <tr>
+      <td>submit</td>
+      <td>
+        Submit (gönder) düğmesi olduğunu belirtir. Form verilerini gönderir.
+      </td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>Düğme için bir başlangıç değeri belirtir.</td>
+      <td><em>text</em></td>
+      <td>Düğme için başlangıç değerini belirtir.</td>
+    </tr>
+    <tr>
+      <td>popovertarget</td>
+      <td>Hangi açılır öğenin çağrılacağını belirtir.</td>
+      <td><em>element_id</em></td>
+      <td>Bu düğmeyle ilgili açılır öğenin kimliği.</td>
+    </tr>
+    <tr>
+      <td rowspan="3">popovertargetaction</td>
+      <td rowspan="3">
+        Düğmeye tıklandığında açılır öğeye ne olacağını belirtir.
+      </td>
+      <td>hide</td>
+      <td>Düğmeye tıkladığınızda açılır öğe gizlenir.</td>
+    </tr>
+    <tr>
+      <td>show</td>
+      <td>Düğmeye tıkladığınızda açılır öğe gösterilir.</td>
+    </tr>
+    <tr>
+      <td>toogle</td>
+      <td>
+        Varsayılan değer. Popover öğesi, düğmeye tıkladığınızda gizleme ve
+        gösterme arasında geçiş yapar.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <button> Örnek -->
+<div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        <button type="button">Click Me!</button>
+      </form>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+<!-- <fieldset> Etiketi-->
+<div>
+  <strong>&lt;fieldset&gt; : </strong>Form içerisindeki ilişkili elemanları
+  gruplandırır. &lt;fieldset&gt; etiketi ilişkili elemanları etrafına bir
+  kutu çizer.
+</div>
+
+<!-- <fieldset> Özellik Tablosu -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">
+        <strong>&lt;fieldset&gt; Özellikleri ve Değerleri</strong>
+      </th>
+    </tr>
+    <tr>
+      <td><strong>Özellik</strong></td>
+      <td><strong>Tanım</strong></td>
+      <td><strong>Değer</strong></td>
+      <td><strong>Tanım</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>disabled</td>
+      <td>Nesnenin kullanılamaz olduğunu belirtir.</td>
+      <td>disabled</td>
+      <td>Nesnenin kullanılamaz olduğunu belirtir.</td>
+    </tr>
+    <tr>
+      <td>form</td>
+      <td>Nesneye bir veya daha fazla form bağlar.</td>
+      <td><em>form_id</em></td>
+      <td>
+        Fieldset'in ait olduğu form veya formların (aralarında boşluk) id
+        değerini belirtir.
+      </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>Nesnenin ismini belirtir.</td>
+      <td><em>text</em></td>
+      <td>Fieldset etiketinin ismini belirtir.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <legend> Etiketi-->
+<div>
+  <strong>&lt;legend&gt; : </strong>&lt;fieldset&gt; etiketi için bir başlık
+  tanımlar.
+</div>
+
+<!-- <fieldset>,<legend> Örnek -->
+  <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form action="">
+        <fieldset>
+          <legend>Personalia:</legend>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="birthday">First name:</label>
+          <input type="date" id="birthday" name="birthday"><br><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+<!-- <output> Etiketi-->
+<div>
+  <strong>&lt;output&gt; : </strong>Bir hesaplama sonucu tanımlar. (Scriptin
+  oluşturduğu sonuç gibi)
+</div>
+
+<!-- <output> Özellik Tablosu -->
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">
+        <strong>&lt;output&gt; Özellikleri ve Değerleri</strong>
+      </th>
+    </tr>
+    <tr>
+      <td><strong>Özellik</strong></td>
+      <td><strong>Tanım</strong></td>
+      <td><strong>Değer</strong></td>
+      <td><strong>Tanım</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>for</td>
+      <td>
+        Hesaplamanın sonucu ile hesaplamada kullanılan öğeler arasındaki
+        ilişkiyi belirtir.
+      </td>
+      <td><em>element_id</em></td>
+      <td>
+        Hesaplama sonucunda kullanılan etiket veya aralarında boşluk
+        bırakarak etiketlerin id değerlerini belirtir.
+      </td>
+    </tr>
+    <tr>
+      <td>form</td>
+      <td>Çıkış öğesinin hangi forma ait olduğunu belirtir.</td>
+      <td><em>form_id</em></td>
+      <td>
+        Hesaplama sonucunun ait olduğu bir veya aralarında boşluk bırakarak
+        daha fazla form tanımlanmasını belirtir.
+      </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>Çıkış öğesi için bir ad belirtir.</td>
+      <td><em>name</em></td>
+      <td>&lt;output&gt; etiketinin ismini belirtir.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <output> Örnek -->
+  <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <form>
+        <input type="range" id="a" value="50">
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+      </form>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+<script src="editor.js"></script>
+</body>
+
 </html>

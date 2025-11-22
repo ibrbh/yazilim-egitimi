@@ -1,26 +1,790 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
-    />
-  </head>
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1></h1>
+<html lang="tr">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Event Özellikleri</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Event Özellikleri</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" width="463">
+          Pencere Özellikleri
+        </th>
+      </tr>
+      <tr>
+        <td width="126">
+          &Ouml;zellik
+        </td>
+        <td width="337">
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td width="126">
+          onafterprint
+        </td>
+        <td width="337">
+          Belge yazdırıldıktan sonra &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onbeforeprint
+        </td>
+        <td width="337">
+          Belge yazdırılmadan &ouml;nce &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onbeforeunload
+        </td>
+        <td width="337">
+          Belge boşaltılmak &uuml;zereyken &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onerror
+        </td>
+        <td width="337">
+          Bir hata oluştuğunda &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onhashchange
+        </td>
+        <td width="337">
+          Bir URL'nin bağlantı kısmında değişiklikler olduğunda &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onload
+        </td>
+        <td width="337">
+          Sayfanın y&uuml;klenmesi tamamlandıktan sonra tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onmessage
+        </td>
+        <td width="337">
+          Mesaj tetiklendiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onoffline
+        </td>
+        <td width="337">
+          Tarayıcı &ccedil;evrimdışı &ccedil;alışmaya başladığında &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          ononline
+        </td>
+        <td width="337">
+          Tarayıcı &ccedil;evrimi&ccedil;i &ccedil;alışmaya başladığında &ccedil;alıştırılacak komut dosyası.
+          (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onpagehide
+        </td>
+        <td width="337">
+          Bir kullanıcı bir sayfadan ayrıldığında &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onpageshow
+        </td>
+        <td width="337">
+          Bir kullanıcı bir sayfaya gittiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onpopstate
+        </td>
+        <td width="337">
+          Pencerenin ge&ccedil;mişi değiştiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onresize
+        </td>
+        <td width="337">
+          Tarayıcı penceresi yeniden boyutlandırıldığında tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onstorage
+        </td>
+        <td width="337">
+          Bir Web Depolama alanı g&uuml;ncellendiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="126">
+          onunload
+        </td>
+        <td width="337">
+          Bir sayfa kaldırıldığında (veya tarayıcı penceresi kapatıldığında) tetiklenir. (script)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" width="463">
+          Form Özellikleri
+        </th>
+      </tr>
+      <tr>
+        <td width="124">
+          &Ouml;zellik
+        </td>
+        <td width="339">
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td width="124">
+          onblur
+        </td>
+        <td width="339">
+          &Ouml;ğe odağı kaybettiği anda ateşlenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          onchange
+        </td>
+        <td width="339">
+          Elemanın değerinin değiştirildiği anı tetikler. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          oncontextmenu
+        </td>
+        <td width="339">
+          Bir bağlam men&uuml;s&uuml; tetiklendiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          onfocus
+        </td>
+        <td width="339">
+          &Ouml;ğenin odaklandığı anı tetikler. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          oninput
+        </td>
+        <td width="339">
+          Bir &ouml;ğe kullanıcı girişi aldığında &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          oninvalid
+        </td>
+        <td width="339">
+          Bir &ouml;ğe ge&ccedil;ersiz olduğunda &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          onreset
+        </td>
+        <td width="339">
+          Bir formdaki Sıfırla d&uuml;ğmesine tıklandığında tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          onsearch
+        </td>
+        <td width="339">
+          Kullanıcı bir arama alanına bir şey yazdığında tetiklenir (&lt;input="search"&gt; i&ccedil;in). (script)
+
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          onselect
+        </td>
+        <td width="339">
+          Bir &ouml;ğede bazı metinler se&ccedil;ildikten sonra tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="124">
+          onsubmit
+        </td>
+        <td width="339">
+          Bir form g&ouml;nderildiğinde tetiklenir. (script)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" width="463">
+          Klavye Özelllikleri
+        </th>
+      </tr>
+      <tr>
+        <td width="96">
+          &Ouml;zellik
+        </td>
+        <td width="366">
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td width="96">
+          onkeydown
+        </td>
+        <td width="366">
+          Bir kullanıcı bir tuşa bastığında tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="96">
+          onkeypress
+        </td>
+        <td width="366">
+          Bir kullanıcı bir tuşa bastığında tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="96">
+          onkeyup
+        </td>
+        <td width="366">
+          Bir kullanıcı bir anahtarı serbest bıraktığında tetiklenir. (script)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" width="463">
+          Fare Özellikleri
+        </th>
+      </tr>
+      <tr>
+        <td width="123">
+          &Ouml;zellik
+        </td>
+        <td width="340">
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td width="123">
+          onclick
+        </td>
+        <td width="340">
+          &Ouml;ğeye bir fare tıklamasıyla tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="123">
+          ondblclick
+        </td>
+        <td width="340">
+          &Ouml;ğeye fareyle &ccedil;ift tıklandığında ateşlenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="123">
+          onmousedown
+        </td>
+        <td width="340">
+          Bir &ouml;ğe &uuml;zerinde bir fare d&uuml;ğmesine basıldığında tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="123">
+          onmousemove
+        </td>
+        <td width="340">
+          Bir &ouml;ğenin &uuml;zerindeyken fare işaret&ccedil;isi hareket ettiğinde tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="123">
+          onmouseout
+        </td>
+        <td width="340">
+          Fare işaret&ccedil;isi bir &ouml;ğenin dışına &ccedil;ıktığında tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="123">
+          onmouseover
+        </td>
+        <td width="340">
+          Fare işaret&ccedil;isi bir &ouml;ğenin &uuml;zerine geldiğinde tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="123">
+          onmouseup
+        </td>
+        <td width="340">
+          Bir &ouml;ğe &uuml;zerinde bir fare d&uuml;ğmesi bırakıldığında tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="123">
+          onmousewheel
+        </td>
+        <td width="340">
+          Kullanımdan kaldırıldı. Bunun yerine onwheel niteliğini kullanın. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="123">
+          onwheel
+        </td>
+        <td width="340">
+          Fare tekerleği bir &ouml;ğe &uuml;zerinde yukarı veya aşağı yuvarlandığında tetiklenir. (script)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" width="463">
+          Sürükleme Özellikleri
+        </th>
+      </tr>
+      <tr>
+        <td width="104">
+          &Ouml;zellik
+        </td>
+        <td width="359">
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td width="104">
+          ondrag
+        </td>
+        <td width="359">
+          Bir &ouml;ğe s&uuml;r&uuml;klendiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="104">
+          ondragend
+        </td>
+        <td width="359">
+          S&uuml;r&uuml;kleme işleminin sonunda &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="104">
+          ondragenter
+        </td>
+        <td width="359">
+          Bir &ouml;ğe ge&ccedil;erli bir bırakma hedefine s&uuml;r&uuml;klendiğinde &ccedil;alıştırılacak komut
+          dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="104">
+          ondragleave
+        </td>
+        <td width="359">
+          Bir &ouml;ğe ge&ccedil;erli bir bırakma hedefinden ayrıldığında &ccedil;alıştırılacak komut dosyası.
+          (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="104">
+          ondragover
+        </td>
+        <td width="359">
+          Bir &ouml;ğe ge&ccedil;erli bir bırakma hedefinin &uuml;zerine s&uuml;r&uuml;klenirken
+          &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="104">
+          ondragstart
+        </td>
+        <td width="359">
+          S&uuml;r&uuml;kleme işleminin başlangıcında &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="104">
+          ondrop
+        </td>
+        <td width="359">
+          S&uuml;r&uuml;klenen &ouml;ğe bırakılırken &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="104">
+          onscroll
+        </td>
+        <td width="359">
+          Bir &ouml;ğenin kaydırma &ccedil;ubuğu kaydırılırken &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" width="463">
+          Pano Özellikleri
+        </th>
+      </tr>
+      <tr>
+        <td width="71">
+          &Ouml;zellik
+        </td>
+        <td width="391">
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td width="71">
+          oncopy
+        </td>
+        <td width="391">
+          Kullanıcı bir &ouml;ğenin i&ccedil;eriğini kopyaladığında tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="71">
+          oncut
+        </td>
+        <td width="391">
+          Kullanıcı bir &ouml;ğenin i&ccedil;eriğini kestiğinde tetiklenir. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="71">
+          onpaste
+        </td>
+        <td width="391">
+          Kullanıcı bir &ouml;ğeye bazı i&ccedil;erikler yapıştırdığında tetiklenir. (script)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" width="463">
+          Medya Özellikleri
+        </th>
+      </tr>
+      <tr>
+        <td width="147">
+          &Ouml;zellik
+        </td>
+        <td width="316">
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td width="147">
+          onabort
+        </td>
+        <td width="316">
+          İptal edildiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          oncanplay
+        </td>
+        <td width="316">
+          Bir dosya oynatılmaya hazır olduğunda &ccedil;alıştırılacak komut dosyası (başlamak i&ccedil;in yeterince
+          arabelleğe alındığında). (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          oncanplaythrough
+        </td>
+        <td width="316">
+          Bir dosya arabelleğe alma i&ccedil;in duraklama olmadan sonuna kadar oynatılabildiğinde
+          &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          oncuechange
+        </td>
+        <td width="316">
+          Bir &lt;track&gt; &ouml;ğesinde işaret değiştiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          ondurationchange
+        </td>
+        <td width="316">
+          Medyanın uzunluğu değiştiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onemptied
+        </td>
+        <td width="316">
+          K&ouml;t&uuml; bir şey olduğunda ve dosya aniden kullanılamadığında (beklenmedik bir şekilde bağlantının
+          kesilmesi gibi) &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onended
+        </td>
+        <td width="316">
+          Medya sona erdiğinde &ccedil;alıştırılacak komut dosyası ("Dinlediğiniz i&ccedil;in teşekk&uuml;rler" gibi
+          mesajlar i&ccedil;in yararlı bir olay). (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onerror
+        </td>
+        <td width="316">
+          Dosya y&uuml;klenirken bir hata oluştuğunda &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onloadeddata
+        </td>
+        <td width="316">
+          Medya verileri y&uuml;klendiğinde &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onloadedmetadata
+        </td>
+        <td width="316">
+          Meta veriler (boyutlar ve s&uuml;re gibi) y&uuml;klendiğinde &ccedil;alıştırılacak komut dosyası. (script)
+
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onloadstart
+        </td>
+        <td width="316">
+          Herhangi bir şey ger&ccedil;ekten y&uuml;klenmeden &ouml;nce dosya y&uuml;klenmeye başladığında
+          &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onpause
+        </td>
+        <td width="316">
+          Medya kullanıcı tarafından veya programlı olarak duraklatıldığında &ccedil;alıştırılacak komut dosyası.
+          (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onplay
+        </td>
+        <td width="316">
+          Medya oynatmaya başlamaya hazır olduğunda &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onplaying
+        </td>
+        <td width="316">
+          Medya ger&ccedil;ekten oynamaya başladığında &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onprogress
+        </td>
+        <td width="316">
+          Tarayıcı medya verilerini alma s&uuml;recindeyken &ccedil;alıştırılacak komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onratechange
+        </td>
+        <td width="316">
+          Oynatma hızı her değiştiğinde &ccedil;alıştırılacak komut dosyası (bir kullanıcının ağır &ccedil;ekim veya
+          hızlı ileri sarma moduna ge&ccedil;mesi gibi). (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onseeked
+        </td>
+        <td width="316">
+          Arama &ouml;zelliği, aramanın sona erdiğini belirten false olarak ayarlandığında &ccedil;alıştırılacak
+          komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onseeking
+        </td>
+        <td width="316">
+          Arama &ouml;zniteliği, aramanın etkin olduğunu belirten true olarak ayarlandığında &ccedil;alıştırılacak
+          komut dosyası. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onstalled
+        </td>
+        <td width="316">
+          Tarayıcı herhangi bir nedenle medya verilerini getiremediğinde &ccedil;alıştırılacak komut dosyası.
+          (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onsuspend
+        </td>
+        <td width="316">
+          Medya verileri alınırken &ccedil;alıştırılacak komut dosyası, herhangi bir nedenle tamamen y&uuml;klenmeden
+          &ouml;nce durduruluyor. (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          ontimeupdate
+        </td>
+        <td width="316">
+          Oynatma konumu değiştiğinde &ccedil;alıştırılacak komut dosyası (kullanıcının medyada farklı bir noktaya
+          hızlı ileri sarması gibi). (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onvolumechange
+        </td>
+        <td width="316">
+          Ses d&uuml;zeyi her değiştirildiğinde &ccedil;alıştırılacak komut dosyası (sesin "sessiz" olarak
+          ayarlanmasını i&ccedil;erir). (script)
+        </td>
+      </tr>
+      <tr>
+        <td width="147">
+          onwaiting
+        </td>
+        <td width="316">
+          Medya duraklatıldığında ancak devam etmesi beklendiğinde &ccedil;alıştırılacak komut dosyası (medyanın daha
+          fazla veri arabelleğe almak i&ccedil;in duraklaması gibi). (script)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" width="463">
+          Misc Özellikleri
+        </th>
+      </tr>
+      <tr>
+        <td width="85">
+          &Ouml;zellik
+        </td>
+        <td width="378">
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td width="85">
+          ontoggle
+        </td>
+        <td width="378">
+          Kullanıcı &lt;details&gt; &ouml;ğesini a&ccedil;tığında veya kapattığında tetiklenir. (script)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

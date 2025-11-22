@@ -1,26 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
-    />
-  </head>
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1></h1>
+<html lang="tr">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Semantik Etiketler</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Semantik Etiketler</h1>
+
+  <img src="images/Semantik.png">
+
+  <!-- <article> Etiketi -->
+  <div><strong>&lt;article&gt; : </strong>Bağımsız, müstakil içerikler tanımlar. Bu etiketle işaretlenen içerik sitenin geri kalanından bağımsız olarak dağıtmak mümkün olmalıdır. Şu içerikler &lt;article&gt; etiketi ile işaretlenebilir; Forum Yazıları, Blog Yazıları, Haberler, Yorumlar</div>
+
+  <!-- <aside> Etiketi -->
+  <div><strong>&lt;aside&gt; : </strong>İçerikte bulunan bir yerle ilgili açıklama yapmak için kullanılır. &lt;aside&gt; etiketi içerikle ilgili olmalıdır.</div>
+
+  <!-- <details> Etiketi -->
+  <div><strong>&lt;details&gt; : </strong>Kullanıcı tarafından görüntelenip gizlenebilen ek bilgiler tanımlar. &lt;details&gt; etiketi açılıp kapanabilen etkileşimli bir nesne tanımlar. &lt;details&gt; etiketi içerisine bir çok içerik konulabilir. &lt;details&gt; etiketi open özelliği tanımlıysa içerik sayfa ilk yüklendiğinde görünürdür.</div>
+
+  <!-- <details>  Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;details&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>open</td>
+        <td>Sayfa ilk yüklendiğinde içeriğin görünür olduğunu belirtir.</td>
+        <td>open</td>
+        <td>Liste öğesinin değerini belirtir.</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- <figcaption> Etiketi -->
+  <div><strong>&lt;figcaption&gt; : </strong>&lt;figure&gt; etiketi için bir başlık tanımlar. &lt;figcaption&gt; etiketi &lt;figure&gt; etiketinin ilk veya son etiketi olarak tanımlanabilir.</div>
+
+
+  <!-- <figure> Etiketi -->
+  <div><strong>&lt;figure&gt; : </strong>Çizimler, fotoğraflar, kod listeleri gibi bağımsız içerikleri belirtir. &lt;figure&gt; etiketi içeriğin ana akışıyla ilgili olsa da, bağımsızdır.</div>
+
+  <!-- <footer> Etiketi -->
+  <div><strong>&lt;footer&gt; : </strong>Bir belge veya bölümün altbilgisini tanımlar. &lt;footer&gt; etiketi yapısına uygun içerik barındırmalıdır. &lt;footer&gt; etiketi genellikle telif hakkı bilgileri, kullanım koşulları, iletişim bilgileri vb. bilgileri üzerinde tutar.</div>
+
+  <!-- <header> Etiketi -->
+  <div><strong>&lt;header&gt; : </strong>Belge veya bir bölüm için başlık tanımlar. Bu etiket taşıyıcı için navigasyon menüleri veya tanıtıcı içerik olarak kullanılmalıdır. Bir belgede birçok &lt;header&gt; etiketi kullanılabilir. &lt;header&gt; etiketi &lt;footer&gt;, &lt;address&gt; veya başka bir &lt;header&gt; etiketi içerisinde tanımlanamaz.</div>
+
+  <!-- <main> Etiketi -->
+  <div><strong>&lt;main&gt; : </strong>Bir belgenin ana içeriğini belirtir.</div>
+
+  <!-- <mark> Etiketi -->
+  <div><strong>&lt;mark&gt; : </strong>işaretlenmiş metin tanımlar. Eğer metinin bir parçasını işaretlemek, vurgulamak isterseniz &lt;mark&gt; etiketini kullanılır.
+</div>
+
+  <!-- <nav> Etiketi -->
+  <div><strong>&lt;nav&gt; : 
+</strong>Gezinti(navigasyon) linlerinin bulunduğu bölümü tanımlar. Belgenin tüm link grupları &lt;nav&gt; etiketi ile işaretlenmemelidir. &lt;nav&gt; etiketi sadece ana blokta bulunan bağlantılar için tasarlanmıştır.</div>
+
+  <!-- <section> Etiketi -->
+  <div><strong>&lt;section&gt; : </strong>Belgede bir bölüm tanımlar. Bölümler üstbilgi, altbilgi gibi sayfanın herhangi bir bölümü olabilir.
+</div>
+
+  <!-- <summary> Etiketi -->
+  <div><strong>&lt;summary&gt; : </strong>&lt;details&gt; etiketinin başlığını tanımlar. Başlık bilgisi içeriğin gösterilip/gizlenmesi için tıklanabilirdir.
+</div>
+
+  <!-- <time> Etiketi -->
+  <div><strong>&lt;time&gt; : </strong>Gregoryan takvimine göre saat veya tarih tanımlar.</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

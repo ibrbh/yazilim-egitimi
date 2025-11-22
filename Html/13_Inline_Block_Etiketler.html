@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Inline ve Block Etiketler</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -14,7 +14,59 @@
   <body>
     <a href="index.html">Ana Sayfa</a>
     <hr />
-    <h1></h1>
+    <h1>Inline ve Block Etiketler</h1>
+
+    <div>
+      <strong>Block Etiketler : </strong>Her zaman yeni satırdan başlar ve
+      soldan sağa var olan alanı kaplar. Yani açılış ve kapanış etiketi arasında
+      belirlenen alanı kaplar.
+    </div>
+    <div>
+      <strong>Inline Etiketler : </strong>Adından anlaşılacağı üzere aynı
+      satırda başlayıp içerik kadar alan kaplar.
+    </div>
+
+    <br /><img src="images/Inline_Block.png" /><br />
+
+    <!-- <div> Etiketi -->
+    <div>
+      <strong>&lt;div&gt; : </strong>HTML belgesinde bir bölüm, sektör
+      tanımlar.b&lt;div&gt; etiketini bloklar halinde göstermek için CSS ile
+      biçimlendirilir.
+    </div>
+
+    <!-- <span> Etiketi -->
+    <div>
+      <strong>&lt;span&gt; : </strong>Belgede satır içi grup tanımlar.
+      &lt;span&gt; etiketi arasında kalan içerik görsel olarak bir değişiklik
+      göstermez. &lt;span&gt; etiketi belge yada metnin bir kısmını işlemek için
+      kullanılır. Bir metin &lt;span&gt; etiketi arasında alındığında, CSS ile
+      biçimlendirilebilir veya JavaScript ile işlenebilir.
+    </div>
+
+    <!-- <div>,<span> Örnek -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+    <div>
+      <h2>London</h2>
+      <p>London is the capital city of <span>England</span>.</p>
+      <p>London has over 13 million inhabitants.</p>
+    </div>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>

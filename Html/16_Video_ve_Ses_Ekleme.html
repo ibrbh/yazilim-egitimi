@@ -1,20 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Video ve Ses Ekleme</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
     />
   </head>
+
   <body>
     <a href="index.html">Ana Sayfa</a>
     <hr />
-    <h1></h1>
+    <h1>Video ve Ses Ekleme</h1>
+
+    <!-- <source> Etiketi -->
+    <div>
+      <strong>&lt;source&gt; : </strong>&lt;audio&gt; ve &lt;video&gt; gibi
+      medya tanımları için birden fazla medya kaynağı tanımlar. &lt;source&gt;
+      etiketi çapraz tarayıcılar için medya türü veya codec desteğine dayalı
+      alternatif ses veya video dosya yollarını tanımlamayı sağlar.
+    </div>
+
+    <!-- <source> Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">
+            <strong>&lt;source&gt; Özellikleri ve Değerleri</strong>
+          </th>
+        </tr>
+        <tr>
+          <td><strong>Özellik</strong></td>
+          <td><strong>Tanım</strong></td>
+          <td><strong>Değer</strong></td>
+          <td><strong>Tanım</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>media</td>
+          <td>
+            Medya özelliği medya kaynağının hangi medya / cihaz için optimize
+            edildiğini tanımlar. Bu özellik birçok değer alabilir.
+          </td>
+          <td><em>media_query</em></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>sizes</td>
+          <td>Farklı sayfa düzenleri için görüntü boyutlarını belirtir.</td>
+          <td><em>&nbsp;</em></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>src</td>
+          <td>
+            Src özelliği oynatılacak medya dosyasının URL adresini belirtir.
+          </td>
+          <td><em>URL</em></td>
+          <td>Oynatılacak medya dosyasının URL'ını belirtir.</td>
+        </tr>
+        <tr>
+          <td>srcset</td>
+          <td>
+            &lt;picture&gt;'de &lt;source&gt; kullanıldığında gereklidir. Farklı
+            durumlarda kullanılacak görselin URL'sini belirtir.
+          </td>
+          <td><em>URL</em></td>
+          <td>Resmin URL'sini belirtir.</td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>Type özelliği medya dosyasının MIME tipini belirtir.</td>
+          <td><em>MIME-type</em></td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <audio> Etiketi -->
+    <div>
+      <strong>&lt;audio&gt; : </strong>Ses, müzik veya diğer ses ortamları
+      tanımlar. (.mp3, .ogg, .wav)
+    </div>
+
+    <!-- <audio> Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">
+            <strong>&lt;audio&gt; Özellikleri ve Değerleri</strong>
+          </th>
+        </tr>
+        <tr>
+          <td><strong>Özellik</strong></td>
+          <td><strong>Tanım</strong></td>
+          <td><strong>Değer</strong></td>
+          <td><strong>Tanım</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>autoplay</td>
+          <td>Ses dosyasının otomatik olarak oynatılacağını belirtir.</td>
+          <td>autoplay</td>
+          <td>
+            Bu özellik tanımlandığında ses dosyası durdur butonuna basılmaz ise
+            otomatik olarak başlayacaktır.
+          </td>
+        </tr>
+        <tr>
+          <td>controls</td>
+          <td>Ses kontrol nesnelerinin gözükmesini belirtir.</td>
+          <td>controls</td>
+          <td>
+            Oynatıcı üzerinde ses kontrol nesnelerinin gözükmesini sağlar.
+            (Oynat (Play), Duraklat (Pause), Yürütmek Çubuğu (Seeking), Ses
+            (Volume))
+          </td>
+        </tr>
+        <tr>
+          <td>loop</td>
+          <td>Ses dosyası her bitişinde tekrar oynatılacağını belirtir.</td>
+          <td>loop</td>
+          <td>
+            Bu özellik tanımlandığında ses dosyası her bitişinde tekrar çalmaya
+            başlayacaktır.
+          </td>
+        </tr>
+        <tr>
+          <td>muted</td>
+          <td>Sesin sessize alınması gerektiğini belirtir.</td>
+          <td>muted</td>
+          <td>Sesin sessize alınması gerektiğini belirtir.</td>
+        </tr>
+        <tr>
+          <td rowspan="3">preload</td>
+          <td rowspan="3">
+            Yazarın sayfa yüklendiğinde sesin yüklenip / yüklenmemesi ile ilgili
+            düşüncesini belirtir.
+          </td>
+          <td>auto</td>
+          <td>
+            Yazar, sayfa yüklendiğinde ses dosyasının yüklenmesi gerektiğini
+            düşünür.
+          </td>
+        </tr>
+        <tr>
+          <td>metadata</td>
+          <td>
+            Yazar, sayfa yüklendiğinde ses dosyasının metaverilerinin yüklenmesi
+            gerektiğini düşünür.
+          </td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>
+            Yazar, sayfa yüklendiğinde ses dosyasının yüklenmemesi gerektiğini
+            düşünür.
+          </td>
+        </tr>
+        <tr>
+          <td>src</td>
+          <td>Ses dosyasının konumunu belirtir.</td>
+          <td><em>URL</em></td>
+          <td>Ses dosyasının konumunu belirtir.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <audio> Örnek -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <audio controls autoplay>
+        <source src="horse.ogg" type="audio/ogg"><source>
+        <source src="horse.mp3" type="audio/mpeg"><source>
+      </audio>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
+
+    <!-- <video> Etiketi -->
+    <div>
+      <strong>&lt;video&gt; : </strong>Film klibi, video akışı veya diğer video
+      ortamları tanımlar.
+    </div>
+
+    <!-- <video> Özellik Tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">
+            <strong>&lt;video&gt; Özellikleri ve Değerleri</strong>
+          </th>
+        </tr>
+        <tr>
+          <td><strong>Özellik</strong></td>
+          <td><strong>Tanım</strong></td>
+          <td><strong>Değer</strong></td>
+          <td><strong>Tanım</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>autoplay</td>
+          <td>
+            Durdur butonuna basılmaz ise otomatik olarak başlatılacağını
+            belirtir.
+          </td>
+          <td>autoplay</td>
+          <td>
+            Bu özellik tanımlandığında video dosyası durdur butonuna basılmaz
+            ise otomatik olarak başlayacaktır.
+          </td>
+        </tr>
+        <tr>
+          <td>controls</td>
+          <td>Video kontrol nesnelerinin gözükeceğini belirtir.</td>
+          <td>controls</td>
+          <td>
+            Oynatıcı üzerinde video kontrol nesnelerinin gözükmesini sağlar.
+            (Oynat (Play), Duraklat (Pause), Yürütmek Çubuğu (Seeking), Ses
+            (Volume), Tam Ekran (Fullscreen), Başlıklar/Altyazılar
+            (Captions/Subtitles tanımlanmış ise), Parça metni (track tanımlanmış
+            ise))
+          </td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>Video dosyasının piksel cinsinden yüksekliğini belirtir.</td>
+          <td><em>pixels</em></td>
+          <td>Video dosyasının yüksekliğini belirtir. 100px = 100</td>
+        </tr>
+        <tr>
+          <td>loop</td>
+          <td>
+            Video dosyasının her bitişinde tekrar yürütüleceğini belirtir.
+          </td>
+          <td>loop</td>
+          <td>
+            Bu özellik tanımlandığında video dosyası her bitişinde tekrar
+            çalmaya başlayacaktır.
+          </td>
+        </tr>
+        <tr>
+          <td>muted</td>
+          <td>Video ses çıkışının sessiz olacağını belirtir.</td>
+          <td>muted</td>
+          <td>
+            Bu özellik tanımlandığında video ses çıkışı sessiz olarak ayarlanır.
+          </td>
+        </tr>
+        <tr>
+          <td>poster</td>
+          <td>Video dosyası için bir kapak(poster) belirtir.</td>
+          <td><em>URL</em></td>
+          <td>Resimin URL'ını belirtir.</td>
+        </tr>
+        <tr>
+          <td rowspan="3">preload</td>
+          <td rowspan="3">
+            Yazarın sayfa yüklendiğinde video dosyasının yüklenmesi ile ilgili
+            düşüncesini belirtir.
+          </td>
+          <td>auto</td>
+          <td>
+            Yazar, sayfa yüklendiğinde video dosyasının yüklenmesi gerektiğini
+            düşünür.
+          </td>
+        </tr>
+        <tr>
+          <td>metadata</td>
+          <td>
+            Yazar, sayfa yüklendiğinde video dosyasının metaverilerinin
+            yüklenmesi gerektiğini düşünür.
+          </td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>
+            Yazar, sayfa yüklendiğinde video dosyasının yüklenmemesi gerektiğini
+            düşünür.
+          </td>
+        </tr>
+        <tr>
+          <td>src</td>
+          <td>Video dosyasının konumunu belirtir.</td>
+          <td><em>URL</em></td>
+          <td>Video dosyasının konumunu belirtir.</td>
+        </tr>
+        <tr>
+          <td>width</td>
+          <td>Video dosyasının piksel cinsinden genişliğini belirtir.</td>
+          <td><em>pixels</em></td>
+          <td>Video dosyasının genişliğini belirtir. 300px = 300</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <video> Örnek -->
+    <div class="editor" data-editor>
+      <div class="editorTextareaGroup">
+        <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <video width="320" height="240" controls>
+        <source src="https://youtu.be/qkE_vLsxFx4" type="video/mp4">
+      </video>
+    </body>
+  </html>
+    </textarea
+        >
+        <button class="editorButton">Çalıştır</button>
+      </div>
+      <iframe class="editorIframe"></iframe>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>

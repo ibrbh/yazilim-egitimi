@@ -1,26 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
-    />
-  </head>
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1></h1>
+<html lang="tr">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Global Özellikler</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Global Özellikler</h1>
+  <table>
+    <thead>
+      <tr>
+        <td>
+          &Ouml;zellik
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+          accesskey
+        </td>
+        <td>
+          Nesneye klavyeden bir kısayol tuşu tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          class
+        </td>
+        <td>
+          Nesneye CSS ile oluşturulmuş bir veya daha fazla sınıf ataması tanımlar. contenteditable Nesnenin
+            d&uuml;zenlenip d&uuml;zenlenemeyeceğini tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          contextmenu
+        </td>
+        <td>
+          Nesneyi bir men&uuml; ile ilişkilendirir. Nesnenin bağlam men&uuml;s&uuml; de denilebilir. Nesneye sağ
+            tıklamalarda a&ccedil;ılacak olan men&uuml; ilişkilendirilmesidir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          data-*
+        </td>
+        <td>
+          Sayfa veya uygulamaya &ouml;zel verileri saklamak, tutmak veya yakalamak i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          dir
+        </td>
+        <td>
+          Nesnedeki i&ccedil;eriğin yazılış y&ouml;n&uuml;n&uuml; tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          draggable
+        </td>
+        <td>
+          Nesnenin s&uuml;r&uuml;klenebilir olup olmadığını tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          dropzone
+        </td>
+        <td>
+          Nesne s&uuml;r&uuml;kle bırak işlemi yapıldıktan sonra tarayıcının ne yapacağını tanımlar.
+            S&uuml;r&uuml;klenen verilerin kopyalandığını da belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hidden
+        </td>
+        <td>
+          Nesnenin artık veya uygun olmadığını belirtir. Gizlemelerde veri tutma işlemlerinde kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          id
+        </td>
+        <td>
+          Nesneye benzersiz bir kimlik tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          lang
+        </td>
+        <td>
+          Nesne i&ccedil;eriğinin dil tanımlamasını yapar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          spellcheck
+        </td>
+        <td>
+          Nesne i&ccedil;eriğinin dil bilgisi ve yazım kurallarının denetlenmesini sağlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          style
+        </td>
+        <td>
+          Nesneye satır i&ccedil;i CSS tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          tabindex
+        </td>
+        <td>
+          Nesnelerin sekme sırasını tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          title
+        </td>
+        <td>
+          Nesneye başlık tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          translate
+        </td>
+        <td>
+          Nesnenin başka dile &ccedil;evrilip &ccedil;evrilmeyeceğini tanımlar.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

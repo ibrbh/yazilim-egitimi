@@ -1,26 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
-    />
-  </head>
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1></h1>
+<html lang="tr">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Çerçeve Oluşturma</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Çerçeve Oluşturma</h1>
+
+  <!-- <iframe> Etiketi -->
+  <div><strong>&lt;iframe&gt; : </strong>Satıriçi bir çerçeve tanımlar. Bu satıriçi çerçeveye başka bir HTML belgesi
+    yüklemenizi sağlar. Belge içinde belge.
+  </div>
+
+  <!-- <iframe> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4"><strong>&lt;iframe&gt; Özellikleri ve Değerleri</strong></th>
+      </tr>
+      <tr>
+        <td><strong>Özellik</strong></td>
+        <td><strong>Tanım</strong></td>
+        <td><strong>Değer</strong></td>
+        <td><strong>Tanım</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>allow</td>
+        <td>&lt;iframe&gt; için bir özellik politikasını belirtir.</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td rowspan="2">allowfullscreen</td>
+        <td rowspan="2">&lt;iframe&gt; requestFullscreen() yöntemini çağırarak tam ekran modunu etkinleştirebiliyorsa
+          true olarak ayarlanır.</td>
+        <td>true</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>false</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td rowspan="2">allowpaymentrequest</td>
+        <td rowspan="2">Çapraz kaynak &lt;iframe&gt;'in Ödeme İsteği API'sini çağırmasına izin verilmesi gerekiyorsa
+          true olarak ayarlanır.</td>
+        <td>true</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>false</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>Bir &lt;iframe&gt;'in yüksekliğini belirtir. Varsayılan yükseklik 150 pikseldir.</td>
+        <td><em>pixels</em></td>
+        <td>Bir &lt;iframe&gt;'in yüksekliğini belirtir. Varsayılan yükseklik 150 pikseldir.</td>
+      </tr>
+      <tr>
+        <td rowspan="2">loading</td>
+        <td rowspan="2">Tarayıcının bir iframe'i hemen yüklemesi mi gerektiğini yoksa bazı koşullar karşılanana kadar
+          iframe'lerin yüklenmesini ertelemesi mi gerektiğini belirtir.</td>
+        <td>eager</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>lazy</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>Bir &lt;iframe&gt;'in adını belirtir.</td>
+        <td><em>text</em></td>
+        <td>Bir &lt;iframe&gt;'in adını belirtir.</td>
+      </tr>
+      <tr>
+        <td rowspan="8">referrerpolicy</td>
+        <td rowspan="8">iframe alınırken hangi yönlendiren bilgilerinin gönderileceğini belirtir.</td>
+        <td>no-referrer</td>
+        <td>Taleple birlikte yönlendiren bilgisi gönderilmeyecektir.</td>
+      </tr>
+      <tr>
+        <td>no-referrer-when-downgrade</td>
+        <td>Varsayılan. Yönlendiren başlığı HTTPS olmayan kaynaklara gönderilmeyecek.</td>
+      </tr>
+      <tr>
+        <td>origin</td>
+        <td>İstek istemcisine yalnızca şema, ana bilgisayar ve bağlantı noktasını gönder.</td>
+      </tr>
+      <tr>
+        <td>origin-when-cross-origin</td>
+        <td>cross-origin istekleri için: Yalnızca şema, ana makine ve bağlantı noktasını gönderir. same-origin istekler
+          için: Yolu da ekleyin.</td>
+      </tr>
+      <tr>
+        <td>same-origin</td>
+        <td>same-origin istekler için: Yönlendiren bilgisi gönderilecektir. cross-origin istekleri için: Yönlendiren
+          bilgisi gönderilmeyecek.</td>
+      </tr>
+      <tr>
+        <td>strict-origin</td>
+        <td>Yönlendiren bilgilerini yalnızca güvenlik düzeyi aynıysa gönderir. (örn. HTTPS'den HTTPS'ye). Daha az
+          güvenli bir hedefe göndermez. (örn. HTTPS'den HTTP'ye).</td>
+      </tr>
+      <tr>
+        <td>strict-origin-when-cross-origin</td>
+        <td>Aynı kaynaktan istek gerçekleştirirken tam yolu gönder. Yalnızca güvenlik düzeyi aynı kaldığında (örn.
+          HTTPS'den HTTPS'ye) Origin'i gönderin. Daha az güvenli bir hedefe başlık gönderme (HTTPS'den HTTP'ye).</td>
+      </tr>
+      <tr>
+        <td>unsafe-url</td>
+        <td>Kökeni, yolu ve sorgu dizesini gönderin (ancak parça, şifre veya kullanıcı adını göndermeyin). Bu değer
+          güvensiz olarak değerlendiriliyor.</td>
+      </tr>
+      <tr>
+        <td rowspan="12">sandbox</td>
+        <td rowspan="12">&lt;iframe&gt; içeriği için ekstra bir dizi kısıtlamayı etkinleştirir.</td>
+        <td><em>(no value)</em></td>
+        <td>Tüm kısıtlamaları uygular.</td>
+      </tr>
+      <tr>
+        <td>allow-forms</td>
+        <td>Form gönderimine izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-modals</td>
+        <td>Kalıcı pencerelerin açılmasına izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-orientation-lock</td>
+        <td>Ekran yönünü kilitlemeye izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-pointer-lock</td>
+        <td>İşaretçi Kilidi API'sinin kullanılmasına izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-popups</td>
+        <td>Pop-up'lara izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-popups-to-escape-sandbox</td>
+        <td>Açılır pencerelerin korumalı alanı devralmadan yeni pencereler açmasına izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-presentation</td>
+        <td>Bir sunum oturumunun başlatılmasına izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-same-origin</td>
+        <td>iframe içeriğinin aynı kaynaktan geliyormuş gibi değerlendirilmesine olanak tanır.</td>
+      </tr>
+      <tr>
+        <td>allow-scripts</td>
+        <td>Komut dosyalarının çalıştırılmasına izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-top-navigation</td>
+        <td>iframe içeriğinin üst düzey tarama bağlamında gezinmesine izin verir.</td>
+      </tr>
+      <tr>
+        <td>allow-top-navigation-by-user-activation</td>
+        <td>iframe içeriğinin üst düzey tarama bağlamında gezinmesine izin verir, (ancak yalnızca kullanıcı tarafından
+          başlatılmışsa)</td>
+      </tr>
+      <tr>
+        <td>src</td>
+        <td>&lt;iframe&gt;'e gömülecek belgenin adresini belirtir.</td>
+        <td><em>URL</em></td>
+        <td>iframe'e gömülecek belgenin URL'sini belirtir.</td>
+      </tr>
+      <tr>
+        <td>srcdoc</td>
+        <td>&lt;iframe&gt;'de gösterilecek sayfanın HTML içeriğini belirtir.</td>
+        <td><em>HTML_code</em></td>
+        <td>&lt;iframe&gt;'de gösterilecek sayfanın HTML içeriğini belirtir.</td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>Bir &lt;iframe&gt;'in genişliğini belirtir. Varsayılan genişlik 300 pikseldir.</td>
+        <td><em>pixels</em></td>
+        <td>Bir &lt;iframe&gt;'in genişliğini belirtir. Varsayılan genişlik 300 pikseldir.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <iframe> Örnek -->
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <iframe width="783" height="449" src="https://www.youtube.com/embed/jYVt33VFPao" title="İşlemesi En Kolay Günah - Yandı Ameller!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

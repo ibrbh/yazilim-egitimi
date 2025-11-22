@@ -1,26 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
-    />
-  </head>
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1></h1>
+<html lang="tr">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Youtube</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Youtube</h1>
+
+  <!-- Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <td width="189">
+          <strong>&Ouml;zellik</strong>
+        </td>
+        <td width="57">
+          <strong>Değer</strong>
+        </td>
+        <td width="217">
+          <strong>Tanım</strong>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2" width="189">
+          autoplay
+        </td>
+        <td width="57">
+          1
+        </td>
+        <td width="217">
+          Sayfa a&ccedil;ılınca video otomatik başlar.
+        </td>
+      </tr>
+      <tr>
+        <td width="57">
+          0
+        </td>
+        <td width="217">
+          Sayfa a&ccedil;ılınca video otomatik başlamaz.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2" width="189">
+          mute
+        </td>
+        <td width="57">
+          1
+        </td>
+        <td width="217">
+          Sayfa a&ccedil;ılınca video sessizde başlar.
+        </td>
+      </tr>
+      <tr>
+        <td width="57">
+          0
+        </td>
+        <td width="217">
+          Sayfa a&ccedil;ılınca video sessizde başlanmaz.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2" width="189">
+          loop
+        </td>
+        <td width="57">
+          1
+        </td>
+        <td width="217">
+          Video bitince video otomatik olarak yeniden başlar.
+        </td>
+      </tr>
+      <tr>
+        <td width="57">
+          0
+        </td>
+        <td width="217">
+          Video bitince video otomatik olarak yeniden başlamaz
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2" width="189">
+          controls
+        </td>
+        <td width="57">
+          1
+        </td>
+        <td width="217">
+          Video oynatılırken kontrol ekranı g&ouml;z&uuml;k&uuml;r..
+        </td>
+      </tr>
+      <tr>
+        <td width="57">
+          0
+        </td>
+        <td width="217">
+          Video oynatılırken kontrol ekranı g&ouml;z&uuml;kmez.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+   <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=1"
+      ></iframe>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

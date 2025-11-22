@@ -1,26 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
-    />
-  </head>
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1></h1>
+<html lang="tr">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Tablo Ekleme</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Tablo Ekleme</h1>
+
+  <!-- <table> Etiketi -->
+  <div><strong>&lt;table&gt; : </strong>HTML tabloları tanımlar. &lt;table&gt; etiketi bir veya daha fazla
+    &lt;th&gt;,&lt;tr&gt; ve &lt;td&gt; etiketlerinden oluşur.</div>
+
+  <!-- <table> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;table&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>border</td>
+        <td>Tablonun kalınlığını belirtir.</td>
+        <td><em>text</em></td>
+        <td>Tablonun kalınlığını belirtir.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <th> Etiketi -->
+  <div><strong>&lt;th&gt; : </strong>Tablo başlığı tanımlar.</div>
+
+  <!-- <th> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;th&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>colspan</td>
+        <td>Kaç sütunun birleşeceğini belirtir.</td>
+        <td><em>number</em></td>
+        <td>Sütunda birleştirilecek hücre sayısını belirtir.</td>
+      </tr>
+      <tr>
+        <td>rowspan</td>
+        <td>Kaç satırın birleşeceğini belirtir.</td>
+        <td><em>number</em></td>
+        <td>Satırda birleştirilecek hücre sayısını belirtir.</td>
+      </tr>
+      <tr>
+        <td>headers</td>
+        <td>Hücre içeriğinin bağlı olduğu başlığı belirtir.</td>
+        <td><em>header_id</em></td>
+        <td>Hücre içeriğinin bağlı olduğu bir veya daha fazla başlığın id değerini belirtir.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <tr>, <td> Etiketleri-->
+  <div><strong>&lt;tr&gt; : </strong>Bir satır tanımlar.
+  </div>
+  <div><strong>&lt;td&gt; : </strong>Tablo hücresi tanımlar.</div>
+
+  <!-- <td> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;td&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>colspan</td>
+        <td>Kaç sütunun birleşeceğini belirtir.</td>
+        <td><em>number</em></td>
+        <td>Sütunda birleştirilecek hücre sayısını belirtir.</td>
+      </tr>
+      <tr>
+        <td>rowspan</td>
+        <td>Kaç satırın birleşeceğini belirtir.</td>
+        <td><em>number</em></td>
+        <td>Satırda birleştirilecek hücre sayısını belirtir.</td>
+      </tr>
+      <tr>
+        <td>headers</td>
+        <td>Hücre içeriğinin bağlı olduğu başlığı belirtir.</td>
+        <td><em>header_id</em></td>
+        <td>Hücre içeriğinin bağlı olduğu bir veya daha fazla başlığın id değerini belirtir.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <caption> Etiketi -->
+  <div><strong>&lt;caption&gt; : </strong>Tablo başlığı tanımlar. &lt;caption&gt; etiketi &lt;table&gt; etiketinden
+    hemen sonra tanımlanmalıdır. Her tabloda sadece tek bir başlık tanımlanabilir. Varsayılan olarak tablo başlığı tablo
+    üzerinde ortalanmış olacaktır. CSS text-align ve caption-side özellikleri ile biçimlendirilebilir.</div>
+
+  <!-- <caption> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;caption&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">align</td>
+        <td rowspan="4">Başlığın hizalanmasını belirtir.</td>
+        <td>left</td>
+        <td>Başlığın tablonun solunda olduğunu belirtir.</td>
+      </tr>
+      <tr>
+        <td>right</td>
+        <td>Başlığın tablonun sağında olduğunu belirtir.</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>Başlığın tablonun üstünde olduğunu belirtir.</td>
+      </tr>
+      <tr>
+        <td>bottom</td>
+        <td>Başlığın tablonun altında olduğunu belirtir.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <colgroup> Etiketi -->
+  <div><strong> &lt;colgroup&gt; : </strong>Bir yada daha fazla sütunlu tabloları biçimlendirmek için kullanılır.
+    &lt;colgroup&gt; etiketi tüm
+    sütunlara stiller uygulayarak, her satır ve hücre için stillerin tekrarlanmaması için gayet kullanışlıdır.
+    &lt;colgroup&gt; etiketi &lt;table&gt; etiketinin içerisinde olmak zorundadır, &lt;caption&gt; etiketinden hemen
+    sonra, &lt;thead&gt;,&lt;tbody&gt;,&lt;tfoot&gt; ve &lt;tr&gt; etiketlerin önce tanımlanmalıdır. &lt;colgroup&gt;
+    etiketi içindeki birden fazla sütun biçimlendirmek için &lt;col&gt; etiketini kullanılır.</div>
+
+  <!-- colgroup> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;colgroup&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>span</td>
+        <td>Birleşecek sütun sayısını belirtir.</td>
+        <td><em>number</em></td>
+        <td>Birleşecek sütun sayısını belirtir.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <col> Etiketi -->
+  <div><strong>&lt;col&gt; : </strong>&lt;colgroup&gt; etiketi içerisinde kullanılarak, her sütun için sütun
+    özelliklerini tanımlar.
+    &lt;col&gt; etiketi tüm sütunlara stiller uygulayarak, her satır ve hücre için stillerin tekrarlanmaması için gayet
+    kullanışlıdır.</div>
+
+  <!-- <col> Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">&lt;col&gt; Özellikleri ve Değerleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>span</td>
+        <td>Birleşecek sütun sayısını belirtir.</td>
+        <td><em>number</em></td>
+        <td>Birleşecek sütun sayısını belirtir.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <thead>,<tbody>,<tfoot> Etiketleri -->
+  <div><strong>&lt;thead&gt; : </strong>HTML tablosunun başlık içeriğini gruplandımak için kullanılır.</div>
+  <div><strong>&lt;tbody&gt; : </strong>HTML tablosunun gövde içeriğini gruplandımak için kullanılır.</div>
+  <div><strong>&lt;tfoot&gt; : </strong>HTML tablosunun altbilgi içeriğini gruplandımak için kullanılır.</div>
+
+  <!-- <table> Örnek -->
+    <div class="editor" data-editor>
+  <div class="editorTextareaGroup">
+    <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <table border="1">
+        <caption align="top">Person Information</caption>
+        <colgroup>
+          <col span="1" style="background-color: pink;">
+          <col span="2" style="background-color: aqua;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Person 1</th>
+            <th>Person 2</th>
+            <th>Person 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Emil</td>
+            <td>Tobias</td>
+            <td>Linus</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>14</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </body>
+  </html>
+    </textarea>
+    <button class="editorButton">Çalıştır</button>
+  </div>
+  <iframe class="editorIframe"></iframe>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>
