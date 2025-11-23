@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>useEffect</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr />
+    <h1>useEffect</h1>
+
+    <div>
+      React JS’te useEffect, bir bileşen render olduğunda, güncellendiğinde veya
+      ortadan kalktığında (unmount) çalıştırmak istediğimiz yan etkileri (side
+      effects) yönetmemizi sağlayan Hook’tur. Bir component’in: İlk defa ekrana
+      gelince (mount), state veya props değişince, ekrandan kaldırılınca
+      (unmount) çalıştırmak istediğimiz kodları yazdığımız yerdir. Buna yan etki
+      (side effect) denir. Şu durumlarda kullanılır: API’den veri çekmek
+      (fetch), Event listener eklemek / kaldırmak, localStorage’a veri
+      kaydetmek, zamanlayıcı ve interval kullanmak, DOM ile etkileşim (scroll,
+      title değiştirme vs.)
+    </div>
+
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        Editör 1
+        <button class="run-btn hide">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+useEffect(() => {
+  // Bu kodlar sayfa her render edildiğinde çalışır.
+});
+
+useEffect(() => {
+  // Bu kodlar sayfa sadece ilk render edildiğinde çalışır.
+}, []);
+
+useEffect(() => {
+  // Bu kodlar sayfa ilk render edildiğinde ve state1 ve state2 render edildiğinde çalışır. 
+}, [state1,state2]);</textarea
+      >
+      <iframe class="output hide"></iframe>
+    </div>
+
+    <!-- Örnek Uygulama -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        Editör 1
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+// import { useState,useEffect } from "react";
+
+function App() {
+  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const [count,setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount(count + 1);
+    }, 1000);
+  });
+  
+
+  return (
+    <div className="App">
+      I've rendered {count} times!
+    </div>
+  );
+}
+ReactDOM.render(<App />, document.getElementById('root'));</textarea
+      >
+      <iframe class="output"></iframe>
+    </div>
+
+    <!-- Örnek Uygulama -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        Editör 1
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+// import { useState,useEffect } from "react";
+
+function App() {
+  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const [count,setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount(count + 1);
+    }, 1000);
+  },[]);
+  
+
+  return (
+    <div className="App">
+      I've rendered {count} times!
+    </div>
+  );
+}
+ReactDOM.render(<App />, document.getElementById('root'));</textarea
+      >
+      <iframe class="output"></iframe>
+    </div>
+
+    <!-- Örnek Uygulama -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        Editör 1
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+// import { useState,useEffect } from "react";
+
+function App() {
+  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const [count,setCount] = useState(0);
+  const [calculation, setCalculation] = useState(0);
+
+  useEffect(() => {
+    setCalculation(()=>count**2)
+  },[count]);
+
+  const arttir = () => (
+    setCount(count+1)
+  )
+
+  const azalt = () => (
+    setCount(count-1)
+  ) 
+
+  return (
+    <div className="App">
+      <p>Sayı : {count}</p>
+      <button onClick={arttir}>Arttır</button>
+      <button onClick={azalt}>Azalt</button>
+      <p>Sayının Karesi : {calculation}</p>
+    </div>
+  );
+}
+ReactDOM.render(<App />, document.getElementById('root'));</textarea
+      >
+      <iframe class="output"></iframe>
+    </div>
+
+    <script src="editor.js"></script>
+  </body>
+</html>

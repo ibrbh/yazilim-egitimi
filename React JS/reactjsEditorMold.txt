@@ -10,8 +10,6 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-    </textarea
-  >
+ReactDOM.render(<App />, document.getElementById('root'));</textarea>
   <iframe class="output"></iframe>
 </div>

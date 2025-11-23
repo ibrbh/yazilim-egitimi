@@ -21,6 +21,7 @@ document.querySelectorAll("[data-editor]").forEach((editor) => {
               <script src="https://unpkg.com/react@18/umd/react.development.js"><\/script>
               <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"><\/script>
               <script src="https://unpkg.com/@babel/standalone/babel.min.js"><\/script>
+              <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
             </head>
             <body>
               <div id="root"></div>

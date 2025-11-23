@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Axios</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <a href="index.html">Ana Sayfa</a>
+    <hr />
+    <h1>Axios</h1>
+
+    <div>
+      React (ve genel olarak JavaScript) projelerinde API istekleri yapmak için
+      en popüler kütüphanelerden biri Axios’tur. Fetch’e göre daha kolay
+      yazılır, daha güçlü özellikler sunar ve hata yönetimi daha nettir.
+    </div>
+
+    <div>
+      Axios, HTTP istekleri (GET, POST, PUT, DELETE vb.) yapmak için kullanılan
+      hafif bir JavaScript kütüphanesidir. Kullanım alanları: API’den veri
+      çekmek, API’ye veri göndermek, Backend ile haberleşmek, Token’lı istekler
+      yapmak, Hata yakalamak, Interceptor ile istekleri yönetmek
+    </div>
+
+    <div>
+      Örneklerde şu web sitesi kullanılacak :
+      <a href="https://jsonplaceholder.typicode.com/users" target="_blank"
+        >Git</a
+      >
+    </div>
+
+    <!-- GET Örnek Uygulama -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        Get İsteği
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+// import { useEffect, useState } from "react";
+// import axios from "axios";
+
+function App() {
+  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    axios.get("https://jsonplaceholder.typicode.com/users")
+      .then(res => setUsers(res.data))
+      .catch(err => setUsers([{ name: "Veri alınamadı" }]));
+  }, []);
+
+  return (
+    <div>
+      <h2>GET Örneği: Kullanıcı Listesi</h2>
+      <ul>
+        {users.map(u => (
+          <li key={u.id || u.name}>{u.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));</textarea>
+      <iframe class="output"></iframe>
+    </div>
+
+    <!-- POST Örnek Uygulama -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        Post İsteği
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+// import { useState } from "react";
+// import axios from "axios";
+
+function App() {
+  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const [user, setUser] = useState(null);
+
+  const addUser = () => {
+    axios.post("https://jsonplaceholder.typicode.com/users", {
+      name: "Yeni Kullanıcı"
+    })
+    .then(res => setUser(res.data))
+    .catch(err => setUser({ name: "Eklenemedi" }));
+  };
+
+  return (
+    <div>
+      <h2>POST Örneği: Kullanıcı Ekle</h2>
+      <button onClick={addUser}>Kullanıcı Ekle</button>
+      {user && <p>Eklenen Kullanıcı: {user.name}</p>}
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));</textarea>
+      <iframe class="output"></iframe>
+    </div>
+
+    <!-- PUT Örnek Uygulama -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        Post İsteği
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+// import { useState } from "react";
+// import axios from "axios";
+
+function App() {
+  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const [user, setUser] = useState({ name: "Eski Kullanıcı" });
+
+  const updateUser = () => {
+    axios.put("https://jsonplaceholder.typicode.com/users/1", {
+      name: "Güncellenmiş Kullanıcı"
+    })
+    .then(res => setUser(res.data))
+    .catch(err => setUser({ name: "Güncellenemedi" }));
+  };
+
+  return (
+    <div>
+      <h2>PUT Örneği: Kullanıcı Güncelle</h2>
+      <button onClick={updateUser}>Güncelle</button>
+      <p>Kullanıcı: {user.name}</p>
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));</textarea>
+      <iframe class="output"></iframe>
+    </div>
+
+    <!-- DELETE Örnek Uygulama -->
+    <div class="react-editor" data-editor>
+      <div class="editor-header">
+        Post İsteği
+        <button class="run-btn">Çalıştır</button>
+      </div>
+      <textarea class="react-code">
+// import { useState } from "react";
+// import axios from "axios";
+
+function App() {
+  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
+  const [status, setStatus] = useState("Henüz silinmedi");
+
+  const deleteUser = () => {
+    axios.delete("https://jsonplaceholder.typicode.com/users/1")
+      .then(() => setStatus("Kullanıcı silindi"))
+      .catch(() => setStatus("Silme başarısız"));
+  };
+
+  return (
+    <div>
+      <h2>DELETE Örneği: Kullanıcı Sil</h2>
+      <button onClick={deleteUser}>Sil</button>
+      <p>Durum: {status}</p>
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));</textarea>
+      <iframe class="output"></iframe>
+    </div>
+
+    <script src="editor.js"></script>
+  </body>
+</html>
