@@ -1,0 +1,34 @@
+* {
+  text-align: justify;
+}
+
+.editor-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+  width: 100%;
+}
+
+table,
+td,
+th {
+  border: 1px solid #666;
+  padding: 8px;
+}

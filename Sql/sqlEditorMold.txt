@@ -1,0 +1,7 @@
+<div class="editor-box">
+  <h3>SQL Editör 1</h3>
+  <textarea id="sqlEditor_1">SELECT * FROM users;</textarea>
+  <br />
+  <button onclick="runSQL(1)">RUN</button>
+  <div id="output_1"></div>
+</div>
