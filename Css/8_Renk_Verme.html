@@ -1,32 +1,240 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>CSS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Renk Verme</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Renk Verme</h1>
+  <div>Css'te color özelliği ile metin rengini düzenleyebilir ve background-color özelliği ile de arka plan rengi
+    ayarlayabilirsiniz.</div>
+
+  <h2>RenkAdları Kullanarak Renk Verme</h2>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Renk Verme
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+<p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="magenta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p.white{color:white;background-color:black;}
+p.red{color:red;}
+p.green{color:green;}
+p.blue{color:blue;}
+p.yellow{color:yellow;}
+p.magenta{color:magenta;}
+p.cyan{color:cyan;}
+p.black{color:black;}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Hexademical Renkler</h2>
+  <div>Heademical renkleri belirtmek için #RRGGBB yazılmalıdır.</div>
+
+  <img src="images/Hexademical Colors.png" alt="" height="200">
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Renk Verme
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+<p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="magenta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p.white{color:#ffffff;background-color:#000000;}
+p.red{color:#ff0000;}
+p.green{color:#00ff00;}
+p.blue{color:#0000ff;}
+p.yellow{color:#ffff00;}
+p.magenta{color:#ff00ff;}
+p.cyan{color:#00ffff;}
+p.black{color:#000000;}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Hexademical Saydam Renkler</h2>
+  <div>Saydam özellikte kullanmak istiyorsak #RRGGBB den sonra 00 ve FF arasında iki hane daha eklememiz gerekecektir.
+  </div>
+
+  <img src="images/Hexademical Saydam Renkler.png" alt="" height="200">
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Renk Verme
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+<p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="magenta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p.white{color:#ffffff;background-color:#00000050;}
+p.red{color:#ff0000;background-color:#ff000050;}
+p.green{color:#00ff00;background-color:#00ff0050;}
+p.blue{color:#0000ff;background-color:#0000ff50;}
+p.yellow{color:#ffff00;background-color:#ffff0050;}
+p.magenta{color:#ff00ff;background-color:#ff00ff50;}
+p.cyan{color:#00ffff;background-color:#00ffff50;}
+p.black{color:#000000;background-color:#00000050;}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>RGB Renkler</h2>
+  <div>RGB renkleri kullanmak için rgb() fonksiyonunu kullanmalısınız. color:rgb(R,G,B) şeklinde yazılmalı. Burada
+    R=Red, G=Green ve B=Blue (Kırmızı, Yeşil, Mavi) yi temsil etmektedir. R,G,B değleri arasında virgül ile yazılmalı ve
+    0 ile 255 arasında bir değer atanmalıdır.</div>
+
+  <img src="images/RGB Colors.png" alt="" height="200">
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Renk Verme
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+<p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="magenta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+<p class="black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, dolore?</p><br>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p.white{color:rgb(255,255,255);background-color:rgb(0,0,0);}
+p.red{color:rgb(255,0,0);}
+p.green{color:rgb(0,255,0);}
+p.blue{color:rgb(0,0,255);}
+p.yellow{color:rgb(255,255,0);}
+p.magenta{color:rgb(255,0,255);}
+p.cyan{color:rgb(0,255,255);}
+p.black{color:rgb(0,0,0);}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>RGBA Renkler</h2>
+  Nesnenin saydamlığını belirlemek için rgb() değerine a 'alfa' değeri eklenir. alfa değeri 0 ile 1.0 arasında
+  olmalıdır.
+
+  <img src="images/RGBA Colors.png" alt="" height="200">
+
+  <h2>HSL Renkler</h2>
+  <div>HSL renkleri hsl() fonksiyonu ile belirtilir. HSL (hue, saturation, lightness) H = renk tonu, S = Doygunluk, L =
+    Hafiflik</div>
+
+  <img src="images/HSL Colors.png" alt="" height="200">
+
+  <h2>HSLA Renkler</h2>
+  <div>Aynı rgba(R,G,B,alfa-değeri) fonksiyonunda olduğu gibi hsla(H,S,L,alfa-değeri) şeklinde yazılmaktadır. Alfa
+    değeri hsla() fonksiyonunda elemanın renk opaklığını ayarlamak için kullanılır. Elemanın opacity: değeri ile
+    karıştırmayınız. Alfa değeri 0 ile 1.0 arasında bir değer alacaktır.</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

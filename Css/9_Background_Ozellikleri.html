@@ -1,32 +1,1006 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>CSS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Background Özelli̇kleri̇</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Background Özelli̇kleri̇</h1>
+  <!-- background-color Özelliği -->
+  <div><strong>background-color : </strong> Arka plan rengi atamak için kullanılır.</div>
+
+  <!-- background-color Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-color Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <em>color</em>
+        </td>
+        <td>
+          Arka plan rengini belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          transparent
+        </td>
+        <td>
+          Arka plan renginin şeffaf olması gerektiğini belirtir. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      background-color
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat quae ipsa cupiditate repellat doloribus voluptas iste quisquam repellendus! Numquam omnis consectetur architecto voluptatum ipsum modi consequatur reprehenderit repellat laboriosam?</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+body{background-color:lightblue;}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- background-image Özelliği -->
+  <div><strong>background-image : </strong> Arka plana resim eklemek için kullanılır.</div>
+
+  <!-- background-image özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-image Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          url('<em>URL</em>')
+        </td>
+        <td>
+          Resmin URL'si. Birden fazla resim belirtmek i&ccedil;in URL'leri virg&uuml;lle ayırın
+        </td>
+      </tr>
+      <tr>
+        <td>
+          none
+        </td>
+        <td>
+          Hi&ccedil;bir arka plan resmi g&ouml;r&uuml;nt&uuml;lenmez. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          conic-gradient()
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml; olarak konik bir degrade ayarlar. En az iki renk tanımlayın
+        </td>
+      </tr>
+      <tr>
+        <td>
+          linear-gradient()
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml; olarak doğrusal bir degrade ayarlar. En az iki renk tanımlayın
+          (yukarıdan aşağıya)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          radial-gradient()
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml; olarak radyal bir degrade ayarlar. En az iki renk tanımlayın
+          (merkezden kenarlara)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          repeating-conic-gradient()
+        </td>
+        <td>
+          Konik bir degradeyi tekrarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          repeating-linear-gradient()
+        </td>
+        <td>
+          Doğrusal bir degradeyi tekrarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          repeating-radial-gradient()
+        </td>
+        <td>
+          Radyal degradeyi tekrarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      background-image
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat quae ipsa cupiditate repellat doloribus voluptas iste quisquam repellendus! Numquam omnis consectetur architecto voluptatum ipsum modi consequatur reprehenderit repellat laboriosam?</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+body{
+  background-image:url("https://images.pexels.com/photos/30482701/pexels-photo-30482701.jpeg");
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- background-position Özelliği -->
+  <div><strong>background-position : </strong> Arka plana eklenen resmin pozisyonunu belirtmek için kullanılır.</div>
+
+  <!-- background-position Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-position Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          left top<br /> left center<br /> left bottom<br /> right top<br /> right center<br /> right bottom<br />
+          center top<br /> center center<br /> center bottom
+        </td>
+        <td>
+          Yalnızca bir anahtar kelime belirtirseniz diğer değer "center" olacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>x% y%</em>
+        </td>
+        <td>
+          İlk değer yatay konum, ikinci değer ise dikey konumdur. Sol &uuml;st k&ouml;şe %0 %0'dır. Sağ alt k&ouml;şe
+          %100 %100'd&uuml;r. Yalnızca bir değer belirtirseniz diğer değer %50 olacaktır. Varsayılan değer: %0 %0
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>xpos ypos</em>
+        </td>
+        <td>
+          İlk değer yatay konum, ikinci değer ise dikey konumdur. Sol &uuml;st k&ouml;şe 0 0'dır. Birimler piksel (0px
+          0px) veya başka herhangi bir CSS birimi olabilir. Yalnızca bir değer belirtirseniz diğer değer %50 olacaktır.
+          % ve konumları karıştırabilirsiniz
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      background-position
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat quae ipsa cupiditate repellat doloribus voluptas iste quisquam repellendus! Numquam omnis consectetur architecto voluptatum ipsum modi consequatur reprehenderit repellat laboriosam?</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+body{
+  background-image:url("images/Beşiktaş JK.png");
+  background-position:center top;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- background-repeat Özelliği -->
+  <div><strong>background-repeat : </strong> Arka plan resminin tekrarlı mı yoksa tekrarsız mı ekleneceğini belirlemek
+    için kullanılır.</div>
+
+  <!-- background-repeat Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-repeat Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          repeat
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml; hem dikey hem de yatay olarak tekrarlanır.&nbsp; Son resim sığmadığı
+          takdirde kırpılacaktır. Bu varsayılandır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          repeat-x
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml; yalnızca yatay olarak tekrarlanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          repeat-y
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml; yalnızca dikey olarak tekrarlanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          no-repeat
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml; tekrarlanmaz. Resim yalnızca bir kez g&ouml;sterilecek.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          space
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml;, kırpmadan m&uuml;mk&uuml;n olduğu kadar tekrarlanır. İlk ve son
+          g&ouml;r&uuml;nt&uuml;, &ouml;ğenin her iki tarafına sabitlenir ve boşluklar, g&ouml;r&uuml;nt&uuml;ler
+          arasında eşit şekilde dağıtılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          round
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml; tekrarlanır ve alanı doldurmak i&ccedil;in sıkıştırılır veya uzatılır
+          (boşluk yok)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      background-repeat
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat quae ipsa cupiditate repellat doloribus voluptas iste quisquam repellendus! Numquam omnis consectetur architecto voluptatum ipsum modi consequatur reprehenderit repellat laboriosam?</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+body{
+  background-image:url("images/Beşiktaş JK.png");
+  background-position:center top;
+  background-repeat:no-repeat;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- background-size Özelliği -->
+  <div><strong>background-size : </strong> Arka plan resminin alanı nasıl kaplayacağını belirlemek için kullanılır.
+  </div>
+
+  <!-- background-size Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-size Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. Arka plan resmi orijinal boyutunda g&ouml;r&uuml;nt&uuml;lenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml;n&uuml;n genişliğini ve y&uuml;ksekliğini ayarlar. İlk değer genişliği,
+          ikinci değer ise y&uuml;ksekliği ayarlar. Yalnızca bir değer verilirse ikincisi "otomatik" olarak ayarlanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>percentage</em>
+        </td>
+        <td>
+          Arka plan g&ouml;r&uuml;nt&uuml;s&uuml;n&uuml;n genişliğini ve y&uuml;ksekliğini ana &ouml;ğenin y&uuml;zdesi
+          olarak ayarlar. İlk değer genişliği, ikinci değer ise y&uuml;ksekliği ayarlar. Yalnızca bir değer verilirse
+          ikincisi "otomatik" olarak ayarlanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cover
+        </td>
+        <td>
+          Arka plan resmini, g&ouml;rseli uzatmak veya kenarlardan birini biraz kesmek zorunda kalsa bile, ekranın
+          tamamını kaplayacak şekilde yeniden boyutlandırır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          contain
+        </td>
+        <td>
+          Resmin tamamen g&ouml;r&uuml;n&uuml;r olduğundan emin olmak i&ccedil;in arka plan resmini yeniden
+          boyutlandırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      background-size
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat quae ipsa cupiditate repellat doloribus voluptas iste quisquam repellendus! Numquam omnis consectetur architecto voluptatum ipsum modi consequatur reprehenderit repellat laboriosam?</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+body{
+  background-image:url("https://images.pexels.com/photos/30482701/pexels-photo-30482701.jpeg");
+  background-position:center top;
+  background-repeat:no-repeat;
+  background-size:100px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- background-attachment Özelliği -->
+  <div><strong>background-attachment : </strong> Arka plana eklenen resmin sabit mi yoksa statik mi olacağını ayarlamak
+    için kullanılır.</div>
+
+  <!-- background-attachment Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-attachment Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          scroll
+        </td>
+        <td>
+          Arka plan resmi sayfayla birlikte kaydırılacaktır. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fixed
+        </td>
+        <td>
+          Arka plan resmi sayfayla birlikte kaydırılmayacak.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          local
+        </td>
+        <td>
+          Arka plan resmi &ouml;ğenin i&ccedil;eriğiyle birlikte kaydırılacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- background-blend-mode Özelliği -->
+  <div><strong>background-blend-mode : </strong> background-blend-mode özelliği, bir öğeye tanımlanmış ardalan
+    resminin(background-image) ardalan rengiyle(background-color) nasıl harmanlanacağını tanımlar. Grafik işleme
+    araçlarıyla çalışanların aşina olduğu bir resim harmanlama işlemidir.</div>
+
+  <!-- background-blend-mode Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-blend-mode Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          normal
+        </td>
+        <td>
+          Bu varsayılandır. Karıştırma modunu normale ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          multiply
+        </td>
+        <td>
+          Karıştırma modunu &ccedil;oğaltılacak şekilde ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          screen
+        </td>
+        <td>
+          Karışım modunu ekrana ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          overlay
+        </td>
+        <td>
+          Karıştırma modunu kaplamaya ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          darken
+        </td>
+        <td>
+          Karıştırma modunu koyulaştıracak şekilde ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          lighten
+        </td>
+        <td>
+          Karıştırma modunu a&ccedil;ıklaştıracak şekilde ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          color-dodge
+        </td>
+        <td>
+          Karışım modunu renk atlatmaya ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          saturation
+        </td>
+        <td>
+          Karışım modunu doygunluğa ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          color
+        </td>
+        <td>
+          Karışım modunu renkli olarak ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          luminosity
+        </td>
+        <td>
+          Karışım modunu parlaklığa ayarlar.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      background-blend-mode
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat quae ipsa cupiditate repellat doloribus voluptas iste quisquam repellendus! Numquam omnis consectetur architecto voluptatum ipsum modi consequatur reprehenderit repellat laboriosam?</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+body{
+  background-image:url("https://images.pexels.com/photos/30482701/pexels-photo-30482701.jpeg");
+  background-position:center top;
+  background-repeat:no-repeat;
+  background-size:100px;
+  background-color:red;
+  background-blend-mode:multiply;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- background-clip Özelliği -->
+  <div><strong>background-clip : </strong> CSS background-clip özelliği, bir arka plan görüntüsünün hangi bölümlerinin
+    öğe tarafından doldurulacağını belirlemek için kullanılır. Bu özellik, web tasarımcılarına daha fazla esneklik
+    sağlar ve arka planın nasıl görüneceğini kontrol etmelerine izin verir.</div>
+
+  <!-- background-clip Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-clip Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          border-box
+        </td>
+        <td>
+          Arka plan, &ouml;ğenin sınırlarını doldurur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          padding-box
+        </td>
+        <td>
+          Arka plan, &ouml;ğenin dolgusunu doldurur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          content-box
+        </td>
+        <td>
+          Arka plan, &ouml;ğenin i&ccedil;eriğini doldurur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          text
+        </td>
+        <td>
+          Arka plan, metin i&ccedil;inde g&ouml;r&uuml;nt&uuml;lenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      background-clip
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p class="example1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat quae ipsa cupiditate repellat doloribus voluptas iste quisquam repellendus! Numquam omnis consectetur architecto voluptatum ipsum modi consequatur reprehenderit repellat laboriosam?</p>
+      <p class="example2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla mollitia, velit, dolores ut eum aspernatur suscipit recusandae consectetur impedit eligendi praesentium officia et temporibus voluptatem obcaecati assumenda earum optio sint!</p>
+      <p class="example3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque placeat porro dolorem, beatae debitis tempora vitae maxime cum ipsa odio consectetur magnam nulla excepturi repudiandae vero? In quaerat vitae perferendis!</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p{
+  border:5px dashed black;
+  background-color:aqua;
+  padding:20px;
+}
+
+p.example1{
+  background-clip:border-box;
+}
+
+p.example2{
+  background-clip:padding-box;
+}
+
+p.example3{
+  background-clip:content-box;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- background-origin Özelliği -->
+  <div><strong>background-origin : </strong> CSS'de background-origin özelliği, arkaplan görselinin nereye
+    yerleştirileceğini belirtir.</div>
+
+  <!-- background-origin Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">background-origin Değerleri</th>
+      </tr>
+      <tr>
+        <td>
+          Değer
+        </td>
+        <td>
+          Tanım
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          border-box
+        </td>
+        <td>
+          Arka plan resmi, sınırın sol &uuml;st k&ouml;şesinden başlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          padding-box
+        </td>
+        <td>
+          (varsayılan) Arka plan resmi, i&ccedil; kenarının sol &uuml;st k&ouml;şesinden başlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          content-box
+        </td>
+        <td>
+          Arka plan resmi i&ccedil;eriğin sol &uuml;st k&ouml;şesinden başlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- background Özelliği -->
+  <div><strong>background : </strong> CSS Background özelliklerini tek satırda tanımlamak için kullanılır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      background-clip
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat quae ipsa cupiditate repellat doloribus voluptas iste quisquam repellendus! Numquam omnis consectetur architecto voluptatum ipsum modi consequatur reprehenderit repellat laboriosam?</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+body{
+  background:url("images/Beşiktaş JK.png") no-repeat center top;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>
