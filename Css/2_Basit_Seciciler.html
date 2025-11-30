@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Basi̇t Seçi̇ci̇ler (Selectors)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Basi̇t Seçi̇ci̇ler (Selectors)</h1>
+
+  <!-- Element Seçici -->
+  <div><strong>Element (Etiket) Seçici : </strong> Etiket adı ile bir HTML öğesini seçmenizi sağlar.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Element Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <h1>This is a heading</h1>
+      <p>This is a paragraph</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+/* Sayfadaki h1 etiketlerini seçer */
+h1{
+  color:blue;
+  text-align:center;
+}
+
+/* Sayfadaki p etiketlerini seçer */
+p{
+  color:red;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Id Seçici -->
+  <div><strong>Id (Kimlik) Seçici : </strong> CSS ile id seçici kullanmak için #idName şeklinde yazılmalıdır. id="myID"
+    şeklinde her HTML öğesine id="" tanımlayabilirsiniz. Id bilgileri eşsiz ve 1 sayfada en fazla 1 adet kullanılabilir.
+    Aynı sayfada aynı id="" değerine sahip başka bir HTML öğesinin bulunması yanlış kullanım olacaktır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Id Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <h1 id="title">This is a heading</h1>
+      <p id="description">This is a paragraph</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+/* title id sine sahip h1 etiketini seçer. */
+h1#title{
+  color:blue;
+  text-align:center;
+}
+
+/* description id sine sahip etiketi seçer. */
+#description{
+  color:red;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Class Seçici -->
+  <div><strong>Class (Sınıf) Seçici : </strong> Bir HTML öğesini classname'ine göre yani sınıf adına göre seçmemizi
+    sağlar. &lt;div class="main"&gt; main classname'ine sahip bir div elemanımız var ise onu seçmek için div.main{width:50%;} şeklinde belirtebilirsiniz. class özelliği her HTML öğesinde kullanılabilir ve aynı classname'e sahip birden çok eleman belirleyebilirsiniz.
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Class Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <h1 class="title">This is a heading</h1>
+      <p class="description">This is a paragraph</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+/* class ı title olan bütün h1 etiketlerini seçer. */
+h1.title{
+  color:blue;
+  text-align:center;
+}
+
+/* class ı description olan bütün etiketleri seçer. */
+.description{
+  color:red;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Evrensel Seçici -->
+  <div><strong>Evrensel Seçici : </strong> Evrensel css seçicisi olarak * işareti kullanılmaktadır. *{} şeklinde
+    kullandığınızda HTML sayfasındaki tüm elemanları seçmiş olursunuz. Aynı şekilde bir elamanın içerisindeki tüm
+    öğeleri de seçmek için kullanabilirsiniz. div.main * şeklinde yazıldığında main classname'e sahip div içerisindeki
+    'div class="main"' hariç tüm öğeleri seçmiş olursunuz.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Evrensel Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <h1>This is a heading</h1>
+      <p>This is a paragraph</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+/* Sayfadaki bütün etiketleri seçer. */
+*{
+  background-color:black;
+  color:white;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Grup Seçici -->
+  <div><strong>Grup Seçici : </strong> Aynı stillere sahip HTML öğelerini aralarında "," kullanarak aynı anda
+    stillendirmenizi sağlar.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Grup Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <h1>This is a h1 heading</h1>
+      <h2>This is a h2 heading</h2>
+      <h3>This is a h3 heading</h3>
+      <h4>This is a h4 heading</h4>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+/* Sayfadaki h1 etiketlerini seçer. */
+h1{
+  background-color:black;
+  color:white;
+}
+
+/* Sayfadaki h2 ve h3 etiketlerini seçer. */
+h2,h3{
+  color:yellow;
+}
+
+/* Sayfadaki h2 ve h4 etiketlerini seçer. */
+h2,h4{
+  background-color:red;
+}
+
+/* Sayfadaki h3 etiketlerini seçer. */
+h3{
+  background-color:blue;
+}
+
+/* Sayfadaki h4 etiketlerini seçer. */
+h4{
+  color:blue;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

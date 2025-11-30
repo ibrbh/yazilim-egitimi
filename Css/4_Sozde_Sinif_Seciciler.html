@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sözde Sinif Seçi̇ci̇ler (Pseudo Class)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Sözde Sinif Seçi̇ci̇ler (Pseudo Class)</h1>
+  <div>
+    Pseudo class seçiciler bir eleman üzerinde mouse ile gelindiğinde olduğunda, bir input içerisine tıknalıdığında gibi
+    bir çok değişik durumu seçerek stillendirmeniz için tasarlanmıştır. :pseudo-class şeklinde kullanılır.
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <td>
+          Se&ccedil;ici
+        </td>
+        <td>
+          &Ouml;rnek
+        </td>
+        <td>
+          A&ccedil;ıklama
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          :active
+        </td>
+        <td>
+          a:active
+        </td>
+        <td>
+          Aktif olan linki se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :checked
+        </td>
+        <td>
+          input:checked
+        </td>
+        <td>
+          checkbox ve radio input giriş elemanlarında se&ccedil;ili olanı belirtmek i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :disabled
+        </td>
+        <td>
+          input:disabled
+        </td>
+        <td>
+          Etkin kullanıma sahip olmayan pasif input ve button elemanlarını belirtmek i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :empty
+        </td>
+        <td>
+          p:empty
+        </td>
+        <td>
+          &Ccedil;ocuğu olmayan her &lt;p&gt; &ouml;ğesini se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :enabled
+        </td>
+        <td>
+          input:enabled
+        </td>
+        <td>
+          Kullanılabilir ve tıklanabilir input ve button &ouml;ğelerini belirtmek i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :first-child
+        </td>
+        <td>
+          p:first-child
+        </td>
+        <td>
+          ilk &ccedil;ocuk elemanı se&ccedil;mek i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :first-of-type
+        </td>
+        <td>
+          p:first-of-type
+        </td>
+        <td>
+          Ebeveyninin ilk &lt;p&gt; elemanı olan her &lt;p&gt; elemanını se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :focus
+        </td>
+        <td>
+          input:focus
+        </td>
+        <td>
+          Link &ouml;ğesine tıknalıdığı anda nasıl g&ouml;r&uuml;neceğini stillendirmenizi sağlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :hover
+        </td>
+        <td>
+          a:hover
+        </td>
+        <td>
+          Bir HTML &ouml;ğesi &uuml;zerinde fare ile gelindiğinde nasıl g&ouml;r&uuml;neceğini stillendirmenizi
+          sağlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :in-range
+        </td>
+        <td>
+          input:in-range
+        </td>
+        <td>
+          Belirtilen aralıktaki değere sahip &lt;input&gt; &ouml;ğelerini se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :invalid
+        </td>
+        <td>
+          input:invalid
+        </td>
+        <td>
+          Ge&ccedil;ersiz değere sahip t&uuml;m &lt;input&gt; &ouml;ğelerini se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :lang(language)
+        </td>
+        <td>
+          p:lang(en)
+        </td>
+        <td>
+          a:lang(en) diye belirtildiğinde lang="en" &ouml;zniteliğine sahip olan link &ouml;ğelerini se&ccedil;miş
+          olursunuz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :last-child
+        </td>
+        <td>
+          p:last-child
+        </td>
+        <td>
+          Son sıradaki &ccedil;ocuk elemanı se&ccedil;mek i&ccedil;in kullanılır. Bir&ccedil;ok HTML &ouml;ğelerine
+          uygulanabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :last-of-type
+        </td>
+        <td>
+          p:last-of-type
+        </td>
+        <td>
+          Ebeveyninin son &lt;p&gt; &ouml;ğesi olan her &lt;p&gt; &ouml;ğesini se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :link
+        </td>
+        <td>
+          a:link
+        </td>
+        <td>
+          Ziyaret edilmeyen t&uuml;m bağlantıları se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :not(selector)
+        </td>
+        <td>
+          :not(p)
+        </td>
+        <td>
+          se&ccedil;mek istediğiniz &ouml;ğlelerin dışında hari&ccedil; tutmak istediğiniz &ouml;ğeyi de belirtmek
+          i&ccedil;in kullanılır. &ouml;rnek div:not(.myDiv) denildiğinde my-div clasname'e sahip div dışındaki
+          t&uuml;m div elemanlarını se&ccedil;miş olursunuz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :nth-child(n)
+        </td>
+        <td>
+          p:nth-child(2)
+        </td>
+        <td>
+          p:nth-child(2) şeklinde yazıldığında 2. &ccedil;ocuk p &ouml;ğesi se&ccedil;ilmiş olur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :nth-last-child(n)
+        </td>
+        <td>
+          p:nth-last-child(2)
+        </td>
+        <td>
+          div:nth-child(2) şeklinde yazıldığında sondan 2. &ccedil;ocuk div &ouml;ğesi se&ccedil;ilmiş olur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :nth-last-of-type(n)
+        </td>
+        <td>
+          p:nth-last-of-type(2)
+        </td>
+        <td>
+          p:nth-child(2) şeklinde yazıldığında son alt p &ouml;ğesinden başlayarak t&uuml;m 2. p &ouml;ğelerini
+          se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :nth-of-type(n)
+        </td>
+        <td>
+          p:nth-of-type(2)
+        </td>
+        <td>
+          p:nth-of-type(2) şeklinde yazıldığında &uuml;stten başlayarak 2. sıradaki t&uuml;m p &ouml;ğelerini
+          se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :only-of-type
+        </td>
+        <td>
+          p:only-of-type
+        </td>
+        <td>
+          p:only-of-type &ouml;ğesi ebevyni i&ccedil;erisinde sadece 1 adet p &ouml;ğesi varsa oradaki p elemanını
+          se&ccedil;er. Eğer ebeveyn i&ccedil;ersinde biden fazla p &ouml;ğesi varsa oradaki p &ouml;ğeleri
+          :only:of-type ile se&ccedil;ilemez.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :only-child
+        </td>
+        <td>
+          p:only-child
+        </td>
+        <td>
+          p:only-child ve p:only-of-type arasındaki fark p:only-child ta ebeveyn i&ccedil;erisinde p &ouml;ğesi
+          dışında başka bir &ouml;ğe olsa dahi oradaki p &ouml;ğesi se&ccedil;ilmez. p &ouml;ğesinin
+          se&ccedil;ilebilmesi i&ccedil;in ebevyninin i&ccedil;erisinde 1 adet p &ouml;ğesi dışında başka bir eleman
+          olmamalıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :optional
+        </td>
+        <td>
+          input:optional
+        </td>
+        <td>
+          Zorunlu giriş olmayan input elemanlarını stillendirmek i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :out-of-range
+        </td>
+        <td>
+          input:out-of-range
+        </td>
+        <td>
+          Belirtilen aralığın dışında bir değere sahip &lt;input&gt; &ouml;ğelerini se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :read-only
+        </td>
+        <td>
+          input:read-only
+        </td>
+        <td>
+          Sadece okunabilir şekilde etkin olmayan input elemanlarını se&ccedil;mek ve stillendirmek i&ccedil;in
+          kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :read-write
+        </td>
+        <td>
+          input:read-write
+        </td>
+        <td>
+          "Salt okunur" &ouml;zelliği olmayan &lt;input&gt; &ouml;ğelerini se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :required
+        </td>
+        <td>
+          input:required
+        </td>
+        <td>
+          Bilgi girilmesi zorunlu ya da se&ccedil;ilmesi zorunlu tutulmuş input ve form elemanlarını se&ccedil;mek
+          i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :root
+        </td>
+        <td>
+          root
+        </td>
+        <td>
+          Belgenin k&ouml;k &ouml;ğesini se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :target
+        </td>
+        <td>
+          #news:target
+        </td>
+        <td>
+          Ge&ccedil;erli etkin #news &ouml;ğesini se&ccedil;er (bu bağlantı adını i&ccedil;eren bir URL'ye tıklanır)
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :valid
+        </td>
+        <td>
+          input:valid
+        </td>
+        <td>
+          Ge&ccedil;erli bir değere sahip t&uuml;m &lt;input&gt; &ouml;ğelerini se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          :visited
+        </td>
+        <td>
+          a:visited
+        </td>
+        <td>
+          T&uuml;m ziyaret edilmiş linkleri se&ccedil;er.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Sözde Sınıf Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <a href="https://www.google.com" target="_blank">Google</a>
+      <a href="https://www.youtube.com" target="_blank">Youtube</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+a{
+  text-decoration:none;
+  color:white;
+  background-color:black;
+}
+
+a:active{
+  background-color:purple;
+}
+
+a:hover{
+  background-color:blue;
+}
+
+a:visited{
+  background-color:red;
+}
+
+a:focus{
+  background-color:green;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

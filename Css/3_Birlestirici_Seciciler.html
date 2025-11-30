@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Bi̇rleşti̇ri̇ci̇ Seçi̇ci̇ler (Combi̇nators)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Bi̇rleşti̇ri̇ci̇ Seçi̇ci̇ler (Combi̇nators)</h1>
+
+  <!-- Alt Seçiciler -->
+  <div><strong>Alt Seçicler (Boşluk) : </strong> Bir HTML öğesi altındaki seçilmek istenen öğeleri belritmek için
+    kullanılır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Alt Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="main">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio harum beatae rerum, tempora ullam ad delectus corporis, illum debitis sed ratione ipsum rem neque voluptatum obcaecati perspiciatis asperiores inventore accusamus.</p>
+      </div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet consectetur sed, quis iusto debitis hic eligendi nemo exercitationem praesentium eius ut sequi id ipsam, expedita adipisci excepturi perspiciatis ea facilis.</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div.main{
+  padding:20px;
+  margin:20px;
+  background-color:red;
+}
+
+div.main p{
+  color:white;
+  font-size:20px;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Çocuk Seçiciler -->
+  <div><strong>Çocuk (&gt;) Seçiciler : </strong> Bir HTML öğesinin hemen altındaki ilk hiyerarşiden gelen öğeleri
+    seçmek için kullanılır. Seçilen öğelerin altındaki aynı tür elemanları farklı şekilde stillendirmek istiyorsak çocuk
+    seçici &gt; kullanmak büyük fayda sağlayacaktır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Çocuk Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <ul class="example">
+        <li>
+          <a href="#">1.Seviye a Elemanı</a>
+          <ul>
+            <li><a href="#">2.Seviye a Elemanları Seçilmeyecek</a></li>
+            <li><a href="#">2.Seviye a Elemanları Seçilmeyecek</a></li>
+            <li><a href="#">2.Seviye a Elemanları Seçilmeyecek</a></li>
+          </ul>
+        </li>
+        <li><a href="#">1.Seviye a Elemanı</a></li>
+        <li><a href="#">1.Seviye a Elemanı</a></li>
+        <li><a href="#">1.Seviye a Elemanı</a></li>
+      </ul>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+ul.example{
+  list-style:none;
+  padding:20px;
+}
+
+ul.example>li>a{
+  background-color:red;
+  color:white;
+  font-size:20px;
+  padding:10px;
+  display:inline-block;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Komşu Kardeş Seçici -->
+  <div><strong>Komşu Kardeş Seçici (+) : </strong> Komşu kardeş seçiciler genellikle belirli bir öğeden sonra gelen aynı
+    hiyerarşideki ilk öğeyi seçmek için kullanılır. Aşağıdaki örnekte h4 öğesinden sonra gelen ilk p öğesi
+    seçilmektedir.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Komşu Kardeş Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, nobis?</p>
+      <h6>Örnek HTML Kodları</h6>
+      <h4 class="myTitle">Örnek Başlık</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, fugiat!</p>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, incidunt.</p>
+      </div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, ex.</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h4.myTitle+p{
+  background-color:blue;
+  color:white;
+  padding:10px;
+  font-size:20px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Genel Seçici -->
+  <div><strong>Genel Seçici (~) : </strong> Genel seçici ~ ile bir öğeden sonra gelen tüm kardeş öğeler seçilebilir.
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Genel Seçici
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, molestiae!</p>
+      <div class="example1">
+        <span>Div Öğesi</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, obcaecati?</p>
+      </div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, eveniet!</p>
+      <span>Span Öğesi</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste.</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div.example1{
+  border:2px solid red;
+  padding:15px;
+}
+
+div.example1~p{
+  background-color:yellow;
+  color:red;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

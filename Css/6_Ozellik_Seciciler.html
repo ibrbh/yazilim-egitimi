@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Özelli̇k Seçi̇ci̇leri̇ (Attribute Selectors)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Özelli̇k Seçi̇ci̇leri̇ (Attribute Selectors)</h1>
+  <div>CSS Atrribute seçiciler belirli bir niteliğe sahip ya da belirli bir nitelik değerine sahip olan HTML öğelerini
+    seçmek için kullanılır.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <td>
+          Se&ccedil;ici
+        </td>
+        <td>
+          &Ouml;rnek
+        </td>
+        <td>
+          A&ccedil;ıklama
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          [attribute]
+        </td>
+        <td>
+          a[target]
+        </td>
+        <td>
+          target="" &ouml;zelliği olan t&uuml;m a &ouml;ğlerini se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [attribute=value]
+        </td>
+        <td>
+          a[target="_blank"]
+        </td>
+        <td>
+          target="_blank" &ouml;zelliği olan t&uuml;m a &ouml;ğelerini se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [attribute~=value]
+        </td>
+        <td>
+          a[class~="test"]
+        </td>
+        <td>
+          class &ouml;zelliği test clasname i&ccedil;eren t&uuml;m a &ouml;ğelerini se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [attribute|=value]
+        </td>
+        <td>
+          [lang|="en"]
+        </td>
+        <td>
+          "en" ile başlayan dil &ouml;zelliği değerine sahip t&uuml;m &ouml;ğeleri se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [attribute^=value]
+        </td>
+        <td>
+          a[href^="http"]
+        </td>
+        <td>
+          href &ouml;zelliği http ile başlayan t&uuml;m a &ouml;ğelerini se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [attribute$=value]
+        </td>
+        <td>
+          a[class$="test"]
+        </td>
+        <td>
+          class &ouml;zelliği test clasname ile sonlanan t&uuml;m a &ouml;ğelerini se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          [attribute*=value]
+        </td>
+        <td>
+          a[class*="link"]
+        </td>
+        <td>
+          class &ouml;zelliği "link" i&ccedil;eren t&uuml;m a &ouml;ğelerini se&ccedil;er. &ouml;rnek &lt;a href="#"
+          class="link1"&gt;&lt;/a&gt;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Özellik Seçicileri
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <a href="https://www.w3schools.com">w3Schools</a>
+      <a href="http://www.disney.com" target="_blank">Disney</a>
+      <a href="http://www.wikipedia.org" target="_top">Vikipedi</a>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+a[target]{
+  background-color:yellow;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Özellik Seçicileri
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <a href="https://tercihyazilim.com" target="_self" class="link1">Link1</a><br>
+      <a href="http://tercihyazilim.com" target="_blank" class="link2">Link2</a><br>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+a[class~=link1]{
+  border:2px solid red;
+  display:inline-block;
+  padding:10px;
+  color:red;
+}
+
+a[target="_blank"]{
+  border:2px solid blue;
+  display:inline-block;
+  padding:10px 30px;
+  color:blue;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Özellik Seçicileri
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <h1 class="top-header">Welcome</h1>
+      <p class="top-text">Hello World</p>
+      <p class="topcontent">Are you learning CSS?</p>
+
+      <h1 class="bottom-header">Welcome</h1>
+      <p class="bottom-text">Hello World</p>
+      <p class="bottomcontent">Are you learning CSS?</p>
+
+      <div class="first_test">The first div element.</div>
+      <div class="second">The second div element.</div>
+      <div class="my_test">The third div element.</div>
+      <p class="mytest">This is some text in a paragraph.</p>
+
+      <div class="first_exam">The first div element.</div>
+      <div class="second">The second div element.</div>
+      <div class="my_exam">The third div element.</div>
+      <p class="myexam">This is some text in a paragraph.</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+[class|="top"]{
+  background:yellow;
+}
+
+[class^="bottom"]{
+  background:aqua;
+}
+
+[class$="test"]{
+  background:pink;
+}
+
+[class*="ex"]{
+  background:purple;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

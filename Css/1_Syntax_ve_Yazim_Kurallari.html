@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Syntax ve Yazım Kuralları</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Syntax ve Yazım Kuralları</h1>
+  <h2>Syntax</h2>
+  <img src="images/Syntax.png">
+
+  <h2>Yazım Kuralları</h2>
+
+  <!-- Inline Css -->
+  <div><strong>Inline Css : </strong> Bu kullanım şeklinde CSS kodlarımızı HTML/XHTML etiketleri içine "style"
+    özniteliği ile birlikte yazacağız.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Inline Css
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <h1 style="color:blue; text-align: center;">This is a heading</h1>
+      <p style="color:red">This is a paragraph</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code"></textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Internal Css -->
+  <div><strong>Internal Css : </strong> Bu kullanım şeklinde CSS kodlarımızı &lt;head&gt; etiketi altında &lt;style&gt;
+    etiketi içine yazacağız.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Internal Css
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+      <style>
+        h1{
+          color:blue;
+          text-align: center;
+        }
+        p{
+          color:red;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>This is a heading</h1>
+      <p>This is a paragraph</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code"></textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- External Css -->
+  <div><strong>External Css : </strong> Bu kullanım şekli, bizim kullanmamız gereken CSS kullanım şeklidir. İsminden de
+    anlaşılacağı gibi CSS kodlarımız ayrı bir dosyada olacaktır ve biz bu dosyayı etiketi içinde çağıracağız. CSS
+    dosyamızın uzantısı ".css" olmalıdır ve CSS dosyamızda sadece CSS kodları olmalıdır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      External Css
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <h1>This is a heading</h1>
+      <p>This is a paragraph</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}
+
+p{
+  color:red;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Css Şartları ve Kuralları</h2>
+  <ul>
+    <li>CSS kodları sayfa içerisinde kullanılıyor ise mutlaka style tag'ı (etiketi) içerisinde yazılmalıdır.</li>
+    <li>CSS kodları sayfa içerisinde style tag'ı (etiketi) içerisinde kullanılıyorsa her seçici {} (süslü parantezler)
+      içerisinde yazılmalıdır.</li>
+    <li>CSS kodları sayfa içerisinde ve satır içi kullanılıyor ise mutlaka style global özelliği içerisinde
+      yazılmalıdır.</li>
+    <li>CSS kodları sayfa içerisinde ve satır içi class (sınıf) şeklinde kullanılıyor ise mutlaka class global özelliği
+      içerisine dahil edilmelidir.</li>
+    <li>CSS'de özellik ve değer arasında mutlaka : (iki nokta) karakteri eklenmelidir.</li>
+    <li>CSS'de özellik ve değer kullanıldıktan sonra mutlaka ; (noktalı virgül) ile sonlandırılmalıdır.</li>
+    <li>CSS'de birden fazla tag'a (etikete) erişilmek isteniyorsa mutlaka taglar arasına , (virgül) eklenmelidir.</li>
+    <li>Sayfaya harici bir CSS dosyasını dahil edilmek isteniyor ise link HTML tag'ını kullanılmalıdır ve ilgili CSS dosyası içerisinde style tag'ları (etiketleri) kullanılmamalıdır.</li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

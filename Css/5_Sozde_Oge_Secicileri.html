@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sözde Öğe Seçi̇ci̇leri̇ (Pseudo Elements)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Sözde Öğe Seçi̇ci̇leri̇ (Pseudo Elements)</h1>
+  <div>CSS pseudo elements seçiciler bir öğenin belirli bir bölümüne stil vermek için kullanılmaktadır.
+    p::pseudo-element{} şeklinde kullanımı mevcuttur. pseudo-element kullanımında :: şeklinde iki tane iki nokta işareti
+    ile kullanılması gerekir. W3C ::pseudo-element ile :pseudo-class kullanımını biririnden ayırmak için bu kullanım
+    şeklini tasalamıştır.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <td>
+          Se&ccedil;ici
+        </td>
+        <td>
+          &Ouml;rnek
+        </td>
+        <td>
+          A&ccedil;ıklama
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          ::after
+        </td>
+        <td>
+          p::after
+        </td>
+        <td>
+          HTML &ouml;ğesinden sonra bir şey eklemek eklemek i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ::before
+        </td>
+        <td>
+          p::before
+        </td>
+        <td>
+          HTML &ouml;ğesinden &ouml;nce bir şey eklemek eklemek i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ::first-letter
+        </td>
+        <td>
+          p::first-letter
+        </td>
+        <td>
+          &lt;p&gt; &ouml;ğesinin ilk harfini se&ccedil;er ve stillendirme yapabilirsiniz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ::first-line
+        </td>
+        <td>
+          p::first-line
+        </td>
+        <td>
+          &lt;p&gt; &ouml;ğesininin ilk satırını se&ccedil;er.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ::marker
+        </td>
+        <td>
+          ::marker
+        </td>
+        <td>
+          Liste &ouml;ğelerinin markerlarını stillendirmenizi sağlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ::placaholder
+        </td>
+        <td>
+          input::placaholder
+        </td>
+        <td>
+          input &ouml;ğesi i&ccedil;erisinde placeholder="" attribute kısmını se&ccedil;er ve stillendirmenizi sağlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ::selection
+        </td>
+        <td>
+          p::selection
+        </td>
+        <td>
+          Kullanıcı mouse ile se&ccedil;im yaptığında se&ccedil;im yapılan kısmı stillendirmenizi sağlar. &Ouml;rnek
+          se&ccedil;ilen kısmın arka planı mavi ve yazısı beyaz şekilde default gelmektedir.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Sözde Öğe Seçicileri
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p class="example1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quo a repudiandae impedit minima in tempore reiciendis distinctio qui cum placeat, suscipit, autem culpa amet! Similique possimus reiciendis harum fugit.
+      </p>
+      <p class="example2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quos, recusandae modi veritatis est sequi eaque iusto ab. Quae sapiente voluptatibus obcaecati facilis corrupti, rerum incidunt eos soluta itaque sequi.
+      </p>
+      <p class="example3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure maxime omnis unde commodi maiores. Voluptates asperiores doloremque rem repellendus earum facilis enim quis consequatur eaque vitae. Quidem, pariatur maiores?
+      </p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p.example1::before{
+  content:"Before Element";
+  display:inline-block;
+  background-color:red;
+  color:white;
+  margin:0 10px;
+  padding:5px 20px;
+}
+
+p.example1::after{
+  content:"After Element";
+  display:inline-block;
+  background-color:red;
+  color:white;
+  margin:0 10px;
+  padding:5px 20px;
+}
+p.example2::first-line{
+  background-color:red;
+  color:white;
+  font-size:20px;
+  padding:10px;
+}
+p.example3::first-letter{
+  color:red;
+  font-size:40px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+   <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Sözde Öğe Seçicileri
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+
+      <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ol>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+::marker{
+  color:red;
+  font-size:23px;
+}
+
+::selection{
+  background-color:yellow;
+  color:red;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>
