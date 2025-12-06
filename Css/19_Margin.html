@@ -1,32 +1,400 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>CSS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Margin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Margin</h1>
+  <div>Kenarın dışındaki alandır. Margin şeffaftır.</div>
+
+  <!-- Margin Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Margin Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="5">
+          <p>margin</p>
+        </td>
+        <td rowspan="5">
+          <p>T&uuml;m margin &ouml;zelliklerini tek bir bildirimde ayarlamak i&ccedil;in kullanılan kısa bir
+            &ouml;zelliktir.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Margin' i px, pt, cm vb. cinsinden belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren &ouml;ğenin genişliğinin y&uuml;zdesi olarak margin' i belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Bir elemanın t&uuml;m kenarlarına otomatik olarak marj (boşluk) uygulamak i&ccedil;in kullanılır.
+            &Ouml;zellikle blok elemanlarını yatay olarak ortalamak i&ccedil;in kullanılır. Eğer genişlik
+            (width) belirlenmişse, bu elemanın ana kapsayıcı i&ccedil;inde yatay olarak ortalanmasını sağlar.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>margin-bottom</p>
+        </td>
+        <td rowspan="5">
+          <p>Bir &ouml;ğenin alt margin' ini ayarlar.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Margin' i px, pt, cm vb. cinsinden belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren &ouml;ğenin genişliğinin y&uuml;zdesi olarak margin' i belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Elemanın alt kısmına otomatik marj uygulamak i&ccedil;in kullanılır. Genellikle margin-top: auto; ile
+            birlikte kullanılarak dikey ortalama sağlanabilir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>margin-left</p>
+        </td>
+        <td rowspan="5">
+          <p>Bir &ouml;ğenin sol margin' ini ayarlar.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Margin' i px, pt, cm vb. cinsinden belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren &ouml;ğenin genişliğinin y&uuml;zdesi olarak margin' i belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Elemanın sol kısmına otomatik marj uygulamak i&ccedil;in kullanılır. Elemanı sağa iterek sağa
+            hizalamak i&ccedil;in kullanılabilir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>margin-right</p>
+        </td>
+        <td rowspan="5">
+          <p>Bir &ouml;ğenin sağ margin' ini ayarlar.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Margin' i px, pt, cm vb. cinsinden belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren &ouml;ğenin genişliğinin y&uuml;zdesi olarak margin' i belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Elemanın sağ kısmına otomatik marj uygulamak i&ccedil;in kullanılır. Elemanı sola iterek sola
+            hizalamak i&ccedil;in kullanılabilir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>margin-top</p>
+        </td>
+        <td rowspan="5">
+          <p>Bir &ouml;ğenin &uuml;st padding' ini ayarlar.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Margin' i px, pt, cm vb. cinsinden belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren &ouml;ğenin genişliğinin y&uuml;zdesi olarak margin' i belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Elemanın &uuml;st kısmına otomatik marj uygulamak i&ccedil;in kullanılır. Ancak, tek başına
+            kullanıldığında &ccedil;oğunlukla bir etkisi olmaz &ccedil;&uuml;nk&uuml; auto değeri genellikle
+            esnek konteynerlerin i&ccedil;inde veya belirli durumlarda kullanıldığında anlam kazanır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- margin Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      margin
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="one">Lorem ipsum dolor sit amet.</div>
+      <div class="two">Lorem ipsum dolor sit amet.</div>
+      <div class="three">Lorem ipsum dolor sit amet.</div>
+      <div class="four">Lorem ipsum dolor sit amet.</div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div{
+  border-style:solid;
+  border-width:3px;
+  background-color:yellow;
+  width:500px;
+}
+
+/* top,right,bottom,left */
+div.one{
+  margin: 25px 50px 75px 100px;
+}
+
+/* top,right and left,bottom */
+div.two{
+  margin: 25px 50px 75px;
+}
+
+/* top and bottom,right and left */
+div.three{
+  margin: 25px 50px
+}
+
+/* all */
+div.four{
+  margin: 100px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- margin:auto Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      margin:auto
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="one">one</div>
+      <div class="two">two</div>
+      <div class="three">three</div>
+      <div class="four">four</div>
+      <div class="five">five</div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div{
+  border-style:solid;
+  border-width:3px;
+  background-color:yellow;
+  width:500px;
+}
+
+div.one{
+  margin:auto;
+}
+
+div.two{
+  margin-top:auto;
+}
+
+div.three{
+  margin-bottom:auto;
+}
+
+div.four{
+  margin-left:auto;
+}
+
+div.five{
+  margin-right:auto;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

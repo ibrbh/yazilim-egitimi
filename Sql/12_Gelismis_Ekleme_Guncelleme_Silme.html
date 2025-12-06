@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Kayıt Ekleme, Kayıt Güncelleme, Kayıt Silme (Gelişmiş)</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Kayıt Ekleme, Kayıt Güncelleme, Kayıt Silme (Gelişmiş)</h1>
+
+  <div><strong>INSERT INTO : </strong> Tabloya yeni kayıt eklemek için kullanılır.</div>
+  <div><strong>UPDATE : </strong> Bir tablodaki mevcut kayıtları değiştirmek için kullanılır.</div>
+  <div><strong>DELETE : </strong> Tablodaki mevcut kayıtları silmek için kullanılır.</div>
+
+  <!-- orders -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="5">orders</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>OrderID</strong>
+        </td>
+        <td>
+          <strong>CustomerID</strong>
+        </td>
+        <td>
+          <strong>EmployeeID</strong>
+        </td>
+        <td>
+          <strong>OrderDate</strong>
+        </td>
+        <td>
+          <strong>ShipperID</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10308
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          1996-09-18
+        </td>
+        <td>
+          3
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10309
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          1996-09-19
+        </td>
+        <td>
+          1
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10310
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          1996-09-20
+        </td>
+        <td>
+          2
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- employees -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="5">employees</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>EmployeeID</strong>
+        </td>
+        <td>
+          <strong>LastName</strong>
+        </td>
+        <td>
+          <strong>FirstName</strong>
+        </td>
+        <td>
+          <strong>BirthDate</strong>
+        </td>
+        <td>
+          <strong>Photo</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          Davolio
+        </td>
+        <td>
+          Nancy
+        </td>
+        <td>
+          12/8/1968
+        </td>
+        <td>
+          EmpID1.pic
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Fuller
+        </td>
+        <td>
+          Andrew
+        </td>
+        <td>
+          2/19/1952
+        </td>
+        <td>
+          EmpID2.pic
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Leverling
+        </td>
+        <td>
+          Janet
+        </td>
+        <td>
+          8/30/1963
+        </td>
+        <td>
+          EmpID3.pic
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- customers -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="7">customers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>CustomerID</strong>
+        </td>
+        <td>
+          <strong>CustomerName</strong>
+        </td>
+        <td>
+          <strong>ContactName</strong>
+        </td>
+        <td>
+          <strong>Address</strong>
+        </td>
+        <td>
+          <strong>City</strong>
+        </td>
+        <td>
+          <strong>PostalCode</strong>
+        </td>
+        <td>
+          <strong>Country</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1<br />
+        </td>
+        <td>
+          Alfreds Futterkiste
+        </td>
+        <td>
+          Maria Anders
+        </td>
+        <td>
+          Obere Str. 57
+        </td>
+        <td>
+          Berlin
+        </td>
+        <td>
+          12209
+        </td>
+        <td>
+          Germany
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Ana Trujillo Emparedados y helados
+        </td>
+        <td>
+          Ana Trujillo
+        </td>
+        <td>
+          Avda. de la Constituci&oacute;n 2222
+        </td>
+        <td>
+          M&eacute;xico D.F.
+        </td>
+        <td>
+          05021
+        </td>
+        <td>
+          Mexico
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Antonio Moreno Taquer&iacute;a
+        </td>
+        <td>
+          Antonio Moreno
+        </td>
+        <td>
+          Mataderos 2312
+        </td>
+        <td>
+          M&eacute;xico D.F.
+        </td>
+        <td>
+          05023
+        </td>
+        <td>
+          Mexico
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4<br />
+        </td>
+        <td>
+          Around the Horn
+        </td>
+        <td>
+          Thomas Hardy
+        </td>
+        <td>
+          120 Hanover Sq.
+        </td>
+        <td>
+          London
+        </td>
+        <td>
+          WA1 1DP
+        </td>
+        <td>
+          UK
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Berglunds snabbk&ouml;p
+        </td>
+        <td>
+          Christina Berglund
+        </td>
+        <td>
+          Berguvsv&auml;gen 8
+        </td>
+        <td>
+          Lule&aring;
+        </td>
+        <td>
+          S-958 22
+        </td>
+        <td>
+          Sweden
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor1">INSERT INTO employee_talent (employee_id,fullname,email,satis_adeti)
+SELECT e.id,CONCAT(e.first_name," ",e.last_name) as fullname,e.email_address,COUNT(o.id) as adet FROM employees e
+LEFT JOIN orders o on e.id=o.employee_id GROUP BY e.id ORDER BY adet
+</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor2">UPDATE employees e INNER JOIN employee_performance ep
+ON e.id = ep.employee_id
+SET e.email_address = ep.email
+WHERE ep.email LİKE "%updated%"
+</textarea><br>
+    <button onclick="runSQL('editor2')">Çalıştır</button>
+    <iframe id="editor2_out"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor3">DELETE customers
+FROM customers LEFT JOİN orders
+ON orders.customer_id = customers.id
+WHERE orders.customer_id is null AND customers.id = 13
+</textarea><br>
+    <button onclick="runSQL('editor3')">Çalıştır</button>
+    <iframe id="editor3_out"></iframe>
+  </div>
+
+</body>
+
+</html>

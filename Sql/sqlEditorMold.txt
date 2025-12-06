@@ -1,7 +1,5 @@
-<div class="editor-box">
-  <h3>SQL Editör 1</h3>
-  <textarea id="sqlEditor_1">SELECT * FROM users;</textarea>
-  <br />
-  <button onclick="runSQL(1)">RUN</button>
-  <div id="output_1"></div>
+<div class="editor">
+  <textarea id="editor1">SELECT * FROM users;</textarea><br>
+  <button onclick="runSQL('editor1')">Çalıştır</button>
+  <iframe id="editor1_out"></iframe>
 </div>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Matematik Fonksiyonları</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Matematik Fonksiyonları</h1>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          calc()
+        </td>
+        <td>
+          CSS &ouml;zellik değerlerini belirlemek i&ccedil;in hesaplamalar yapmanızı sağlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max()
+        </td>
+        <td>
+          &Ouml;zellik değeri olarak virg&uuml;lle ayrılmış değerler listesinden en b&uuml;y&uuml;k değeri kullanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min()
+        </td>
+        <td>
+          &Ouml;zellik değeri olarak virg&uuml;lle ayrılmış değerler listesinden en k&uuml;&ccedil;&uuml;k değeri
+          kullanır
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div><code>calc(<em>expression</em>)</code></div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <div><code>max(<em>value1,value2,...</em>)</code></div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <div><code>min(<em>value1,value2,...</em>)</code></div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Transform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Transform</h1>
+
+  <!-- Transform Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Transform Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="24">
+          transform
+        </td>
+        <td rowspan="24">
+          Bir &ouml;ğeye 2B veya 3B d&ouml;n&uuml;şt&uuml;rme uygular. Bu &ouml;zellik, &ouml;ğeleri
+          d&ouml;nd&uuml;rmenize, &ouml;l&ccedil;eklendirmenize, taşımanıza, eğmenize vb. olanak tanır.
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Hi&ccedil;bir d&ouml;nd&uuml;rmenin olmaması gerektiğini tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          matrix(<em>n,n,n,n,n,n</em>)
+        </td>
+        <td>
+          Altı değerden oluşan bir matris kullanarak 2 boyutlu d&ouml;n&uuml;ş&uuml;m&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          matrix3d(<em>n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n</em>)
+        </td>
+        <td>
+          16 değerden oluşan 4x4 matris kullanarak 3 boyutlu d&ouml;n&uuml;ş&uuml;m&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          translate(<em>x,y</em>)
+        </td>
+        <td>
+          2D taşıma yapar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          translate3d(<em>x,y,z</em>)
+        </td>
+        <td>
+          3D taşıma yapar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          translateX(<em>x</em>)
+        </td>
+        <td>
+          Yalnızca X ekseninde taşıma yapar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          translateY(<em>y</em>)
+        </td>
+        <td>
+          Yalnızca Y ekseninde taşıma yapar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          translateZ(<em>z</em>)
+        </td>
+        <td>
+          Yalnızca Z ekseninde taşıma yapar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          scale(<em>x,y</em>)
+        </td>
+        <td>
+          2 boyutlu &ouml;l&ccedil;ekli d&ouml;n&uuml;ş&uuml;m&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          scale3d(<em>x,y,z</em>)
+        </td>
+        <td>
+          3 boyutlu &ouml;l&ccedil;ekli d&ouml;n&uuml;ş&uuml;m&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          scaleX(<em>x</em>)
+        </td>
+        <td>
+          X ekseni i&ccedil;in bir değer vererek &ouml;l&ccedil;ek d&ouml;n&uuml;ş&uuml;m&uuml;n&uuml; tanımlar
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          scaleY(<em>y</em>)
+        </td>
+        <td>
+          Y ekseni i&ccedil;in bir değer vererek &ouml;l&ccedil;ek d&ouml;n&uuml;ş&uuml;m&uuml;n&uuml; tanımlar
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          scaleZ(<em>z</em>)
+        </td>
+        <td>
+          Z ekseni i&ccedil;in bir değer vererek 3 boyutlu &ouml;l&ccedil;ek
+          d&ouml;n&uuml;ş&uuml;m&uuml;n&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rotate(<em>angle</em>)
+        </td>
+        <td>
+          2D d&ouml;n&uuml;ş&uuml; tanımlar, a&ccedil;ı parametrede belirtilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rotate3d(<em>x,y,z,angle</em>)
+        </td>
+        <td>
+          3D d&ouml;nd&uuml;rmeyi tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rotateX(<em>angle</em>)
+        </td>
+        <td>
+          X ekseni boyunca 3B d&ouml;nd&uuml;rmeyi tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rotateY(<em>angle</em>)
+        </td>
+        <td>
+          Y ekseni boyunca 3B d&ouml;nd&uuml;rmeyi tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rotateZ(<em>angle</em>)
+        </td>
+        <td>
+          Z ekseni boyunca 3B d&ouml;nd&uuml;rmeyi tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          skew(<em>x-angle,y-angle</em>)
+        </td>
+        <td>
+          X ve Y ekseni boyunca 2B eğrilme d&ouml;n&uuml;ş&uuml;m&uuml;n&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          skewX(<em>angle</em>)
+        </td>
+        <td>
+          X ekseni boyunca 2B eğrilme d&ouml;n&uuml;ş&uuml;m&uuml;n&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          skewY(<em>angle</em>)
+        </td>
+        <td>
+          Y ekseni boyunca 2B eğrilme d&ouml;n&uuml;ş&uuml;m&uuml;n&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          perspective(<em>n</em>)
+        </td>
+        <td>
+          3B d&ouml;n&uuml;şt&uuml;r&uuml;lm&uuml;ş bir &ouml;ğe i&ccedil;in perspektif
+          g&ouml;r&uuml;n&uuml;m&uuml; tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          transform-origin
+        </td>
+        <td rowspan="5">
+          D&ouml;n&uuml;şt&uuml;r&uuml;len &ouml;ğelerin konumunu değiştirmenize olanak tanır.
+        </td>
+        <td>
+          <em>x-axis</em>
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m&uuml;n x ekseninde nereye yerleştirileceğini tanımlar.
+          (left,center,right,<em>length,%)</em>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>y-axis</em>
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m&uuml;n y ekseninde nereye yerleştirileceğini tanımlar.
+          (left,center,right,<em>length,%)</em>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>z-axis</em>
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m&uuml;n z ekseninde nereye yerleştirileceğini tanımlar.
+          (left,center,right,<em>length,%)</em>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          transform-style
+        </td>
+        <td rowspan="4">
+          İ&ccedil; i&ccedil;e ge&ccedil;miş &ouml;ğelerin 3B alanda nasıl oluşturulacağını belirtir.
+        </td>
+        <td>
+          flat
+        </td>
+        <td>
+          Alt &ouml;ğelerin 3B konumunu korumayacağını belirtir. Bu varsayılandır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          preserve-3d
+        </td>
+        <td>
+          Alt &ouml;ğelerin 3B konumunu koruyacağını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          perspective
+        </td>
+        <td rowspan="4">
+          3B &ouml;ğelerin nasıl g&ouml;r&uuml;nt&uuml;lendiğine ilişkin perspektifi belirtir.
+        </td>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          &Ouml;ğenin g&ouml;r&uuml;n&uuml;mden ne kadar uzağa yerleştirildiğini belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. 0 ile aynı. Perspektif ayarlanmaz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          perspective-origin
+        </td>
+        <td rowspan="4">
+          3B &ouml;ğelerin alt konumunu belirtir.
+        </td>
+        <td>
+          <em>x-axis</em>
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m&uuml;n x ekseninde nereye yerleştirileceğini tanımlar.
+          (left,center,right,<em>length,%</em>) &ndash; (Default Değer : 50%)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>y-axis</em>
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m&uuml;n y ekseninde nereye yerleştirileceğini tanımlar.
+          (left,center,right,<em>length,%</em>) &ndash; (Default Değer : 50%)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          backface-visibility
+        </td>
+        <td rowspan="4">
+          Bir &ouml;ğenin ekrana bakılmadığında g&ouml;r&uuml;n&uuml;r olup olmayacağını tanımlar.
+        </td>
+        <td>
+          visible
+        </td>
+        <td>
+          Varsayılan değer. Arka taraf g&ouml;r&uuml;n&uuml;yor.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hidden
+        </td>
+        <td>
+          Arka taraf g&ouml;r&uuml;nm&uuml;yor.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

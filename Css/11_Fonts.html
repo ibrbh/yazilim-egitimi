@@ -1,32 +1,676 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>CSS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Fonts</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Fonts</h1>
+
+  <!-- Fonts Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Font Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p>font</p>
+        </td>
+        <td>
+          <p>B&uuml;t&uuml;n font &ouml;zelliklerini tek satırda belirtir.</p>
+        </td>
+        <td>
+          <p><em>&nbsp;</em></p>
+        </td>
+        <td>
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          <p>font-family</p>
+        </td>
+        <td rowspan="3">
+          <p>Bir &ouml;ğenin yazı tipini belirtir.</p>
+        </td>
+        <td>
+          <p><em>family-name / generic-family</em></p>
+        </td>
+        <td>
+          <p>Bir &ouml;ğenin yazı tipini belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="13">
+          <p>font-size</p>
+        </td>
+        <td rowspan="13">
+          <p>Metnin yazı tipi boyutunu belirtir.</p>
+        </td>
+        <td>
+          <p>medium</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu orta boyuta ayarlar. Bu varsayılandır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>xx-small</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu xx-k&uuml;&ccedil;&uuml;k boyuta ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>x-small</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu ekstra k&uuml;&ccedil;&uuml;k bir boyuta ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>small</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu k&uuml;&ccedil;&uuml;k bir boyuta ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>large</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu b&uuml;y&uuml;k boyuta ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>x-large</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu ekstra b&uuml;y&uuml;k boyuta ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>xx-large</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu xx b&uuml;y&uuml;k boyuta ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>smaller</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu ana &ouml;ğeden daha k&uuml;&ccedil;&uuml;k bir boyuta ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>larger</p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu ana &ouml;ğeden daha b&uuml;y&uuml;k bir boyuta ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu px, cm vb. cinsinden sabit bir boyuta ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>Yazı tipi boyutunu ana &ouml;ğenin yazı tipi boyutunun y&uuml;zdesine ayarlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>font-style</p>
+        </td>
+        <td rowspan="5">
+          <p>Metin i&ccedil;in yazı tipi stilini belirtir.</p>
+        </td>
+        <td>
+          <p>normal</p>
+        </td>
+        <td>
+          <p>Tarayıcı normal bir yazı tipi stili g&ouml;r&uuml;nt&uuml;ler. Bu varsayılandır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>italic</p>
+        </td>
+        <td>
+          <p>Tarayıcı italik bir yazı tipi stili g&ouml;r&uuml;nt&uuml;er.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>oblique</p>
+        </td>
+        <td>
+          <p>Tarayıcı eğik bir yazı tipi stili g&ouml;r&uuml;nt&uuml;ler.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>font-variant</p>
+        </td>
+        <td rowspan="4">
+          <p>Bir metnin k&uuml;&ccedil;&uuml;k b&uuml;y&uuml;k harf yazı tipinde g&ouml;r&uuml;nt&uuml;lenip
+            g&ouml;r&uuml;nt&uuml;lenmeyeceğini belirtir.</p>
+        </td>
+        <td>
+          <p>normal</p>
+        </td>
+        <td>
+          <p>Tarayıcı normal bir yazı tipi g&ouml;r&uuml;nt&uuml;ler. Bu varsayılandır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>small-caps</p>
+        </td>
+        <td>
+          <p>Tarayıcı k&uuml;&ccedil;&uuml;k b&uuml;y&uuml;k harfli bir yazı tipi g&ouml;r&uuml;nt&uuml;ler.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="7">
+          <p>font-weight</p>
+        </td>
+        <td rowspan="7">
+          <p>Bir yazı tipinin ağırlığını belirtir.</p>
+        </td>
+        <td>
+          <p>normal</p>
+        </td>
+        <td>
+          <p>Normal karakterleri tanımlar. Bu varsayılandır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>bold</p>
+        </td>
+        <td>
+          <p>Kalın karakterleri tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>bolder</p>
+        </td>
+        <td>
+          <p>Daha kalın karakterleri tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>lighter</p>
+        </td>
+        <td>
+          <p>Daha ince karakterleri tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>100</p>
+          <p>200</p>
+          <p>300</p>
+          <p>400</p>
+          <p>500</p>
+          <p>600</p>
+          <p>700</p>
+          <p>800</p>
+          <p>900</p>
+        </td>
+        <td>
+          <p>İnceden kalına kadar karakterleri tanımlar. 400 normal ile aynıdır ve 700 bold ile aynıdır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          <p>font-kerring</p>
+        </td>
+        <td rowspan="3">
+          <p>Bir fontta saklanan karakter aralığı bilgilerinin kullanımını kontrol eder.</p>
+        </td>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Varsayılan. Tarayıcı, yazı tipi karakter aralığının uygulanıp uygulanmayacağını belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>normal</p>
+        </td>
+        <td>
+          <p>Yazı tipi karakter aralığının uygulandığını belirtir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>none</p>
+        </td>
+        <td>
+          <p>Yazı tipi karakter aralığının uygulanmadığını belirtir</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="11">
+          <p>font-stretch</p>
+        </td>
+        <td rowspan="11">
+          <p>Metni daha dar (yoğunlaştırılmış) veya daha geniş (genişletilmiş) yapmanıza olanak tanır</p>
+        </td>
+        <td>
+          <p>ultra-condensed</p>
+        </td>
+        <td>
+          <p>Metni olabildiğince daraltır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>extra-condensed</p>
+        </td>
+        <td>
+          <p>Metni yoğunlaştırılmış metinden daha dar yapar ancak aşırı yoğunlaştırılmış metin kadar dar yapmaz
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>condensed</p>
+        </td>
+        <td>
+          <p>Metni yarı yoğunlaştırılmış metinden daha dar yapar ancak ekstra yoğunlaştırılmış metin kadar dar
+            yapmaz</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>semi-condensed</p>
+        </td>
+        <td>
+          <p>Metni normalden daha dar yapar ancak yoğunlaştırılmış kadar dar yapmaz</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>normal</p>
+        </td>
+        <td>
+          <p>Varsayılan değer. Yazı tipi genişletme yok</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>semi-expanded</p>
+        </td>
+        <td>
+          <p>Metni normalden daha geniş yapar ancak genişletildiği kadar geniş yapmaz</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>expanded</p>
+        </td>
+        <td>
+          <p>Metni yarı genişletilmişten daha geniş yapar ancak ekstra genişletilmiş kadar geniş yapmaz</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>extra-expanded</p>
+        </td>
+        <td>
+          <p>Metni genişletilmişten daha geniş yapar ancak ultra genişletilmiş kadar geniş yapmaz</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ultra-expanded</p>
+        </td>
+        <td>
+          <p>Metni olabildiğince genişletir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- font-family Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      font-family
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, accusantium.</p>
+<p class="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, sit?</p>
+<p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus!</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+.p1{
+  font-family:"Times New Roman","Times","serif";
+}
+
+.p2{
+  font-family:"Arial","Helvetica","sans-serif";
+}
+
+.p3{
+  font-family:"Lucida Console","Courier New","monospace";
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- font-size Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      font-size
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, accusantium.</p>
+<p class="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, sit?</p>
+<p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus!</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+.p1{
+  font-size:40px;
+}
+
+.p2{
+  font-size:30px;
+}
+
+.p3{
+  font-size:20px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- font-style Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      font-style
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, accusantium.</p>
+<p class="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, sit?</p>
+<p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus!</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+.p1{
+  font-style:normal;
+}
+
+.p2{
+  font-style:italic;
+}
+
+.p3{
+  font-style:oblique;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- font-variant Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      font-variant
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, accusantium.</p>
+<p class="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, sit?</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+.p1{
+  font-variant:normal;
+}
+
+.p2{
+  font-variant:small-caps;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- font-weight Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      font-weight
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, accusantium.</p>
+<p class="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, sit?</p>
+<p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus!</p>
+<p class="p4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, nihil.</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+.p1{
+  font-weight:normal;
+}
+
+.p2{
+    font-weight:lighter;
+}
+
+.p3{
+  font-weight:bold;
+}
+
+.p4{
+  font-weight:900;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

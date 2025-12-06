@@ -1,0 +1,17 @@
+&lt;
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="4"></th>
+    </tr>
+    <tr>
+      <td>Özellik</td>
+      <td>Tanım</td>
+      <td>Değer</td>
+      <td>Tanım</td>
+    </tr>
+  </thead>
+  <tbody>
+
+width="[^"]*"

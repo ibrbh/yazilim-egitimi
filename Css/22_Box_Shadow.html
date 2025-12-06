@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Box Shadow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Box Shadow</h1>
+
+  <!-- box-shadow Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Box Shadow Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="9">
+          box-shadow
+        </td>
+        <td rowspan="9">
+          Box-shadow &ouml;zelliği, bir &ouml;ğeye bir veya daha fazla g&ouml;lge ekler.
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. Hi&ccedil;bir g&ouml;lge g&ouml;r&uuml;nt&uuml;lenmiyor.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>h-offset</em>
+        </td>
+        <td>
+          Gerekli. G&ouml;lgenin yatay uzaklığı. Pozitif bir değer, g&ouml;lgeyi kutunun sağ tarafına, negatif
+          bir değer ise g&ouml;lgeyi kutunun sol tarafına yerleştirir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>v-offset</em>
+        </td>
+        <td>
+          Gerekli. G&ouml;lgenin dikey uzaklığı. Pozitif bir değer g&ouml;lgeyi kutunun altına yerleştirir,
+          negatif bir değer ise g&ouml;lgeyi kutunun &uuml;st&uuml;ne koyar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>blur</em>
+        </td>
+        <td>
+          İsteğe bağlı. Bulanıklık yarı&ccedil;apı. Sayı ne kadar y&uuml;ksek olursa g&ouml;lge o kadar bulanık
+          olur
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>spread</em>
+        </td>
+        <td>
+          İsteğe bağlı. Yayılma yarı&ccedil;apı. Pozitif bir değer g&ouml;lgenin boyutunu artırır, negatif bir
+          değer ise g&ouml;lgenin boyutunu azaltır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>color</em>
+        </td>
+        <td>
+          İsteğe bağlı. G&ouml;lgenin rengi. Varsayılan değer metin rengidir. Olası renk değerlerinin tam
+          listesi i&ccedil;in CSS Renk Değerleri'ne bakın.
+          Not: Safari'de (PC'de) renk parametresi gereklidir. Rengi belirtmezseniz g&ouml;lge hi&ccedil;
+          g&ouml;r&uuml;nt&uuml;lenmez.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inset
+        </td>
+        <td>
+          İsteğe bağlı. G&ouml;lgeyi dış g&ouml;lgeden (başlangı&ccedil;tan) i&ccedil; g&ouml;lgeye değiştirir
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div><a href="https://getcssscan.com/css-box-shadow-examples"><strong>CSS hazır box-shadow için : </strong></a></div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

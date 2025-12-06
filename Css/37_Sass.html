@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sass</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Sass</h1>
+  <div>Sass bir CSS ön işlemcisidir. Sass, CSS tekrarını azaltır ve dolayısıyla zaman kazandırır.</div>
+
+  <h2>Kurulum</h2>
+  <div>Kurulum için terminal ekranına şu kod yazılır : <code>npm install -g sass</code></div>
+
+  <h2>Sass Değişkenler</h2>
+  <div><code>$variablename: value;</code></div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Sass Değişken Kapsamı</h2>
+  <div>Sass’ da local değişkenler geçerlidir. global değişken için <code>!global</code> kullanılır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Sass Nasting</h2>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>@import</h2>
+  <div><code>@import filename;</code></div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  @mixin ve @include
+
+  <div><code>@mixin name {
+     property: value;
+     property: value;
+     ...}
+</code></div>
+
+  <div><code>selector {
+    @include mixin-name;
+}
+</code></div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>@extend</h2>
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Sass String</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          quote(<em>string</em>)
+        </td>
+        <td>
+          Dizeye tırnak işaretleri ekler ve sonucu d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> quote(Hello world!)<br /> Result: "Hello world!"
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          str-index(<em>string</em>,<em>&nbsp;substring</em>)
+        </td>
+        <td>
+          Alt dizenin dize i&ccedil;indeki ilk oluşumunun dizinini d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> str-index("Hello world!", "H")<br /> Result: 1
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          str-insert(<em>string</em>,&nbsp;<em>insert</em>,&nbsp;<em>index</em>)
+        </td>
+        <td>
+          Belirtilen dizin konumuna ekleme eklenmiş dizeyi d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> str-insert("Hello world!", " wonderful", 6)<br /> Result: "Hello wonderful
+            world!"
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          str-length(<em>string</em>)
+        </td>
+        <td>
+          Dizenin uzunluğunu (karakter cinsinden) d&ouml;nd&uuml;r&uuml;r.
+          <br /> <strong>Example:</strong><br /> str-length("Hello world!")<br /> Result: 12
+        </td>
+      </tr>
+      <tr>
+        <td>
+          str-slice(<em>string</em>,&nbsp;<em>start</em>,&nbsp;<em>end</em>)
+        </td>
+        <td>
+          Dizeden karakterleri &ccedil;ıkarır; başlangı&ccedil;ta başlayıp bitişte bitir ve dilimi
+            d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br /> str-slice("Hello world!", 2, 5)<br />
+            Result: "ello"
+        </td>
+      </tr>
+      <tr>
+        <td>
+          to-lower-case(<em>string</em>)
+        </td>
+        <td>
+          K&uuml;&ccedil;&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;lm&uuml;ş dizenin bir kopyasını
+            d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br /> to-lower-case("Hello World!")<br />
+            Result: "hello world!"
+        </td>
+      </tr>
+      <tr>
+        <td>
+          to-upper-case(<em>string</em>)
+        </td>
+        <td>
+          B&uuml;y&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;lm&uuml;ş dizenin bir kopyasını
+            d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br /> to-upper-case("Hello World!")<br />
+            Result: "HELLO WORLD!"
+        </td>
+      </tr>
+      <tr>
+        <td>
+          unique-id()
+        </td>
+        <td>
+          Rastgele oluşturulmuş, tırnak i&ccedil;ine alınmamış benzersiz bir dize d&ouml;nd&uuml;r&uuml;r (mevcut
+            k&uuml;stahlık oturumunda benzersiz olduğu garanti edilir).<br /> <br /> <strong>Example:</strong><br />
+            unique-id()<br /> Result: tyghefnsv
+        </td>
+      </tr>
+      <tr>
+        <td>
+          unquote(<em>string</em>)
+        </td>
+        <td>
+          Dize etrafındaki tırnak işaretlerini (varsa) kaldırır ve sonucu d&ouml;nd&uuml;r&uuml;r.
+          <br /> <strong>Example:</strong><br /> unquote("Hello world!")<br /> Result: Hello world!
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Sass Numeric</h2>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          abs(<em>number</em>)
+        </td>
+        <td>
+          Sayının mutlak değerini d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br /> abs(15)<br />
+            Result: 15<br /> abs(-15)<br /> Result: 15
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ceil(<em>number</em>)
+        </td>
+        <td>
+          Sayıyı en yakın tam sayıya yuvarlar.
+          <br /> <strong>Example:</strong><br /> ceil(15.20)<br /> Result: 16
+        </td>
+      </tr>
+      <tr>
+        <td>
+          comparable(<em>num1</em>,&nbsp;<em>num2</em>)
+        </td>
+        <td>
+          num1 ve num2'nin karşılaştırılabilir olup olmadığını d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> comparable(15px, 10px)<br /> Result: true<br /> comparable(20mm, 1cm)<br />
+            Result: true<br /> comparable(35px, 2em)<br /> Result: false
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          floor(<em>number</em>)
+        </td>
+        <td>
+          Sayıyı en yakın tam sayıya yuvarlar.<br /> <br /> <strong>Example:</strong><br /> floor(15.80)<br />
+            Result: 15
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max(<em>number...</em>)
+        </td>
+        <td>
+          Birka&ccedil; sayının en y&uuml;ksek değerini d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> max(5, 7, 9, 0, -3, -7)<br /> Result: 9
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min(<em>number...</em>)
+        </td>
+        <td>
+          Birka&ccedil; sayının en d&uuml;ş&uuml;k değerini d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> min(5, 7, 9, 0, -3, -7)<br /> Result: -7
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          percentage(<em>number</em>)
+        </td>
+        <td>
+          Sayıyı y&uuml;zdeye d&ouml;n&uuml;şt&uuml;r&uuml;r (sayıyı 100 ile &ccedil;arpar).
+          <br /> <strong>Example:</strong><br /> percentage(1.2)<br /> Result: 120
+        </td>
+      </tr>
+      <tr>
+        <td>
+          random()
+        </td>
+        <td>
+          0 ile 1 arasında rastgele bir sayı d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br />
+            random()<br /> Result: 0.45673
+        </td>
+      </tr>
+      <tr>
+        <td>
+          random(<em>number</em>)
+        </td>
+        <td>
+          1 ile sayı arasında rastgele bir tamsayı d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> random(6)<br /> Result: 4
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          round(<em>number</em>)
+        </td>
+        <td>
+          Sayıyı en yakın tam sayıya yuvarlar.<br /> <br /> <strong>Example:</strong><br /> round(15.20)<br />
+            Result: 15<br /> round(15.80)<br /> Result: 16
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Sass List</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          append(<em>list</em>,&nbsp;<em>value</em>, [<em>separator</em>])
+        </td>
+        <td>
+          Listenin sonuna tek bir değer ekler. ayırıcı otomatik, virg&uuml;l veya boşluk olabilir. otomatik
+            varsayılandır.<br /> <br /> <strong>Example:</strong><br /> append((a b c), d)<br /> Result: a b c d<br />
+            append((a b c), (d), comma)<br /> Result: a, b, c, d
+        </td>
+      </tr>
+      <tr>
+        <td>
+          index(<em>list</em>,&nbsp;<em>value</em>)
+        </td>
+        <td>
+          Listedeki değerin dizin konumunu d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br />
+            index(a b c, b)<br /> Result: 2<br /> index(a b c, f)<br /> Result: null
+        </td>
+      </tr>
+      <tr>
+        <td>
+          is-bracketed(<em>list</em>)
+        </td>
+        <td>
+          Listenin k&ouml;şeli parantez i&ccedil;erip i&ccedil;ermediğini kontrol eder.<br /> <br />
+            <strong>Example:</strong><br /> is-bracketed([a b c])<br /> Result: true<br /> is-bracketed(a b c)<br />
+            Result: false
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          join(<em>list1</em>,&nbsp;<em>list2</em>, [<em>separator, bracketed</em>])
+        </td>
+        <td>
+          Liste2'yi liste1'in sonuna ekler. ayırıcı otomatik, virg&uuml;l veya boşluk olabilir. auto varsayılandır
+            (ilk listedeki ayırıcıyı kullanacaktır). Parantez i&ccedil;ine alma işlemi otomatik, doğru veya yanlış
+            olabilir. otomatik varsayılandır.<br /> <br /> <strong>Example:</strong><br /> join(a b c, d e f)<br />
+            Result: a b c d e f<br /> join((a b c), (d e f), comma)<br /> Result: a, b, c, d, e, f<br /> join(a b c, d e
+            f, $bracketed: true)<br /> Result: [a b c d e f]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          length(<em>list</em>)
+        </td>
+        <td>
+          Listenin uzunluğunu d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br /> length(a b
+            c)<br /> Result: 3
+        </td>
+      </tr>
+      <tr>
+        <td>
+          list-separator(<em>list</em>)
+        </td>
+        <td>
+          Kullanılan liste ayırıcıyı dize olarak d&ouml;nd&uuml;r&uuml;r. Boşluk veya virg&uuml;l olabilir.<br />
+            <br /> <strong>Example:</strong><br /> list-separator(a b c)<br /> Result: "space"<br /> list-separator(a,
+            b, c)<br /> Result: "comma"
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          nth(<em>list</em>,&nbsp;<em>n</em>)
+        </td>
+        <td>
+          Listedeki n'inci &ouml;ğeyi d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br /> nth(a b
+            c, 3)<br /> Result: c
+        </td>
+      </tr>
+      <tr>
+        <td>
+          set-nth(<em>list</em>,&nbsp;<em>n</em>,&nbsp;<em>value</em>)
+        </td>
+        <td>
+          N'inci liste &ouml;ğesini belirtilen değere ayarlar.<br /> <br /> <strong>Example:</strong><br /> set-nth(a
+            b c, 2, x)<br /> Result: a x c
+        </td>
+      </tr>
+      <tr>
+        <td>
+          zip(<em>lists</em>)
+        </td>
+        <td>
+          Listeleri tek bir &ccedil;ok boyutlu liste halinde birleştirir.<br /> <br />
+            <strong>Example:</strong><br /> zip(1px 2px 3px, solid dashed dotted, red green blue)<br /> Result: 1px
+            solid red, 2px dashed green, 3px dotted blue
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Sass Map</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td width="164">
+          <strong>Function</strong>
+        </td>
+        <td width="299">
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td width="164">
+          map-get(<em>map</em>,&nbsp;<em>key</em>)
+        </td>
+        <td width="299">
+          Haritada belirtilen anahtarın değerini d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> $font-sizes: ("small": 12px, "normal": 18px, "large": 24px)<br />
+            map-get($font-sizes, "small")<br /> Result: 12px
+          
+        </td>
+      </tr>
+      <tr>
+        <td width="164">
+          map-has-key(<em>map</em>,&nbsp;<em>key</em>)
+        </td>
+        <td width="299">
+          Haritanın belirtilen anahtara sahip olup olmadığını kontrol eder. Doğru veya yanlış
+            d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br /> $font-sizes: ("small": 12px, "normal":
+            18px, "large": 24px)<br /> map-has-key($font-sizes, "big")<br /> Result: false
+        </td>
+      </tr>
+      <tr>
+        <td width="164">
+          map-keys(<em>map</em>)
+        </td>
+        <td width="299">
+          Haritadaki t&uuml;m anahtarların listesini d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> $font-sizes: ("small": 12px, "normal": 18px, "large": 24px)<br />
+            map-keys($font-sizes)<br /> Result: "small", "normal, "large"
+          
+        </td>
+      </tr>
+      <tr>
+        <td width="164">
+          map-merge(<em>map1</em>,&nbsp;<em>map2</em>)
+        </td>
+        <td width="299">
+          Harita2'yi harita1'in sonuna ekler.<br /> <br /> <strong>Example:</strong><br /> $font-sizes: ("small":
+            12px, "normal": 18px, "large": 24px)<br /> $font-sizes2: ("x-large": 30px, "xx-large": 36px)<br />
+            map-merge($font-sizes, $font-sizes2)<br /> Result: "small": 12px, "normal": 18px, "large": 24px, "x-large":
+            30px, "xx-large": 36px
+        </td>
+      </tr>
+      <tr>
+        <td width="164">
+          map-remove(<em>map</em>,&nbsp;<em>keys...</em>)
+        </td>
+        <td width="299">
+          Belirtilen anahtarları haritadan kaldırır.<br /> <br /> <strong>Example:</strong><br /> $font-sizes:
+            ("small": 12px, "normal": 18px, "large": 24px)<br /> map-remove($font-sizes, "small")<br /> Result:
+            ("normal": 18px, "large": 24px)<br /> map-remove($font-sizes, "small", "large")<br /> Result: ("normal":
+            18px)
+        </td>
+      </tr>
+      <tr>
+        <td width="164">
+          map-values(<em>map</em>)
+        </td>
+        <td width="299">
+          Haritadaki t&uuml;m değerlerin bir listesini d&ouml;nd&uuml;r&uuml;r.
+          <br /> <strong>Example:</strong><br /> $font-sizes: ("small": 12px, "normal": 18px, "large": 24px)<br />
+            map-values($font-sizes)<br /> Result: 12px, 18px, 24px
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Sass Selector</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          is-superselector(<em>super</em>,&nbsp;<em>sub</em>)
+        </td>
+        <td>
+          S&uuml;per se&ccedil;icinin alt eşleşen t&uuml;m &ouml;ğelerle eşleşip eşleşmediğini kontrol eder.
+          <br /> <strong>Example:</strong><br /> is-superselector("div", "div.myInput")<br /> Result: true<br />
+            is-superselector("div.myInput", "div")<br /> Result: false<br /> is-superselector("div", "div")<br />
+            Result: true
+        </td>
+      </tr>
+      <tr>
+        <td>
+          selector-append(<em>selectors</em>)
+        </td>
+        <td>
+          İkinci (ve &uuml;&ccedil;&uuml;nc&uuml;/d&ouml;rd&uuml;nc&uuml; vb.) se&ccedil;iciyi birinci
+            se&ccedil;iciye ekler.<br /> <br /> <strong>Example:</strong><br /> selector-append("div", ".myInput")<br />
+            Result: div.myInput<br /> selector-append(".warning", "__a")<br /> Result: .warning__a
+        </td>
+      </tr>
+      <tr>
+        <td>
+          selector-extend(<em>selector</em>,&nbsp;<em>extendee</em>,&nbsp;<em>extender</em>)
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          selector-nest(<em>selectors</em>)
+        </td>
+        <td>
+          Sağlanan listeye g&ouml;re CSS se&ccedil;icilerinin i&ccedil; i&ccedil;e ge&ccedil;miş listesini
+            i&ccedil;eren yeni bir se&ccedil;ici d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br />
+            selector-nest("ul", "li")<br /> Result: ul li<br /> selector-nest(".warning", "alert", "div")<br /> Result:
+            .warning div, alert div
+        </td>
+      </tr>
+      <tr>
+        <td>
+          selector-parse(<em>selector</em>)
+        </td>
+        <td>
+          &Uuml;st se&ccedil;iciyle aynı formatı kullanarak se&ccedil;icide bulunan dizelerin listesini
+            d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br /> selector-parse("h1 .myInput
+            .warning")<br /> Result: ('h1' '.myInput' '.warning')
+        </td>
+      </tr>
+      <tr>
+        <td>
+          selector-replace(<em>selector</em>,&nbsp;<em>original</em>,&nbsp;<em>replacement</em>)
+        </td>
+        <td>
+          Orijinalde belirtilen se&ccedil;icilerin yerine, belirtilen se&ccedil;icilerin yer aldığı yeni bir
+            se&ccedil;ici d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br />
+            selector-replace("p.warning", "p", "div")<br /> Result: div.warning
+        </td>
+      </tr>
+      <tr>
+        <td>
+          selector-unify(<em>selector1</em>,&nbsp;<em>selector2</em>)
+        </td>
+        <td>
+          Yalnızca hem se&ccedil;ici1 hem de se&ccedil;ici2 tarafından eşleşen &ouml;ğelerle eşleşen yeni bir
+            se&ccedil;ici d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br />
+            selector-unify("myInput", ".disabled")<br /> Result: myInput.disabled<br /> selector-unify("p", "h1")<br />
+            Result: null
+        </td>
+      </tr>
+      <tr>
+        <td>
+          simple-selectors(<em>selectors</em>)
+        </td>
+        <td>
+          Se&ccedil;icilerdeki tek tek se&ccedil;icilerin listesini d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> simple-selectors("div.myInput")<br /> Result: div, .myInput<br />
+            simple-selectors("div.myInput:before")<br /> Result: div, .myInput, :before
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Sass Introspection</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          call(<em>function</em>,&nbsp;<em>arguments</em>...)
+        </td>
+        <td>
+          Bağımsız değişkenlerle bir işlevi &ccedil;ağırır ve sonucu d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          content-exists()
+        </td>
+        <td>
+          Ge&ccedil;erli karışımın bir @content bloğundan ge&ccedil;irilip ge&ccedil;irilmediğini kontrol eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          feature-exists(<em>feature</em>)
+        </td>
+        <td>
+          &Ouml;zelliğin mevcut Sass uygulaması tarafından desteklenip desteklenmediğini kontrol eder.<br /> <br />
+            <strong>Example:</strong><br /> feature-exists("at-error");<br /> Result: true
+        </td>
+      </tr>
+      <tr>
+        <td>
+          function-exists(<em>functionname</em>)
+        </td>
+        <td>
+          Belirtilen fonksiyonun mevcut olup olmadığını kontrol eder.<br /> <br /> <strong>Example:</strong><br />
+            function-exists("nonsense")<br /> Result: false
+        </td>
+      </tr>
+      <tr>
+        <td>
+          get-function(<em>functionname</em>, css: false)
+        </td>
+        <td>
+          Belirtilen işlevi d&ouml;nd&uuml;r&uuml;r. Css doğruysa bunun yerine d&uuml;z bir CSS işlevi
+            d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          global-variable-exists(<em>variablename</em>)
+        </td>
+        <td>
+          Belirtilen global değişkenin mevcut olup olmadığını kontrol eder.<br /> <br />
+            <strong>Example:</strong><br /> variable-exists(a)<br /> Result: true
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inspect(<em>value</em>)
+        </td>
+        <td>
+          Değerin dize temsilini d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          mixin-exists(<em>mixinname</em>)
+        </td>
+        <td>
+          Belirtilen karışımın mevcut olup olmadığını kontrol eder.<br /> <br /> <strong>Example:</strong><br />
+            mixin-exists("important-text")<br /> Result: true
+        </td>
+      </tr>
+      <tr>
+        <td>
+          type-of(<em>value</em>)
+        </td>
+        <td>
+          Değerin t&uuml;r&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r. Sayı, dize, renk, liste, harita, bool, null, işlev,
+            arglist olabilir.<br /> <br /> <strong>Example:</strong><br /> type-of(15px)<br /> Result: number<br />
+            type-of(#ff0000)<br /> Result: color
+        </td>
+      </tr>
+      <tr>
+        <td>
+          unit(<em>number</em>)
+        </td>
+        <td>
+          Bir sayıyla ilişkili birimi d&ouml;nd&uuml;r&uuml;r.<br /> <br /> <strong>Example:</strong><br />
+            unit(15px)<br /> Result: px
+        </td>
+      </tr>
+      <tr>
+        <td>
+          unitless(<em>number</em>)
+        </td>
+        <td>
+          Belirtilen numaranın kendisiyle ilişkilendirilmiş bir biriminin olup olmadığını kontrol eder.<br /> <br />
+            <strong>Example:</strong><br /> unitless(15px)<br /> Result: false<br /> unitless(15)<br /> Result: true
+        </td>
+      </tr>
+      <tr>
+        <td>
+          variable-exists(<em>variablename</em>)
+        </td>
+        <td>
+          Belirtilen değişkenin ge&ccedil;erli kapsamda mevcut olup olmadığını kontrol eder.<br /> <br />
+            <strong>Example:</strong><br /> variable-exists(b)<br /> Result: true
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Sass Set Color</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rgb(<em>red</em>,&nbsp;<em>green</em>,&nbsp;<em>blue</em>)
+        </td>
+        <td>
+          Kırmızı-Yeşil-Mavi (RGB) modelini kullanarak bir renk ayarlar. Bir RGB renk değeri şu şekilde belirtilir:
+            rgb(kırmızı, yeşil, mavi). Her parametre o rengin yoğunluğunu tanımlar ve 0 ile 255 arasında bir tam sayı
+            veya bir y&uuml;zde değeri (%0 ile %100 arasında) olabilir.<br /> <br /> <strong>Example:</strong><br />
+            rgb(0, 0, 255); // rendered as blue because the blue parameter is set to its highest value (255) and the
+            others are set to 0
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rgba(<em>red</em>,&nbsp;<em>green</em>,&nbsp;<em>blue</em>,&nbsp;<em>alpha</em>)
+        </td>
+        <td>
+          Kırmızı-Yeşil-Mavi-Alfa (RGBA) modelini kullanarak bir renk ayarlar. RGBA renk değerleri, rengin opaklığını
+            belirten alfa kanalına sahip RGB renk değerlerinin bir uzantısıdır. Alfa parametresi 0,0 (tamamen şeffaf)
+            ile 1,0 (tamamen opak) arasında bir sayıdır.<br /> <br /> <strong>Example:</strong><br /> rgba(0, 0, 255,
+            0.3); // rendered as blue with opacity
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hsl(<em>hue</em>,&nbsp;<em>saturation</em>,&nbsp;<em>lightness</em>)
+        </td>
+        <td>
+          Ton-Doygunluk-A&ccedil;ıklık (HSL) modelini kullanarak bir renk ayarlar ve renklerin silindirik koordinat
+            g&ouml;sterimini temsil eder. Ton, renk tekerleğinde bir derecedir (0'dan 360'a kadar) - 0 veya 360 kırmızı,
+            120 yeşil, 240 mavidir. Doygunluk bir y&uuml;zde değeridir; %0 grinin bir tonu, %100 ise tam renk anlamına
+            gelir. Hafiflik de bir y&uuml;zdedir; %0 siyah, %100 beyazdır.<br /> <br /> <strong>Example:</strong><br />
+            hsl(120, 100%, 50%); // green<br /> hsl(120, 100%, 75%); // light green<br /> hsl(120, 100%, 25%); // dark
+            green<br /> hsl(120, 60%, 70%); // pastel green
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hsla(<em>hue</em>,&nbsp;<em>saturation</em>,&nbsp;<em>lightness</em>,&nbsp;<em>alpha</em>)
+        </td>
+        <td>
+          Ton-Doygunluk-A&ccedil;ıklık-Alfa (HSLA) modelini kullanarak bir renk ayarlar. HSLA renk değerleri, rengin
+            opaklığını belirten alfa kanalına sahip HSL renk değerlerinin bir uzantısıdır. Alfa parametresi 0,0 (tamamen
+            şeffaf) ile 1,0 (tamamen opak) arasında bir sayıdır.<br /> <br /> <strong>Example:</strong><br /> hsl(120,
+            100%, 50%, 0.3); // green with opacity<br /> hsl(120, 100%, 75%, 0.3); // light green with opacity
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grayscale(<em>color</em>)
+        </td>
+        <td>
+          Renkle aynı a&ccedil;ıklığa sahip gri bir renk ayarlar.<br /> <br /> <strong>Example:</strong><br />
+            grayscale(#7fffd4);<br /> Result: #c6c6c6
+        </td>
+      </tr>
+      <tr>
+        <td>
+          complement(<em>color</em>)
+        </td>
+        <td>
+          Rengin tamamlayıcı rengi olan bir renk ayarlar.<br /> <br /> <strong>Example:</strong><br />
+            complement(#7fffd4);<br /> Result: #ff7faa
+        </td>
+      </tr>
+      <tr>
+        <td>
+          invert(<em>color</em>,&nbsp;<em>weight</em>)
+        </td>
+        <td>
+          Rengin tersi veya negatif rengi olan bir renk ayarlar. Ağırlık parametresi isteğe bağlıdır ve %0 ile %100
+            arasında bir sayı olmalıdır. Varsayılan %100'd&uuml;r.<br /> <br /> <strong>Example:</strong><br />
+            invert(white);<br /> Result: black
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Sass Get Color</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          red(<em>color</em>)
+        </td>
+        <td>
+          Rengin kırmızı değerini 0 ile 255 arasında bir sayı olarak d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> red(#7fffd4);<br /> Result: 127<br /> red(red);<br /> Result: 255
+        </td>
+      </tr>
+      <tr>
+        <td>
+          green(<em>color</em>)
+        </td>
+        <td>
+          Rengin yeşil değerini 0 ile 255 arasında bir sayı olarak d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> green(#7fffd4);<br /> Result: 255<br /> green(blue);<br /> Result: 0
+        </td>
+      </tr>
+      <tr>
+        <td>
+          blue(<em>color</em>)
+        </td>
+        <td>
+          Rengin mavi değerini 0 ile 255 arasında bir sayı olarak d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> blue(#7fffd4);<br /> Result: 212<br /> blue(blue);<br /> Result: 255
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hue(<em>color</em>)
+        </td>
+        <td>
+          Rengin tonunu 0 derece ile 360 derece arasında bir sayı olarak d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> hue(#7fffd4);<br /> Result: 160deg
+        </td>
+      </tr>
+      <tr>
+        <td>
+          saturation(<em>color</em>)
+        </td>
+        <td>
+          Rengin HSL doygunluğunu %0 ile %100 arasında bir sayı olarak d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> saturation(#7fffd4);<br /> Result: 100%
+        </td>
+      </tr>
+      <tr>
+        <td>
+          lightness(<em>color</em>)
+        </td>
+        <td>
+          Rengin HSL a&ccedil;ıklığını %0 ile %100 arasında bir sayı olarak d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> lightness(#7fffd4);<br /> Result: 74.9%
+        </td>
+      </tr>
+      <tr>
+        <td>
+          alpha(<em>color</em>)
+        </td>
+        <td>
+          Rengin alfa kanalını 0 ile 1 arasında bir sayı olarak d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> alpha(#7fffd4);<br /> Result: 1
+        </td>
+      </tr>
+      <tr>
+        <td>
+          opacity(<em>color</em>)
+        </td>
+        <td>
+          Rengin alfa kanalını 0 ile 1 arasında bir sayı olarak d&ouml;nd&uuml;r&uuml;r.<br /> <br />
+            <strong>Example:</strong><br /> opacity(rgba(127, 255, 212, 0.5));<br /> Result: 0.5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Sass Manipulate Color</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Function</strong>
+        </td>
+        <td>
+          <strong>Description &amp; Example</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          mix(<em>color1</em>,&nbsp;<em>color2</em>,&nbsp;<em>weight</em>)
+        </td>
+        <td>
+          Renk1 ve Renk2 karışımından oluşan bir renk oluşturur. Ağırlık parametresi %0 ile %100 arasında olmalıdır.
+            Daha b&uuml;y&uuml;k ağırlık, daha fazla rengin1 kullanılması gerektiği anlamına gelir. Daha
+            k&uuml;&ccedil;&uuml;k ağırlık, daha fazla rengin2 kullanılması gerektiği anlamına gelir. Varsayılan
+            %50'dir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          adjust-hue(<em>color</em>,&nbsp;<em>degrees</em>)
+        </td>
+        <td>
+          Rengin tonunu -360 dereceden 360 dereceye kadar bir dereceyle ayarlar.<br /> <br />
+            <strong>Example:</strong><br /> adjust-hue(#7fffd4, 80deg);<br /> Result: #8080ff
+        </td>
+      </tr>
+      <tr>
+        <td>
+          
+            adjust-color(<em>color</em>,&nbsp;<em>red</em>,&nbsp;<em>green</em>,&nbsp;<em>blue</em>,&nbsp;<em>hue</em>,&nbsp;<em>saturation</em>,&nbsp;<em>lightness</em>,&nbsp;<em>alpha</em>)
+          
+        </td>
+        <td>
+          Bir veya daha fazla parametreyi belirtilen miktara g&ouml;re ayarlar. Bu işlev, belirtilen miktarı mevcut
+            renk değerine ekler veya &ccedil;ıkarır.<br /> <br /> <strong>Example:</strong><br /> adjust-color(#7fffd4,
+            blue: 25);<br /> Result:
+        </td>
+      </tr>
+      <tr>
+        <td>
+          
+            change-color(<em>color</em>,&nbsp;<em>red</em>,&nbsp;<em>green</em>,&nbsp;<em>blue</em>,&nbsp;<em>hue</em>,&nbsp;<em>saturation</em>,&nbsp;<em>lightness</em>,&nbsp;<em>alpha</em>)
+          
+        </td>
+        <td>
+          Bir rengin bir veya daha fazla parametresini yeni değerlere ayarlar.<br /> <br />
+            <strong>Example:</strong><br /> change-color(#7fffd4, red: 255);<br /> Result: #ffffd4
+        </td>
+      </tr>
+      <tr>
+        <td>
+          
+            scale-color(<em>color</em>,&nbsp;<em>red</em>,&nbsp;<em>green</em>,&nbsp;<em>blue</em>,&nbsp;&nbsp;<em>saturation</em>,&nbsp;<em>lightness</em>,&nbsp;<em>alpha</em>)
+          
+        </td>
+        <td>
+          Bir veya daha fazla renk parametresini &ouml;l&ccedil;eklendirir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rgba(<em>color</em>,&nbsp;<em>alpha</em>)
+        </td>
+        <td>
+          Verilen alfa kanalıyla yeni bir renk rengi oluşturur.
+          <br /> <strong>Example:</strong><br /> rgba(#7fffd4, 30%);<br /> Result: rgba(127, 255, 212, 0.3)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          lighten(<em>color</em>,&nbsp;<em>amount</em>)
+        </td>
+        <td>
+          %0 ila %100 arasında bir miktarda daha a&ccedil;ık bir renk rengi oluşturur. Miktar parametresi HSL
+            a&ccedil;ıklığını bu y&uuml;zde oranında artırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          darken(<em>color</em>,&nbsp;<em>amount</em>)
+        </td>
+        <td>
+          %0 ile %100 arasında bir miktarda daha koyu bir renk rengi oluşturur. Miktar parametresi HSL
+            a&ccedil;ıklığını bu y&uuml;zde oranında azaltır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          saturate(<em>color</em>,&nbsp;<em>amount</em>)
+        </td>
+        <td>
+          %0 ile %100 arasında bir miktarda daha doygun bir renk rengi oluşturur. Miktar parametresi HSL doygunluğunu
+            bu y&uuml;zde oranında artırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          desaturate(<em>color</em>,&nbsp;<em>amount</em>)
+        </td>
+        <td>
+          %0 ile %100 arasında bir miktarda daha az doygun bir renk rengi oluşturur. Miktar parametresi HSL
+            doygunluğunu bu y&uuml;zde oranında azaltır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          opacify(<em>color</em>,&nbsp;<em>amount</em>)
+        </td>
+        <td>
+          0 ile 1 arasındaki miktarda daha opak bir renk rengi oluşturur. Miktar parametresi alfa kanalını o miktarda
+            artırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fade-in(<em>color</em>,&nbsp;<em>amount</em>)
+        </td>
+        <td>
+          0 ile 1 arasındaki miktarda daha opak bir renk rengi oluşturur. Miktar parametresi alfa kanalını bu
+            miktarda artırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          transparentize(<em>color</em>,&nbsp;<em>amount</em>)
+        </td>
+        <td>
+          0 ile 1 arasındaki miktarda daha şeffaf bir renk rengi oluşturur. Miktar parametresi alfa kanalını o kadar
+            azaltır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fade-out(<em>color</em>,&nbsp;<em>amount</em>)
+        </td>
+        <td>
+          0 ile 1 arasındaki miktarda daha şeffaf bir renk rengi oluşturur. Miktar parametresi alfa kanalını o kadar
+            azaltır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

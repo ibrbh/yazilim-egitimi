@@ -1,20 +1,155 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PHP</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>PHP</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Casting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Casting</h1>
+  <div><strong>(string) : </strong>Veriyi sting'e çevirir.</div>
+  <div><strong>(int) : </strong>Veriyi int'e çevirir.</div>
+  <div><strong>(float) : </strong>Veriyi float'a çevirir.</div>
+  <div><strong>(bool) : </strong>Veriyi bool'a çevirir.</div>
+  <div><strong>(array) : </strong>Veriyi array'a çevirir.</div>
+  <div><strong>(object) : </strong>Veriyi object'e çevirir.</div>
 
-    <script src="editor.js"></script>
-  </body>
+  <!-- String Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $a = 5; // Integer
+  $b = 5.34; // Float
+  $c = "hello"; // String
+  $d = true; // Boolean
+  $e = NULL; // NULL
+  $a = (string) $a;
+  $b = (string) $b;
+  $c = (string) $c;
+  $d = (string) $d;
+  $e = (string) $e;
+  // Use var_dump() to verify the data type
+  var_dump($a);
+  var_dump($b);
+  var_dump($c);
+  var_dump($d);
+  var_dump($e);
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+      $a = 5; // Integer
+      $b = 5.34; // Float
+      $c = "25 km"; // String
+      $d = "km 25"; // String
+      $e = "hello"; // String
+      $f = true; // Boolean
+      $g = NULL; // NULL
+
+      $a = (int) $a;
+      $b = (int) $b;
+      $c = (int) $c;
+      $d = (int) $d;
+      $e = (int) $e;
+      $f = (int) $f;
+      $g = (int) $g;
+    ?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+      $a = 5; // Integer
+      $b = 5.34; // Float
+      $c = "25 km"; // String
+      $d = "km 25"; // String
+      $e = "hello"; // String
+      $f = true; // Boolean
+      $g = NULL; // NULL
+
+      $a = (float) $a;
+      $b = (float) $b;
+      $c = (float) $c;
+      $d = (float) $d;
+      $e = (float) $e;
+      $f = (float) $f;
+      $g = (float) $g;
+    ?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+      $a = 5; // Integer
+      $b = 5.34; // Float
+      $c = 0; // Integer
+      $d = -1; // Integer
+      $e = 0.1; // Float
+      $f = "hello"; // String
+      $g = ""; // String
+      $h = true; // Boolean
+      $i = NULL; // NULL
+
+      $a = (bool) $a;
+      $b = (bool) $b;
+      $c = (bool) $c;
+      $d = (bool) $d;
+      $e = (bool) $e;
+      $f = (bool) $f;
+      $g = (bool) $g;
+      $h = (bool) $h;
+      $i = (bool) $i;
+    ?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+      $a = 5; // Integer
+      $b = 5.34; // Float
+      $c = "hello"; // String
+      $d = true; // Boolean
+      $e = NULL; // NULL
+
+      $a = (array) $a;
+      $b = (array) $b;
+      $c = (array) $c;
+      $d = (array) $d;
+      $e = (array) $e;
+    ?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+      $a = 5; // Integer
+      $b = 5.34; // Float
+      $c = "hello"; // String
+      $d = true; // Boolean
+      $e = NULL; // NULL
+
+      $a = (object) $a;
+      $b = (object) $b;
+      $c = (object) $c;
+      $d = (object) $d;
+      $e = (object) $e;
+    ?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+  <script src="editor.js"></script>
+</body>
+
 </html>

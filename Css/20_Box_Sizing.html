@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Box Sizing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Box Sizing</h1>
+
+  <!-- Box Sizing Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Box Sizing Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">
+          <p>box-sizing</p>
+        </td>
+        <td rowspan="4">
+          <p>Bir &ouml;ğenin genişlik ve y&uuml;kseklik değerinin kenarlık ve padding ' i hesapa katıp
+            katmayacağını belirler.</p>
+        </td>
+        <td>
+          <p>content-box</p>
+        </td>
+        <td>
+          <p>Varsayılan. Genişlik ve y&uuml;kseklik &ouml;zellikleri (ve min/maks &ouml;zellikleri) yalnızca
+            i&ccedil;eriği i&ccedil;erir. Kenarlık ve padding dahil değildir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>border-box</p>
+        </td>
+        <td>
+          <p>Genişlik ve y&uuml;kseklik &ouml;zellikleri (ve min/maks &ouml;zellikleri) i&ccedil;erik, padding ve
+            kenarlığı i&ccedil;erir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      box-sizing
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="one">one</div>
+      <div class="two">two</div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div{
+  border-style:solid;
+  border-width:3px;
+  background-color:yellow;
+  width:100px;
+  height:100px;
+  margin:30px;
+}
+
+div.one{
+  box-sizing:border-box;
+}
+
+div.two{
+  box-sizing:content-box;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

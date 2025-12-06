@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Display</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Display</h1>
+
+  <!-- Display Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Display Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="23">
+          display
+        </td>
+        <td rowspan="23">
+          CSS'de "display" &ouml;zelliği, d&uuml;zeni kontrol etmek i&ccedil;in en &ouml;nemli CSS
+          &ouml;zelliğidir. Display &ouml;zelliği, bir elemanın g&ouml;r&uuml;nt&uuml;lenip
+          g&ouml;r&uuml;nt&uuml;lenmeyeceğini veya nasıl g&ouml;r&uuml;nt&uuml;leneceğini belirtir.
+        </td>
+        <td>
+          inline
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i &ouml;ğe olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          block
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok &ouml;ğesi olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          contents
+        </td>
+        <td>
+          Kabı ortadan kaldırarak &ouml;ğenin alt &ouml;ğelerini DOM'da bir sonraki seviyeye y&uuml;kseltir.
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok d&uuml;zeyinde esnek kapsayıcı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok d&uuml;zeyinde ızgara kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-block
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zeyde blok kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+          &Ouml;ğenin kendisi satır i&ccedil;i &ouml;ğe olarak bi&ccedil;imlendirilmiştir ancak y&uuml;kseklik
+          ve genişlik değerlerini uygulayabilirsiniz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-flex
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zeyde esnek kapsayıcı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-grid
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zey ızgara kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-table
+        </td>
+        <td>
+          &Ouml;ğe, satır i&ccedil;i d&uuml;zeyde bir tablo olarak g&ouml;r&uuml;nt&uuml;lenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          list-item
+        </td>
+        <td>
+          Elemanın bir &lt;li&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          run-in
+        </td>
+        <td>
+          Bağlama bağlı olarak bir &ouml;ğeyi blok veya satır i&ccedil;i olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;table&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-caption
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;caption&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-column-group
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;colgroup&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-header-group
+        </td>
+        <td>
+          Elemanın bir &lt;thead&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-footer-group
+        </td>
+        <td>
+          Elemanın bir &lt;tfoot&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-row-group
+        </td>
+        <td>
+          Elemanın bir &lt;tbody&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-cell
+        </td>
+        <td>
+          Elemanın bir &lt;td&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-column
+        </td>
+        <td>
+          Elemanın bir &lt;col&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-row
+        </td>
+        <td>
+          Elemanın bir &lt;tr&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          none
+        </td>
+        <td>
+          &Ouml;ğeyi tamamen kaldırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

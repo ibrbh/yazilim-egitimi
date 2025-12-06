@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PHP</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>PHP</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Veri Türleri</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Veri Türleri</h1>
+  <div><strong>string : </strong> Metinsel bilgiler</div>
+  <div><strong>int : </strong> Tam sayılar</div>
+  <div><strong>double : </strong> Ondalıklı sayılar</div>
+  <div><strong>boolean : </strong> true/false bilgi</div>
+  <div><strong>object : </strong> Nesne</div>
+  <div><strong>array : </strong> Diziler</div>
+  <div><strong>null : </strong> Değer içermeyen değişken</div>
 
-    <script src="editor.js"></script>
-  </body>
+  <div class="editor-box">
+      <div class="editor" contenteditable="true">&lt;?php
+  $x1 = "Hello world!"; // string  
+  $x2 = 5985; // int
+  $x3 = 10.365; // float
+  $x4 = true; // boolean
+  $x5 = array("Volvo","BMW","Toyota"); // array
+  $x6 = null; // null
+  
+  echo $x1;
+  echo $x2;
+  echo $x3;
+  echo $x4;
+  echo $x5;
+  echo $x5[0];
+  echo $x5[1];
+  echo $x5[2];
+  echo $x6;
+?&gt;</div>
+      <button class="runBtn">Çalıştır</button>
+      <div class="output"></div>
+    </div>
+
+  <script src="editor.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Grid</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Grid</h1>
+  <div>Grid’ in kullanılabilmesi için öncelikle container’ın display özelliğinin grid yapılması gerekir.</div>
+
+  <!-- Display Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Display Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="23">
+          display
+        </td>
+        <td rowspan="23">
+          CSS'de "display" &ouml;zelliği, d&uuml;zeni kontrol etmek i&ccedil;in en &ouml;nemli CSS
+          &ouml;zelliğidir. Display &ouml;zelliği, bir elemanın g&ouml;r&uuml;nt&uuml;lenip
+          g&ouml;r&uuml;nt&uuml;lenmeyeceğini veya nasıl g&ouml;r&uuml;nt&uuml;leneceğini belirtir.
+        </td>
+        <td>
+          inline
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i &ouml;ğe olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          block
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok &ouml;ğesi olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          contents
+        </td>
+        <td>
+          Kabı ortadan kaldırarak &ouml;ğenin alt &ouml;ğelerini DOM'da bir sonraki seviyeye y&uuml;kseltir.
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok d&uuml;zeyinde esnek kapsayıcı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok d&uuml;zeyinde ızgara kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-block
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zeyde blok kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+          &Ouml;ğenin kendisi satır i&ccedil;i &ouml;ğe olarak bi&ccedil;imlendirilmiştir ancak y&uuml;kseklik
+          ve genişlik değerlerini uygulayabilirsiniz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-flex
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zeyde esnek kapsayıcı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-grid
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zey ızgara kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-table
+        </td>
+        <td>
+          &Ouml;ğe, satır i&ccedil;i d&uuml;zeyde bir tablo olarak g&ouml;r&uuml;nt&uuml;lenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          list-item
+        </td>
+        <td>
+          Elemanın bir &lt;li&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          run-in
+        </td>
+        <td>
+          Bağlama bağlı olarak bir &ouml;ğeyi blok veya satır i&ccedil;i olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;table&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-caption
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;caption&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-column-group
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;colgroup&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-header-group
+        </td>
+        <td>
+          Elemanın bir &lt;thead&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-footer-group
+        </td>
+        <td>
+          Elemanın bir &lt;tfoot&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-row-group
+        </td>
+        <td>
+          Elemanın bir &lt;tbody&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-cell
+        </td>
+        <td>
+          Elemanın bir &lt;td&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-column
+        </td>
+        <td>
+          Elemanın bir &lt;col&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-row
+        </td>
+        <td>
+          Elemanın bir &lt;tr&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          none
+        </td>
+        <td>
+          &Ouml;ğeyi tamamen kaldırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Grid Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Grid Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">
+          column-gap
+        </td>
+        <td rowspan="4">
+          S&uuml;tunlar arasındaki boşluğu belirtir
+        </td>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          S&uuml;tunlar arasındaki boşluğu ayarlayacak belirli bir uzunluk
+        </td>
+      </tr>
+      <tr>
+        <td>
+          normal
+        </td>
+        <td>
+          Varsayılan değer. S&uuml;tunlar arasındaki normal boşluğu belirtir. W3C 1em değerini &ouml;nerir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          gap
+        </td>
+        <td rowspan="3">
+          row-gap ve column-gap &ouml;zellikleri i&ccedil;in kısa bir &ouml;zellik
+        </td>
+        <td>
+          <em>row-gap column gap</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="9">
+          grid
+        </td>
+        <td rowspan="9">
+          Izgara şablonu satırları, ızgara şablonu s&uuml;tunları, ızgara şablonu alanları, ızgara otomatik
+          satırları, ızgara otomatik s&uuml;tunları ve ızgara otomatik akışı &ouml;zellikleri i&ccedil;in kısa
+          bir &ouml;zellik
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. S&uuml;tunların veya satırların belirli bir boyutu yok
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>grid-template-rows / grid-template-columns</em>
+        </td>
+        <td>
+          S&uuml;tunların ve satırların boyutunu/boyutlarını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>grid-template-areas</em>
+        </td>
+        <td>
+          Adlandırılmış &ouml;ğeleri kullanan ızgara d&uuml;zenini belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>grid-template-rows / grid-auto-columns</em>
+        </td>
+        <td>
+          Satırların boyutunu (y&uuml;ksekliğini) ve s&uuml;tunların otomatik boyutunu belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>grid-auto-rows / grid-template-columns</em>
+        </td>
+        <td>
+          Satırların otomatik boyutunu belirtir ve grid-template-columns &ouml;zelliğini ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>grid-template-rows / grid-auto-flow grid-auto-columns</em>
+        </td>
+        <td>
+          Satırların boyutunu (y&uuml;ksekliğini), otomatik olarak yerleştirilen &ouml;ğelerin nasıl
+          yerleştirileceğini ve s&uuml;tunların otomatik boyutunu belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>grid-auto-flow grid-auto-rows / grid-template-columns</em>
+        </td>
+        <td>
+          Otomatik olarak yerleştirilen &ouml;ğelerin nasıl yerleştirileceğini ve satırların otomatik boyutunu
+          belirtir ve grid-template-columns &ouml;zelliğini ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid-area
+        </td>
+        <td>
+          grid-row-start, grid-column-start, grid-row-end ve grid-column-end i&ccedil;in bir kısayol.
+        </td>
+        <td>
+          <em>grid-row-start / grid-column-start / grid-row-end / grid-column-end</em>
+        </td>
+        <td>
+          Izgara &ouml;ğesi i&ccedil;in bir ad belirtir
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="7">
+          grid-auto-columns
+        </td>
+        <td rowspan="7">
+          Varsayılan s&uuml;tun boyutunu belirtir
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. S&uuml;tunların boyutu kabın boyutuna g&ouml;re belirlenir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fit-content()
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max-content
+        </td>
+        <td>
+          S&uuml;tundaki en b&uuml;y&uuml;k &ouml;ğeye bağlı olarak her s&uuml;tunun boyutunu ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min-content
+        </td>
+        <td>
+          S&uuml;tundaki en k&uuml;&ccedil;&uuml;k &ouml;ğeye bağlı olarak her s&uuml;tunun boyutunu ayarlar
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          minmax(min.max)
+        </td>
+        <td>
+          Min'den b&uuml;y&uuml;k veya ona eşit ve maksimumdan k&uuml;&ccedil;&uuml;k veya ona eşit bir boyut
+          aralığı ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Yasal bir uzunluk değeri kullanarak s&uuml;tunların boyutunu ayarlar. Uzunluk birimleri hakkında
+          bilgi edinin
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>%</em>
+        </td>
+        <td>
+          Y&uuml;zde değeri kullanarak s&uuml;tunların boyutunu ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          grid-auto-flow
+        </td>
+        <td rowspan="5">
+          Otomatik olarak yerleştirilen &ouml;ğelerin ızgaraya nasıl ekleneceğini belirtir
+        </td>
+        <td>
+          row
+        </td>
+        <td>
+          Varsayılan değer. &Ouml;ğeleri her satırı doldurarak yerleştirir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          column
+        </td>
+        <td>
+          &Ouml;ğeleri her s&uuml;tunu doldurarak yerleştirir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          dense
+        </td>
+        <td>
+          Izgaradaki delikleri dolduracak şekilde &ouml;ğeleri yerleştirir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          row dense
+        </td>
+        <td>
+          &Ouml;ğeleri her satırı doldurarak yerleştirir ve ızgaradaki t&uuml;m delikleri doldurur
+        </td>
+      </tr>
+      <tr>
+        <td>
+          column dense
+        </td>
+        <td>
+          &Ouml;ğeleri her s&uuml;tunu doldurarak yerleştirir ve ızgaradaki t&uuml;m delikleri doldurur
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          grid-auto-rows
+        </td>
+        <td rowspan="4">
+          Varsayılan satır boyutunu belirtir
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. Satırların boyutu, satırdaki en b&uuml;y&uuml;k &ouml;ğenin boyutuna g&ouml;re
+          belirlenir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max-content
+        </td>
+        <td>
+          Her satırın boyutunu, satırdaki en b&uuml;y&uuml;k &ouml;ğeye bağlı olacak şekilde ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min-content
+        </td>
+        <td>
+          Her satırın boyutunu, satırdaki en k&uuml;&ccedil;&uuml;k &ouml;ğeye bağlı olacak şekilde ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Yasal bir uzunluk değeri kullanarak satırların boyutunu ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid-column
+        </td>
+        <td>
+          grid-column-start ve grid-column-end i&ccedil;in bir kısayol.
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          grid-column-end
+        </td>
+        <td rowspan="3">
+          Izgara &ouml;ğesinin nerede sonlandırılacağını belirtir
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. &Ouml;ğe bir s&uuml;tuna yayılacak
+        </td>
+      </tr>
+      <tr>
+        <td>
+          span <em>n</em>
+        </td>
+        <td>
+          &Ouml;ğenin yayılacağı s&uuml;tun sayısını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>column-line</em>
+        </td>
+        <td>
+          &Ouml;ğenin g&ouml;steriminin hangi s&uuml;tunda sonlandırılacağını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid-column-gap
+        </td>
+        <td>
+          S&uuml;tunlar arasındaki boşluğun boyutunu belirtir
+        </td>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Px veya % gibi herhangi bir yasal uzunluk değeri. 0 varsayılan değerdir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          grid-column-start
+        </td>
+        <td rowspan="3">
+          Izgara &ouml;ğesinin nereden başlayacağını belirtir
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. &Ouml;ğe akışı takip ederek yerleştirilecek
+        </td>
+      </tr>
+      <tr>
+        <td>
+          span <em>n</em>
+        </td>
+        <td>
+          &Ouml;ğenin yayılacağı s&uuml;tun sayısını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>column-line</em>
+        </td>
+        <td>
+          Hangi s&uuml;tunun kullanılacağını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid-gap
+        </td>
+        <td>
+          grid-row-gap ve grid-column-gap &ouml;zellikleri i&ccedil;in kısa bir &ouml;zellik
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid-row
+        </td>
+        <td>
+          grid-row-start ve grid-row-end &ouml;zellikleri i&ccedil;in kısa bir &ouml;zellik
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          grid-row-end
+        </td>
+        <td rowspan="3">
+          Izgara &ouml;ğesinin nerede sonlandırılacağını belirtir
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. &Ouml;ğe bir satıra yayılacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          span <em>n</em>
+        </td>
+        <td>
+          &Ouml;ğenin yayılacağı satır sayısını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>row-line</em>
+        </td>
+        <td>
+          &Ouml;ğenin g&ouml;steriminin hangi satırda sonlandırılacağını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid-row-gap
+        </td>
+        <td>
+          Satırlar arasındaki boşluğun boyutunu belirtir
+        </td>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Px veya % gibi herhangi bir yasal uzunluk değeri. 0 varsayılan değerdir
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          grid-row-start
+        </td>
+        <td rowspan="2">
+          Izgara &ouml;ğesinin nereden başlayacağını belirtir
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. Akış takip edilerek eşya yerleştirilecektir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>row-line</em>
+        </td>
+        <td>
+          &Ouml;ğenin g&ouml;r&uuml;nt&uuml;lenmesinin hangi satırda başlatılacağını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          grid-template
+        </td>
+        <td rowspan="5">
+          grid-template-rows, grid-template-columns ve grid-template-areas i&ccedil;in kısa bir &ouml;zellik
+
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. S&uuml;tunların veya satırların belirli bir boyutu yok
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>grid-template rows / grid-template-columns</em>
+        </td>
+        <td>
+          S&uuml;tunların ve satırların boyutunu/boyutlarını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>grid-template-areas</em>
+        </td>
+        <td>
+          Adlandırılmış &ouml;ğeleri kullanan ızgara d&uuml;zenini belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          grid-template-areas
+        </td>
+        <td rowspan="2">
+          Adlandırılmış ızgara &ouml;ğelerini kullanarak s&uuml;tunların ve satırların nasıl
+          g&ouml;r&uuml;nt&uuml;leneceğini belirtir
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. Adlandırılmış ızgara alanı yok
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>itemnames</em>
+        </td>
+        <td>
+          Her s&uuml;tun ve satırın nasıl g&ouml;r&uuml;nt&uuml;lenmesi gerektiğini belirten bir sıra
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="7">
+          grid-template-columns
+        </td>
+        <td rowspan="7">
+          S&uuml;tunların boyutunu ve ızgara d&uuml;zeninde ka&ccedil; s&uuml;tun olduğunu belirtir
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. Gerekirse s&uuml;tunlar oluşturulur
+        </td>
+      </tr>
+      <tr>
+        <td>
+          auto
+        </td>
+        <td>
+          S&uuml;tunların boyutu, kabın boyutuna ve s&uuml;tundaki &ouml;ğelerin i&ccedil;eriğinin boyutuna
+          g&ouml;re belirlenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max-content
+        </td>
+        <td>
+          Her s&uuml;tunun boyutunu, s&uuml;tundaki en b&uuml;y&uuml;k &ouml;ğeye bağlı olacak şekilde ayarlar
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min-content
+        </td>
+        <td>
+          Her s&uuml;tunun boyutunu, s&uuml;tundaki en k&uuml;&ccedil;&uuml;k &ouml;ğeye bağlı olacak şekilde
+          ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Yasal bir uzunluk değeri kullanarak s&uuml;tunların boyutunu ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          grid-template-rows
+        </td>
+        <td rowspan="5">
+          Izgara d&uuml;zenindeki satırların boyutunu belirtir
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Herhangi bir boyut ayarlanmadı. Gerekirse satırlar oluşturulur
+        </td>
+      </tr>
+      <tr>
+        <td>
+          auto
+        </td>
+        <td>
+          Satırların boyutu, kabın boyutuna ve satırdaki &ouml;ğelerin i&ccedil;eriğinin boyutuna g&ouml;re
+          belirlenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max-content
+        </td>
+        <td>
+          Her satırın boyutunu, satırdaki en b&uuml;y&uuml;k &ouml;ğeye bağlı olacak şekilde ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min-content
+        </td>
+        <td>
+          Her satırın boyutunu, satırdaki en k&uuml;&ccedil;&uuml;k &ouml;ğeye bağlı olacak şekilde ayarlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Yasal bir uzunluk değeri kullanarak satırların boyutunu ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          row-gap
+        </td>
+        <td rowspan="4">
+          Izgara satırları arasındaki boşluğu belirtir
+        </td>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Satırlar arasındaki boşluğu ayarlayacak belirli bir uzunluk veya %
+        </td>
+      </tr>
+      <tr>
+        <td>
+          normal
+        </td>
+        <td>
+          Varsayılan değer. Satırlar arasındaki normal boşluğu belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Grid Gap</h2>
+  <img src="images/Grid_Gap.png" alt="">
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Grid Line</h2>
+  <img src="images/Grid_Line.png" alt="">
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Grid-Template</h2>
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Grid Area</h2>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Grid-Flow</h2>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Grid-Auto</h2>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

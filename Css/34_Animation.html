@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Animation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Animation</h1>
+
+  <!-- Animation Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Animation Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          animation
+        </td>
+        <td>
+          B&uuml;t&uuml;n animation &ouml;zelliklerini tek satıra yazmak i&ccedil;in kullanılır. (name duration
+          timing-function delay iteration-count direction fill-mode play-state)
+        </td>
+        <td>
+          <em>&nbsp;</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          animation-name
+        </td>
+        <td rowspan="4">
+          Se&ccedil;iciye bağlamak istediğiniz keyframe adını belirtir
+        </td>
+        <td>
+          <em>keyframename</em>
+        </td>
+        <td>
+          Se&ccedil;iciye bağlamak istediğiniz keyframe adını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. Animasyon olmayacağını belirtir (kademeden gelen animasyonları ge&ccedil;ersiz
+          kılmak i&ccedil;in kullanılabilir)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          animation-duration
+        </td>
+        <td rowspan="3">
+          Bir animasyonun tamamlanmasının ka&ccedil; saniye veya milisaniye s&uuml;receğini belirtir
+        </td>
+        <td>
+          <em>time</em>
+        </td>
+        <td>
+          Bir animasyonun bir d&ouml;ng&uuml;y&uuml; tamamlamak i&ccedil;in alması gereken s&uuml;reyi
+          belirtir. Bu saniye veya milisaniye cinsinden belirtilebilir. Varsayılan değer 0'dır; bu, herhangi
+          bir animasyonun oluşmayacağı anlamına gelir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="11">
+          animation-timing-function
+        </td>
+        <td rowspan="11">
+          Animasyonun hız eğrisini belirtir
+        </td>
+        <td>
+          linear
+        </td>
+        <td>
+          Animasyon baştan sona aynı hıza sahip
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ease
+        </td>
+        <td>
+          Varsayılan değer. Animasyonun yavaş bir başlangıcı var, ardından hızlı bir şekilde bitiyor ve
+          yavaş&ccedil;a bitiyor
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ease-in
+        </td>
+        <td>
+          Animasyonun yavaş bir başlangıcı var
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ease-out
+        </td>
+        <td>
+          Animasyonun yavaş bir sonu var
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ease-in-out
+        </td>
+        <td>
+          Animasyonun hem yavaş bir başlangıcı hem de yavaş bir sonu var
+        </td>
+      </tr>
+      <tr>
+        <td>
+          step-start
+        </td>
+        <td>
+          Adımlara eşdeğer (1, başlangı&ccedil;)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          step-end
+        </td>
+        <td>
+          Adımlara eşdeğer (1, son)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          steps(int,start|end)
+        </td>
+        <td>
+          İki parametreli bir adımlama fonksiyonunu belirtir. İlk parametre fonksiyondaki aralık sayısını
+          belirtir. Pozitif bir tam sayı olmalıdır (0'dan b&uuml;y&uuml;k). İsteğe bağlı olan ikinci parametre
+          "başlangı&ccedil;" veya "bitiş" değeridir ve aralık i&ccedil;inde değer değişikliğinin meydana
+          geldiği noktayı belirtir. İkinci parametre atlanırsa "bitiş" değeri verilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cubic-bezier(<em>n,n,n,n</em>)
+        </td>
+        <td>
+          K&uuml;bik bezier işlevinde kendi değerlerinizi tanımlayın
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          animation-delay
+        </td>
+        <td rowspan="3">
+          Animasyonun başlamasından &ouml;nceki gecikmeyi belirtir
+        </td>
+        <td>
+          <em>time</em>
+        </td>
+        <td>
+          İsteğe bağlı. Animasyon başlamadan &ouml;nce beklenecek saniye (s) veya milisaniye (ms) sayısını
+          tanımlar. Varsayılan değer 0'dır. Negatif değerlere izin verilir. Negatif değerler kullanırsanız
+          animasyon, sanki N saniye/milisaniyedir oynatılıyormuş gibi başlayacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          animation-iteration-count
+        </td>
+        <td rowspan="4">
+          Bir animasyonun ka&ccedil; kez oynatılacağını belirtir
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          Bir animasyonun ka&ccedil; kez oynatılması gerektiğini tanımlayan bir sayı. Varsayılan değer 1'dir
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          infinite
+        </td>
+        <td>
+          Animasyonun sonsuz kez (sonsuza kadar) oynatılması gerektiğini belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          animation-direction
+        </td>
+        <td rowspan="6">
+          Animasyonun alternatif d&ouml;ng&uuml;lerde tersten oynatılıp oynatılmayacağını belirtir
+        </td>
+        <td>
+          normal
+        </td>
+        <td>
+          Varsayılan değer. Animasyon normal şekilde oynatılır (ileriye doğru)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          reverse
+        </td>
+        <td>
+          Animasyon ters y&ouml;nde (geriye doğru) oynatılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          alternate
+        </td>
+        <td>
+          Animasyon &ouml;nce ileriye, sonra geriye doğru oynatılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          alternate-reverse
+        </td>
+        <td>
+          Animasyon &ouml;nce geriye, sonra ileriye doğru oynatılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          animation-fill-mode
+        </td>
+        <td rowspan="6">
+          Animasyonun, y&uuml;r&uuml;t&uuml;ld&uuml;ğ&uuml; s&uuml;renin dışında hangi değerlerin uygulandığını
+          belirtir
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. Animasyon, y&uuml;r&uuml;t&uuml;lmeden &ouml;nce veya
+          y&uuml;r&uuml;t&uuml;ld&uuml;kten sonra &ouml;ğeye herhangi bir stil uygulamayacaktır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          forwards
+        </td>
+        <td>
+          &Ouml;ğe, son anahtar kare tarafından ayarlanan stil değerlerini koruyacaktır (animasyon
+          y&ouml;n&uuml;ne ve animasyon yineleme sayısına bağlıdır)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          backwards
+        </td>
+        <td>
+          &Ouml;ğe, ilk anahtar kare tarafından belirlenen stil değerlerini alır (animasyon y&ouml;n&uuml;ne
+          bağlıdır) ve bunu animasyon gecikme s&uuml;resi boyunca korur
+        </td>
+      </tr>
+      <tr>
+        <td>
+          both
+        </td>
+        <td>
+          Animasyon, animasyon &ouml;zelliklerini her iki y&ouml;nde de genişleterek hem ileri hem de geri
+          kurallara uyacaktır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          animation-play-state
+        </td>
+        <td rowspan="4">
+          Animasyonun &ccedil;alışıp &ccedil;alışmadığını veya duraklatıldığını belirtir
+        </td>
+        <td>
+          paused
+        </td>
+        <td>
+          Animasyonun duraklatıldığını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          running
+        </td>
+        <td>
+          Varsayılan değer. Animasyonun &ccedil;alıştığını belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

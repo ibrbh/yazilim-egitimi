@@ -1,32 +1,579 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>CSS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Listeler</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Listeler</h1>
+
+  <!-- Liste Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Liste Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p>list-style</p>
+        </td>
+        <td>
+          <p>Bir listenin t&uuml;m &ouml;zelliklerini tek bildirimde ayarlar.</p>
+        </td>
+        <td>
+          <p>&nbsp;</p>
+        </td>
+        <td>
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>list-style-image</p>
+        </td>
+        <td rowspan="4">
+          <p>Liste &ouml;ğesi işaret&ccedil;isi olarak bir g&ouml;r&uuml;nt&uuml;y&uuml; belirtir.</p>
+        </td>
+        <td>
+          <p>none</p>
+        </td>
+        <td>
+          <p>Hi&ccedil;bir resim g&ouml;sterilmeyecek. Bunun yerine, list-style-type &ouml;zelliği ne t&uuml;r
+            liste işaret&ccedil;isinin oluşturulacağını tanımlayacaktır. Bu varsayılandır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>url</p>
+        </td>
+        <td>
+          <p>Liste &ouml;ğesi işaret&ccedil;isi olarak kullanılacak g&ouml;r&uuml;nt&uuml;n&uuml;n yolunu
+            belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>list-style-position</p>
+        </td>
+        <td rowspan="4">
+          <p>Liste &ouml;ğesi işaretleyicilerinin (madde işaretleri) konumunu belirtir.</p>
+        </td>
+        <td>
+          <p>inside</p>
+        </td>
+        <td>
+          <p>Madde işaretleri liste &ouml;ğesinin i&ccedil;inde olacaktır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>outside</p>
+        </td>
+        <td>
+          <p>Madde işaretleri liste &ouml;ğesinin dışında olacaktır. Bu varsayılandır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="24">
+          <p>list-style-type</p>
+        </td>
+        <td rowspan="24">
+          <p>Liste &ouml;ğesi işaret&ccedil;isinin t&uuml;r&uuml;n&uuml; belirtir.</p>
+        </td>
+        <td>
+          <p>disc</p>
+        </td>
+        <td>
+          <p>Varsayılan değer. İşaret&ccedil;i i&ccedil;i dolu bir dairedir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>armenian</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i geleneksel Ermeni numaralandırmasıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>circle</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i bir dairedir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>cjk-ideographic</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i d&uuml;z ideografik sayılardır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>decimal</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i bir sayıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>decimal-leading-zero</p>
+        </td>
+        <td>
+          <p>İşaretleyici, başında sıfır bulunan bir sayıdır (01, 02, 03 vb.)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>georgian</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i geleneksel G&uuml;rc&uuml; numaralandırmasıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>hebrew</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i geleneksel İbranice numaralandırmadır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>hiragana</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i geleneksel Hiragana numaralandırmasıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>hiragana-iroha</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i geleneksel Hiragana iroha numaralandırmasıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>katakana</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i geleneksel Katakana numaralandırmasıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>katakana-iroha</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i geleneksel Katakana iroha numaralandırmasıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>lower-alpha</p>
+        </td>
+        <td>
+          <p>İşaretleyici d&uuml;ş&uuml;k alfadır (a, b, c, d, e, vb.)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>lower-greek</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i aşağı yunancadır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>lower-latin</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i alt Latincedir (a, b, c, d, e, vb.)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>lower-roman</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i alt-roma'dır (i, ii, iii, iv, v, vb.)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>none</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i g&ouml;sterilmiyor</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>square</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i bir karedir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>upper-alpha</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i &uuml;st alfadır (A, B, C, D, E, vb.)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>upper-greek</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i &uuml;st Yunancadır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>upper-latin</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i &uuml;st Latincedir (A, B, C, D, E, vb.)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>upper-roman</p>
+        </td>
+        <td>
+          <p>İşaret&ccedil;i &uuml;st romandır (I, II, III, IV, V, vb.)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- list-style-type Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      list-style-type
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <ul class="a">
+        <li>Circle Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ul>
+      <ul class="b">
+        <li>Disc Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ul>
+      <ul class="c">
+        <li>Square Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ul>
+      <ol class="d">
+        <li>Armenian Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="e">
+        <li>Cjk-ideographic Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="f">
+        <li>Decimal Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="g">
+        <li>Decimal-loading-zero Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="h">
+        <li>Georgian Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="i">
+        <li>Hebrew Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="j">
+        <li>Hiragana Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="k">
+        <li>Hiragana-iroha Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="l">
+        <li>Katakana Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="m">
+        <li>Katakana-iroha Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="n">
+        <li>Lower-alpha Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="o">
+        <li>Lower-greek Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="p">
+        <li>Lower-latin Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="q">
+        <li>Lower-roman Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="r">
+        <li>Upper-alpha Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="s">
+        <li>Upper-greek Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="t">
+        <li>Uppler-latin Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="u">
+        <li>Upper-roman Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="v">
+        <li>None Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+      <ol class="w">
+        <li>Inherit Type</li>
+        <li>Tea</li>
+        <li>Coffee</li>
+      </ol>
+    </body> 
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">ul.a {list-style-type: circle;}
+ul.b {list-style-type: disc;}
+ul.c {list-style-type: square;}
+ol.d {list-style-type: armenian;}
+ol.e {list-style-type: cjk-ideographic;}
+ol.f {list-style-type: decimal;}
+ol.g {list-style-type: decimal-leading-zero;}
+ol.h {list-style-type: georgian;}
+ol.i {list-style-type: hebrew;}
+ol.j {list-style-type: hiragana;}
+ol.k {list-style-type: hiragana-iroha;}
+ol.l {list-style-type: katakana;}
+ol.m {list-style-type: katakana-iroha;}
+ol.n {list-style-type: lower-alpha;}
+ol.o {list-style-type: lower-greek;}
+ol.p {list-style-type: lower-latin;}
+ol.q {list-style-type: lower-roman;}
+ol.r {list-style-type: upper-alpha;}
+ol.s {list-style-type: upper-greek;}
+ol.t {list-style-type: upper-latin;}
+ol.u {list-style-type: upper-roman;}
+ol.v {list-style-type: none;}
+ol.w {list-style-type: inherit;}
+</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- list-style-image Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      list-style-image
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>milk</li>
+      </ul>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+ul{
+  list-style-image:url("images/Beşiktaş JK Favicon.png");
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- list-style-position Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      list-style-position
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><ul class="a">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  
+  <ul class="b">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+ul.a{
+  list-style-position:outside;
+}
+
+ul.b{
+  list-style-position:inside;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

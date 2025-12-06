@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Responsive Web Tasarımı</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Responsive Web Tasarımı</h1>
+  <img src="images/Responsive_Web_Design.png" alt="">
+
+  <h2>Viewport</h2>
+  <div>HTML5 ile gelen bu
+    <meta> özellik sayesinde web geliştiricileri responsive web tasarımlarını mobil cihazlarda mobil tarayıcılar ile
+    uyumlu hale getirebilmektedirler.
+  </div>
+  <img src="images/Viewport.png" alt="">
+
+  <h2>Grid View</h2>
+  <div>Günümüzün modern web sitelerinde Izgara Tabanlı Tasarım kullanılır. Bu tasarım yönteminde sayfa sanal satırlardan
+    row ve 12 sütündan column oluşur Her kutu belli bir sütun genişliğinde tasarlanır. 12 sütundan oluşan web
+    sayfalarındaki kutular çalıştıkları cihaza göre boyut değiştirirler Böylece sayfalar tüm cihazlarda uygun bir
+    şekilde görünürler</div>
+  <img src="images/Grid_View.png" alt="">
+
+  <ul>
+    <li>Responsive Izgara Görünüm için önce HTML sayfasındaki tüm etiketlerin ‘box-sizing’ özelliği ‘border-box’
+      olmalıdır.</li>
+    <img src="images/GV1.png" alt="">
+    <li>Daha sonra kutuları ‘float:left’ özelliği ile sola yaslıyoruz. Daha sonra sütun genişliğinin yüzdelerini
+      giriyoruz. Öncelikle bir sütunun yüzdesini hesaplamamız gerekiyor: %100 / 12 sütun = %8,33. 12 sütunun her biri
+      için bir sınıf, class='col-' ve bölümün kaç sütuna yayılması gerektiğini tanımlayan bir sayı oluştururuz.</li>
+    <img src="images/GV2" alt="">
+    <li>Izgarada gridview kullanılan satır row içeriklerinin temizlenmesi, her satırın alt alta gelmesi ve float
+      komutundan etkilenip sola yaslanmaması için aşağıdaki kodlar yazılır.</li>
+    <img src="images/GV3.png" alt="">
+  </ul>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Media Query</h2>
+
+  <div>Responsive media query bir CSS3 ile gelen bir özelliktir. Belirli bir koşul altında CSS kurallarının geçerli
+    olmasını sağlar.</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">
+          <strong>Media Query T&uuml;rleri</strong>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Değer</strong>
+        </td>
+        <td>
+          <strong>Tanım</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          all
+        </td>
+        <td>
+          T&uuml;m medya t&uuml;r&uuml; cihazlar i&ccedil;in kullanılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          print
+        </td>
+        <td>
+          Baskı &ouml;nizleme modu i&ccedil;in kullanılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          screen
+        </td>
+        <td>
+          Bilgisayar ekranları, tabletler, akıllı telefonlar vb. i&ccedil;in kullanılır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="5">
+          <strong>Media Query &Ouml;zellikleri</strong>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>&Ouml;zellik</strong>
+        </td>
+        <td>
+          <strong>Tanım</strong>
+        </td>
+        <td>
+          <strong>Değer</strong>
+        </td>
+        <td>
+          <strong>Tanım</strong>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          orientation
+        </td>
+        <td rowspan="2">
+          G&ouml;r&uuml;n&uuml;m alanının y&ouml;nelimi. Manzara veya portre
+        </td>
+        <td>
+          landscape
+        </td>
+        <td>
+          G&ouml;r&uuml;nt&uuml; alanının genişliği y&uuml;ksekliğinden b&uuml;y&uuml;k ise &ccedil;alışır
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          portrait
+        </td>
+        <td>
+          G&ouml;r&uuml;nt&uuml; alanının y&uuml;kesekliği genişliğinden b&uuml;y&uuml;k ise &ccedil;alışır
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max-height
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m alanının maksimum y&uuml;ksekliği.
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min-height
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m alanının minimum y&uuml;ksekliği.
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          height
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m alanının y&uuml;ksekliği (kaydırma &ccedil;ubuğu dahil).
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max-width
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m alanının maksimum genişliği.
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min-width
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m alanının minimum genişliği.
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          width
+        </td>
+        <td>
+          G&ouml;r&uuml;n&uuml;m alanının genişliği (kaydırma &ccedil;ubuğu dahil).
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan=2>
+          <strong>Media Query Operat&ouml;rleri</strong>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Değer</strong>
+        </td>
+        <td>
+          <strong>A&ccedil;ıklama</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          and
+        </td>
+        <td>
+          ve
+        </td>
+      </tr>
+      <tr>
+        <td>
+          or
+        </td>
+        <td>
+          veya
+        </td>
+      </tr>
+      <tr>
+        <td>
+          not
+        </td>
+        <td>
+          değil
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <img src="images/Media_Query.png" alt="">
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Resim ve Video</h2>
+  <div>Responsive resim/video oluşturmanın en kolay yolu, resmin/videonun bulunduğu kutunun içine sığmasını sağlamaktır.
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

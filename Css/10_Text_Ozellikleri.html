@@ -1,32 +1,1231 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>CSS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Text Özellikleri</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Text Özellikleri</h1>
+
+  <!-- Text Color -->
+  <h2>Text Color</h2>
+  <div><strong>color : </strong>Metin rengi tanımlama yapılmaktadır. color:red;, color:#ff0000; vb. şekillerde
+    belirtilmektedir.</div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      text-color
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odio?</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p{
+  color:red;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Text Spacing -->
+  <h2>Text Spacing</h2>
+
+  <!-- Text Spacing Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Text Spacing Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">
+          letter-spacing
+        </td>
+        <td rowspan="4">
+          Bir metindeki karakterler arasındaki boşluğu belirtir.
+        </td>
+        <td>
+          normal
+        </td>
+        <td>
+          Karakterler arasındaki normal boşluğu tanımlar. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Karakterler arasındaki boşluk olarak kullanılan uzunluğu tanımlar (negatif değerlere de izin verilir). Uzunluk
+          birimleri hakkında bilgi edinin
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          line-height
+        </td>
+        <td rowspan="6">
+          Satır y&uuml;ksekliğini belirtir.
+        </td>
+        <td>
+          normal
+        </td>
+        <td>
+          Normal bir satır y&uuml;ksekliği. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          Satır y&uuml;ksekliğini ayarlamak i&ccedil;in ge&ccedil;erli yazı tipi boyutuyla &ccedil;arpılacak sayı
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Piksel, pt, cm vb. cinsinden sabit bir &ccedil;izgi y&uuml;ksekliği.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>%</em>
+        </td>
+        <td>
+          Ge&ccedil;erli yazı tipi boyutunun y&uuml;zdesi cinsinden satır y&uuml;ksekliği
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          text-indent
+        </td>
+        <td rowspan="4">
+          Bir metin bloğundaki ilk satırın girintisini belirtir.
+        </td>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Px, pt, cm, em vb. cinsinden sabit bir girinti tanımlar. Varsayılan değer 0'dır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>%</em>
+        </td>
+        <td>
+          Girintiyi ana &ouml;ğenin genişliğinin %'si olarak tanımlar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="7">
+          white-space
+        </td>
+        <td rowspan="7">
+          Bir &ouml;ğenin i&ccedil;indeki boşlukların nasıl işleneceğini belirtir.
+        </td>
+        <td>
+          normal
+        </td>
+        <td>
+          Boşluk dizileri tek bir boşluk halinde daraltılacaktır. Gerektiğinde metin kaydırılacaktır. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          nowrap
+        </td>
+        <td>
+          Boşluk dizileri tek bir boşluk halinde daraltılacaktır. Metin asla bir sonraki satıra kaydırılmayacaktır.
+          Metin, &lt;br&gt; etiketiyle karşılaşılıncaya kadar aynı satırda devam eder
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pre
+        </td>
+        <td>
+          Boşluk tarayıcı tarafından korunur. Metin yalnızca satır sonlarında kaydırılır. HTML'deki &lt;pre&gt; etiketi
+          gibi davranır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pre-line
+        </td>
+        <td>
+          Boşluk dizileri tek bir boşluk halinde daraltılacaktır. Metin gerektiğinde sarılır ve satır sonları verilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pre-wrap
+        </td>
+        <td>
+          Boşluk tarayıcı tarafından korunur. Metin gerektiğinde sarılır ve satır sonları verilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          word-spacing
+        </td>
+        <td rowspan="4">
+          Bir metindeki kelimeler arasındaki boşluğu belirtir.
+        </td>
+        <td>
+          normal
+        </td>
+        <td>
+          Kelimeler arasındaki normal boşluğu tanımlar (0,25em). Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Kelimeler arasında ek bir boşluk tanımlar (px, pt, cm, em vb. cinsinden). Negatif değerlere izin verilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      text-spacing
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, exercitationem.</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p{
+  letter-spacing:5px;
+  line-height:0.8;
+  word-spacing:10px;
+  white-space:nowrap;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Text Alignment -->
+  <h2>Text Alignment</h2>
+
+  <!-- Text Alignment Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Text Alignment Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>      
+      <tr>
+        <td rowspan="4">
+          direction
+        </td>
+        <td rowspan="4">
+          Metin y&ouml;n&uuml;n&uuml;/yazma y&ouml;n&uuml;n&uuml; belirtir.
+        </td>
+        <td>
+          ltr
+        </td>
+        <td>
+          Metin y&ouml;n&uuml; soldan sağa gider. Bu varsayılandır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rtl
+        </td>
+        <td>
+          Metin y&ouml;n&uuml; sağdan sola gider.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          text-align
+        </td>
+        <td rowspan="6">
+          Metnin yatay hizalamasını belirtir.
+        </td>
+        <td>
+          left
+        </td>
+        <td>
+          Metni sola hizalar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          right
+        </td>
+        <td>
+          Metni sağa hizalar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          center
+        </td>
+        <td>
+          Metni ortalar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          justify
+        </td>
+        <td>
+          Her satırın genişliği eşit olacak şekilde satırları uzatır (gazete ve dergilerde olduğu gibi).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="9">
+          text-align-last
+        </td>
+        <td rowspan="9">
+          Bir metnin son satırının nasıl hizalanacağını belirtir.
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. Son satır iki yana dayalı ve sola hizalanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          left
+        </td>
+        <td>
+          Son satır sola hizalanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          right
+        </td>
+        <td>
+          Son satır sağa hizalanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          center
+        </td>
+        <td>
+          Son satır merkeze hizalanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          justify
+        </td>
+        <td>
+          Son satır diğer satırlarla aynı hizadadır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          start
+        </td>
+        <td>
+          Son satır, satırın başına hizalanır (metin y&ouml;n&uuml; soldan sağa ise sol; metin y&ouml;n&uuml; sağdan
+          sola ise sağ)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          end
+        </td>
+        <td>
+          Son satır, satırın sonuna hizalanır (metin y&ouml;n&uuml; soldan sağa ise sağ; metin y&ouml;n&uuml; sağdan
+          sola ise sol)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="8">
+          unicode-bidi
+        </td>
+        <td rowspan="8">
+          Aynı belgede birden &ccedil;ok dili desteklemek i&ccedil;in metnin ge&ccedil;ersiz kılınıp kılınmayacağını
+          ayarlamak veya d&ouml;nd&uuml;rmek i&ccedil;in Direction &ouml;zelliğiyle birlikte kullanılır.
+        </td>
+        <td>
+          normal
+        </td>
+        <td>
+          &Ouml;ğe, ek bir yerleştirme d&uuml;zeyi a&ccedil;maz. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          embed
+        </td>
+        <td>
+          Satır i&ccedil;i &ouml;ğeler i&ccedil;in bu değer, ek bir yerleştirme d&uuml;zeyi a&ccedil;ar
+        </td>
+      </tr>
+      <tr>
+        <td>
+          bidi-override
+        </td>
+        <td>
+          Satır i&ccedil;i &ouml;ğeler i&ccedil;in bu, bir ge&ccedil;ersiz kılma oluşturur. Blok elemanları i&ccedil;in
+          bu, başka bir blok elemanının i&ccedil;inde olmayan satır i&ccedil;i seviyedeki alt &ouml;ğeler i&ccedil;in
+          bir ge&ccedil;ersiz kılma oluşturur
+        </td>
+      </tr>
+      <tr>
+        <td>
+          isolate
+        </td>
+        <td>
+          Element kardeşlerinden izole edilmiştir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          isolate-override
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          plaintext
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="12">
+          vertical-align
+        </td>
+        <td rowspan="12">
+          Bir &ouml;ğenin dikey hizalamasını ayarlar.
+        </td>
+        <td>
+          baseline
+        </td>
+        <td>
+          &Ouml;ğe, &uuml;st &ouml;ğenin taban &ccedil;izgisiyle hizalanır. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Bir &ouml;ğeyi belirtilen uzunluğa kadar y&uuml;kseltir veya al&ccedil;altır. Negatif değerlere izin verilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>%</em>
+        </td>
+        <td>
+          Bir &ouml;ğeyi "line-height" &ouml;zelliğinin y&uuml;zdesi kadar y&uuml;kseltir veya al&ccedil;altır. Negatif
+          değerlere izin verilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sub
+        </td>
+        <td>
+          &Ouml;ğe, &uuml;st &ouml;ğenin alt simge taban &ccedil;izgisiyle hizalanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          super
+        </td>
+        <td>
+          &Ouml;ğe, &uuml;st &ouml;ğenin &uuml;st simge taban &ccedil;izgisiyle hizalanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          top
+        </td>
+        <td>
+          &Ouml;ğe, &ccedil;izgideki en y&uuml;ksek &ouml;ğenin &uuml;st kısmıyla hizalanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          text-top
+        </td>
+        <td>
+          &Ouml;ğe, &uuml;st &ouml;ğenin yazı tipinin &uuml;st kısmıyla hizalanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          middle
+        </td>
+        <td>
+          &Ouml;ğe, ana &ouml;ğenin ortasına yerleştirilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          bottom
+        </td>
+        <td>
+          &Ouml;ğe, satırdaki en alttaki &ouml;ğeyle hizalanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          text-bottom
+        </td>
+        <td>
+          &Ouml;ğe, &uuml;st &ouml;ğenin yazı tipinin alt kısmıyla hizalanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      text-alignment
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, placeat!</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p{
+  text-align:center;
+  direction:rtl;
+  unicode-bidi:bidi-override;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Text Decoration -->
+  <h2>Text Decoration</h2>
+
+  <!--Text Decoration Özellik Tablosu  -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Text Decoration Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>      
+      <tr>
+        <td>
+          text-decoration
+        </td>
+        <td>
+          T&uuml;m metin dekorasyon &ouml;zelliklerini tek bir &ouml;zellikte ayarlar.
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          text-decoration-color
+        </td>
+        <td rowspan="3">
+          Metin dekorasyonunun rengini belirtir.
+        </td>
+        <td>
+          <em>color</em>
+        </td>
+        <td>
+          Metin dekorasyonunun rengini belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          text-decoration-line
+        </td>
+        <td rowspan="6">
+          Kullanılacak metin dekorasyonunun t&uuml;r&uuml;n&uuml; belirtir (altı &ccedil;izili, &uuml;st &ccedil;izili
+          vb.)
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. Metin dekorasyonu i&ccedil;in hi&ccedil;bir satır belirtmez
+        </td>
+      </tr>
+      <tr>
+        <td>
+          underline
+        </td>
+        <td>
+          Metnin altında bir satırın g&ouml;r&uuml;nt&uuml;leneceğini belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          overline
+        </td>
+        <td>
+          Metnin &uuml;zerinde bir satırın g&ouml;r&uuml;nt&uuml;leneceğini belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          line-through
+        </td>
+        <td>
+          Metin boyunca bir satırın g&ouml;r&uuml;nt&uuml;leneceğini belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="7">
+          text-decoration-style
+        </td>
+        <td rowspan="7">
+          Metin dekorasyonunun stilini belirtir (d&uuml;z, noktalı vb.)
+        </td>
+        <td>
+          solid
+        </td>
+        <td>
+          Varsayılan değer. Satır tek satır olarak g&ouml;r&uuml;nt&uuml;lenecektir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          double
+        </td>
+        <td>
+          Satır &ccedil;ift &ccedil;izgi olarak g&ouml;r&uuml;nt&uuml;lenecektir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          dotted
+        </td>
+        <td>
+          &Ccedil;izgi noktalı &ccedil;izgi olarak g&ouml;r&uuml;nt&uuml;lenecektir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          dashed
+        </td>
+        <td>
+          &Ccedil;izgi kesikli &ccedil;izgi olarak g&ouml;r&uuml;nt&uuml;lenecektir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          wavy
+        </td>
+        <td>
+          &Ccedil;izgi dalgalı bir &ccedil;izgi olarak g&ouml;r&uuml;nt&uuml;lenecektir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          text-decoration-thickness
+        </td>
+        <td rowspan="5">
+          Metin dekorasyon &ccedil;izgisinin kalınlığını belirtir.
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Tarayıcı dekorasyon &ccedil;izgisinin kalınlığını se&ccedil;er
+        </td>
+      </tr>
+      <tr>
+        <td>
+          from-font
+        </td>
+        <td>
+          Bir yazı tipi dosyası tercih edilen kalınlık hakkında bilgi i&ccedil;eriyorsa bu değeri kullanır. Değilse,
+          otomatik olarak davranır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length/percentage</em>
+        </td>
+        <td>
+          Kalınlığı uzunluk veya % olarak belirtir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      text-decoration
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, hic.</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p{
+  text-decoration-line:underline;
+  text-decoration-color:red;
+  text-decoration-style:wavy;
+  text-decoration-thickness:5px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Text Transformation -->
+  <h2>Text Transformation</h2>
+
+  <!-- Text Transformation Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Text Transformation Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>    
+      <tr>
+        <td rowspan="6">
+          text-transform
+        </td>
+        <td rowspan="6">
+          Metnin b&uuml;y&uuml;k harf kullanımını kontrol eder.
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          B&uuml;y&uuml;k harf yok. Metin olduğu gibi g&ouml;r&uuml;nt&uuml;lenir. Bu varsayılandır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          capitalize
+        </td>
+        <td>
+          Her kelimenin ilk karakterini b&uuml;y&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          uppercase
+        </td>
+        <td>
+          T&uuml;m karakterleri b&uuml;y&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          lowercase
+        </td>
+        <td>
+          T&uuml;m karakterleri k&uuml;&ccedil;&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      text-transformation
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p class="uppercase">Lorem ipsum dolor sit amet.</p>
+    <p class="lowercase">Lorem ipsum dolor sit amet.</p>
+    <p class="capitalize">Lorem ipsum dolor sit amet.</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p.uppercase{
+  text-transform:uppercase;
+}
+
+p.lowercase{
+  text-transform:lowercase;
+}
+
+p.capitalize{
+  text-transform:capitalize;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Text Shadow -->
+  <h2>Text Shadow</h2>
+
+  <!-- Text Shadow Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Text Shadow Özellikler</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="7">
+          text-shadow
+        </td>
+        <td rowspan="7">
+          Metne eklenen g&ouml;lge efektini belirtir.
+        </td>
+        <td>
+          <em>h-shadow</em>
+        </td>
+        <td>
+          Gerekli. Yatay g&ouml;lgenin konumu. Negatif değerlere izin verilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>v-shaow</em>
+        </td>
+        <td>
+          Gerekli. Dikey g&ouml;lgenin konumu. Negatif değerlere izin verilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>blue-radius</em>
+        </td>
+        <td>
+          İsteğe bağlı. Bulanıklık yarı&ccedil;apı. Varsayılan değer 0'dır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>color</em>
+        </td>
+        <td>
+          İsteğe bağlı. G&ouml;lgenin rengi. Olası renk değerlerinin tam listesi i&ccedil;in CSS Renk Değerlerine bakın
+        </td>
+      </tr>
+      <tr>
+        <td>
+          none
+        </td>
+        <td>
+          Varsayılan değer. G&ouml;lge yok
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      text-shadow
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aspernatur!</p></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p{
+  text-shadow:2px 2px 5px red;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

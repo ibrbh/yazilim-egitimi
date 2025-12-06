@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Transation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Transation</h1>
+
+  <!-- Transation Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Transation Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          transition
+        </td>
+        <td>
+          D&ouml;rt ge&ccedil;iş &ouml;zelliğini tek bir &ouml;zelliğe ayarlamak i&ccedil;in kullanılan kısa
+          bir &ouml;zelliktir.
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          &nbsp;
+          transition-delay
+        </td>
+        <td rowspan="3">
+          &nbsp;
+          Ge&ccedil;iş efekti i&ccedil;in bir gecikme (saniye cinsinden) belirtir.
+        </td>
+        <td>
+          <em>time</em>
+        </td>
+        <td>
+          Ge&ccedil;iş efekti başlamadan &ouml;nce beklenecek saniye veya milisaniye sayısını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          &nbsp;
+          transition-duration
+        </td>
+        <td rowspan="3">
+          &nbsp;
+          Bir ge&ccedil;iş efektinin tamamlanmasının ka&ccedil; saniye veya milisaniye s&uuml;receğini
+          belirtir.
+        </td>
+        <td>
+          <em>time</em>
+        </td>
+        <td>
+          Bir ge&ccedil;iş efektinin tamamlanmasının ka&ccedil; saniye veya milisaniye s&uuml;receğini
+          belirtir. Varsayılan değer 0'dır, yani herhangi bir etki olmayacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          &nbsp;
+          transition-property
+        </td>
+        <td rowspan="5">
+          &nbsp;
+          Ge&ccedil;iş efektinin kullanıldığı CSS &ouml;zelliğinin adını belirtir.
+        </td>
+        <td>
+          none
+        </td>
+        <td>
+          Hi&ccedil;bir &ouml;zellik ge&ccedil;iş efektine sahip olmayacak.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          all
+        </td>
+        <td>
+          Varsayılan değer. T&uuml;m &ouml;zelliklere ge&ccedil;iş efekti verilecek.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>property</em>
+        </td>
+        <td>
+          Ge&ccedil;iş efektinin kullanıldığı CSS &ouml;zellik adlarının virg&uuml;lle ayrılmış listesini
+          tanımlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="11">
+          transition-timing-function
+        </td>
+        <td rowspan="11">
+          Ge&ccedil;iş efektinin hız eğrisini belirtir.
+        </td>
+        <td>
+          ease
+        </td>
+        <td>
+          Varsayılan değer. Yavaş başlayan, sonra hızlı ve sonra yavaş yavaş biten bir ge&ccedil;iş efektini
+          belirtir (k&uuml;bik-bezier'e (0,25,0,1,0,25,1) eşdeğerdir)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          linear
+        </td>
+        <td>
+          Baştan sona aynı hızda bir ge&ccedil;iş efekti belirtir (k&uuml;bik-bezier(0,0,1,1)'e eşdeğer)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ease-in
+        </td>
+        <td>
+          Yavaş bir şekilde başlar, sona doğru hızını arttırır (k&uuml;bik-bezier'e (0,42,0,1,1) eşdeğerdir)
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ease-out
+        </td>
+        <td>
+          Hızlı bir şekilde başlar, sona doğru yavaşlar. (k&uuml;bik-bezier(0,0,0.58,1)'e eşdeğer)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ease-in-out
+        </td>
+        <td>
+          Yavaş başlangı&ccedil;lı ve bitişli bir ge&ccedil;iş efektini belirtir (k&uuml;bik-bezier'e
+          (0,42,0,0,58,1) eşdeğerdir)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          step-start
+        </td>
+        <td>
+          Adımlara eşdeğer (1, başlangı&ccedil;)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          step-end
+        </td>
+        <td>
+          Adımlara eşdeğer (1, son)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          steps(int,start|end)
+        </td>
+        <td>
+          İki parametreli bir adımlama fonksiyonunu belirtir. İlk parametre fonksiyondaki aralık sayısını
+          belirtir. Pozitif bir tam sayı olmalıdır (0'dan b&uuml;y&uuml;k). İsteğe bağlı olan ikinci parametre
+          "start" veya "end" değeridir ve aralık i&ccedil;inde değer değişikliğinin meydana geldiği noktayı
+          belirtir. İkinci parametre atlanırsa "bitiş" değeri verilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cubic-bezier(<em>n,n,n,n</em>)
+        </td>
+        <td>
+          Cubic-bezier fonksiyonunda kendi değerlerinizi tanımlayın. Olası değerler 0'dan 1'e kadar sayısal
+          değerlerdir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

@@ -1,18 +1,790 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SQL</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>SQL</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>SQL Editor</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>SQL</h1>
+  <h2>Aritmetik Operatörler</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Operatör</strong>
+        </td>
+        <td>
+          <strong>Açıklama</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          +
+        </td>
+        <td>
+          Toplama
+        </td>
+      </tr>
+      <tr>
+        <td>
+          -
+        </td>
+        <td>
+          Çıkartma
+        </td>
+      </tr>
+      <tr>
+        <td>
+          *
+        </td>
+        <td>
+          Çarpma
+        </td>
+      </tr>
+      <tr>
+        <td>
+          /
+        </td>
+        <td>
+          Bölme
+        </td>
+      </tr>
+      <tr>
+        <td>
+          %
+        </td>
+        <td>
+          Mod Alma
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+
+  <div class="editor">
+    <textarea id="editor1">SELECT 30 + 20;
+-- SELECT 30 - 20;
+-- SELECT 30 * 20;
+-- SELECT 30 / 20;
+-- SELECT 30 % 20;</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+  <h2>Bitsel Operatörler</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Operatör</strong>
+        </td>
+        <td>
+          <strong>Açıklama</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          &amp;
+        </td>
+        <td>
+          Bitsel AND
+        </td>
+      </tr>
+      <tr>
+        <td>
+          |
+        </td>
+        <td>
+          Bitsel OR
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ^
+        </td>
+        <td>
+          Bit bazında özel OR
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Karşılaştırma Operatörleri</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Operatör</strong>
+        </td>
+        <td>
+          <strong>Açıklama</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          =
+        </td>
+        <td>
+          Eşit
+        </td>
+      </tr>
+      <tr>
+        <td>
+          &gt; 
+        </td>
+        <td>
+          Büyük
+        </td>
+      </tr>
+      <tr>
+        <td>
+          &lt; 
+        </td>
+        <td>
+          Küçük
+        </td>
+      </tr>
+      <tr>
+        <td>
+          &gt;=
+        </td>
+        <td>
+          Büyük eşit
+        </td>
+      </tr>
+      <tr>
+        <td>
+          &lt;=
+        </td>
+        <td>
+          Küçük eşit
+        </td>
+      </tr>
+      <tr>
+        <td>
+          != veya &lt;&gt;
+        </td>
+        <td>
+          Eşit değil
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- products -->
+  <table>
+    <thead>
+      <th colspan="6">products</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>ProductID</strong>
+        </td>
+        <td>
+          <strong>ProductName</strong>
+        </td>
+        <td>
+          <strong>SupplierID</strong>
+        </td>
+        <td>
+          <strong>CategoryID</strong>
+        </td>
+        <td>
+          <strong>Unit</strong>
+        </td>
+        <td>
+          <strong>Price</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          Chais
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          10 boxes x 20 bags
+        </td>
+        <td>
+          18
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Chang
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          24 - 12 oz bottles
+        </td>
+        <td>
+          19
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Aniseed Syrup
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          12 - 550 ml bottles
+        </td>
+        <td>
+          10
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4
+        </td>
+        <td>
+          Chef Anton's Cajun Seasoning
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          48 - 6 oz jars
+        </td>
+        <td>
+          22
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Chef Anton's Gumbo Mix
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          36 boxes
+        </td>
+        <td>
+          21.35
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="editor">
+    <textarea id="editor2">SELECT * FROM products WHERE Price = 18;
+-- SELECT * FROM products WHERE Price > 30;
+-- SELECT * FROM products WHERE Price < 30;
+-- SELECT * FROM products WHERE Price >= 30;
+-- SELECT * FROM products WHERE Price <= 30;
+-- SELECT * FROM products WHERE Price != 18;
+</textarea><br>
+    <button onclick="runSQL('editor2')">Çalıştır</button>
+    <iframe id="editor2_out"></iframe>
+  </div>
+
+  <h2>Bileşik Operatörler</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Operatör</strong>
+        </td>
+        <td>
+          <strong>Açıklama</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          +=
+        </td>
+        <td>
+          Add equals
+        </td>
+      </tr>
+      <tr>
+        <td>
+          -=
+        </td>
+        <td>
+          Subtract equals
+        </td>
+      </tr>
+      <tr>
+        <td>
+          *=
+        </td>
+        <td>
+          Multiply equals
+        </td>
+      </tr>
+      <tr>
+        <td>
+          /=
+        </td>
+        <td>
+          Divide equals
+        </td>
+      </tr>
+      <tr>
+        <td>
+          %=
+        </td>
+        <td>
+          Modulo equals
+        </td>
+      </tr>
+      <tr>
+        <td>
+          &amp;=
+        </td>
+        <td>
+          Bitwise AND equals
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ^-=
+        </td>
+        <td>
+          Bitwise exclusive equals
+        </td>
+      </tr>
+      <tr>
+        <td>
+          |*=
+        </td>
+        <td>
+          Bitwise OR equals
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Mantıksal Operatörler</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Operatör</strong>
+        </td>
+        <td>
+          <strong>Açıklama</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ALL
+        </td>
+        <td>
+          Tüm alt sorgu değerleri koşulu karşılıyorsa TRUE.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          AND
+        </td>
+        <td>
+          AND ile ayrılmış tüm koşullar TRUE ise TRUE.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ANY
+        </td>
+        <td>
+          Alt sorgu değerlerinden herhangi biri koşulu karşılıyorsa TRUE.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          BETWEEN
+        </td>
+        <td>
+          Belirli bir aralıktaki değerleri seçer.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          EXISTS
+        </td>
+        <td>
+          Alt sorgu bir veya daha fazla kayıt döndürüyorsa TRUE
+        </td>
+      </tr>
+      <tr>
+        <td>
+          IN
+        </td>
+        <td>
+          Sütun değerinin herhangi bir değere eşit olması istenen durumlarda kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          LIKE
+        </td>
+        <td>
+          Bir sütunda belirli bir modeli aramak için WHERE ile birlikte kullanılır. Yüzde işareti (%) sıfır, bir veya
+          birden fazla karakteri temsil eder. Alt çizgi işareti (_) tek bir karakteri temsil eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          NOT
+        </td>
+        <td>
+          Koşul(lar) NOT TRUE ise bir kayıt görüntüler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          OR
+        </td>
+        <td>
+          OR ile ayrılan koşullardan herhangi biri TRUE ise TRUE.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SOME
+        </td>
+        <td>
+          Alt sorgu değerlerinden herhangi biri koşulu karşılıyorsa TRUE.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- products -->
+  <table>
+    <thead>
+      <th colspan="6">products</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>ProductID</strong>
+        </td>
+        <td>
+          <strong>ProductName</strong>
+        </td>
+        <td>
+          <strong>SupplierID</strong>
+        </td>
+        <td>
+          <strong>CategoryID</strong>
+        </td>
+        <td>
+          <strong>Unit</strong>
+        </td>
+        <td>
+          <strong>Price</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          Chais
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          10 boxes x 20 bags
+        </td>
+        <td>
+          18
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Chang
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          24 - 12 oz bottles
+        </td>
+        <td>
+          19
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Aniseed Syrup
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          12 - 550 ml bottles
+        </td>
+        <td>
+          10
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4
+        </td>
+        <td>
+          Chef Anton's Cajun Seasoning
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          48 - 6 oz jars
+        </td>
+        <td>
+          22
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Chef Anton's Gumbo Mix
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          36 boxes
+        </td>
+        <td>
+          21.35
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- customers -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="7">customers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>CustomerID</strong>
+        </td>
+        <td>
+          <strong>CustomerName</strong>
+        </td>
+        <td>
+          <strong>ContactName</strong>
+        </td>
+        <td>
+          <strong>Address</strong>
+        </td>
+        <td>
+          <strong>City</strong>
+        </td>
+        <td>
+          <strong>PostalCode</strong>
+        </td>
+        <td>
+          <strong>Country</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1<br />
+        </td>
+        <td>
+          Alfreds Futterkiste
+        </td>
+        <td>
+          Maria Anders
+        </td>
+        <td>
+          Obere Str. 57
+        </td>
+        <td>
+          Berlin
+        </td>
+        <td>
+          12209
+        </td>
+        <td>
+          Germany
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Ana Trujillo Emparedados y helados
+        </td>
+        <td>
+          Ana Trujillo
+        </td>
+        <td>
+          Avda. de la Constituci&oacute;n 2222
+        </td>
+        <td>
+          M&eacute;xico D.F.
+        </td>
+        <td>
+          05021
+        </td>
+        <td>
+          Mexico
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Antonio Moreno Taquer&iacute;a
+        </td>
+        <td>
+          Antonio Moreno
+        </td>
+        <td>
+          Mataderos 2312
+        </td>
+        <td>
+          M&eacute;xico D.F.
+        </td>
+        <td>
+          05023
+        </td>
+        <td>
+          Mexico
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4<br />
+        </td>
+        <td>
+          Around the Horn
+        </td>
+        <td>
+          Thomas Hardy
+        </td>
+        <td>
+          120 Hanover Sq.
+        </td>
+        <td>
+          London
+        </td>
+        <td>
+          WA1 1DP
+        </td>
+        <td>
+          UK
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Berglunds snabbk&ouml;p
+        </td>
+        <td>
+          Christina Berglund
+        </td>
+        <td>
+          Berguvsv&auml;gen 8
+        </td>
+        <td>
+          Lule&aring;
+        </td>
+        <td>
+          S-958 22
+        </td>
+        <td>
+          Sweden
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="editor">
+    <textarea id="editor3">SELECT * FROM products WHERE ProductID BETWEEN 1 AND 3;;
+-- SELECT * FROM Products WHERE ProductName LIKE 'C%';
+-- SELECT * FROM Products WHERE ProductName IN ('Chais','Aniseed Syrup');
+-- SELECT * FROM Customers WHERE Country = 'Mexico' AND Address = 'Mataderos 2312';
+-- SELECT * FROM Customers WHERE Country = 'Mexico' OR Address = 'Mataderos 2312';
+-- SELECT * FROM Customers WHERE NOT Country = 'Mexico';
+</textarea><br>
+    <button onclick="runSQL('editor3')">Çalıştır</button>
+    <iframe id="editor3_out"></iframe>
+  </div>
+
+</body>
+
 </html>

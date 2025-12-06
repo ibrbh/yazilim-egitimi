@@ -1,20 +1,197 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PHP</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>PHP</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Diziler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Diziler</h1>
 
-    <script src="editor.js"></script>
-  </body>
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+      $cars = array("Volvo", "BMW", "Toyota");
+      echo "I like ".$cars[0].", ".$cars[1]." and ".$cars[2].".";
+      ?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>İndexed Diziler</h2>
+  <img src="images/Indexed_Array.png" alt="">
+
+  <h2>Associative Diziler</h2>
+  <img src="images/Associative_Array.png" alt="">
+
+  <h2>Çok Boyutlu Diziler</h2>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $cars = array (
+  array("Volvo",22,18),
+  array("BMW",15,13),
+  array("Saab",5,2),
+  array("Land Rover",17,15)
+  );
+
+  echo $cars[0][0].": In stock: ".$cars[0][1].", sold: ".$cars[0][2].".<br>"; // Volvo: In stock: 22,sold:18
+  echo $cars[1][0].": In stock: ".$cars[1][1].", sold: ".$cars[1][2].".<br>"; // BMW: In stock: 15,sold:13
+  echo $cars[2][0].": In stock: ".$cars[2][1].", sold: ".$cars[2][2].".<br>"; // Saab: In stock: 5,sold:2
+  echo $cars[3][0].": In stock: ".$cars[3][1].", sold: ".$cars[3][2].".<br>"; // Land Rover: In stock: 17,sold:15
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Dizi Fonksiyonları</h2>
+  <div><strong>count() : </strong> Bir dizideki öğelerin sayısını döndürür.</div>
+  <div><strong>sort() : </strong> İndekslenmiş bir diziyi artan düzende sıralar.</div>
+  <div><strong>asort() : </strong> Bir ilişkisel diziyi, değerine göre artan düzende sıralar.</div>
+  <div><strong>ksort() : </strong> Bir ilişkisel diziyi anahtara göre artan düzende sıralar.</div>
+  <div><strong>rsort() : </strong> İndekslenmiş bir diziyi azalan düzende sıralar.</div>
+  <div><strong>arsort() : </strong> Bir ilişkisel diziyi, değerine göre azalan düzende sıralar.</div>
+  <div><strong>krsort() : </strong> Bir ilişkisel diziyi anahtara göre azalan düzende sıralar.</div>
+  <div><strong>explode() : </strong> String bir ifadeyi diziye dönüştürür.</div>
+  <div><strong>implode() : </strong> Bir diziyi string bir ifadeye dönüştürür.</div>
+  <div><strong>shuffle() : </strong> Bir diziyi karıştırır.</div>
+  <div><strong>array_combine() : </strong> Bir "keys" dizisindeki ve bir "values" dizisindeki öğeleri kullanarak bir
+    dizi oluşturur.</div>
+  <div><strong>array_merge() : </strong> Bir veya daha fazla diziyi tek bir dizide birleştirir.</div>
+  <div><strong>array_count_values() : </strong> Bir dizinin tüm değerlerini sayar.</div>
+  <div><strong>array_push() : </strong> Bir dizinin sonuna bir veya daha fazla öğe ekler.</div>
+  <div><strong>array_unshift() : </strong> Bir dizinin başına bir veya daha fazla öğe ekler.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $cars = array("Volvo", "BMW", "Toyota");
+  $string = "Beşiktaş,Fenerbahçe,Galatasaray";
+  $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+  $customers = array("customer1", "customer2", "customer3");
+
+  echo count($cars);//3
+  sort($cars);print_r($cars);//Array([0]=>BMW[1]=>Toyota[2]=>Volvo)
+  asort($age);print_r($age);//Array[Peter]=>35[Ben]=>37[Joe]=>43)
+  ksort($age);print_r($age);//Array([Ben]=>37[Joe]=>43[Peter]=>35)
+  rsort($cars);print_r($cars);//Array([0]=>Volvo[1]=>Toyota[2]=>BMW)
+  arsort($age);print_r($age);//Array([Joe]=>43[Ben]=>37[Peter]=>35)
+  krsort($age);print_r($age);//Array([Peter]=>35[Joe]=>43[Ben]=>37)
+  print_r(explode(",",$string)); //Array([0]=>Beşiktaş[1]=>Fenerbahçe [2]=>Galatasaray)
+  print_r(implode(",",$cars)); //Volvo,BMW,Toyota
+  shuffle($cars); print_r($cars);//Array([0]=>BMW[1]=>Volvo[2]=>Toyota)
+  print_r(array_combine($cars,$customers)); //Array([Volvo]=>customer1[BMW]=>customer2[Toyota]=>customer3)
+  print_r(array_merge($cars,$customers)); //Array([0]=>Volvo[1]=>BMW[2]=>Toyota[3]=>customer1[4]=>customer2[5]=>customer3)
+  print_r(array_count_values($cars)); //Array([Volvo]=>1[BMW]=>1[Toyota]=>1)
+  array_push($cars,"Mercedes");print_r($cars); //Array([0]=>Volvo[1]=>BMW[2]=>Toyota[3]=>Mercedes)
+  array_unshift($cars,"Mercedes"); print_r($cars); //Array([0]=>Mercedes[1]=>Volvo[2]=>BMW[3]=>Toyota)
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Diğer Dizi Fonksiyonları</h2>
+
+  <div><strong>array() : </strong> Bir dizi oluşturur.</div>
+  <div><strong>array_change_key_case() : </strong> Bir dizideki tüm tuşları küçük veya büyük harfe değiştirir.</div>
+  <div><strong>array_chunk() : </strong> Bir diziyi dizi parçalarına böler.</div>
+  <div><strong>array_column() : </strong> Giriş dizisindeki tek bir sütundaki değerleri döndürür.</div>
+  <div><strong>array_diff() : </strong> Dizileri karşılaştırır ve farkları döndürür (yalnızca değerleri karşılaştırır).
+  </div>
+  <div><strong>array_diff_assoc() : </strong> Dizileri karşılaştırır ve farkları döndürür (anahtarları ve değerleri
+    karşılaştır).</div>
+  <div><strong>array_diff_key() : </strong> Dizileri karşılaştırır ve farkları döndürür (yalnızca anahtarları
+    karşılaştırır).</div>
+  <div><strong>array_diff_uassoc() : </strong> Dizileri karşılaştırır ve farklılıkları döndürür (kullanıcı tanımlı bir
+    anahtar karşılaştırma işlevi kullanarak anahtarları ve değerleri karşılaştırır).</div>
+  <div><strong>array_diff_ukey() : </strong> Dizileri karşılaştırır ve farklılıkları döndürür (yalnızca kullanıcı
+    tanımlı bir anahtar karşılaştırma işlevi kullanarak anahtarları karşılaştırır).</div>
+  <div><strong>array_fill() : </strong> Bir diziyi değerlerle doldurur.</div>
+  <div><strong>array_fill_keys() : </strong> Anahtarları belirterek bir diziyi değerlerle doldurur.</div>
+  <div><strong>array_filter() : </strong> Geri arama işlevi kullanarak bir dizinin değerlerini filtreler.</div>
+  <div><strong>array_flip() : </strong> Bir dizideki ilişkili değerleri ile tüm anahtarları çevirir/değiştirir.</div>
+  <div><strong>array_intersect() : </strong> Dizileri karşılaştırır ve eşleşmeleri döndürür (yalnızca değerleri
+    karşılaştırır).</div>
+  <div><strong>array_intersect_assoc() : </strong> Dizileri karşılaştırır. ve eşleşmeleri döndürür. (anahtarları ve
+    değerleri karşılaştırır).</div>
+  <div><strong>array_intersect_key() : </strong> Dizileri karşılaştırır ve eşleşmeleri döndürür (yalnızca anahtarları
+    karşılaştırır).</div>
+  <div><strong>array_intersect_uassoc() : </strong> Dizileri karşılaştırır. ve eşleşmeleri döndürür. (kullanıcı tanımlı
+    bir anahtar karşılaştırma işlevi kullanarak anahtarları ve değerleri karşılaştırır).</div>
+  <div><strong>array_intersect_ukey() : </strong> Dizileri karşılaştırır ve eşleşmeleri döndürür (yalnızca kullanıcı
+    tanımlı bir anahtar karşılaştırma işlevi kullanarak anahtarları karşılaştırır.)</div>
+  <div><strong>array_key_exists() : </strong> Dizide belirtilen anahtarın var olup olmadığını kontrol eder.</div>
+  <div><strong>array_keys() : </strong> Bir dizinin tüm anahtarlarını döndürür.</div>
+  <div><strong>array_map() : </strong> Bir dizinin her değerini, yeni değerler döndüren kullanıcı yapımı bir işleve
+    gönderir.</div>
+  <div><strong>array_merge_recursive() : </strong> Bir veya daha fazla diziyi yinelemeli olarak bir dizide birleştirir.
+  </div>
+  <div><strong>array_multisort() : </strong> Birden çok veya çok boyutlu dizileri sıralar.</div>
+  <div><strong>array_pad() : </strong> Belirli bir değere sahip belirli sayıda öğeyi bir diziye ekler.</div>
+  <div><strong>array_pop() : </strong> Bir dizinin son elemanını siler.</div>
+  <div><strong>array_product() : </strong> Bir dizideki değerlerin çarpımını hesaplar.</div>
+  <div><strong>array_rand() : </strong> Bir diziden bir veya daha fazla rasgele anahtar döndürür.</div>
+  <div><strong>array_reduce() : </strong> Kullanıcı tanımlı bir işlev kullanarak bir diziyi dize olarak döndürür.</div>
+  <div><strong>array_replace() : </strong> İlk dizinin değerlerini aşağıdaki dizilerin değerleri ile değiştirir.</div>
+  <div><strong>array_replace_recursive() : </strong> İlk dizinin değerlerini tekrarlı olarak aşağıdaki dizilerin
+    değerleri ile değiştirir.</div>
+  <div><strong>array_reverse() : </strong> Bir diziyi ters sırada döndürür.</div>
+  <div><strong>array_search() : </strong> Belirli bir değer için bir dizi arar ve anahtarı döndürür.</div>
+  <div><strong>array_shift() : </strong> Bir diziden ilk öğeyi kaldırır ve kaldırılan öğenin değerini döndürür.</div>
+  <div><strong>array_slice() : </strong> Bir dizinin seçili kısımlarını döndürür.</div>
+  <div><strong>array_splice() : </strong> Bir dizinin belirtilen öğelerini kaldırır ve değiştirir.</div>
+  <div><strong>array_sum() : </strong> Bir dizideki değerlerin toplamını döndürür.</div>
+  <div><strong>array_udiff() : </strong> Dizileri karşılaştırır ve farklılıkları döndürür (yalnızca kullanıcı tanımlı
+    bir anahtar karşılaştırma işlevi kullanarak değerleri karşılaştırır.).</div>
+  <div><strong>array_udiff_assoc() : </strong> Dizileri karşılaştırır ve farklılıkları döndürür (anahtarları
+    karşılaştırmak için yerleşik bir işlevi ve değerleri karşılaştırmak için kullanıcı tanımlı bir işlevi kullanarak
+    anahtarları ve değerleri karşılaştırır).</div>
+  <div><strong>array_udiff_uassoc() : </strong> Dizileri karşılaştırır ve farkları döndürür (iki kullanıcı tanımlı
+    anahtar karşılaştırma işlevini kullanarak anahtarları ve değerleri karşılaştırır).</div>
+  <div><strong>array_uintersect() : </strong> Dizileri karşılaştırır ve eşleşmeleri döndürür (yalnızca kullanıcı tanımlı
+    bir anahtar karşılaştırma işlevi kullanarak değerleri karşılaştırır).</div>
+  <div><strong>array_uintersect_assoc() : </strong> Dizileri karşılaştırır ve eşleşmeleri döndürür (anahtarları
+    karşılaştırmak için yerleşik bir işlevi ve değerleri karşılaştırmak için kullanıcı tanımlı bir işlevi kullanarak
+    anahtarları ve değerleri karşılaştırır).</div>
+  <div><strong>array_uintersect_uassoc() : </strong> Dizileri karşılaştırır ve eşleşmeleri döndürüe (iki kullanıcı
+    tanımlı anahtar karşılaştırma işlevini kullanarak anahtarları ve değerleri karşılaştırır).</div>
+  <div><strong>array_unique() : </strong> Bir diziden yinelenen değerleri kaldırır.</div>
+  <div><strong>array_values() : </strong> Bir dizinin tüm değerlerini döndürür.</div>
+  <div><strong>array_walk() : </strong> Bir dizinin her üyesine bir kullanıcı işlevi uygular.</div>
+  <div><strong>array_walk_recursive() : </strong> Bir dizinin her üyesine yinelemeli olarak bir kullanıcı işlevi
+    uygular.</div>
+  <div><strong>compact() : </strong> Değişkenleri ve değerlerini içeren dizi oluşturur.</div>
+  <div><strong>current() : </strong> Bir dizideki geçerli öğeyi döndürür.</div>
+  <div><strong>each() : </strong> PHP 7.2'den kaldırılmıştır. Bir diziden geçerli anahtar ve değer çiftini döndürür.
+  </div>
+  <div><strong>end() : </strong> Bir dizinin iç işaretçisini son elemanına ayarlar.</div>
+  <div><strong>extract() : </strong> Değişkenleri bir diziden geçerli sembol tablosuna aktarır.</div>
+  <div><strong>in_array() : </strong> Bir dizide belirtilen bir değerin olup olmadığını kontrol eder.</div>
+  <div><strong>key() : </strong> Bir diziden bir anahtar getirir.</div>
+  <div><strong>list() : </strong> Değişkenleri bir diziymiş gibi atar.</div>
+  <div><strong>natcasesort() : </strong> Büyük/küçük harfe duyarsız "doğal düzen" algoritması kullanarak bir diziyi
+    sıralar.</div>
+  <div><strong>natsort() : </strong> Bir diziyi "doğal sıra" algoritması kullanarak sıralar.</div>
+  <div><strong>next() : </strong> Bir dizinin dahili dizi işaretçisini ilerletir.</div>
+  <div><strong>pos() : </strong> Alias of current()</div>
+  <div><strong>prev() : </strong> Dahili dizi işaretçisini geri sarar.</div>
+  <div><strong>range() : </strong> Bir dizi öğe içeren bir dizi oluşturur.</div>
+  <div><strong>reset() : </strong> Bir dizinin dahili işaretçisini ilk elemanına ayarlar.</div>
+  <div><strong>sizeof() : </strong> Alias of count()</div>
+  <div><strong>uasort() : </strong> Kullanıcı tanımlı bir karşılaştırma işlevi kullanarak bir diziyi değerlere göre
+    sıralar ve dizin ilişkisini korur.</div>
+  <div><strong>uksort() : </strong> Kullanıcı tanımlı bir karşılaştırma işlevi kullanarak bir diziyi tuşlara göre
+    sıralar.</div>
+  <div><strong>usort() : </strong> Kullanıcı tanımlı bir karşılaştırma işlevi kullanarak bir diziyi değerlere göre
+    sıralar.</div>
+  <script src="editor.js"></script>
+</body>
+
 </html>

@@ -1,18 +1,103 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SQL</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>SQL</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Kayıt Seçme</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Kayıt Seçme</h1>
+
+  <div>table_name ismindeki tablodan column1, column2, ...sütunları aşağıdaki gibi seçilir.</div>
+  <img src="images/Kayit_Secme1.png" alt="">
+
+  <!-- users -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3">users</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>id</strong>
+        </td>
+        <td>
+          <strong>name</strong>
+        </td>
+        <td>
+          <strong>age</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          Ali
+        </td>
+        <td>
+          25
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Ayşe
+        </td>
+        <td>
+          30
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Mehmet
+        </td>
+        <td>
+          27
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor1">SELECT id,name,age FROM users;</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor2">SELECT id AS kimlik,name AS isim,age AS yaş FROM users;</textarea><br>
+    <button onclick="runSQL('editor2')">Çalıştır</button>
+    <iframe id="editor2_out"></iframe>
+  </div>
+
+  <div>Tüm kayıtlar aşağıdaki gibi seçilir.</div>
+  <img src="images/Kayit_Secme2.png" alt="">
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor3">SELECT * FROM users;</textarea><br>
+    <button onclick="runSQL('editor3')">Çalıştır</button>
+    <iframe id="editor3_out"></iframe>
+  </div>
+
+</body>
+
 </html>

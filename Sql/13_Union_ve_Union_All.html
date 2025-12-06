@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Union ve Union All Kullanımı</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Union ve Union All Kullanımı</h1>
+
+  <div><strong>Union : </strong> İki veya daha fazla Select ifadesinin sonuç kümesini birleştirmek için kullanılır.
+    Union içindeki her Select ifadesi aynı sayıda sütuna sahip olmalıdır. Sütunların da benzer veri türlerine sahip
+    olması gerekir. Her Select ifadesindeki sütunlar da aynı sırada olmalıdır.</div>
+  <div><strong>Union All : </strong> Union' dan farklı olarak tekrarlayan alanlarıda seçer.</div>
+
+  <img src="images/Union_Union_All.png" alt="">
+
+  <!-- Union Örnek -->
+  <div class="editor">
+    <textarea id="editor1">SELECT * FROM users;</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+  <!-- Union All Örnek -->
+  <div class="editor">
+    <textarea id="editor1">SELECT * FROM users;</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+</body>
+
+</html>

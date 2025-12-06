@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Position</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Position</h1>
+
+  <!-- Position Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Position Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="7">
+          position
+        </td>
+        <td rowspan="7">
+          Bir &ouml;ğenin konumlandırma t&uuml;r&uuml;n&uuml; belirtir.
+        </td>
+        <td>
+          static
+        </td>
+        <td>
+          Varsayılan değer. &Ouml;ğeler belge akışında g&ouml;r&uuml;nd&uuml;kleri şekilde sırayla işlenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          absolute
+        </td>
+        <td>
+          &Ouml;ğe, ilk konumlandırılmış (statik değil) kapsayıcı &ouml;ğesine g&ouml;re konumlandırılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fixed
+        </td>
+        <td>
+          &Ouml;ğe, tarayıcı penceresine g&ouml;re konumlandırılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          relative
+        </td>
+        <td>
+          &Ouml;ğe normal konumuna g&ouml;re konumlandırılmıştır, dolayısıyla "left:20px" &ouml;ğenin SOL
+          konumuna 20 piksel ekler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sticky
+        </td>
+        <td>
+          &Ouml;ğe, kullanıcının kaydırma konumuna g&ouml;re konumlandırılır
+          Yapışkan bir &ouml;ğe, kaydırma konumuna bağlı olarak g&ouml;receli ve sabit arasında ge&ccedil;iş
+          yapar. G&ouml;r&uuml;n&uuml;m alanında belirli bir ofset konumu karşılanana kadar g&ouml;receli
+          olarak konumlandırılır - daha sonra yerine "yapışır" (pozisyon:sabit gibi).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          top
+          bottom
+          left
+          right
+        </td>
+        <td rowspan="5">
+          &Ouml;ğeyi yukarı, aşağı, sağa ve sola g&ouml;re hizalar.
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Tarayıcının konumları hesaplamasını sağlar. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>length</em>
+        </td>
+        <td>
+          Konumları px, cm vb. cinsinden ayarlar. Negatif değerlere izin verilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>%</em>
+        </td>
+        <td>
+          Konumları i&ccedil;eren &ouml;ğenin %'si olarak ayarlar. Negatif değerlere izin verilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          clip
+        </td>
+        <td rowspan="4">
+          kesinlikle konumlandırılmış bir &ouml;ğeyi kırpmak i&ccedil;in bir dikd&ouml;rtgen belirlemenizi
+          sağlar. Dikd&ouml;rtgen, t&uuml;m&uuml; kırpılacak &ouml;ğenin sol &uuml;st k&ouml;şesinden olmak
+          &uuml;zere d&ouml;rt koordinat olarak belirtilir.
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Herhangi bir kesme işlemi uygulanmayacaktır. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <em>shape</em>
+        </td>
+        <td>
+          Bir &ouml;ğeyi klipsler. Ge&ccedil;erli tek değer şudur: rect (top,right,bottom,left)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

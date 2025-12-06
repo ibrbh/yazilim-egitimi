@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Flexbox</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Flexbox</h1>
+  <div>Flexbox’ın kullanılabilmesi için öncelikle container’ın display özelliğinin flex yapılması gerekir.</div>
+
+  <!-- Display Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Display Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="23">
+          display
+        </td>
+        <td rowspan="23">
+          CSS'de "display" &ouml;zelliği, d&uuml;zeni kontrol etmek i&ccedil;in en &ouml;nemli CSS
+          &ouml;zelliğidir. Display &ouml;zelliği, bir elemanın g&ouml;r&uuml;nt&uuml;lenip
+          g&ouml;r&uuml;nt&uuml;lenmeyeceğini veya nasıl g&ouml;r&uuml;nt&uuml;leneceğini belirtir.
+        </td>
+        <td>
+          inline
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i &ouml;ğe olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          block
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok &ouml;ğesi olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          contents
+        </td>
+        <td>
+          Kabı ortadan kaldırarak &ouml;ğenin alt &ouml;ğelerini DOM'da bir sonraki seviyeye y&uuml;kseltir.
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok d&uuml;zeyinde esnek kapsayıcı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          grid
+        </td>
+        <td>
+          Bir &ouml;ğeyi blok d&uuml;zeyinde ızgara kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-block
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zeyde blok kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+          &Ouml;ğenin kendisi satır i&ccedil;i &ouml;ğe olarak bi&ccedil;imlendirilmiştir ancak y&uuml;kseklik
+          ve genişlik değerlerini uygulayabilirsiniz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-flex
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zeyde esnek kapsayıcı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-grid
+        </td>
+        <td>
+          Bir &ouml;ğeyi satır i&ccedil;i d&uuml;zey ızgara kapsayıcısı olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inline-table
+        </td>
+        <td>
+          &Ouml;ğe, satır i&ccedil;i d&uuml;zeyde bir tablo olarak g&ouml;r&uuml;nt&uuml;lenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          list-item
+        </td>
+        <td>
+          Elemanın bir &lt;li&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          run-in
+        </td>
+        <td>
+          Bağlama bağlı olarak bir &ouml;ğeyi blok veya satır i&ccedil;i olarak g&ouml;r&uuml;nt&uuml;ler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;table&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-caption
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;caption&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-column-group
+        </td>
+        <td>
+          &Ouml;ğenin bir &lt;colgroup&gt; &ouml;ğesi gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-header-group
+        </td>
+        <td>
+          Elemanın bir &lt;thead&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-footer-group
+        </td>
+        <td>
+          Elemanın bir &lt;tfoot&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-row-group
+        </td>
+        <td>
+          Elemanın bir &lt;tbody&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-cell
+        </td>
+        <td>
+          Elemanın bir &lt;td&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-column
+        </td>
+        <td>
+          Elemanın bir &lt;col&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table-row
+        </td>
+        <td>
+          Elemanın bir &lt;tr&gt; elemanı gibi davranmasına izin verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          none
+        </td>
+        <td>
+          &Ouml;ğeyi tamamen kaldırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <img src="images/Flexbox.png" alt="">
+
+  <!-- Flexbox Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Flexbox Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="6">
+          flex-direction
+        </td>
+        <td rowspan="6">
+          Bu main axis&rsquo;i oluşturur, b&ouml;ylece flex &ouml;ğelerinin flex container&rsquo;da
+          yerleştirileceği y&ouml;n tanımlanmış olunur.
+        </td>
+        <td>
+          row
+        </td>
+        <td>
+          Varsayılan değer. &Ouml;ğeler yatay olarak sıra halinde g&ouml;r&uuml;nt&uuml;lenir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          row-reverse
+        </td>
+        <td>
+          Satırla aynı, ancak ters sırada
+        </td>
+      </tr>
+      <tr>
+        <td>
+          column
+        </td>
+        <td>
+          &Ouml;ğeler s&uuml;tun halinde dikey olarak g&ouml;r&uuml;nt&uuml;lenir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          column-reverse
+        </td>
+        <td>
+          S&uuml;tunlar aynı, ancak ters sırada
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          flex-wrap
+        </td>
+        <td rowspan="5">
+          Default olarak flex &ouml;ğelerinin t&uuml;m&uuml; tek bir satıra sığdırılmaya &ccedil;alışılır. Bunu
+          değiştirebiliriz ve &ouml;ğelerin istediğimiz şekilde sıralanmasını sağlayabiliriz.
+        </td>
+        <td>
+          nowrap
+        </td>
+        <td>
+          Esnek kutu i&ccedil;ersindeki &ouml;ğeler her zaman tek satır dizilir.&Ouml;ğelerin boyutları da
+          esnek kutu alanı k&uuml;&ccedil;&uuml;ld&uuml;k&ccedil;e max seviyede
+          k&uuml;&ccedil;&uuml;lt&uuml;l&uuml;r. K&uuml;&ccedil;&uuml;lmediği noktada ise esnek kutu
+          i&ccedil;inden taşma olacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          wrap
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki &ouml;ğelerin boyutlarını k&uuml;&ccedil;&uuml;ltmeden sabit
+          tutabilmek i&ccedil;in &ouml;ğeleri bir alt satıra ya da yan satıra ge&ccedil;irecektir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          wrap-reverse
+        </td>
+        <td>
+          wrap değeri ile aynı şekilde davranır. &ouml;ğeler alt satıra ge&ccedil;tiğinde en alt satırdan
+          başlatarak &ouml;ğeleri sıralar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex-flow
+        </td>
+        <td>
+          Bu, hem flex-wrap hem de flex-direction&rsquo;ı beraber sağlayan bir &ouml;zelliktir
+        </td>
+        <td>
+          <em>&nbsp;</em>
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="8">
+          justify-content
+        </td>
+        <td rowspan="8">
+          Bu, main axis boyunca hizalanmayı sağlar. &Ouml;ğeler maksimum boyutlarına ulaştıklarında, veya
+          t&uuml;m &ouml;ğeler flexible olmadığında boş kalan alanın dağıtılmasına yardımcı olur. Ayrıca
+          &ouml;ğelerin satırdan taşmaları durumunda da işe yarar.
+        </td>
+        <td>
+          flex-start
+        </td>
+        <td>
+          Varsayılan değerdir &ouml;ğeleri ana-eksene g&ouml;re en baştan hizalar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex-end
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki &ouml;ğeleri ana-eksen y&ouml;n&uuml;nde esnek kutunun sonuna doğru
+          iter. row-reverse ya yada column-reverse mantığı ile &ccedil;alışmaz sadece &ouml;ğeleri sona iter
+          ve sırlamasını değiştirmez.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          center
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki &ouml;ğeleri ana-eksen y&ouml;n&uuml;nde ortalayacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          space-between
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki ilk hat ana eksenin başlangı&ccedil; (start) posizyonuna doğru son hat
+          ise ana-eksenin sonuna (end) doğru konumlanır. diğer hatlar bu iki hat arasında ana-eksene g&ouml;re
+          ortalı olur. Her hat arasındaki boşluklar birbirine eşit olur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          space-around
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki &ouml;ğeler kutuya ana-eksene g&ouml;re ortalı bir şekilde sıralanır
+          ve her esnek hat arasındaki boşluk ile en baştaki ve en sondaki hattın kapsayıcya olan boşluğun iki
+          katıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          space-evenly
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki &ouml;ğeler kutuya ana-eksene g&ouml;re ortalı bir şekilde sıralanır
+          ve her esnek hat arasındaki boşluk ile en baştaki ve en sondaki hattın kapsayıcya olan boşluk
+          birbirine eşittir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="10">
+          align-items
+        </td>
+        <td rowspan="10">
+          Bu, flex &ouml;ğelerinin ge&ccedil;erli satırdaki cross eksen boyunca nasıl d&uuml;zenleneceğini
+          sağlar. Bunu, cross axis&rsquo;in justify content&rsquo;i gibi d&uuml;ş&uuml;nebiliriz.
+        </td>
+        <td>
+          normal
+        </td>
+        <td>
+          Varsayılan. Esnek kutu ve ızgara &ouml;ğeleri i&ccedil;in 'uzat' veya tanımlanmış blok boyutuna sahip
+          ızgara &ouml;ğeleri i&ccedil;in 'başlat' gibi davranır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          stretch
+        </td>
+        <td>
+          esnek kapı cross-axis (&ccedil;apraz eksende) doldurmak i&ccedil;in gerer.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          center
+        </td>
+        <td>
+          flex kapsayıcı i&ccedil;erisindeki t&uuml;m &ouml;ğeler esnek kapsayıcının &ccedil;apraz eksenine
+          g&ouml;re ortalı bir şekilde sıralanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex-start
+        </td>
+        <td>
+          Esnek kap i&ccedil;erisinde &ouml;ğeleri &ccedil;apraz eksende en &uuml;st konuma getirir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex-end
+        </td>
+        <td>
+          Esnek kap i&ccedil;erisinde &ouml;ğeleri &ccedil;apraz eksende en alt konuma getirir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          start
+        </td>
+        <td>
+          &Ouml;ğeler blok y&ouml;n&uuml;nde kendi ızgara h&uuml;crelerinin başına konumlandırılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          end
+        </td>
+        <td>
+          &Ouml;ğeler blok y&ouml;n&uuml;nde kendi ızgara h&uuml;crelerinin sonuna yerleştirilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          baseline
+        </td>
+        <td>
+          Esnek kabın i&ccedil;erisndeki &ouml;ğelerin metin taban &ccedil;izgilerine g&ouml;re dizilmesini
+          sağlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="9">
+          align-content
+        </td>
+        <td rowspan="9">
+          Align-content kullanılarak, konteyner i&ccedil;inde bulunan ve &ouml;nceden tanımlanmış olan satır
+          veya s&uuml;tunların hizalanması yapılabilmektedir. Bu &ouml;zellik, konteynerin y&uuml;ksekliği
+          veya genişliği yeterli olmadığında kullanılmaktadır. &Ccedil;alışabilmesi i&ccedil;in flex-wrap :
+          wrap olmalıdır.
+        </td>
+        <td>
+          stretch
+        </td>
+        <td>
+          Varsayılan değerdir. stretch değeri auto değerdeki boyutlu &ouml;ğelerin &ccedil;apraz eksene
+          g&ouml;re boyutlarını sığacak şekilde width ya da height değerlerinin eşitlenerek artırılmasıdır.
+          Boyutu auto olmayan &ouml;ğeler bu tanımın dışında kalacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          center
+        </td>
+        <td>
+          &ouml;ğeler esnek kap i&ccedil;erisinde &ccedil;apraz eksene ortalı bir şekilde dizilir. Bu
+          &ouml;zellik &ouml;ğeleri 2 eksende de esnek kutunun i&ccedil;erisinde ortalamaz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex-start
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki &ouml;ğeleri esnek kutunun &ccedil;apraz-ekseni doğrultusunda en başa
+          dizilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex-end
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki &ouml;ğeleri esnek kutunun &ccedil;apraz-ekseni doğrultusunda en sona
+          dizilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          space-between
+        </td>
+        <td>
+          Esnek kutu i&ccedil;erisindeki ilk hat &ccedil;apraz eksene g&ouml;re en başta son hat ise
+          &ccedil;apraz eksene g&ouml;re en sonda dizilir. Diğer hatlarda onları ortalaycak şekilde
+          dizilirler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          space-around
+        </td>
+        <td>
+          &Ccedil;oklu hata sahip flexbox yapısı i&ccedil;erisinde her hat arası boşuk eşit olacak şekilde
+          esnek kaba &ccedil;apraz eksende ortalı sıralanır, en &uuml;stteki ve en sondaki hattın esnek
+          kapsayıcı arasındaki boşluk hatlar arasındaki boşluğun yarısına eşittir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          space-evenly
+        </td>
+        <td>
+          &Ccedil;oklu hata sahip flexbox yapısı i&ccedil;erisinde her hat arası boşuk eşit olacak şekilde
+          esnek kaba &ccedil;apraz eksende ortalı sıralanır, en &uuml;stteki ve en sondaki hattın esnek
+          kapsayıcı arasındaki boşluk hatlar arasındaki boşluğa eşittir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <img src="images/Flex_Direction.png" alt=""><br>
+  <img src="images/Flex_Wrap.png" alt=""><br>
+  <img src="images/Justify_Content1.png" alt="">
+  <img src="images/Justify_Content2.png" alt=""><br>
+  <img src="images/Align_Items.png" alt=""><br>
+  <img src="images/Align_Content.png" alt=""><br>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Flexbox Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Flexbox Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          flex
+        </td>
+        <td>
+          flex-grow, flex-shrink, flex-basis &ouml;zellikleri i&ccedil;in kısa bir &ouml;zellik
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          flex-grow
+        </td>
+        <td rowspan="3">
+          Bir esnek &ouml;ğenin aynı kapsayıcı i&ccedil;indeki geri kalan esnek &ouml;ğelere g&ouml;re ne kadar
+          b&uuml;y&uuml;yeceğini belirtir
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          &Ouml;ğenin geri kalan esnek &ouml;ğelere g&ouml;re ne kadar b&uuml;y&uuml;yeceğini belirten bir
+          sayı. Varsayılan değer 0'dır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          flex-shrink
+        </td>
+        <td rowspan="3">
+          Bir esnek &ouml;ğenin aynı kapsayıcı i&ccedil;indeki geri kalan esnek &ouml;ğelere g&ouml;re ne kadar
+          k&uuml;&ccedil;&uuml;leceğini belirtir
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          &Ouml;ğenin geri kalan esnek &ouml;ğelere g&ouml;re ne kadar k&uuml;&ccedil;&uuml;leceğini belirten
+          bir sayı. Varsayılan değer 1'dir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          flex-basis
+        </td>
+        <td rowspan="4">
+          Esnek bir &ouml;ğenin başlangı&ccedil; uzunluğunu belirtir
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          Esnek &ouml;ğenin/&ouml;ğelerin başlangı&ccedil; uzunluğunu belirten bir uzunluk birimi veya
+          y&uuml;zdesi
+        </td>
+      </tr>
+      <tr>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan değer. Uzunluk, esnek &ouml;ğenin uzunluğuna eşittir. &Ouml;ğenin uzunluğu belirtilmemişse
+          uzunluk, i&ccedil;eriğine g&ouml;re olacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          order
+        </td>
+        <td rowspan="3">
+          Aynı kapsayıcı i&ccedil;indeki esnek &ouml;ğelerin sırasını belirtir
+        </td>
+        <td>
+          <em>number</em>
+        </td>
+        <td>
+          Varsayılan değer 0. Esnek &ouml;ğenin sırasını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="8">
+          align-self
+        </td>
+        <td rowspan="8">
+          Esnek bir &ouml;ğenin hizalamasını belirtir (esnek kapsayıcının align-items &ouml;zelliğini
+          ge&ccedil;ersiz kılar)
+        </td>
+        <td>
+          auto
+        </td>
+        <td>
+          Varsayılan. &Ouml;ğe, ana kapsayıcısının align-items &ouml;zelliğini veya &uuml;st kapsayıcısı yoksa
+          "stretch" &ouml;zelliğini devralır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          stretch
+        </td>
+        <td>
+          Eleman kaba sığacak şekilde konumlandırılmıştır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          center
+        </td>
+        <td>
+          Eleman kabın ortasına konumlandırılmıştır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex-start
+        </td>
+        <td>
+          Eleman kabın başlangıcına konumlandırılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flex-end
+        </td>
+        <td>
+          Eleman kabın sonuna konumlandırılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          baseline
+        </td>
+        <td>
+          &Ouml;ğe kabın taban &ccedil;izgisine konumlandırılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

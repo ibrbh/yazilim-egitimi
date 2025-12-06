@@ -1,18 +1,195 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SQL</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>SQL</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Gruplama</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Gruplama</h1>
+  <div><strong>GROUP BY : </strong>Aynı değerlere sahip satırları özet satırları halinde gruplandırır. Örneğin "her
+    ülkedeki müşteri sayısını bulmak". GROUP BY ifadesi genellikle sonuç kümesini bir veya daha fazla sütuna göre
+    gruplandırmak için toplama fonksiyonlarıyla (COUNT(), MAX(), MIN(), SUM(), AVG()) birlikte kullanılır.</div>
+
+  <img src="images/Group_By.png" alt="">
+
+  <div><strong>SELECT DISTINCT : </strong>Yalnızca farklı değerleri döndürmek için kullanılır. Bir tablonun içindeki bir
+    sütun genellikle birçok yinelenen değer içerir; ve bazen yalnızca farklı (farklı) değerleri listelemek istersiniz.
+  </div>
+
+  <img src="images/Select_Distinct.png" alt="">
+
+  <div><strong>HAVING : </strong>Gruplanan elemanları filtreler.</div>
+
+  <img src="images/Having.png" alt="">
+
+  <!-- customers -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="7">customers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>CustomerID</strong>
+        </td>
+        <td>
+          <strong>CustomerName</strong>
+        </td>
+        <td>
+          <strong>ContactName</strong>
+        </td>
+        <td>
+          <strong>Address</strong>
+        </td>
+        <td>
+          <strong>City</strong>
+        </td>
+        <td>
+          <strong>PostalCode</strong>
+        </td>
+        <td>
+          <strong>Country</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1<br />
+        </td>
+        <td>
+          Alfreds Futterkiste
+        </td>
+        <td>
+          Maria Anders
+        </td>
+        <td>
+          Obere Str. 57
+        </td>
+        <td>
+          Berlin
+        </td>
+        <td>
+          12209
+        </td>
+        <td>
+          Germany
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Ana Trujillo Emparedados y helados
+        </td>
+        <td>
+          Ana Trujillo
+        </td>
+        <td>
+          Avda. de la Constituci&oacute;n 2222
+        </td>
+        <td>
+          M&eacute;xico D.F.
+        </td>
+        <td>
+          05021
+        </td>
+        <td>
+          Mexico
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Antonio Moreno Taquer&iacute;a
+        </td>
+        <td>
+          Antonio Moreno
+        </td>
+        <td>
+          Mataderos 2312
+        </td>
+        <td>
+          M&eacute;xico D.F.
+        </td>
+        <td>
+          05023
+        </td>
+        <td>
+          Mexico
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4<br />
+        </td>
+        <td>
+          Around the Horn
+        </td>
+        <td>
+          Thomas Hardy
+        </td>
+        <td>
+          120 Hanover Sq.
+        </td>
+        <td>
+          London
+        </td>
+        <td>
+          WA1 1DP
+        </td>
+        <td>
+          UK
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Berglunds snabbk&ouml;p
+        </td>
+        <td>
+          Christina Berglund
+        </td>
+        <td>
+          Berguvsv&auml;gen 8
+        </td>
+        <td>
+          Lule&aring;
+        </td>
+        <td>
+          S-958 22
+        </td>
+        <td>
+          Sweden
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor1">SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country
+-- SELECT DISTINCT Country FROM Customers;
+-- SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country HAVING COUNT(CustomerID) > 1;
+</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+</body>
+
 </html>

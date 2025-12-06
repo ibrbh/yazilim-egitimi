@@ -1,181 +1,125 @@
-// -------------------
-// Sanal veritabanı oluştur
-// -------------------
-function createDB() {
-    return {
-        users: [
-            { id: 1, name: "Ali", email: "ali@example.com" },
-            { id: 2, name: "Veli", email: "veli@example.com" },
-            { id: 3, name: "Ayşe", email: "ayse@example.com" }
-        ]
-    };
-}
+let SQL;
+let db;
 
-// Multi editör DB
-let DB_POOL = {
-    1: createDB(),
-    2: createDB()
-};
+initSqlJs({
+  locateFile: filename => `https://sql.js.org/dist/${filename}`
+}).then(SQLLib => {
+  SQL = SQLLib;
+  db = new SQL.Database();
 
-// -------------------
-// SQL ÇALIŞTIR
-// -------------------
-function runSQL(editorId) {
-    const sql = document.getElementById("sqlEditor_" + editorId).value.trim();
-    const output = document.getElementById("output_" + editorId);
-    const DB = DB_POOL[editorId];
-    output.innerHTML = "";
+  console.log("SQL.js Hazır");
 
-    try {
-        const lower = sql.toLowerCase();
+  // 🔥 BURADA HAZIR TABLO OLUŞUYOR 🔥
+  const setupSQL = `
+    CREATE TABLE users (
+      id INTEGER,
+      name TEXT,
+      age INTEGER
+    );
 
-        // ----- SELECT -----
-        if (lower.startsWith("select")) {
-            const tableMatch = sql.match(/from\s+(\w+)/i);
-            if (!tableMatch) throw "Tablo bulunamadı";
-            const table = tableMatch[1];
-            if (!DB[table]) throw "Tablo bulunamadı: " + table;
+    INSERT INTO users VALUES (1, 'Ali', 25);
+    INSERT INTO users VALUES (2, 'Ayşe', 30);
+    INSERT INTO users VALUES (3, 'Mehmet', 27);
 
-            let columnsMatch = sql.match(/select\s+(.*)\s+from/i);
-            let columns = columnsMatch ? columnsMatch[1].split(",").map(c=>c.trim()) : ["*"];
+    CREATE TABLE customers (
+      customerID INTEGER,
+      customerName TEXT,
+      contactName TEXT,
+      Address TEXT,
+      City TEXT,
+      PostalCode TEXT,
+      Country TEXT
+    );
 
-            // WHERE varsa
-            let rows = DB[table];
-            let whereMatch = sql.match(/where\s+(.*)/i);
-            if (whereMatch) {
-                let condition = whereMatch[1].replace(/;/,"");
-                let condMatch = condition.match(/(\w+)\s*=\s*['"]?(.*?)['"]?$/);
-                if (condMatch) {
-                    const col = condMatch[1];
-                    const val = condMatch[2];
-                    rows = rows.filter(r => r[col]==val);
-                }
-            }
+    INSERT INTO customers VALUES (1,'Alfreds Futterkiste','Maria     Anders','Obere Str. 57','Berlin','12209','Germany');
+    INSERT INTO customers VALUES (2,'Ana Trujillo Emparedados y     helados','Ana Trujillo','Avda. de la Constitución 2222',    'México D.F.','05021','Mexico');
+    INSERT INTO customers VALUES (3,'Antonio Moreno Taquería',    'Antonio Moreno','Mataderos 2312','México D.F.','05023','Mexico');
+    INSERT INTO customers VALUES (4,'Around the Horn','Thomas     Hardy','120 Hanover Sq.','London','WA1 1DP','UK');
+    INSERT INTO customers VALUES (5,'Berglunds snabbköp','Christina Berglund','Berguvsvägen 8','Luleå','S-958 22','Sweden');
 
-            // Sütun seçimi
-            if (!(columns.length==1 && columns[0]=="*")) {
-                rows = rows.map(r => {
-                    let obj = {};
-                    columns.forEach(c => obj[c]=r[c]);
-                    return obj;
-                });
-            }
+    CREATE TABLE products (
+      productID INTEGER,
+      productName TEXT,
+      supplierID INTEGER,
+      categoryID INTEGER,
+      unit TEXT,
+      price INTEGER
+    );
 
-            renderTable(rows, output);
-            return;
-        }
+    INSERT INTO products VALUES (1,'Chais',1,1,'10 boxes x 20 bags',18);
+    INSERT INTO products VALUES (2,'Chang',1,1,'24 - 12 oz     bottles',25);
+    INSERT INTO products VALUES (3,'Aniseed Syrup',1,2,'12 - 550     ml bottles',10);
+    INSERT INTO products VALUES (4,'Chef Anton Cajun     Seasoning',2,2,'48 - 6 oz jars',32);
+    INSERT INTO products VALUES (5,'Chef Anton Gumbo Mix',2,2,'36 boxes',41.35);
 
-        // ----- INSERT -----
-        if (lower.startsWith("insert")) {
-            const tableMatch = sql.match(/into\s+(\w+)/i);
-            if (!tableMatch) throw "Tablo bulunamadı";
-            const table = tableMatch[1];
-            if (!DB[table]) throw "Tablo bulunamadı: " + table;
+    CREATE TABLE orders (
+      orderID INTEGER,
+      customerID INTEGER,
+      employeeID INTEGER,
+      OrderDate TEXT,
+      ShipperID INTEGER
+    );
 
-            const valuesMatch = sql.match(/values\s*\((.*)\)/i);
-            if (!valuesMatch) throw "VALUES bulunamadı";
+    INSERT INTO orders VALUES (10308,2,7,"1996-09-18",3);
+    INSERT INTO orders VALUES (10309,5,3,"1996-09-19",1);
+    INSERT INTO orders VALUES (10310,1,8,"1996-09-20",2);
 
-            let values = valuesMatch[1].split(",").map(v=>v.trim().replace(/'/g,""));
-            const columns = Object.keys(DB[table][0]); // otomatik kolon
+    CREATE TABLE employees (
+      EmployeeID INTEGER,
+      LastName TEXT,
+      FirstName TEXT,
+      BirthDate TEXT,
+      Photo INTEGER
+    );
 
-            let newRow = {};
-            columns.forEach((c,i)=>{
-                if(c=="id") newRow[c] = DB[table].length + 1;
-                else newRow[c] = values[i-1] || "";
-            });
+    INSERT INTO employees VALUES (1,"Davolio","Nancy","12/08/1968","EmpID1.pic");
+    INSERT INTO employees VALUES (2,"Fuller","Andrew","19/02/1968","EmpID2.pic");
+    INSERT INTO employees VALUES (3,"Leverling","Janet","30/08/1963","EmpID3.pic");
+  `;
 
-            DB[table].push(newRow);
-            output.innerHTML = "Kayıt eklendi.";
-            return;
-        }
+  db.run(setupSQL);
+  console.log("Hazır kullanıcı tablosu oluşturuldu.");
+});
 
-        // ----- DELETE -----
-        if (lower.startsWith("delete")) {
-            const tableMatch = sql.match(/from\s+(\w+)/i);
-            if (!tableMatch) throw "Tablo bulunamadı";
-            const table = tableMatch[1];
-            if (!DB[table]) throw "Tablo bulunamadı: " + table;
+// GLOBAL – her editörde çalışır
+function runSQL(editorID) {
+  const input = document.getElementById(editorID);
+  const iframe = document.getElementById(editorID + "_out");
 
-            let whereMatch = sql.match(/where\s+(.*)/i);
-            if(whereMatch){
-                let condition = whereMatch[1].replace(/;/,"");
-                let condMatch = condition.match(/(\w+)\s*=\s*['"]?(.*?)['"]?$/);
-                if(condMatch){
-                    const col = condMatch[1], val = condMatch[2];
-                    DB[table] = DB[table].filter(r => r[col] != val);
-                }
-            } else {
-                DB[table] = [];
-            }
+  if (!SQL || !db) {
+    iframe.contentDocument.body.innerHTML = "<b>SQL.js henüz yüklenmedi!</b>";
+    return;
+  }
 
-            output.innerHTML = "Satırlar silindi.";
-            return;
-        }
+  try {
+    const query = input.value;
+    const result = db.exec(query);
 
-        // ----- UPDATE -----
-        if (lower.startsWith("update")) {
-            const tableMatch = sql.match(/update\s+(\w+)/i);
-            if (!tableMatch) throw "Tablo bulunamadı";
-            const table = tableMatch[1];
-            if (!DB[table]) throw "Tablo bulunamadı: " + table;
+    let html = "";
 
-            const setMatch = sql.match(/set\s+(.*)\s*(where|$)/i);
-            if (!setMatch) throw "SET kısmı bulunamadı";
+    if (result.length > 0) {
+      const columns = result[0].columns;
+      const values = result[0].values;
 
-            let setPairs = setMatch[1].split(",").map(s=>s.trim());
-            let updates = {};
-            setPairs.forEach(pair => {
-                let [k,v] = pair.split("=");
-                updates[k.trim()] = v.trim().replace(/'/g,"");
-            });
+      html += "<table border='1' cellspacing='0' cellpadding='4'><tr>";
+      columns.forEach(c => html += `<th>${c}</th>`);
+      html += "</tr>";
 
-            let whereMatch = sql.match(/where\s+(.*)/i);
-            if(whereMatch){
-                let condition = whereMatch[1].replace(/;/,"");
-                let condMatch = condition.match(/(\w+)\s*=\s*['"]?(.*?)['"]?$/);
-                if(condMatch){
-                    const col = condMatch[1], val = condMatch[2];
-                    DB[table].forEach(r=>{
-                        if(r[col]==val){
-                            Object.keys(updates).forEach(k=>r[k]=updates[k]);
-                        }
-                    });
-                }
-            } else {
-                DB[table].forEach(r=>{
-                    Object.keys(updates).forEach(k=>r[k]=updates[k]);
-                });
-            }
-
-            output.innerHTML = "Satırlar güncellendi.";
-            return;
-        }
-
-        throw "Bu SQL komutu desteklenmiyor.";
-
-    } catch(err){
-        output.innerHTML = "<span style='color:red'>" + err + "</span>";
-    }
-}
-
-// -------------------
-// TABLO ÇİZDIR
-// -------------------
-function renderTable(rows, outputEl){
-    if(rows.length===0){
-        outputEl.innerHTML = "Tablo boş.";
-        return;
-    }
-    let html = "<table><tr>";
-    Object.keys(rows[0]).forEach(c=>html += "<th>"+c+"</th>");
-    html += "</tr>";
-
-    rows.forEach(r=>{
+      values.forEach(row => {
         html += "<tr>";
-        Object.values(r).forEach(v=>html+="<td>"+v+"</td>");
+        row.forEach(col => html += `<td>${col}</td>`);
         html += "</tr>";
-    });
+      });
 
-    html += "</table>";
-    outputEl.innerHTML = html;
+      html += "</table>";
+    } else {
+      html = "<b>Komut başarıyla çalıştı.</b>";
+    }
+
+    iframe.contentDocument.body.innerHTML = html;
+
+  } catch (err) {
+    iframe.contentDocument.body.innerHTML =
+      `<b style='color:red;'>HATA: ${err.message}</b>`;
+  }
 }

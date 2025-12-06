@@ -1,21 +1,97 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Veri Tipleri</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Veri Tipleri</h1>
-    <h2>Metinsel Veri Tipleri</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Veri Tipleri</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <h2>Binary(İkilik) Veri Tipleri</h2>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Veri Tipleri</h1>
 
-    <script src="editor.js"></script>
-  </body>
+  <h2>Metinsel Veri Tipleri</h2>
+  <div><strong>char(n) : </strong> Unicode’u desteklemeyip char(n) şeklinde kullanılırlar. 8000 karaktere kadar değer
+    alabilirler. Belirtilenden(n) az karakter girilse dahi giriş yapılan boyut kadar yer kaplar. Veri giriş boyutları
+    benzer,sabit olan veri kümelerinde kullanılması önerilir.</div>
+  <div><strong>nchar : </strong> Unicode(uluslararası karakter setini, tanımlı tüm alfabeleri içerir) destekler. Chardan
+    farklı olarak maksimum 4000 karaktere kadar değer alabilir.</div>
+  <div><strong>varchar(n) : </strong> Chardan farklı olarak verinin boyutu kadar yere kaplar. 8000 karaktere kadar
+    depolama yapar. Birbirinden farklı uzunlukta veri girişi yapılacağı zaman kullanılması önerilir. varchar(MAX)
+    kullanımı ile 2GB’a kadar depolama yapılabilir.</div>
+  <div><strong>nvarchar : </strong> Verinin boyutu kadar yer kaplar. Varchardan farklı olarak unicode’u destekler.4000
+    karaktere kadar değer alabilir.</div>
+  <div><strong>text : </strong> Belirtilenden az değer girilse bile boyutu kadar yer kaplar. 2GB’a kadar metinsel veri
+    depolar.Unicode’u desteklemez.</div>
+  <div><strong>ntext : </strong> Text’den farklı olarak girilen karakter boyutu kadar yer kaplar ve unicode’u destekler.
+  </div>
+
+  <h2>Binary(İkilik) Veri Tipleri</h2>
+  <div><strong>binary : </strong> 1 ve 0 ları temsil eden ikilik taban veri tipidir.Sabit uzunluklu veri tiplerinde
+    kullanılırlar. 8000 byte’a kadar depolama yapabilir.</div>
+  <div><strong>varbinary : </strong> Binary’den farklı olarak girilen karakter kadar yer kaplar. Bu yüzden uzunlukların
+    değişken olduğu durumlarda tercih edilir.</div>
+  <div><strong>image : </strong> Resim dosyalarını saklamak için kullanılır. En fazla 2 GB’a kadar veri depolar. Bunun
+    yerine varbinary(MAX) kullanılması tercih edilir.</div>
+
+
+  <h2>Sayısal Veri Tipleri</h2>
+  <div><strong>bit : </strong> Bir byte uzunluğunda tam sayı veri tipidir. Genellikle evet/hayır şeklinde mantıksal
+    bilgileri tutmak için kullanılır.</div>
+  <div><strong>int : </strong> 4 byte büyüklüğünde, -2 milyar /+2 milyar arasında değer tutabilen tam sayı veri tipidir
+  </div>
+  <div><strong>bigint : </strong> 8 byte büyüklüğünde -2⁶³ ve 2⁶³ arasında değer tutabilen tam sayı veri tipidir.</div>
+  <div><strong>smallint : </strong> 2 byte büyüklüğünde -32.768 ve 32.768 arası değer alabilen tam sayı veri tipidir.
+  </div>
+  <div><strong>tinyint : </strong> 1 byte büyüklğüne sahip, 0–255 arası tam sayı veriler için kullanılan tam sayı veri
+    tipidir.</div>
+  <div><strong>decimal(p,s), numeric(p,s) : </strong> İkisinin de kullanımı aynıdır. Bu veri tipinde saklanacak sayının
+    basamak sayısı tanımlanabilir.Veri tipi boyutu belirtilen basamak sayılarına göre değişkenlik gösterebilir.-38 ve
+    +38 basamak arası verileri depolayabilir. -10³⁸ ,10³⁸ arası ondalık ve tam sayı türünde veri saklayabilir.</div>
+  <div><strong>double(size,d) : </strong> Normal boyutlu ondalıklı sayı. Toplam rakam sayısı boyutta belirtilir. Ondalık
+    noktadan sonraki basamak sayısı d parametresinde belirtilir.</div>
+
+  <h2>Parasal Veri Tipleri</h2>
+  <div><strong>money : </strong> 8 byte boyutunda, yaklaşı -2⁶⁴ ile 2⁶⁴ arasında parasal değerleri tutmak için
+    kullanılır. 4 basamağa kadar duyarlı ondalık tipli verileri saklar.</div>
+  <div><strong>smallmoney : </strong> 4 byte uzunluğunda yaklaşık -214.000 ile 214.000 arası parasal değerleri tutmak
+    için kullanılır. Money tipinde olduğu gibi 4 basamağa kadar duyarlı ondalık tipli verileri saklarken kullanılır.
+  </div>
+
+  <h2>Tarih-Zaman Veri Tipleri</h2>
+  <div><strong>date : </strong> Tarihleri YYYY-AA-GG (yıl-ay-gün) formatında saklar. 3 byte uzunluğunda veri tipidir.
+  </div>
+  <div><strong>smalldatetime : </strong> Tarih ve zaman verilerini yıl-ay-gün ve saat-dakika-saniye-salise şeklide
+    saklar. 4 byte uzunluğunda veri tipidir.</div>
+  <div><strong>datetime : </strong> YYYY-AA-GG şeklinde tarih ve zaman verilerini tutan 8 byte uzunluğunda veri tipidir.
+    1 Ocak 1753–31 Aralık 9999 arası veriler için kullanılır.</div>
+  <div><strong>datetime2 : </strong> Datetime’dan farklı olarak 1 Ocak 0001–31 Aralık 9999 tarihleri arasu verileri
+    tutan ekstra olarak salise hassasiyeti daha yüksektir. Kapladığı alan salise hassasiyetine göre 6–8 byte arası
+    değişebilir.</div>
+  <div><strong>time : </strong> Sadece saat verilerini saat-dakika-saniye-salise(7 basamaklı) şeklinde saklayan, boyutu
+    kullanıcı tarafından değiştirilebilen 3–5 byte arası yer kaplayan veri tipidir.</div>
+  <div><strong>datetimeoffset : </strong> Ülkelere göre değişen zaman farkını hesaplayıp tutarken kullanılır.</div>
+
+  <h2>Diğer Veri Tipleri</h2>
+  <div><strong>sql_variant : </strong> sayı,metin, binary gibi farklı veri tiplerini depolamak için kullanılan veri
+    tipidir. Yani bir sütun ya da fonksiyonda birden fazla veri tipi kullanmamız gerektiğinde tercih etmeliyiz.</div>
+  <div><strong>xml : </strong> XML türünde veri saklamak için kullanılır. Kapasitesi 2 GB’dır.Bellekteki boyutu,
+    saklanan XML verisine göre değişkenlik gösterir.</div>
+  <div><strong>geometry : </strong> Öklid koordinat sistemine ait verileri tutmak için kullanılır. Geometrik şekillerin
+    en-boy-yükselik verilerini saklar.</div>
+  <div><strong>timestamp : </strong> Tabloya kayıt eklendiğinde, güncellendiğinde binary türünde özel değer alan veri
+    tipidir.</div>
+  <div><strong>uniqueidentifier : </strong> 16 byte uzunluğunda benzersiz GUID tipinde veri tutar.İki GUID birbirinden
+    tamamen farklıdır eşit olamazlar.</div>
+  <div><strong>hierarchyid : </strong> Ağaç veri modeli ve ya hiyerarşik olarak sınflandırılmış verileri saklamak için
+    kullanılır.</div>
+  <div><strong>geography : </strong> Coğrafi koordinat ve GPS verilerini tutmak için kullanılır.</div>
+
+  <script src="editor.js"></script>
+</body>
+
 </html>

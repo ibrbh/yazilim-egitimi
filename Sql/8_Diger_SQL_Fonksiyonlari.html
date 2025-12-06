@@ -1,18 +1,172 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SQL</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>SQL</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Diğer SQL Fonksiyonları</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Diğer SQL Fonksiyonları</h1>
+  <h2>String Fonksiyonlar</h2>
+  <div><strong>ASCII : </strong> Belirli bir karakter için ASCII değerini döndürür.</div>
+  <div><strong>CHAR_LENGTH : </strong> Bir dizenin uzunluğunu döndürür (karakter cinsinden).</div>
+  <div><strong>CHARACTER_LENGTH : </strong> Bir dizenin uzunluğunu döndürür (karakter cinsinden).</div>
+  <div><strong>CONCAT_WS : </strong> Ayırıcıyla birlikte iki veya daha fazla ifadeyi ekler.</div>
+  <div><strong>FIELD : </strong> Değerler listesindeki bir değerin dizin konumunu döndürür.</div>
+  <div><strong>FIND_IN_SET : </strong> Bir dize listesi içindeki bir dizenin konumunu döndürür.</div>
+  <div><strong>FORMAT : </strong> Bir sayıyı "#,###,###.##" gibi, belirtilen sayıda ondalık basamağa yuvarlanacak
+    şekilde biçimlendirir.</div>
+  <div><strong>INSERT : </strong> Belirtilen konumda ve belirli sayıda karakter için bir dizenin içine bir dize ekler.
+  </div>
+  <div><strong>INSTR : </strong> Bir dizenin başka bir dizedeki ilk oluşumunun konumunu döndürür.</div>
+  <div><strong>LCASE : </strong> Bir dizeyi küçük harfe dönüştürür.</div>
+  <div><strong>LOCATE : </strong> Bir dizede bir alt dizenin ilk geçtiği konumun konumunu döndürür.</div>
+  <div><strong>LPAD : </strong> Bir dizeyi başka bir dizeyle belirli bir uzunluğa kadar sola doğru doldurur.</div>
+  <div><strong>LTRIM : </strong> Bir dizenin başındaki boşlukları kaldırır.</div>
+  <div><strong>MID : </strong> Bir dizeden bir alt dizeyi çıkarır (herhangi bir konumdan başlayarak).</div>
+  <div><strong>POSITION : </strong> Bir dizede bir alt dizenin ilk geçtiği konumun konumunu döndürür.</div>
+  <div><strong>REPEAT : </strong> Bir dizeyi belirtilen sayıda tekrarlar.</div>
+  <div><strong>REPLACE : </strong> Bir dize içindeki bir alt dizenin tüm oluşumlarını yeni bir alt dizeyle değiştirir.
+  </div>
+  <div><strong>REVERSE : </strong> Bir dizeyi tersine çevirir ve sonucu döndürür.</div>
+  <div><strong>RPAD : </strong> Bir dizeyi başka bir dizeyle belirli bir uzunluğa kadar sağa doğru doldurur.</div>
+  <div><strong>RTRIM : </strong> Bir dizenin sonundaki boşlukları kaldırır.</div>
+  <div><strong>SPACE : </strong> Belirtilen sayıda boşluk karakterinden oluşan bir dize döndürür.</div>
+  <div><strong>STRCMP : </strong> İki dizeyi karşılaştırır.</div>
+  <div><strong>SUBSTR : </strong> Bir dizeden bir alt dizeyi çıkarır (herhangi bir konumdan başlayarak).</div>
+  <div><strong>SUBSTRING : </strong> Bir dizeden bir alt dizeyi çıkarır (herhangi bir konumdan başlayarak).</div>
+  <div><strong>SUBSTRING_INDEX : </strong> Belirtilen sayıda sınırlayıcı oluşmadan önce bir dizenin alt dizesini
+  döndürür.</div>
+
+  <h2>Numerik Fonksiyonlar</h2>
+
+  <div><strong>ABS : </strong> Bir sayının mutlak değerini döndürür.</div>
+  <div><strong>ACOS : </strong> Bir sayının ark kosinüsünü verir.</div>
+  <div><strong>ASIN : </strong> Bir sayının ark sinüsünü döndürür.</div>
+  <div><strong>ATAN : </strong> Bir veya iki sayının ark tanjantını döndürür.</div>
+  <div><strong>ATAN2 : </strong> İki sayının ark tanjantını döndürür.</div>
+  <div><strong>AVG : </strong> Bir ifadenin ortalama değerini döndürür.</div>
+  <div><strong>CEIL : </strong> Bir sayının >= olan en küçük tamsayı değerini döndürür.</div>
+  <div><strong>CEILING : </strong> Bir sayının >= olan en küçük tamsayı değerini döndürür.</div>
+  <div><strong>COS : </strong> Bir sayının kosinüsünü döndürür.</div>
+  <div><strong>COT : </strong> Bir sayının kotanjantını döndürür.</div>
+  <div><strong>COUNT : </strong> Bir seçme sorgusunun döndürdüğü kayıtların sayısını döndürür.</div>
+  <div><strong>DEGREES : </strong> Radyan cinsinden bir değeri dereceye dönüştürür.</div>
+  <div><strong>DIV : </strong> Tamsayı bölme için kullanılır.</div>
+  <div><strong>EXP : </strong> Belirtilen sayının üssüne yükseltilmiş e'yi döndürür.</div>
+  <div><strong>FLOOR : </strong> Bir sayının &lt;= olan en büyük tamsayı değerini döndürür.</div>
+  <div><strong>GREATEST : </strong> Bağımsız değişkenler listesinin en büyük değerini döndürür.</div>
+  <div><strong>LEAST : </strong> Bağımsız değişkenler listesinin en küçük değerini döndürür.</div>
+  <div><strong>LN : </strong> Bir sayının doğal logaritmasını verir.</div>
+  <div><strong>LOG : </strong> Bir sayının doğal logaritmasını veya bir sayının belirli bir tabana göre
+    logaritmasını döndürür.</div>
+  <div><strong>LOG10 : </strong> Bir sayının 10 tabanına göre doğal logaritmasını döndürür.</div>
+  <div><strong>LOG2 : </strong> Bir sayının 2 tabanına göre doğal logaritmasını döndürür.</div>
+  <div><strong>MAX : </strong> Bir değerler kümesindeki maksimum değeri döndürür.</div>
+  <div><strong>MIN : </strong> Bir değerler kümesindeki minimum değeri döndürür.</div>
+  <div><strong>MOD : </strong> Bir sayının başka bir sayıya bölümünden kalanını verir.</div>
+  <div><strong>PI : </strong> π değerini döndürür.</div>
+  <div><strong>POW : </strong> Başka bir sayının üssüne yükseltilmiş bir sayının değerini döndürür.</div>
+  <div><strong>POWER : </strong> Başka bir sayının üssüne yükseltilmiş bir sayının değerini döndürür.</div>
+  <div><strong>RADIANS : </strong> Derece değerini radyana dönüştürür.</div>
+  <div><strong>RAND : </strong></div>
+  <div><strong>ROUND : </strong> Sayıyı belirtilen sayıda ondalık basamağa yuvarlar.</div>
+  <div><strong>SIGN : </strong> Bir sayının işaretini döndürür.</div>
+  <div><strong>SIN : </strong> Bir sayının sinüsünü döndürür.</div>
+  <div><strong>SQRT : </strong> Bir sayının karekökünü döndürür.</div>
+  <div><strong>SUM : </strong> Bir değerler kümesinin toplamını hesaplar.</div>
+  <div><strong>TAN : </strong> Bir sayının tanjantını döndürür.</div>
+  <div><strong>TRUNCATE : </strong> Bir sayıyı belirtilen sayıda ondalık basamağa kadar keser.</div>
+
+
+  <h2>Tarih Fonksiyonları</h2>
+  <div><strong>ADDDATE : </strong> Tarihe date/time aralığı ekler ve ardından tarihi döndürür.</div>
+  <div><strong>ADDTIME : </strong> Bir saat/tarihsaat öğesine bir zaman aralığı ekler ve ardından date/datetime
+    değerini döndürür.</div>
+  <div><strong>CURDATE : </strong> Geçerli tarihi döndürür.</div>
+  <div><strong>CURRENT_DATE : </strong> Geçerli tarihi döndürür.</div>
+  <div><strong>CURRENT_TIME : </strong> Geçerli saati döndürür.</div>
+  <div><strong>CURRENT_TIMESTAMP : </strong> Geçerli tarih ve saati döndürür.</div>
+  <div><strong>CURTIME : </strong> Geçerli saati döndürür.</div>
+  <div><strong>DATE : </strong> Tarih kısmını bir tarihsaat ifadesinden çıkarır.</div>
+  <div><strong>DATEDIFF : </strong> İki tarih değeri arasındaki gün sayısını döndürür.</div>
+  <div><strong>DATE_ADD : </strong> Tarihe date/time aralığı ekler ve ardından tarihi döndürür.</div>
+  <div><strong>DATE_FORMAT : </strong> Tarihi biçimlendirir.</div>
+  <div><strong>DATE_SUB : </strong> Tarihten date/time aralığını çıkarır ve ardından tarihi döndürür.</div>
+  <div><strong>DAY : </strong> Belirli bir tarih için ayın gününü döndürür.</div>
+  <div><strong>DAYNAME : </strong> Belirli bir tarihin hafta içi gününün adını döndürür.</div>
+  <div><strong>DAYOFMONTH : </strong> Belirli bir tarih için ayın gününü döndürür.</div>
+  <div><strong>DAYOFWEEK : </strong> Belirli bir tarih için hafta içi endeksini döndürür.</div>
+  <div><strong>DAYOFYEAR : </strong> Belirli bir tarih için yılın gününü döndürür.</div>
+  <div><strong>EXTRACT : </strong> Belirli bir tarihten bir parça çıkarır.</div>
+  <div><strong>FROM_DAYS : </strong> Sayısal bir tarih değerinden bir tarih döndürür.</div>
+  <div><strong>HOUR : </strong> Belirli bir tarihin saat kısmını döndürür.</div>
+  <div><strong>LAST_DAY : </strong> Belirli bir tarih için ayın son gününü çıkarır.</div>
+  <div><strong>LOCALTIME : </strong> Geçerli tarih ve saati döndürür.</div>
+  <div><strong>LOCALTIMESTAMP : </strong> Geçerli tarih ve saati döndürür.</div>
+  <div><strong>MAKEDATE : </strong> Bir yılı ve gün sayısını temel alan bir tarih oluşturur ve döndürür.</div>
+  <div><strong>MAKETIME : </strong> Saat, dakika ve ikinci değere dayalı olarak bir zaman oluşturur ve döndürür.
+  </div>
+  <div><strong>MICROSECOND : </strong> Bir time/datetime mikrosaniye kısmını döndürür.</div>
+  <div><strong>MINUTE : </strong> Bir time/datetime dakika kısmını döndürür.</div>
+  <div><strong>MONTH : </strong> Belirli bir tarihin ay kısmını döndürür.</div>
+  <div><strong>MONTHNAME : </strong> Belirli bir tarih için ayın adını döndürür.</div>
+  <div><strong>NOW : </strong> Geçerli tarih ve saati döndürür.</div>
+  <div><strong>PERIOD_ADD : </strong> Bir döneme belirli sayıda ay ekler.</div>
+  <div><strong>PERIOD_DIFF : </strong> İki dönem arasındaki farkı döndürür.</div>
+  <div><strong>QUARTER : </strong> Belirli bir tarih değeri için yılın çeyreğini döndürür.</div>
+  <div><strong>SECOND : </strong> Bir time/datetime saniye kısmını döndürür.</div>
+  <div><strong>SEC_TO_TIME : </strong> Belirtilen saniyeye göre bir zaman değeri döndürür.</div>
+  <div><strong>STR_TO_DATE : </strong> Bir dizeye ve biçime dayalı olarak bir tarih döndürür.</div>
+  <div><strong>SUBDATE : </strong> Tarihten time/date aralığını çıkarır ve ardından tarihi döndürür.</div>
+  <div><strong>SUBTIME : </strong> Tarihsaat değerinden zaman aralığını çıkarır ve ardından time/datetime değerini
+    döndürür.</div>
+  <div><strong>SYSDATE : </strong> Geçerli tarih ve saati döndürür.</div>
+  <div><strong>TIME : </strong> Belirli bir time/datetime zaman bölümünü çıkarır.</div>
+  <div><strong>TIME_FORMAT : </strong> Bir saati belirtilen formata göre formatlar.</div>
+  <div><strong>TIME_TO_SEC : </strong> Bir zaman değerini saniyeye dönüştürür.</div>
+  <div><strong>TIMEDIFF : </strong> İki time/datetime ifadesi arasındaki farkı döndürür.</div>
+  <div><strong>TIMESTAMP : </strong> Bir tarih veya tarihsaat değerine dayalı olarak bir tarihsaat değeri döndürür.
+  </div>
+  <div><strong>TO_DAYS : </strong> Bir tarih ile "0000-00-00" tarihi arasındaki gün sayısını döndürür.</div>
+  <div><strong>WEEK : </strong> Belirli bir tarihin hafta numarasını döndürür.</div>
+  <div><strong>WEEKDAY : </strong> Belirli bir tarih için haftanın günü sayısını döndürür.</div>
+  <div><strong>WEEKOFYEAR : </strong> Belirli bir tarihin hafta numarasını döndürür.</div>
+  <div><strong>YEAR : </strong> Belirli bir tarihin yıl kısmını döndürür.</div>
+  <div><strong>YEARWEEK : </strong> Belirli bir tarihe ilişkin yıl ve hafta sayısını döndürür.</div>
+
+  <h2>Gelişmiş Fonksiyonlar</h2>
+  <div><strong>BIN : </strong> Bir sayının ikili gösterimini döndürür.</div>
+  <div><strong>BINARY : </strong> Bir değeri ikili dizgeye dönüştürür.</div>
+  <div><strong>CASE : </strong> Koşullardan geçer ve ilk koşul karşılandığında bir değer döndürür.</div>
+  <div><strong>CAST : </strong> Bir değeri (herhangi bir türden) belirli bir veri türüne dönüştürür.</div>
+  <div><strong>COALESCE : </strong> Listedeki boş olmayan ilk değeri döndürür.</div>
+  <div><strong>CONNECTION_ID : </strong> Geçerli bağlantının benzersiz bağlantı kimliğini döndürür.</div>
+  <div><strong>CONV : </strong> Bir sayıyı bir sayısal temel sistemden diğerine dönüştürür.</div>
+  <div><strong>CONVERT : </strong> Bir değeri belirtilen veri türüne veya karakter kümesine dönüştürür.</div>
+  <div><strong>CURRENT_USER : </strong> Sunucunun geçerli istemcinin kimliğini doğrulamak için kullandığı MySQL
+    hesabının kullanıcı adını ve ana bilgisayar adını döndürür.</div>
+  <div><strong>DATABASE : </strong> Geçerli veritabanının adını döndürür.</div>
+  <div><strong>IF : </strong> Koşul TRUE ise bir değer, FALSE ise başka bir değer döndürür.</div>
+  <div><strong>IFNULL : </strong> İfade NULL ise belirtilen değeri döndürün, aksi takdirde ifadeyi döndürün.</div>
+  <div><strong>ISNULL : </strong> Bir ifadenin NULL olup olmamasına bağlı olarak 1 veya 0 değerini döndürür.</div>
+  <div><strong>LAST_INSERT_ID : </strong> Tabloya eklenen veya güncellenen son satırın AUTO_INCREMENT kimliğini
+    döndürür.</div>
+  <div><strong>NULLIF : </strong> İki ifadeyi karşılaştırır ve eşitse NULL değerini döndürür. Aksi takdirde ilk
+    ifade döndürülür.</div>
+  <div><strong>SESSION_USER : </strong> Geçerli MySQL kullanıcı adını ve ana bilgisayar adını döndürür.</div>
+  <div><strong>SYSTEM_USER : </strong> Geçerli MySQL kullanıcı adını ve ana bilgisayar adını döndürür.</div>
+  <div><strong>USER : </strong> Geçerli MySQL kullanıcı adını ve ana bilgisayar adını döndürür.</div>
+  <div><strong>VERSION : </strong> MySQL veritabanının geçerli sürümünü döndürür.</div>
+
+</body>
+
 </html>

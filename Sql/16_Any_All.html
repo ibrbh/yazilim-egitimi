@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Any ve All Operatörü</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Any ve All Operatörü</h1>
+  <div>Any ve All operatörleri, tek bir sütun değeri ile bir dizi başka değer arasında karşılaştırma yapmanıza olanak
+    tanır.</div>
+
+
+  <div><strong>ANY : </strong>Alt sorgu değerlerinden herhangi biri koşulu karşılıyorsa TRUE değerini döndürür. İşlemin
+    aralıktaki değerlerden herhangi biri için doğru olması durumunda koşulun doğru olacağı anlamına gelir.</div>
+
+  <img src="images/Any.png" alt="">
+
+  <div><strong>ALL : </strong>Alt sorgu değerlerinin tümü koşulu karşılıyorsa TRUE değerini döndürür. SELECT, WHERE ve
+    HAVING ifadeleriyle birlikte kullanılır. ALL, koşulun yalnızca işlemin aralıktaki tüm değerler için doğru olması
+    durumunda doğru olacağı anlamına gelir.</div>
+
+  <img src="images/All.png" alt="">
+
+  <!-- orders -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="5">orders</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>OrderID</strong>
+        </td>
+        <td>
+          <strong>CustomerID</strong>
+        </td>
+        <td>
+          <strong>EmployeeID</strong>
+        </td>
+        <td>
+          <strong>OrderDate</strong>
+        </td>
+        <td>
+          <strong>ShipperID</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10308
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          1996-09-18
+        </td>
+        <td>
+          3
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10309
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          1996-09-19
+        </td>
+        <td>
+          1
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10310
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          1996-09-20
+        </td>
+        <td>
+          2
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- products -->
+  <table>
+    <thead>
+      <th colspan="6">products</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>ProductID</strong>
+        </td>
+        <td>
+          <strong>ProductName</strong>
+        </td>
+        <td>
+          <strong>SupplierID</strong>
+        </td>
+        <td>
+          <strong>CategoryID</strong>
+        </td>
+        <td>
+          <strong>Unit</strong>
+        </td>
+        <td>
+          <strong>Price</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          Chais
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          10 boxes x 20 bags
+        </td>
+        <td>
+          18
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Chang
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          24 - 12 oz bottles
+        </td>
+        <td>
+          19
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Aniseed Syrup
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          12 - 550 ml bottles
+        </td>
+        <td>
+          10
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4
+        </td>
+        <td>
+          Chef Anton's Cajun Seasoning
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          48 - 6 oz jars
+        </td>
+        <td>
+          22
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Chef Anton's Gumbo Mix
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          36 boxes
+        </td>
+        <td>
+          21.35
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor1">SELECT ProductName FROM Products WHERE ProductID =
+ANY (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor1">SELECT ProductName FROM Products WHERE ProductID =
+ALL (SELECT ProductID FROM OrderDetails WHERE Quantity = 10);
+</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+</body>
+
+</html>

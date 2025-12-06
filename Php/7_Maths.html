@@ -1,20 +1,95 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PHP</title>
+    <title>Maths</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <a href="index.html">Ana Sayfa</a>
     <hr />
-    <h1>PHP</h1>
+    <h1>Maths</h1>
+    <h2>Maths Metodları</h2>
+    <div><strong>abs() : </strong> Bir sayının mutlak (pozitif) değerini verir.</div>
+    <div><strong>ceil() : </strong> Bir sayıyı en yakın üst tam sayıya yuvarlar.</div>
+    <div><strong>floor() : </strong> Bir sayıyı en yakın alt tam sayıya yuvarlar.</div>
+    <div><strong>round() : </strong> Kayan noktalı bir sayıyı yuvarlar.</div>
+    <div><strong>sqrt() : </strong> Bir sayının karekökünü verir.</div>
+    <div><strong>max() : </strong> Bir dizideki en yüksek değeri veya belirtilen birkaç değerin en yüksek değerini
+        döndürür.</div>
+    <div><strong>min() : </strong> Bir dizideki en düşük değeri veya belirtilen birkaç değerin en düşük değerini
+        döndürür.</div>
+    <div><strong>pi() : </strong> π değerini döndürür.</div>
+    <div><strong>rand() : </strong> Rastgele bir tamsayı üretir.</div>
 
-    
 
+    <!-- Örnek -->
+    <div class="editor-box">
+        <div class="editor" contenteditable="true">&lt;?php
+    echo(abs(-6.7)); // returns 6.7
+    echo(sqrt(64)); // returns 8
+    echo(ceil(0.60)); // returns 1
+    echo(ceil(0.49)); // returns 1
+    echo(floor(0.60)); // returns 0
+    echo(floor(0.49)); // returns 0
+    echo(round(0.60)); // returns 1
+    echo(round(0.49)); // returns 0
+    echo(min(0, 150, 30, 20, -8, -200)); // returns -200
+    echo(max(0, 150, 30, 20, -8, -200)); // returns 150
+    echo(pi()); // returns 3.1415926535898
+    echo(rand());
+    echo(rand(10, 100));
+?&gt;</div>
+        <button class="runBtn">Çalıştır</button>
+        <div class="output"></div>
+    </div>
+
+    <h2>Diğer Maths Metodları</h2>
+    <div><strong>acos() : </strong> Bir sayının ters kosinüsünü döndürür.</div>
+    <div><strong>acosh() : </strong> Bir sayının ters hiperbolik kosinüsünü döndürür.</div>
+    <div><strong>asin() : </strong> Bir sayının ters sinüsünü döndürür.</div>
+    <div><strong>asinh() : </strong> Bir sayının ters hiperbolik sinüsünü döndürür.</div>
+    <div><strong>atan() : </strong> Bir sayının ters tanjantını döndürür.</div>
+    <div><strong>atan2() : </strong> İki değişken x ve y'nin arctanjantını verir.</div>
+    <div><strong>atanh() : </strong> Bir sayının ters hiperbolik tanjantını döndürür.</div>
+    <div><strong>base_convert() : </strong> Bir sayıyı bir sayı tabanından diğerine dönüştürür.</div>
+    <div><strong>bindec() : </strong> Bir ikili sayıyı ondalık sayıya dönüştürür.</div>
+    <div><strong>cos() : </strong> Bir sayının kosinüsünü döndürür.</div>
+    <div><strong>cosh() : </strong> Bir sayının hiperbolik kosinüsünü döndürür.</div>
+    <div><strong>decbin() : </strong> Ondalık sayıyı ikili sayıya dönüştürür.</div>
+    <div><strong>dechex() : </strong> Ondalık sayıyı onaltılık sayıya dönüştürür.</div>
+    <div><strong>decoct() : </strong> Ondalık sayıyı sekizlik sayıya dönüştürür.</div>
+    <div><strong>deg2rad() : </strong> Derece değerini radyan değerine dönüştürür.</div>
+    <div><strong>exp() : </strong> e üssünü hesaplar.</div>
+    <div><strong>expm1() : </strong> exp(x) - 1 döndürür.</div>
+    <div><strong>fmod() : </strong> x/y'nin kalanını verir.</div>
+    <div><strong>getrandmax() : </strong> Rand() tarafından döndürülen mümkün olan en büyük değeri döndürür.</div>
+    <div><strong>hexdec() : </strong> Onaltılık bir sayıyı ondalık sayıya dönüştürür.</div>
+    <div><strong>hypot() : </strong> Dik açılı bir üçgenin hipotenüsünü hesaplar.</div>
+    <div><strong>intdiv() : </strong> Tamsayı bölme işlemini gerçekleştirir.</div>
+    <div><strong>is_finite() : </strong> Bir değerin sonlu olup olmadığını kontrol eder.</div>
+    <div><strong>is_infinite() : </strong> Bir değerin sonsuz olup olmadığını kontrol eder.</div>
+    <div><strong>is_nan() : </strong> Bir değerin 'sayı değil' olup olmadığını kontrol eder.</div>
+    <div><strong>lcg_value() : </strong> 0 ile 1 arasında bir sözde rasgele sayı döndürür.</div>
+    <div><strong>log() : </strong> Bir sayının doğal logaritmasını döndürür.</div>
+    <div><strong>log10() : </strong></div>
+    <div><strong>log1p() : </strong> log(1+sayı) döndürür.</div>
+    <div><strong>mt_getrandmax() : </strong> mt_rand() tarafından döndürülen mümkün olan en büyük değeri döndürür.</div>
+    <div><strong>mt_rand() : </strong> Mersenne Twister algoritmasını kullanarak rastgele bir tamsayı üretir.</div>
+    <div><strong>mt_srand() : </strong> Mersenne Twister rasgele sayı üretecini tohumlar.</div>
+    <div><strong>octdec() : </strong> Sekizlik bir sayıyı ondalık sayıya dönüştürür.</div>
+    <div><strong>pow() : </strong> x'in y'nin kuvvetine yükseltilmiş olarak verir.</div>
+    <div><strong>rad2deg() : </strong> Radyan değerini derece değerine dönüştürür.</div>
+    <div><strong>sin() : </strong> Bir sayının sinüsünü döndürür.</div>
+    <div><strong>sinh() : </strong> Bir sayının hiperbolik sinüsünü döndürür.</div>
+    <div><strong>srand() : </strong> Rastgele sayı üretecini tohumlar.</div>
+    <div><strong>tan() : </strong> Bir sayının tanjantını döndürür.</div>
+    <div><strong>tanh() : </strong> Bir sayının hiperbolik tanjantını döndürür.</div>
     <script src="editor.js"></script>
-  </body>
+</body>
+
 </html>

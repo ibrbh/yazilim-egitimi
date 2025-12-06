@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Overflow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Overflow</h1>
+
+  <!-- Overflow Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Overflow Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="7">
+          overflow
+        </td>
+        <td rowspan="7">
+          İ&ccedil;eriğin bir &ouml;ğenin kutusundan taşması durumunda ne olacağını belirtir.
+        </td>
+        <td>
+          visible
+        </td>
+        <td>
+          Taşma kırpılmaz. &Ouml;ğenin kutusunun dışında işlenir. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hidden
+        </td>
+        <td>
+          Taşma kırpılır ve i&ccedil;eriğin geri kalanı g&ouml;r&uuml;nmez. İ&ccedil;erik programlı olarak
+          kaydırılabilir (&ouml;rneğin, ScrollLeft veya ScrollTo() ayarlanarak)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          clip
+        </td>
+        <td>
+          Taşma kırpılır ve i&ccedil;eriğin geri kalanı g&ouml;r&uuml;nmez. Programatik kaydırma da dahil olmak
+          &uuml;zere kaydırmayı yasaklar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          scroll
+        </td>
+        <td>
+          Taşma kırpılır ancak i&ccedil;eriğin geri kalanını g&ouml;rmek i&ccedil;in bir kaydırma &ccedil;ubuğu
+          eklenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          auto
+        </td>
+        <td>
+          Taşma kırpılırsa i&ccedil;eriğin geri kalanını g&ouml;rmek i&ccedil;in bir kaydırma &ccedil;ubuğu
+          eklenir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          overflow-wrap
+        </td>
+        <td rowspan="5">
+          Uzun s&ouml;zc&uuml;klerin kapsayıcısından taşması durumunda tarayıcının satırları kesip
+          kesemeyeceğini belirtir.
+        </td>
+        <td>
+          normal
+        </td>
+        <td>
+          Uzun kelimeler kaptan taşsa bile kırılmaz. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          anywhere
+        </td>
+        <td>
+          Uzun kelimeler kaptan taşarsa kırılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          break-word
+        </td>
+        <td>
+          Uzun kelimeler kaptan taşarsa kırılır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          overflow-x
+        </td>
+        <td rowspan="6">
+          &Ouml;ğenin i&ccedil;erik alanından taşması durumunda i&ccedil;eriğin sol/sağ kenarlarıyla ne
+          yapılacağını belirtir.
+        </td>
+        <td>
+          visible
+        </td>
+        <td>
+          İ&ccedil;erik kırpılmaz ve sol ve sağ kenarların dışında oluşturulabilir. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hidden
+        </td>
+        <td>
+          İ&ccedil;erik kırpılmıştır ve kaydırma mekanizması sağlanmamıştır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          scroll
+        </td>
+        <td>
+          İ&ccedil;erik kırpılır ve kaydırma mekanizması sağlanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          auto
+        </td>
+        <td>
+          Taşan kutular i&ccedil;in kaydırma mekanizması sağlanmasına neden olur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          overflow-y
+        </td>
+        <td rowspan="6">
+          &Ouml;ğenin i&ccedil;erik alanından taşması durumunda i&ccedil;eriğin &uuml;st/alt kenarlarıyla ne
+          yapılacağını belirtir.
+        </td>
+        <td>
+          visible
+        </td>
+        <td>
+          İ&ccedil;erik kırpılmaz ve i&ccedil;erik kutusunun dışında oluşturulabilir. Bu varsayılandır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hidden
+        </td>
+        <td>
+          İ&ccedil;erik kırpılmıştır ve kaydırma mekanizması sağlanmamıştır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          scroll
+        </td>
+        <td>
+          İ&ccedil;erik kırpılır ve kaydırma mekanizması sağlanır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          auto
+        </td>
+        <td>
+          Taşan kutular i&ccedil;in kaydırma mekanizması sağlanmasına neden olur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

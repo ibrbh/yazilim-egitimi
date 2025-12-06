@@ -4,16 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PHP</title>
+    <title>Değişken Tanımlama</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <a href="index.html">Ana Sayfa</a>
     <hr />
-    <h1>PHP</h1>
+    <h1>Değişken Tanımlama</h1>
+      <ul>
+        <li>Değişkenler sayısal karakter ile başlayamaz.</li>
+        <li>Değişken isimleri arasında boşluk karakteri olmaz.</li>
+        <li>Büyük küçük harf duyarlılığı vardır.</li>
+        <li>Türkçe karakter kullanmamalıyız.</li>
+      </ul>
 
-    
+      <div class="editor-box">
+      <div class="editor" contenteditable="true">&lt;?php
+  $txt1 = "Learn PHP";
+  $txt2 = "W3Schools.com";
+  $x = 5;
+  $y = 4;
+        
+  echo "<h2>" . $txt1 . "</h2>";
+  echo "Study PHP at " . $txt2 . "<br>";
+  echo $x + $y;
+
+?&gt;</div>
+      <button class="runBtn">Çalıştır</button>
+      <div class="output"></div>
+    </div>
 
     <script src="editor.js"></script>
   </body>

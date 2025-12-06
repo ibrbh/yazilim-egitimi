@@ -4,14 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PHP</title>
+    <title>Koşul İfadeleri</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <a href="index.html">Ana Sayfa</a>
     <hr />
-    <h1>PHP</h1>
+    <h1>Koşul İfadeleri</h1>
+
+    <h2>if else elseif Blokları</h2>
+
+    <div><strong>if : </strong>Bir koşul doğruysa kapsamındaki kodları çalıştırır.</div>
+    <div><strong>else : </strong>Bir koşul yanlışsa kapsamındaki kodları çalıştırır.</div>
+    <div><strong>elseif : </strong>İkiden fazla koşul varsa kullanılır.</div>
+
+    <img src="images/If_Else_Elseif.png" alt="">
+
+    <!-- Örnek -->
+    <div class="editor-box">
+      <div class="editor" contenteditable="true">&lt;?php
+  $t = 10;
+
+  if ($t > 0) {
+    echo "Number is positive";
+  } elseif ($t = 0) {
+    echo "Number is zero"; 
+  } else {
+    echo "Number is negative";
+  }
+?&gt;</div>
+      <button class="runBtn">Çalıştır</button>
+      <div class="output"></div>
+    </div>
+
+    <h2>Switch Bloğu</h2>
+
+    <h2>Ternary Operatörü</h2>
 
     
 

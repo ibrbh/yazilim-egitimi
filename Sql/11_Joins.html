@@ -1,18 +1,377 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SQL</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>SQL</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Joins</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Joins</h1>
+  <img src="images/Joins.png" alt="">
+
+  <!-- orders -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="5">orders</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>OrderID</strong>
+        </td>
+        <td>
+          <strong>CustomerID</strong>
+        </td>
+        <td>
+          <strong>EmployeeID</strong>
+        </td>
+        <td>
+          <strong>OrderDate</strong>
+        </td>
+        <td>
+          <strong>ShipperID</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10308
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          1996-09-18
+        </td>
+        <td>
+          3
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10309
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          1996-09-19
+        </td>
+        <td>
+          1
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10310
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          1996-09-20
+        </td>
+        <td>
+          2
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- employees -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="5">employees</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>EmployeeID</strong>
+        </td>
+        <td>
+          <strong>LastName</strong>
+        </td>
+        <td>
+          <strong>FirstName</strong>
+        </td>
+        <td>
+          <strong>BirthDate</strong>
+        </td>
+        <td>
+          <strong>Photo</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          Davolio
+        </td>
+        <td>
+          Nancy
+        </td>
+        <td>
+          12/8/1968
+        </td>
+        <td>
+          EmpID1.pic
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Fuller
+        </td>
+        <td>
+          Andrew
+        </td>
+        <td>
+          2/19/1952
+        </td>
+        <td>
+          EmpID2.pic
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Leverling
+        </td>
+        <td>
+          Janet
+        </td>
+        <td>
+          8/30/1963
+        </td>
+        <td>
+          EmpID3.pic
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- customers -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="7">customers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>CustomerID</strong>
+        </td>
+        <td>
+          <strong>CustomerName</strong>
+        </td>
+        <td>
+          <strong>ContactName</strong>
+        </td>
+        <td>
+          <strong>Address</strong>
+        </td>
+        <td>
+          <strong>City</strong>
+        </td>
+        <td>
+          <strong>PostalCode</strong>
+        </td>
+        <td>
+          <strong>Country</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1<br />
+        </td>
+        <td>
+          Alfreds Futterkiste
+        </td>
+        <td>
+          Maria Anders
+        </td>
+        <td>
+          Obere Str. 57
+        </td>
+        <td>
+          Berlin
+        </td>
+        <td>
+          12209
+        </td>
+        <td>
+          Germany
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Ana Trujillo Emparedados y helados
+        </td>
+        <td>
+          Ana Trujillo
+        </td>
+        <td>
+          Avda. de la Constituci&oacute;n 2222
+        </td>
+        <td>
+          M&eacute;xico D.F.
+        </td>
+        <td>
+          05021
+        </td>
+        <td>
+          Mexico
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Antonio Moreno Taquer&iacute;a
+        </td>
+        <td>
+          Antonio Moreno
+        </td>
+        <td>
+          Mataderos 2312
+        </td>
+        <td>
+          M&eacute;xico D.F.
+        </td>
+        <td>
+          05023
+        </td>
+        <td>
+          Mexico
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4<br />
+        </td>
+        <td>
+          Around the Horn
+        </td>
+        <td>
+          Thomas Hardy
+        </td>
+        <td>
+          120 Hanover Sq.
+        </td>
+        <td>
+          London
+        </td>
+        <td>
+          WA1 1DP
+        </td>
+        <td>
+          UK
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Berglunds snabbk&ouml;p
+        </td>
+        <td>
+          Christina Berglund
+        </td>
+        <td>
+          Berguvsv&auml;gen 8
+        </td>
+        <td>
+          Lule&aring;
+        </td>
+        <td>
+          S-958 22
+        </td>
+        <td>
+          Sweden
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Inner Join</h2>
+  <div>Her iki tabloda da eşleşen değerlere sahip kayıtları seçer.</div>
+  <img src="images/Inner_Join.png" alt="">
+
+  <div class="editor">
+    <textarea
+      id="editor1">SELECT Orders.OrderID, Customers.CustomerName FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+  <h2>Left Join</h2>
+  <div>Soldaki tablodaki (tablo1) tüm kayıtları ve sağdaki tablodaki (tablo2) eşleşen kayıtları döndürür.</div>
+  <img src="images/Left_Join.png" alt="">
+
+  <div class="editor">
+    <textarea id="editor2">SELECT Customers.CustomerName, Orders.OrderID FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+</textarea><br>
+    <button onclick="runSQL('editor2')">Çalıştır</button>
+    <iframe id="editor2_out"></iframe>
+  </div>
+
+  <h2>Right Join</h2>
+  <div>Sağdaki tablodaki (tablo2) tüm kayıtları ve soldaki tablodaki (tablo1) eşleşen kayıtları döndürür.</div>
+  <img src="image/Right_Join" alt="">
+
+  <div class="editor">
+    <textarea id="editor3">SELECT Orders.OrderID, Employees.LastName, Employees.FirstName FROM Orders RIGHT JOIN Employees
+ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+</textarea><br>
+    <button onclick="runSQL('editor3')">Çalıştır</button>
+    <iframe id="editor3_out"></iframe>
+  </div>
+
+  <h2>Full Outer Join</h2>
+  <div>Sol (tablo1) veya sağ (tablo2) tablo kayıtlarında eşleşme olduğunda tüm kayıtları döndürür.</div>
+  <img src="images/Full_Outer_Join.png" alt="">
+
+  <div class="editor">
+    <textarea id="editor4">SELECT Customers.CustomerName, Orders.OrderID FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+</textarea><br>
+    <button onclick="runSQL('editor4')">Çalıştır</button>
+    <iframe id="editor4_out"></iframe>
+  </div>
+</body>
+
 </html>

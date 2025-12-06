@@ -1,32 +1,1025 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>CSS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Border</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Border</h1>
+
+  <!-- Border Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Border Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p>border</p>
+        </td>
+        <td>
+          <p>border-width, border-style ve border-color &ouml;zelliklerini tek satırda yazma imkanı sunar.</p>
+        </td>
+        <td>
+          <p>&nbsp;</p>
+        </td>
+        <td>
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          <p>border-width</p>
+        </td>
+        <td rowspan="6">
+          <p>Kenarlığın genişliğini belirtir.</p>
+        </td>
+        <td>
+          <p>medium</p>
+        </td>
+        <td>
+          <p>Orta kalınlıkta bir kenarlık belirtir. Bu varsayılandır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>thin</p>
+        </td>
+        <td>
+          <p>İnce bir kenarlık belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>thick</p>
+        </td>
+        <td>
+          <p>Kalın bir kenarlık belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Kenarlığın kalınlığını tanımlamanızı sağlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="12">
+          <p>border-style</p>
+        </td>
+        <td rowspan="12">
+          <p>Kenarlığın stilini belirtir.</p>
+        </td>
+        <td>
+          <p>none</p>
+        </td>
+        <td>
+          <p>Varsayılan değer. Kenarlık olmadığını belirtir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>hidden</p>
+        </td>
+        <td>
+          <p>Tablo &ouml;ğeleri i&ccedil;in sınır &ccedil;akışmasının &ccedil;&ouml;z&uuml;m&uuml; dışında "yok"
+            ile aynıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>dotted</p>
+        </td>
+        <td>
+          <p>Noktalı bir kenarlığı belirtir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>dashed</p>
+        </td>
+        <td>
+          <p>Kesikli kenarlığı belirtir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>solid</p>
+        </td>
+        <td>
+          <p>Kesintisiz bir kenarlık belirtir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>double</p>
+        </td>
+        <td>
+          <p>&Ccedil;ift kenarlık belirtir</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>groove</p>
+        </td>
+        <td>
+          <p>3B yivli kenarlığı belirtir. Efekt kenarlık rengi değerine bağlıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ridge</p>
+        </td>
+        <td>
+          <p>3B &ccedil;ıkıntılı bir kenarlığı belirtir. Efekt kenarlık rengi değerine bağlıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inset</p>
+        </td>
+        <td>
+          <p>3B i&ccedil; metin kenarlığını belirtir. Efekt kenarlık rengi değerine bağlıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>outset</p>
+        </td>
+        <td>
+          <p>3B başlangı&ccedil; kenarlığını belirtir. Efekt kenarlık rengi değerine bağlıdır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>border-color</p>
+        </td>
+        <td rowspan="4">
+          <p>Kenarlığın rengini belirtir.</p>
+        </td>
+        <td>
+          <p><em>color</em></p>
+        </td>
+        <td>
+          <p>Kenarlık rengini belirtir. Varsayılan renk, &ouml;ğenin ge&ccedil;erli rengidir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>transparent</p>
+        </td>
+        <td>
+          <p>Kenarlık renginin şeffaf olması gerektiğini belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>border-radius</p>
+        </td>
+        <td rowspan="4">
+          <p>Kutunun k&ouml;şelerine yarı&ccedil;ap atar.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>K&ouml;şelerin yarı&ccedil;apını tanımlar. Varsayılan değer 0'dır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>K&ouml;şelerin yarı&ccedil;apını % cinsinden tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>border-collapse</p>
+        </td>
+        <td rowspan="4">
+          <p>border-collapse &ouml;zelliği, tablo sınırlarının tek bir kenarlığa mı daraltılacağını yoksa standart
+            HTML'de olduğu gibi ayrılacağını mı belirler.</p>
+        </td>
+        <td>
+          <p>separate</p>
+        </td>
+        <td>
+          <p>Sınırlar ayrılmış; her h&uuml;cre kendi sınırlarını g&ouml;sterecektir. Bu varsayılandır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>collapse</p>
+        </td>
+        <td>
+          <p>M&uuml;mk&uuml;n olduğunda kenarlıklar tek bir kenarlığa daraltılır (kenarlık aralığı ve boş
+            h&uuml;cre &ouml;zelliklerinin etkisi yoktur)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>border-image</p>
+        </td>
+        <td>
+          <p>B&uuml;t&uuml;n border-image &ouml;zelliklerini tek satırda yazmak i&ccedil;in kullanılır.</p>
+        </td>
+        <td>
+          <p>&nbsp;</p>
+        </td>
+        <td>
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>border-image-source</p>
+        </td>
+        <td rowspan="4">
+          <p>Kenarlık olarak kullanılacak g&ouml;r&uuml;nt&uuml;n&uuml;n yolunu belirtir.</p>
+        </td>
+        <td>
+          <p>none</p>
+        </td>
+        <td>
+          <p>Herhangi bir g&ouml;rsel kullanılmayacaktır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>image</em></p>
+        </td>
+        <td>
+          <p>Kenarlık olarak kullanılacak g&ouml;r&uuml;nt&uuml;n&uuml;n yolunu belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>border-image-slice</p>
+        </td>
+        <td rowspan="5">
+          <p>Kenarlık resminin nasıl dilimlenneceğini belirtir.</p>
+        </td>
+        <td>
+          <p><em>number</em></p>
+        </td>
+        <td>
+          <p>Sayı(lar) raster g&ouml;r&uuml;nt&uuml;ler i&ccedil;in pikselleri veya vekt&ouml;r
+            g&ouml;r&uuml;nt&uuml;ler i&ccedil;in koordinatları temsil eder.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>Y&uuml;zdeler g&ouml;rselin y&uuml;ksekliğine veya genişliğine g&ouml;redir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>fill</p>
+        </td>
+        <td>
+          <p>G&ouml;r&uuml;nt&uuml;n&uuml;n orta kısmının g&ouml;r&uuml;nt&uuml;lenmesine neden olur.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          <p>border-image-width</p>
+        </td>
+        <td rowspan="6">
+          <p>Kenarlık resminin genişliğini belirtir.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Kenarlık genişliğinin boyutunu belirten uzunluk birimi (px).</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>number</em></p>
+        </td>
+        <td>
+          <p>Varsayılan değer 1. Karşılık gelen kenar genişliğinin katlarını temsil eder.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>Kenarlık g&ouml;r&uuml;nt&uuml; alanının boyutunu ifade eder: yatay uzaklıklar i&ccedil;in alanın
+            genişliği, dikey uzaklıklar i&ccedil;in y&uuml;kseklik</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Belirtilmişse genişlik, karşılık gelen g&ouml;r&uuml;nt&uuml; diliminin asıl genişliği veya
+            y&uuml;ksekliğidir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>border-image-outset</p>
+        </td>
+        <td rowspan="4">
+          <p>Kenarlık g&ouml;r&uuml;nt&uuml;s&uuml; alanının kenarlık kutusunun dışına taşma miktarını belirtir.
+          </p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Kenarlık g&ouml;r&uuml;nt&uuml;s&uuml;n&uuml;n kenarlardan ne kadar uzakta g&ouml;r&uuml;neceğini
+            belirten uzunluk birimi. Varsayılan değer 0'dır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>number</em></p>
+        </td>
+        <td>
+          <p>Karşılık gelen kenar genişliğinin katlarını belirtir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="6">
+          <p>border-image-repeat</p>
+        </td>
+        <td rowspan="6">
+          <p>Kenarlık resminin tekrarlanması, yuvarlanması veya uzatılması gerekip gerekmediği belirtir.</p>
+        </td>
+        <td>
+          <p>stretch</p>
+        </td>
+        <td>
+          <p>Varsayılan değer. G&ouml;r&uuml;nt&uuml; alanı dolduracak şekilde uzatılır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>repeat</p>
+        </td>
+        <td>
+          <p>G&ouml;r&uuml;nt&uuml; alanı dolduracak şekilde d&ouml;şenir (tekrarlanır)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>round</p>
+        </td>
+        <td>
+          <p>G&ouml;r&uuml;nt&uuml;, alanı dolduracak şekilde d&ouml;şenir (tekrarlanır). Alanı tam sayıda
+            d&ouml;şemeyle doldurmazsa g&ouml;r&uuml;nt&uuml; sığacak şekilde yeniden
+            &ouml;l&ccedil;eklendirilir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>space</p>
+        </td>
+        <td>
+          <p>G&ouml;r&uuml;nt&uuml; alanı dolduracak şekilde d&ouml;şenir (tekrarlanır). Alanı tam sayıda
+            d&ouml;şemeyle doldurmazsa, fazladan boşluk d&ouml;şemelerin etrafına dağıtılır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          <p>border-spacing</p>
+        </td>
+        <td rowspan="3">
+          <p>Border-spacing &ouml;zelliği bitişik h&uuml;crelerin sınırları arasındaki mesafeyi ayarlar. Bu
+            &ouml;zellik yalnızca border-spacing:seperate olduğunda &ccedil;alışır.</p>
+        </td>
+        <td>
+          <p><em>length length</em></p>
+        </td>
+        <td>
+          <p>Bitişik h&uuml;crelerin kenarları arasındaki mesafeyi px, cm vb. cinsinden belirtir. Negatif
+            değerlere izin verilmez.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>border-top</p>
+          <p>border-top-color</p>
+          <p>border-top-style</p>
+          <p>border-top-width</p>
+          <p>border-top-left-radius</p>
+          <p>border-top-right-radius</p>
+        </td>
+        <td colspan="2">
+          <p>Kutunun sadece &uuml;st kısmına bu css leri uygular.</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>border-bottom</p>
+          <p>border-bottom-color</p>
+          <p>border-bottom-style</p>
+          <p>border-bottom-width</p>
+          <p>border-bottom-left-radius</p>
+          <p>border-bottom-right-radius</p>
+        </td>
+        <td colspan="2">
+          <p>Kutunun sadece alt kısmına bu css leri uygular.</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>border-left</p>
+          <p>border-left-color</p>
+          <p>border-left-style</p>
+          <p>border-left-width</p>
+        </td>
+        <td colspan="2">
+          <p>Kutunun sadece sol kısmına bu css leri uygular.</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>border-right</p>
+          <p>border-right-color</p>
+          <p>border-right-style</p>
+          <p>border-right-width</p>
+        </td>
+        <td colspan="2">
+          <p>Kutunun sadece sağ kısmına bu css leri uygular.</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>border-block</p>
+          <p>border-block-color</p>
+          <p>border-block-syle</p>
+          <p>vorder-block-width</p>
+          <p>border-block-end</p>
+          <p>border-block-end-color</p>
+          <p>border-block-end-style</p>
+          <p>border-block-end-width</p>
+          <p>border-block-start</p>
+          <p>border-block-start-color</p>
+          <p>border-block-start-style</p>
+          <p>border-block-start-width</p>
+        </td>
+        <td colspan="2">
+          <p>Kutunun sadece &uuml;st ve alt kısmına bu css leri uygular.</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>border-inline</p>
+          <p>border-inline-color</p>
+          <p>border-inline-syle</p>
+          <p>vorder-inline-width</p>
+          <p>border-inline-end</p>
+          <p>border-inline-end-color</p>
+          <p>border-inline-end-style</p>
+          <p>border-inline-end-width</p>
+          <p>border-inline-start</p>
+          <p>border-inline-start-color</p>
+          <p>border-inline-start-style</p>
+          <p>border-inline-start-width</p>
+        </td>
+        <td colspan="2">
+          <p>Kutunun sadece sol ve sağ &uuml;st ve alt kısmına bu css leri uygular.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- border-style Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      border-style
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p class="a">Lorem ipsum dolor sit amet.</p>
+      <p class="b">Lorem ipsum dolor sit amet.</p>
+      <p class="c">Lorem ipsum dolor sit amet.</p>
+      <p class="d">Lorem ipsum dolor sit amet.</p>
+      <p class="e">Lorem ipsum dolor sit amet.</p>
+      <p class="f">Lorem ipsum dolor sit amet.</p>
+      <p class="g">Lorem ipsum dolor sit amet.</p>
+      <p class="h">Lorem ipsum dolor sit amet.</p>
+      <p class="i">Lorem ipsum dolor sit amet.</p>
+      <p class="j">Lorem ipsum dolor sit amet.</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p.a {border-style: none;}
+p.b {border-style: hidden;}
+p.c {border-style: dotted;}
+p.d {border-style: dashed;}
+p.e {border-style: solid;}
+p.f {border-style: double;}
+p.g {border-style: groove;}
+p.h {border-style: ridge;}
+p.i {border-style: inset;}
+p.j {border-style: outset;}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- border-color Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      border-color
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, illum.</p>
+      <p class="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ipsam?</p>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+p{
+  border-style:solid;
+}
+
+p.one{
+  border-color:red;
+}
+
+p.two{
+  border-color:blue;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- border-radius Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      border-radius
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div{
+  background-color:aqua;
+  border-style:solid;
+  border-color:red;
+	margin:50px;
+	width:200px;
+	height:200px;
+}
+
+/* top-left,top-right,bottom-right,bottom-left */
+div.box1{
+  border-radius:15px 50px 30px 5px;
+}
+
+/* top-left,top-right,bottom-right and bottom-left */
+div.box2{
+  border-radius:15px 50px 30px;
+}
+
+/* top-left and bottom-right,top-right and bottom-left */
+div.box3{
+  border-radius:15px 50px;
+}
+
+/* all corners */
+div.box4{
+  border-radius:15px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- border-collapse Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      border-collapse
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <table id="table1">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Griffin</td>
+        </tr>
+        <tr>
+          <td>Lois</td>
+          <td>Griffin</td>
+        </tr>
+      </table>
+
+      <table id="table2">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Griffin</td>
+        </tr>
+        <tr>
+          <td>Lois</td>
+          <td>Griffin</td>
+        </tr>
+      </table>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+table, td, th {
+  border: 1px solid black;
+}
+
+#table1 {
+  border-collapse: separate;
+}
+
+#table2 {
+  border-collapse: collapse;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- border-image Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      border-image
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="myDiv"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+#myDiv{
+  height:30px;
+	width:30px;
+  background-color:yellow;
+  border:15px solid transparent;
+  padding:15px;
+  border-image-source:url("images/Beşiktaş JK Favicon.png");
+  border-image-repeat:stretch;
+  border-image-slice:30;
+  border-image-width:10px;
+  border-image-outset:10px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- border-spacing Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      border-spacing
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <table id="table1">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Griffin</td>
+        </tr>
+        <tr>
+          <td>Lois</td>
+          <td>Griffin</td>
+        </tr>
+      </table>
+
+      <table id="table2">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Griffin</td>
+        </tr>
+        <tr>
+          <td>Lois</td>
+          <td>Griffin</td>
+        </tr>
+      </table>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+table, td, th {
+  border: 1px solid black;
+}
+
+#table1 {
+  border-collapse: separate;
+  border-spacing:15px;
+}
+
+#table2 {
+  border-collapse: collapse;
+  border-spacing:15px 50px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

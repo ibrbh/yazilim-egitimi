@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Visibility</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Visibility</h1>
+
+  <!-- Visibility Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Visibility Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="5">
+          visibility
+        </td>
+        <td rowspan="5">
+          G&ouml;r&uuml;n&uuml;rl&uuml;k &ouml;zelliği, bir &ouml;ğenin g&ouml;r&uuml;n&uuml;r olup olmadığını
+          belirtir.
+        </td>
+        <td>
+          visible
+        </td>
+        <td>
+          Varsayılan değer. &Ouml;ğe g&ouml;r&uuml;n&uuml;r
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hidden
+        </td>
+        <td>
+          &Ouml;ğe gizlidir (ancak yine de yer kaplar)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          collapse
+        </td>
+        <td>
+          Yalnızca tablo satırları (&lt;tr&gt;), satır grupları (&lt;tbody&gt;), s&uuml;tunlar (&lt;col&gt;),
+          s&uuml;tun grupları (&lt;colgroup&gt;) i&ccedil;in. Bu değer bir satırı veya s&uuml;tunu kaldırır
+          ancak tablo d&uuml;zenini etkilemez. Satır veya s&uuml;tunun kapladığı alan diğer i&ccedil;erikler
+          i&ccedil;in kullanılabilecektir.
+          Diğer &ouml;ğelerde daraltma kullanılırsa "gizli" olarak g&ouml;r&uuml;nt&uuml;lenir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          initial
+        </td>
+        <td>
+          Bu &ouml;zelliği varsayılan değerine ayarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          inherit
+        </td>
+        <td>
+          Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      Editör 1
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+h1{
+  color:blue;
+  text-align:center;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

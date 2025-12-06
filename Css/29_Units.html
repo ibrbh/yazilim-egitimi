@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Units</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Units</h1>
+  
+  <h2>Mutlak (Absolute) Uzunluk Birimleri</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Birim</strong>
+        </td>
+        <td>
+          <strong>İsim</strong>
+        </td>
+        <td>
+          <strong>A&ccedil;ıklama</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cm
+        </td>
+        <td>
+          santimetre
+        </td>
+        <td>
+          1 cm = 37,8 px
+        </td>
+      </tr>
+      <tr>
+        <td>
+          mm
+        </td>
+        <td>
+          milimetre
+        </td>
+        <td>
+          1 mm = 3,78 px
+        </td>
+      </tr>
+      <tr>
+        <td>
+          in
+        </td>
+        <td>
+          in&ccedil;
+        </td>
+        <td>
+          1 in = 96 px
+        </td>
+      </tr>
+      <tr>
+        <td>
+          px
+        </td>
+        <td>
+          piksel
+        </td>
+        <td>
+          1 px = (1/96) in
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pt
+        </td>
+        <td>
+          point
+        </td>
+        <td>
+          1 pt = (1/72) in
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pc
+        </td>
+        <td>
+          picas
+        </td>
+        <td>
+          1 pc = 12 pt
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Göreceli (Relative) Uzunluk Birimleri</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>Birim</strong>
+        </td>
+        <td>
+          <strong>A&ccedil;ıklama</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          em
+        </td>
+        <td>
+          em boyutu belgenin yazı tipi b&uuml;y&uuml;kl&uuml;ğ&uuml;ne bağlıdır. &Ouml;rneğin body{font-size:16px;} ise
+          2em = 32px olacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ex
+        </td>
+        <td>
+          ex birimi em ile aynı mantıkta &ccedil;alışır ,&ldquo;ge&ccedil;erli yazı tipinin x y&uuml;ksekliği&rdquo;
+          veya bir &ldquo;em&lsquo; in yarısı&rdquo; olarak tanımlanır. Belirli bir fontun x y&uuml;ksekliği ise, o
+          fontun k&uuml;&ccedil;&uuml;k harf x&rsquo;inin y&uuml;ksekliğidir. Yazı tipi ailesi değiştik&ccedil;e
+          değişir. Nadiren kullanılan bir birimdir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ch
+        </td>
+        <td>
+          ch birimi ex birimine benzer ancak k&uuml;&ccedil;&uuml;k harf x karakterinin y&uuml;ksekliği yerine 0 (sıfır)
+          karakterinin y&uuml;ksekliğini alır. Yine font ailesine bağlı olarak değişkenlik g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          rem
+        </td>
+        <td>
+          rem boyutu ize k&ouml;k dizinin yazı b&uuml;y&uuml;kl&uuml;ğ&uuml;ne bağlıdır. &Ouml;rneğin
+          html{font-size:10px;} ise 2rem = 20px olacaktır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          vw
+        </td>
+        <td>
+          viewport width yani g&ouml;r&uuml;nt&uuml; alanı genişliğine bağlı bir uzunluk birimidir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          vh
+        </td>
+        <td>
+          viewport height yani g&ouml;r&uuml;nt&uuml; alanı y&uuml;ksekliğine bağlı bir uzunluk birimidir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          vmin
+        </td>
+        <td>
+          G&uuml;r&uuml;n&uuml;m alanının y&uuml;ksekliği k&uuml;&ccedil;&uuml;k olan tarafının 1/100'&uuml;ne eşit.
+          &Ouml;rnek ekranın Y&uuml;ksekliği genişiğinden daha k&uuml;&ccedil;&uuml;k ise vmin değeri
+          1vh=Y&uuml;ksekliğe bağlı uzunluk birimi oluyor.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          vmax
+        </td>
+        <td>
+          G&uuml;r&uuml;n&uuml;m alanının y&uuml;ksekliği b&uuml;y&uuml;k olan tarafının 1/100'&uuml;ne eşit. &Ouml;rnek
+          ekranın Y&uuml;ksekliği genişiğinden daha k&uuml;&ccedil;&uuml;k ise vmax değeri 1vw=genişliğe bağlı uzunluk
+          birimi oluyor.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          %
+        </td>
+        <td>
+          İ&ccedil;inde bulunduğu elemana bağlı olarak değişir.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
+</html>

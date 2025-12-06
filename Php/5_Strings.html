@@ -1,20 +1,155 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PHP</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>PHP</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Strings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Strings</h1>
 
-    <script src="editor.js"></script>
-  </body>
+  <h2>Strings Metodları</h2>
+  <div><strong>strlen() : </strong> Metnin karakter sayısını döndürür.</div>
+  <div><strong>str_word_count() : </strong> Metindeki kelime sayısını döndürür.</div>
+  <div><strong>strtolower() : </strong> Metnin bütün harflerini küçük harfe çevirir.</div>
+  <div><strong>strtoupper() : </strong> Metnin bütün harflerini büyük harfe çevirir.</div>
+  <div><strong>ucfirst() : </strong> String ifadenin ilk harfini büyük harfe çevirir.</div>
+  <div><strong>str_replace() : </strong> String ifadedeki bazı karakterleri değiştirir.</div>
+  <div><strong>strrev() : </strong> String ifadeyi tersine çevirir.</div>
+  <div><strong>strpos() : </strong> Bir string ifadenin başka bir string ifade içinde kaçıncı index değerinde olduğunu
+    döndürür.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  echo strlen("Hello world!"); // outputs 12
+  echo str_word_count("Hello world!"); // outputs 2
+  echo strtolower("Hello WORLD."); // outputs hello world
+  echo strtoupper("Hello WORLD!"); // outputs HELLO WORLD
+  echo ucfirst("hello world!"); // outputs Hello world
+  echo str_replace("world", "Dolly", "Hello world!"); //   outputs Hello Dolly!
+  echo strrev("Hello world!"); // outputs !dlrow olleH
+  echo strpos("Hello world!", "world"); // outputs 6
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Diğer Strings Metodları</h2>
+  <div><strong>addcslashes() : </strong> Belirtilen karakterlerin önünde ters eğik çizgi bulunan bir dize döndürür.
+  </div>
+  <div><strong>addslashes() : </strong> Önceden tanımlanmış karakterlerin önünde ters eğik çizgi bulunan bir dize
+    döndürür.</div>
+  <div><strong>bin2hex() : </strong> Bir ASCII karakter dizisini onaltılık değerlere dönüştürür.</div>
+  <div><strong>chop() : </strong> Bir dizenin sağ ucundaki boşlukları veya diğer karakterleri kaldırır.</div>
+  <div><strong>chr() : </strong> Belirtilen ASCII değerinden bir karakter döndürür.</div>
+  <div><strong>chunk_split() : </strong> Bir dizeyi bir dizi küçük parçaya böler.</div>
+  <div><strong>convert_cyr_string() : </strong> Bir diziyi bir Kiril karakter kümesinden diğerine dönüştürür.</div>
+  <div><strong>convert_uudecode() : </strong> Uuencoded bir dizenin kodunu çözer.</div>
+  <div><strong>convert_uuencode() : </strong> Uuencode algoritmasını kullanarak bir diziyi kodlar.</div>
+  <div><strong>count_chars() : </strong> Bir dizide kullanılan karakterler hakkında bilgi verir.</div>
+  <div><strong>crc32() : </strong> Bir dizi için 32 bitlik bir CRC hesaplar.</div>
+  <div><strong>crypt() : </strong> Tek yönlü dize karma.</div>
+  <div><strong>echo() : </strong></div>
+  <div><strong>explode() : </strong> Bir dizeyi bir diziye böler.</div>
+  <div><strong>fprintf() : </strong> Belirli bir çıktı akışına biçimlendirilmiş bir dize yazar.</div>
+  <div><strong>get_html_translation_table() : </strong> htmlspecialchars() ve htmlentities() tarafından kullanılan
+    çeviri tablosunu döndürür.</div>
+  <div><strong>hebrev() : </strong> İbranice metni görsel metne dönüştürür.</div>
+  <div><strong>hebrevc() : </strong> İbranice metni görsel metne ve yeni satırları (\n) <br> biçimine dönüştürür.</div>
+  <div><strong>hex2bin() : </strong> Bir onaltılık değer dizisini ASCII karakterlerine dönüştürür.</div>
+  <div><strong>html_entity_decode() : </strong> HTML varlıklarını karakterlere dönüştürür.</div>
+  <div><strong>htmlentities() : </strong> Karakterleri HTML varlıklarına dönüştürür.</div>
+  <div><strong>htmlspecialchars_decode() : </strong> Önceden tanımlanmış bazı HTML varlıklarını karakterlere dönüştürür.
+  </div>
+  <div><strong>htmlspecialchars() : </strong> Önceden tanımlanmış bazı karakterleri HTML varlıklarına dönüştürür.</div>
+  <div><strong>implode() : </strong> Bir dizinin öğelerinden bir dize döndürür.</div>
+  <div><strong>join() : </strong> implode() takma adı</div>
+  <div><strong>lcfirst() : </strong> Bir dizenin ilk karakterini küçük harfe dönüştürür.</div>
+  <div><strong>levenshtein() : </strong> İki dizi arasındaki Levenshtein mesafesini döndürür.</div>
+  <div><strong>localeconv() : </strong> Yerel sayısal ve parasal biçimlendirme bilgilerini döndürür.</div>
+  <div><strong>ltrim() : </strong> Bir dizenin sol tarafındaki boşlukları veya diğer karakterleri kaldırır.</div>
+  <div><strong>md5() : </strong> Bir dizenin MD5 karmasını hesaplar.</div>
+  <div><strong>md5_file() : </strong> Bir dosyanın MD5 karmasını hesaplar.</div>
+  <div><strong>metaphone() : </strong> Bir dizinin metafon anahtarını hesaplar.</div>
+  <div><strong>money_format() : </strong> Para birimi dizesi olarak biçimlendirilmiş bir dize döndürür.</div>
+  <div><strong>nl_langinfo() : </strong> Belirli yerel bilgileri döndürür.</div>
+  <div><strong>nl2br() : </strong> Bir dizedeki her yeni satırın önüne HTML satır sonları ekler.</div>
+  <div><strong>number_format() : </strong> Bir sayıyı gruplandırılmış binlerle biçimlendirir.</div>
+  <div><strong>ord() : </strong> Bir dizenin ilk karakterinin ASCII değerini döndürür.</div>
+  <div><strong>parse_str() : </strong> Bir sorgu dizesini değişkenlere ayrıştırır.</div>
+  <div><strong>print() : </strong> Bir veya daha fazla dizi çıktısı verir.</div>
+  <div><strong>printf() : </strong> Biçimlendirilmiş bir dize çıkarır.</div>
+  <div><strong>quoted_printable_decode() : </strong> Alıntılanan yazdırılabilir bir dizeyi 8 bitlik bir dizeye
+    dönüştürür.</div>
+  <div><strong>quoted_printable_encode() : </strong> 8 bitlik bir diziyi alıntılanmış yazdırılabilir bir dizeye
+    dönüştürür.</div>
+  <div><strong>quotemeta() : </strong> Meta karakterlerden alıntılar.</div>
+  <div><strong>rtrim() : </strong> Bir dizenin sağ tarafındaki boşlukları veya diğer karakterleri kaldırır.</div>
+  <div><strong>setlocale() : </strong> Yerel bilgileri ayarlar.</div>
+  <div><strong>sha1() : </strong></div>
+  <div><strong>sha1_file() : </strong> Bir dosyanın SHA-1 karmasını hesaplar.</div>
+  <div><strong>similar_text() : </strong> İki dizi arasındaki benzerliği hesaplar.</div>
+  <div><strong>soundex() : </strong> Bir dizenin soundex anahtarını hesaplar.</div>
+  <div><strong>sprintf() : </strong> Bir değişkene biçimlendirilmiş bir dize yazar.</div>
+  <div><strong>sscanf() : </strong> Bir diziden girişi bir formata göre ayrıştırır.</div>
+  <div><strong>str_getcsv() : </strong> Bir CSV dizesini bir diziye ayrıştırır.</div>
+  <div><strong>str_ireplace() : </strong> Bir dizedeki bazı karakterleri değiştirir (büyük/küçük harfe duyarsız).</div>
+  <div><strong>str_pad() : </strong> Bir dizeyi yeni bir uzunluğa kadar doldurur.</div>
+  <div><strong>str_repeat() : </strong> Bir dizeyi belirtilen sayıda tekrarlar.</div>
+  <div><strong>str_rot13() : </strong> Bir dizide ROT13 kodlamasını gerçekleştirir.</div>
+  <div><strong>str_shuffle() : </strong> Bir dizideki tüm karakterleri rastgele karıştırır.</div>
+  <div><strong>str_split() : </strong> Bir dizeyi bir diziye böler.</div>
+  <div><strong>strcasecmp() : </strong> İki diziyi karşılaştırır (büyük/küçük harfe duyarsız).</div>
+  <div><strong>strchr() : </strong> Bir dizginin başka bir dizge içinde ilk geçtiği yeri bulur (strstr() takma adı).
+  </div>
+  <div><strong>strcmp() : </strong> İki diziyi karşılaştırır (büyük/küçük harfe duyarlı).</div>
+  <div><strong>strcoll() : </strong> İki diziyi karşılaştırır (yerel ayar tabanlı dizi karşılaştırması).</div>
+  <div><strong>strcspn() : </strong> Belirtilen bazı karakterlerin herhangi bir kısmı bulunmadan önce bir dizide bulunan
+    karakter sayısını döndürür.</div>
+  <div><strong>strip_tags() : </strong> Bir dizeden HTML ve PHP etiketlerini çıkarır.</div>
+  <div><strong>stripcslashes() : </strong> addcslashes() ile alıntılanan bir dizgenin tırnaklarını kaldırır.</div>
+  <div><strong>stripslashes() : </strong> Addslashes() ile alıntılanan bir dizenin tırnaklarını kaldırır.</div>
+  <div><strong>stripos() : </strong> Bir dizgenin başka bir dizge içinde ilk geçtiği konumu döndürür (büyük/küçük harfe
+    duyarsız).</div>
+  <div><strong>stristr() : </strong> Bir dizginin başka bir dizge içindeki ilk geçtiği yeri bulur (büyük/küçük harfe
+    duyarsız).</div>
+  <div><strong>strnatcasecmp() : </strong> Bir "doğal sıra" algoritması (büyük/küçük harfe duyarsız) kullanarak iki
+    diziyi karşılaştırır.</div>
+  <div><strong>strnatcmp() : </strong> Bir "doğal sıra" algoritması (büyük/küçük harfe duyarlı) kullanarak iki diziyi
+    karşılaştırır.</div>
+  <div><strong>strncasecmp() : </strong> İlk n karakterin dize karşılaştırması (büyük/küçük harfe duyarsız).</div>
+  <div><strong>strncmp() : </strong> İlk n karakterin dize karşılaştırması (büyük/küçük harfe duyarlı).</div>
+  <div><strong>strpbrk() : </strong> Bir dizi karakterden herhangi biri için bir dize arar.</div>
+  <div><strong>strrchr() : </strong> Bir dizginin başka bir dizge içinde son geçtiği yeri bulur.</div>
+  <div><strong>strripos() : </strong> Bir dizgenin başka bir dizge içinde son geçtiği konumu bulur (büyük/küçük harfe
+    duyarsız).</div>
+  <div><strong>strrpos() : </strong> Bir dizginin başka bir dizge içinde son geçtiği konumu bulur (büyük/küçük harfe
+    duyarlı).</div>
+  <div><strong>strspn() : </strong> Yalnızca belirli bir karakter listesindeki karakterleri içeren bir dizede bulunan
+    karakter sayısını döndürür.</div>
+  <div><strong>strstr() : </strong> Bir dizginin başka bir dizge içindeki ilk geçtiği yeri bulur (büyük/küçük harfe
+    duyarlı).</div>
+  <div><strong>strtok() : </strong> Bir diziyi daha küçük dizilere böler.</div>
+  <div><strong>strtr() : </strong> Bir dizideki belirli karakterleri çevirir.</div>
+  <div><strong>substr() : </strong> Bir dizenin bir bölümünü döndürür.</div>
+  <div><strong>substr_compare() : </strong> Belirtilen bir başlangıç ​​konumundan iki diziyi karşılaştırır (ikili
+    güvenli ve isteğe bağlı olarak büyük/küçük harfe duyarlı).</div>
+  <div><strong>substr_count() : </strong> Bir dizede bir alt dizenin kaç kez oluştuğunu sayar.</div>
+  <div><strong>substr_replace() : </strong> Bir dizenin bir bölümünü başka bir dizeyle değiştirir.</div>
+  <div><strong>trim() : </strong> Bir dizenin her iki tarafındaki boşlukları veya diğer karakterleri kaldırır.</div>
+  <div><strong>ucwords() : </strong> Bir dizedeki her kelimenin ilk karakterini büyük harfe dönüştürür.</div>
+  <div><strong>vfprintf() : </strong> Belirli bir çıktı akışına biçimlendirilmiş bir dize yazar.</div>
+  <div><strong>vprintf() : </strong> Biçimlendirilmiş bir dize çıkarır.</div>
+  <div><strong>vsprintf() : </strong> Bir değişkene biçimlendirilmiş bir dize yazar.</div>
+  <div><strong>wordwrap() : </strong> Bir dizeyi belirli sayıda karaktere kaydırır.</div>
+  <script src="editor.js"></script>
+</body>
+
 </html>

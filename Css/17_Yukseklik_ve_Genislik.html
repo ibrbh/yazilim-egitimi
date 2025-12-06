@@ -1,32 +1,339 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>CSS</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Yükseklik ve Genişlik</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Yükseklik ve Genişlik</h1>
+
+  <!-- Yükseklik ve Genişlik Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4">Yükseklik ve Genişlik Özellikleri</th>
+      </tr>
+      <tr>
+        <td>Özellik</td>
+        <td>Tanım</td>
+        <td>Değer</td>
+        <td>Tanım</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="5">
+          <p>height</p>
+        </td>
+        <td rowspan="5">
+          <p>Bir elemanın y&uuml;ksekliğini ayarlar.</p>
+        </td>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Tarayıcı y&uuml;ksekliği hesaplar. Bu varsayılandır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Y&uuml;ksekliği px, cm vb. cinsinden tanımlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>Y&uuml;ksekliği i&ccedil;eren bloğun y&uuml;zdesi olarak tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>width</p>
+        </td>
+        <td rowspan="5">
+          <p>Bir elemanın genişliğini ayarlar.</p>
+        </td>
+        <td>
+          <p>auto</p>
+        </td>
+        <td>
+          <p>Varsayılan değer. Tarayıcı genişliği hesaplar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Genişliği px, cm vb. cinsinden tanımlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>Genişliği i&ccedil;eren bloğun y&uuml;zdesi olarak tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>max-height</p>
+        </td>
+        <td rowspan="5">
+          <p>Bir elemanın maksimum y&uuml;ksekliğini ayarlar.</p>
+        </td>
+        <td>
+          <p>none</p>
+        </td>
+        <td>
+          <p>Maksimum y&uuml;kseklik yok. Bu varsayılandır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Maksimum y&uuml;ksekliği px, cm vb. cinsinden tanımlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren bloğun maksimum y&uuml;ksekliğini y&uuml;zde olarak tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>max-width</p>
+        </td>
+        <td rowspan="5">
+          <p>Bir elemanın maksimum genişliğini ayarlar.</p>
+        </td>
+        <td>
+          <p>none</p>
+        </td>
+        <td>
+          <p>Maksimum genişlik yok. Bu varsayılandır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Maksimum genişliği px, cm vb. cinsinden tanımlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren bloğun maksimum genişliğini y&uuml;zde olarak tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>min-height</p>
+        </td>
+        <td rowspan="4">
+          <p>Bir elemanın minimum y&uuml;ksekliğini ayarlar.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Varsayılan değer 0'dır. Minimum y&uuml;ksekliği piksel, cm vb. cinsinden tanımlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren bloğun minimum y&uuml;ksekliğini y&uuml;zde olarak tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+          <p>min-width</p>
+        </td>
+        <td rowspan="4">
+          <p>Bir elemanın minimum genişliğini ayarlar.</p>
+        </td>
+        <td>
+          <p><em>length</em></p>
+        </td>
+        <td>
+          <p>Varsayılan değer 0'dır. Minimum genişliği piksel, cm vb. cinsinden tanımlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><em>%</em></p>
+        </td>
+        <td>
+          <p>İ&ccedil;eren bloğun minimum genişliğini y&uuml;zde olarak tanımlar</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>initial</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği varsayılan değerine ayarlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>inherit</p>
+        </td>
+        <td>
+          <p>Bu &ouml;zelliği &uuml;st &ouml;ğesinden devralır.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      width ve height
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div{
+  background-color:black;
+  width:100px;
+  height:500px;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

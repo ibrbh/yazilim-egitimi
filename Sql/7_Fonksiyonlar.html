@@ -1,18 +1,189 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SQL</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>SQL</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Fonksiyonlar</title>
+  <script src="https://sql.js.org/dist/sql-wasm.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Fonksiyonlar</h1>
+
+  <div><strong>MIN() : </strong> Seçilen sütunun en küçük değerini döndürür.</div>
+  <div><strong>MAX() : </strong> Seçilen sütunun en büyük değerini döndürür.</div>
+  <div><strong>COUNT() : </strong> Belirtilen ölçütle eşleşen satır sayısını döndürür.</div>
+  <div><strong>AVG() : </strong> Sayısal bir sütunun ortalama değerini döndürür.</div>
+  <div><strong>SUM() : </strong> Sayısal bir sütunun toplam toplamını döndürür.</div>
+  <div><strong>LENGTH : </strong> Bir dizenin uzunluğunu döndürür (bayt cinsinden).</div>
+  <div><strong>LEFT : </strong> Bir dizeden belirli sayıda karakteri çıkarır (soldan başlayarak).</div>
+  <div><strong>RIGHT : </strong> Bir dizeden belirli sayıda karakteri çıkarır (sağdan başlayarak).</div>
+  <div><strong>CONCAT : </strong> İki veya daha fazla ifadeyi birlikte ekler.</div>
+  <div><strong>LOWER : </strong> Bir dizeyi küçük harfe dönüştürür.</div>
+  <div><strong>UPPER : </strong> Bir dizeyi büyük harfe dönüştürür.</div>
+  <div><strong>TRIM : </strong> Bir dizenin başındaki ve sonundaki boşlukları kaldırır.</div>
+
+  <!-- products -->
+  <table>
+    <thead>
+      <th colspan="6">products</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>ProductID</strong>
+        </td>
+        <td>
+          <strong>ProductName</strong>
+        </td>
+        <td>
+          <strong>SupplierID</strong>
+        </td>
+        <td>
+          <strong>CategoryID</strong>
+        </td>
+        <td>
+          <strong>Unit</strong>
+        </td>
+        <td>
+          <strong>Price</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          Chais
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          10 boxes x 20 bags
+        </td>
+        <td>
+          18
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2
+        </td>
+        <td>
+          Chang
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          24 - 12 oz bottles
+        </td>
+        <td>
+          19
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3
+        </td>
+        <td>
+          Aniseed Syrup
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          12 - 550 ml bottles
+        </td>
+        <td>
+          10
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4
+        </td>
+        <td>
+          Chef Anton's Cajun Seasoning
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          48 - 6 oz jars
+        </td>
+        <td>
+          22
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5
+        </td>
+        <td>
+          Chef Anton's Gumbo Mix
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          36 boxes
+        </td>
+        <td>
+          21.35
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="editor1">SELECT MIN(Price) AS SmallestPrice FROM Products;
+-- SELECT MAX(Price) AS LargestPrice FROM Products;
+-- SELECT COUNT(ProductID) FROM Products;
+-- SELECT AVG(Price) FROM Products;
+-- SELECT SUM(Price) FROM Products;
+-- SELECT LENGTH("SQL Tutorial") AS LengthOfString;
+-- SELECT LENGTH(CustomerName) AS LengthOfName FROM Customers;
+-- SELECT LEFT("SQL Tutorial", 3) AS ExtractString;
+-- SELECT LEFT(CustomerName, 5) AS ExtractString FROM Customers;
+-- SELECT RIGHT("SQL Tutorial is cool", 4) AS ExtractString;
+-- SELECT RIGHT(CustomerName, 5) AS ExtractString FROM Customers;
+-- SELECT CONCAT("SQL ", "is ", "fun!") AS ConcatenatedString;
+-- SELECT CONCAT(Address, " ", City) AS Address FROM Customers;
+-- SELECT LOWER("SQL Tutorial is FUN!");
+-- SELECT LOWER(CustomerName) AS LowercaseCustomerName FROM Customers;
+-- SELECT UPPER("SQL Tutorial is FUN!");
+-- SELECT UPPER(CustomerName) AS LowercaseCustomerName FROM Customers;
+-- SELECT TRIM('    SQL Tutorial    ') AS TrimmedString;
+</textarea><br>
+    <button onclick="runSQL('editor1')">Çalıştır</button>
+    <iframe id="editor1_out"></iframe>
+  </div>
+
+
+</body>
+
 </html>
