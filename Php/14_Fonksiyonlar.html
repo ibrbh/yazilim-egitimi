@@ -5,31 +5,170 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Giriş ve Yorum Satırı</title>
+  <title>Fonksiyonlar</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <a href="index.html">Ana Sayfa</a>
   <hr />
-  <h1>Giriş ve Yorum Satırı</h1>
+  <h1>Fonksiyonlar</h1>
+
+  <h2>Fonksiyon Tanımlama</h2>
+  <div>PHP’de fonksiyon tanımlamak için <code>function</code> anahtar kelimesi kullanılır.</div>
+
+  <h4>Syntax</h4>
+  <div><code>
+    function fonksiyonAdi() {// çalışacak kodlar}
+  </code></div>
 
   <!-- Örnek -->
   <div class="editor-box">
     <div class="editor" contenteditable="true">&lt;?php
-  echo "Merhaba Dünya!";
-  
-  // This is a single-line comment
+  function selamVer() {
+    echo "Merhaba!";
+  }
 
-  /*
-  This is a multi-line comment
-  */
+  selamVer(); // Fonksiyonu çağırma
 ?&gt;</div>
     <button class="runBtn">Çalıştır</button>
     <div class="output"></div>
   </div>
 
+  <h2>Parametre Alan Fonksiyon</h2>
+  <div>Fonksiyon çalışırken dışarıdan değer alabilir.</div>
 
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  function topla($a, $b) {
+    echo $a + $b;
+  }
+
+  topla(5, 3); // 8
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Varsayılan (Default) Parametre</h2>
+  <div>Parametre gönderilmezse kullanılacak varsayılan değer tanımlanabilir.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  function selam($isim = "Ziyaretçi") {
+    echo "Hoş geldin, $isim!";
+  }
+
+  selam();          // Hoş geldin, Ziyaretçi!
+  selam("İbrahim"); // Hoş geldin, İbrahim!
+
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Return Kullanımı</h2>
+  <div>Fonksiyon içinde hesaplanan bir değeri dışarıya döndürmek için <code>return</code> kullanılır.</div>
+  
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  function carp($a, $b) {
+      return $a * $b;
+  }
+
+  $sonuc = carp(4, 5);
+  echo $sonuc;  // 20
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Birden Fazla Değer Döndürme</h2>
+  <div>PHP fonksiyonları tek bir değer döndürür ama diziyle birden fazla değer döndürebiliriz.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  function bilgiler() {
+  return ["İbrahim", 25, "Programcı"];
+  }
+
+  list($isim, $yas, $meslek) = bilgiler();
+
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Değişken Sayıda Parametre (Spread/...)</h2>
+  <div><code>...$parametre</code> ile fonksiyona sınırsız sayıda değer gönderilebilir.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  function toplam(...$sayılar) {
+  return array_sum($sayılar);
+  }
+
+  echo toplam(1, 2, 3, 4); // 10
+
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Fonksiyon İçinde Global Değişken Kullanımı</h2>
+  <div>Normalde fonksiyon içinde dışarıdaki değişkenlere erişilemez. Erişmek için <code>global</code> kullanılır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $x = 10;
+
+  function yazdir() {
+      global $x;
+      echo $x;
+  }
+
+  yazdir(); // 10
+
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Anonim (İsimsiz) Fonksiyon</h2>
+  <div>Fonksiyon adı yoktur; genelde değişkene atanır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $mesaj = function() {
+  echo "Bu bir anonim fonksiyon.";
+  };
+
+  $mesaj();
+
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Arrow Functions (Kısa Fonksiyon)</h2>
+  <div>PHP 7.4+ ile gelen, tek satırlık fonksiyon şeklidir.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $carp = fn($a, $b) => $a * $b;
+  echo $carp(3, 4); // 12
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
 
   <script src="editor.js"></script>
 </body>

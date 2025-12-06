@@ -40,9 +40,53 @@
 
     <h2>Switch Bloğu</h2>
 
-    <h2>Ternary Operatörü</h2>
+    <div><strong>switch : </strong>Bir değişkenin değerine göre farklı kod blokları çalıştırmak için kullanılan kontrol yapısıdır. Birden fazla koşulu daha düzenli şekilde yazmamızı sağlar.</div>
+    <div><strong>case : </strong>switch yapısının içinde kontrol edilen değerin hangi duruma eşit olduğunu belirleyen ifadelerdir. Değer eşleşirse o bloğun içindeki kodlar çalışır.</div>
+    <div><strong>break : </strong>case bloğunun çalıştıktan sonra switch yapısından çıkmasını sağlar. Kullanılmazsa alttaki case’ler de çalışmaya devam eder (fall-through).</div>
+    <div><strong>default : </strong>Hiçbir case ifadesi eşleşmezse çalışan varsayılan bloktur. switch yapısının else karşılığıdır.</div>
 
-    
+    <img src="images/Switch_Case_Break_Default.png" alt="">
+
+    <!-- Örnek -->
+    <div class="editor-box">
+      <div class="editor" contenteditable="true">&lt;?php
+  $gun = "Salı";
+  switch ($gun) {
+    case "Pazartesi":
+      echo "Hafta başladı!";
+      break;
+
+    case "Salı":
+      echo "Bugün Salı.";
+      break;
+
+    case "Çarşamba":
+      echo "Haftanın ortası.";
+      break;
+
+    default:
+      echo "Geçerli bir gün değil.";
+  }
+?&gt;</div>
+      <button class="runBtn">Çalıştır</button>
+      <div class="output"></div>
+    </div>
+
+    <h2>Ternary Operatörü</h2>
+    <div>PHP’de ternary operatörü (üçlü operatör), kısa bir if–else yapısı yazmamızı sağlayan pratik bir karşılaştırma operatörüdür.</div>
+
+    <div><code>şart ? doğruysa : yanlışsa</code></div>
+
+    <!-- Örnek -->
+    <div class="editor-box">
+      <div class="editor" contenteditable="true">&lt;?php
+  $yas = 18;
+  $sonuc = ($yas >= 18) ? "Reşit" : "Reşit değil";
+  echo $sonuc;
+?&gt;</div>
+      <button class="runBtn">Çalıştır</button>
+      <div class="output"></div>
+    </div>
 
     <script src="editor.js"></script>
   </body>

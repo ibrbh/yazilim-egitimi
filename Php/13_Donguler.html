@@ -5,31 +5,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Giriş ve Yorum Satırı</title>
+  <title>Döngüler</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <a href="index.html">Ana Sayfa</a>
   <hr />
-  <h1>Giriş ve Yorum Satırı</h1>
+  <h1>Döngüler</h1>
+
+  <h2>While</h2>
+  <div>Bir koşul true olduğu sürece kod bloğunu tekrar tekrar çalıştıran döngüdür.</div>
 
   <!-- Örnek -->
   <div class="editor-box">
     <div class="editor" contenteditable="true">&lt;?php
-  echo "Merhaba Dünya!";
-  
-  // This is a single-line comment
+  $sayi = 1;
+  while ($sayi &lt;= 5) {
+    echo $sayi;
+    $sayi++;
+  }
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>  
 
-  /*
-  This is a multi-line comment
-  */
+  <h2>Do While</h2>
+  <div>Kod bloğunu önce bir kez çalıştırıp ardından koşulu kontrol eden döngü yapısıdır.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $sayi = 1;
+
+  do {
+      echo $sayi;
+      $sayi++;
+  } while ($sayi &lt;= 5);
 ?&gt;</div>
     <button class="runBtn">Çalıştır</button>
     <div class="output"></div>
   </div>
 
+  <h2>For</h2>
+  <div>Belirli bir başlangıç, bitiş ve artış değerine göre çalışan döngüdür.</div>
 
+  <div><code>for (başlangıç; koşul; arttırma) { ... }</code></div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  for ($i = 1; $i &lt;= 5; $i++) {
+    echo $i;
+  }
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Foreach</h2>
+  <div>Bir dizinin elemanlarını anahtar–değer şeklinde veya sadece değer olarak tek tek dönen döngüdür.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $meyveler = ["Elma", "Armut", "Kiraz"];
+
+  foreach ($meyveler as $meyve) {
+      echo $meyve;
+  }
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  $kisiler = ["ad" => "Ali", "yas" => 25];
+
+  foreach ($kisiler as $key => $value) {
+      echo "$key : $value";
+  }
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Continue</h2>
+  <div>O anki döngü adımını atlayıp döngünün bir sonraki adımına geçer.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  for ($i = 1; $i &lt;= 10; $i++) {
+    if ($i == 5) {
+        continue;   // 5 yazılmadan döngü devam eder
+    }
+    echo $i;
+  }
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
+
+  <h2>Break</h2>
+  <div>Döngüyü tamamen durduran komuttur.</div>
+
+  <!-- Örnek -->
+  <div class="editor-box">
+    <div class="editor" contenteditable="true">&lt;?php
+  for ($i = 1; $i &lt;= 10; $i++) {
+    if ($i == 5) {
+        break;   // 5 yazılmadan döngü devam eder
+    }
+    echo $i;
+  }
+?&gt;</div>
+    <button class="runBtn">Çalıştır</button>
+    <div class="output"></div>
+  </div>
 
   <script src="editor.js"></script>
 </body>
