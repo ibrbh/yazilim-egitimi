@@ -22,6 +22,9 @@ document.querySelectorAll("[data-editor]").forEach((editor) => {
               <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"><\/script>
               <script src="https://unpkg.com/@babel/standalone/babel.min.js"><\/script>
               <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+              <script src="https://unpkg.com/redux@4.2.1/dist/redux.js"></script>
+              <script src="https://unpkg.com/@reduxjs/toolkit@1.9.5/dist/redux-toolkit.umd.js"></script>
+              <script src="https://unpkg.com/react-redux@8.0.5/dist/react-redux.js"></script>
             </head>
             <body>
               <div id="root"></div>
