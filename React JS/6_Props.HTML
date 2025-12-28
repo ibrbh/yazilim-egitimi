@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Props</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Props</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Props</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
 
-    <h2>Props Nedir?</h2>
-    <div>
-      Props, bileşenlere dışarıdan veri aktarımı yapmanızı sağlar. Bileşenlerin
-      dışarıdan alıp kullanabileceği, salt okunur (read-only) verilerdir. Bir
-      bileşen, props aracılığıyla aldığı verilere göre farklı şekilde render
-      edilebilir.
-    </div>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Props</h1>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-function Welcome(props){
-  return(
-    <div>
-        <h1>Hello {props.name} {props.surname}</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-  )
-}
+  <h2>Props Nedir?</h2>
+  <div>
+    Props, bileşenlere dışarıdan veri aktarımı yapmanızı sağlar. Bileşenlerin
+    dışarıdan alıp kullanabileceği, salt okunur (read-only) verilerdir. Bir
+    bileşen, props aracılığıyla aldığı verilere göre farklı şekilde render
+    edilebilir.
+  </div>
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/6_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import Welcome from "./components/Welcome";
 
 function App() {
   return (
@@ -61,18 +54,75 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/6_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            Welcome.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react'
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+function Welcome(props){
+  return(
+    <div>
+        <h1>Hello {props.name} {props.surname}</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  )
+}
+
+export default Welcome</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/6_3.png" alt="" width="80%">
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/6_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import Welcome from "./components/Welcome";
+
+function App() {
+  return (
+    <div className="App">
+      <Welcome name="Rafa" surname="Silva"/>
+      <Welcome name="Vaclav" surname="Cerny"/>
+      <Welcome name="Tammy" surname="Abraham"/>
+    </div>
+  );
+}
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/6_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            Welcome.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react'
+
 function Welcome(props){
   const name = props.name;
   const surname = props.surname
@@ -84,6 +134,27 @@ function Welcome(props){
   )
 }
 
+export default Welcome</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/6_3.png" alt="" width="80%">
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/6_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import Welcome from "./components/Welcome";
+
 function App() {
   return (
     <div className="App">
@@ -93,18 +164,21 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/6_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            Welcome.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react'
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
 function Welcome(props){
   const {name,surname} = props;
   return(
@@ -115,6 +189,27 @@ function Welcome(props){
   )
 }
 
+export default Welcome</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/6_3.png" alt="" width="80%">
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/6_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import Welcome from "./components/Welcome";
+
 function App() {
   return (
     <div className="App">
@@ -124,18 +219,21 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/6_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            Welcome.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react'
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
 function Welcome({name,surname}){
   return(
     <div>
@@ -145,33 +243,58 @@ function Welcome({name,surname}){
   )
 }
 
+export default Welcome</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/6_3.png" alt="" width="80%">
+
+  <h2>Props Varsayılan Değerler</h2>
+  <div>
+    Bileşenlere varsayılan prop değerleri atanabilir. Bunun için defaultProps
+    kullanılabilir.
+  </div>
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/6_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import Welcome from "./components/Welcome";
+
 function App() {
   return (
     <div className="App">
+      <Welcome/>
       <Welcome name="Rafa" surname="Silva"/>
       <Welcome name="Vaclav" surname="Cerny"/>
       <Welcome name="Tammy" surname="Abraham"/>
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/6_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            Welcome.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react'
 
-    <h2>Props Varsayılan Değerler</h2>
-    <div>
-      Bileşenlere varsayılan prop değerleri atanabilir. Bunun için defaultProps
-      kullanılabilir.
-    </div>
-
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
 function Welcome({name,surname}){
   return(
     <div>
@@ -186,42 +309,32 @@ Welcome.defaultProps = {
   surname:"Yalçın"
 }
 
-function App() {
-  return (
-    <div className="App">
-      <Welcome/>
-      <Welcome name="Rafa" surname="Silva"/>
-      <Welcome name="Vaclav" surname="Cerny"/>
-      <Welcome name="Tammy" surname="Abraham"/>
-    </div>
-  );
-}
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default Welcome</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/6_4.png" alt="" width="80%">
 
-    <h2>Bileşenlerin İç İçe Kullanımı</h2>
-    <div>
-      Bir bileşen başka bir bileşeni içerebilir ve props'ları bu alt bileşenlere
-      iletebilir. Bu, uygulamanın yapısını modüler ve hiyerarşik hale getirir.
-    </div>
+  <h2>Bileşenlerin İç İçe Kullanımı</h2>
+  <div>
+    Bir bileşen başka bir bileşeni içerebilir ve props'ları bu alt bileşenlere
+    iletebilir. Bu, uygulamanın yapısını modüler ve hiyerarşik hale getirir.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-function Welcome({player}){
-  return(
-    <div>
-        <h1>Hello {player.name} {player.surname}</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-  )
-}
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/6_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import Welcome from "./components/Welcome";
 
 function App() {
   const players = [{name:"Rafa",surname:"Silva"},{name:"Vaclav",surname:"Cerny"},{name:"Tammy",surname:"Abraham"}]
@@ -234,18 +347,21 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/6_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            Welcome.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react'
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
 function Welcome({player}){
   return(
     <div>
@@ -254,6 +370,27 @@ function Welcome({player}){
     </div>
   )
 }
+
+export default Welcome</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/6_3.png" alt="" width="80%">
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/6_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import Welcome from "./components/Welcome";
 
 function App() {
   const players = [{name:"Rafa",surname:"Silva"},{name:"Vaclav",surname:"Cerny"},{name:"Tammy",surname:"Abraham"}]
@@ -268,11 +405,39 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/6_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            Welcome.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react'
 
-    <script src="editor.js"></script>
-  </body>
+function Welcome({player}){
+  return(
+    <div>
+        <h1>Hello {player.name} {player.surname}</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  )
+}
+
+export default Welcome</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/6_3.png" alt="" width="80%">
+
+  <script src="editor.js"></script>
+</body>
+
 </html>

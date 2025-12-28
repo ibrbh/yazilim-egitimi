@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>useState</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>useState</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>useState</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
 
-    <div>
-      React JS’te useState, fonksiyonel bileşenlerde state (durum) yönetmek için
-      kullanılan en temel Hook’tur. Bir bileşenin içinde veri saklamanı, bu
-      veriyi güncellemeni ve güncellendiğinde bileşenin yeniden render
-      edilmesini sağlar. useState, bir bileşende değişebilen verileri
-      yönetmemizi sağlar.Örneğin; bir butona tıklayınca sayının artması, input
-      alanına yazınca ekranda değişmesi, açılır menünün açık/kapalı olması gibi
-      durumlarda state kullanırız.
-    </div>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>useState</h1>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-// import { useState } from "react";
+  <div>
+    React JS’te useState, fonksiyonel bileşenlerde state (durum) yönetmek için
+    kullanılan en temel Hook’tur. Bir bileşenin içinde veri saklamanı, bu
+    veriyi güncellemeni ve güncellendiğinde bileşenin yeniden render
+    edilmesini sağlar. useState, bir bileşende değişebilen verileri
+    yönetmemizi sağlar.Örneğin; bir butona tıklayınca sayının artması, input
+    alanına yazınca ekranda değişmesi, açılır menünün açık/kapalı olması gibi
+    durumlarda state kullanırız.
+  </div>
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/7_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import { useState } from "react";
 
 function App() {
-    const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
     const [count, setCount] = useState(0);
+    // Burada count değişkeni 0 olarak tanımlanmıştır.
 
     const arttir = () => (
         setCount(count + 1)
+        // count değişkenini 1 arttırır.
     )
 
     const azalt = () => (
         setCount(count - 1)
+        // count değişkenini 1 azaltır.
     )
 
     return (
@@ -67,13 +69,20 @@ function App() {
       </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea>
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/7_2.png" alt="" width="80%">
 
-    <div>useState sadece fonksiyon bileşenlerinde kullanılabilir Class componentlerde this.state ve this.setState vardı. Hook'lar gelince fonksiyon komponentlerde de state yönetimi mümkün hale geldi.</div><br>
-    <div>useState her zaman en üst seviyede çalışır. Döngü içinde, koşul (if) içinde, iç içe fonksiyon içinde kullanılamaz.</div>
+  <div>useState sadece fonksiyon bileşenlerinde kullanılabilir Class componentlerde this.state ve this.setState vardı.
+    Hook'lar gelince fonksiyon komponentlerde de state yönetimi mümkün hale geldi.</div><br>
+  <div>useState her zaman en üst seviyede çalışır. Döngü içinde, koşul (if) içinde, iç içe fonksiyon içinde
+    kullanılamaz.</div>
 
-    <script src="editor.js"></script>
-  </body>
+  <script src="editor.js"></script>
+</body>
+
 </html>

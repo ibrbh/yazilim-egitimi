@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>React JSX</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>React JSX</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>React JSX</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
 
-    <!-- JSX Nedir -->
-    <div>
-      <strong>JSX : </strong>JSX, JavaScript kodu içinde HTML benzeri bir
-      sözdizimi kullanmanıza olanak tanır. Bu, bileşenleri daha okunabilir ve
-      yazımı daha kolay hale getirir. JSX, tarayıcılar tarafından doğrudan
-      desteklenmez; bu nedenle, JSX kodu React tarafından React.createElement
-      çağrılarına dönüştürülür.
-    </div>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>React JSX</h1>
 
-    <h2>.js ile .jsx Farkı</h2>
-    <img src="./images/js_vs_jsx.png" alt="" />
+  <!-- JSX Nedir -->
+  <div>
+    <strong>JSX : </strong>JSX, JavaScript kodu içinde HTML benzeri bir
+    sözdizimi kullanmanıza olanak tanır. Bu, bileşenleri daha okunabilir ve
+    yazımı daha kolay hale getirir. JSX, tarayıcılar tarafından doğrudan
+    desteklenmez; bu nedenle, JSX kodu React tarafından React.createElement
+    çağrılarına dönüştürülür.
+  </div>
 
-    <h2>Temel Özellikler</h2>
+  <h2>.js ile .jsx Farkı</h2>
+  <img src="./images/js_vs_jsx.png" alt="" />
 
-    <!-- HTML Benzeri Söz Dizimi -->
-    <div>
-      <strong>HTML Benzeri Sözdizimi : </strong>JSX, HTML benzeri bir
-      sözdizimine sahiptir ancak bazı farklar içerir. Örneğin, class yerine
-      className, for yerine htmlFor kullanılır.
-    </div>
+  <h2>Temel Özellikler</h2>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- HTML Benzeri Söz Dizimi -->
+  <div>
+    <strong>HTML Benzeri Sözdizimi : </strong>JSX, HTML benzeri bir
+    sözdizimine sahiptir ancak bazı farklar içerir. Örneğin, class yerine
+    className, for yerine htmlFor kullanılır.
+  </div>
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+
 function App() {
   return (
     <div className="App">
@@ -63,26 +64,33 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-    </textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_2.png" alt="" width="80%">
 
-    <!-- Javascript İfadeleri -->
-    <div>
-      <strong>JavaScript İfadeleri : </strong>JSX içinde JavaScript ifadeleri
-      süslü parantezler {} kullanılarak eklenir. Bu, dinamik verileri JSX içinde
-      kullanmanızı sağlar.
-    </div>
+  <!-- Javascript İfadeleri -->
+  <div>
+    <strong>JavaScript İfadeleri : </strong>JSX içinde JavaScript ifadeleri
+    süslü parantezler {} kullanılarak eklenir. Bu, dinamik verileri JSX içinde
+    kullanmanızı sağlar.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+
 function App() {
   const name = "İbrahim Yılmaz"
   return (
@@ -91,26 +99,33 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-    </textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_3.png" alt="" width="80%">
 
-    <!-- Koşullu Render Etme (Ternary Operatörü) -->
-    <div>
-      <strong>Koşullu Render Etme (Ternary Operatörü) : </strong>JSX içinde
-      koşullu render işlemleri yapmak için JavaScript koşul ifadeleri
-      kullanılabilir.
-    </div>
+  <!-- Koşullu Render Etme (Ternary Operatörü) -->
+  <div>
+    <strong>Koşullu Render Etme (Ternary Operatörü) : </strong>JSX içinde
+    koşullu render işlemleri yapmak için JavaScript koşul ifadeleri
+    kullanılabilir.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+
 function App() {
   const control = true;
   return (
@@ -119,26 +134,33 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-    </textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_4.png" alt="" width="80%">
 
-    <!-- Kısa Devre Mantığı (Short-Circuiting) -->
-    <div>
-      <strong>Kısa Devre Mantığı (Short-Circuiting) : </strong>&& operatörünün
-      solundaki ifade true ise sağındaki ifadeyi çalıştırır, false ise
-      çalıştırmaz.
-    </div>
+  <!-- Kısa Devre Mantığı (Short-Circuiting) -->
+  <div>
+    <strong>Kısa Devre Mantığı (Short-Circuiting) : </strong>&& operatörünün
+    solundaki ifade true ise sağındaki ifadeyi çalıştırır, false ise
+    çalıştırmaz.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+
 function App() {
   const isLoggedIn = true;
   return (
@@ -147,25 +169,32 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-    </textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_5.png" alt="" width="80%">
 
-    <!-- Liste Render Etme -->
-    <div>
-      <strong>Liste Render Etme : </strong>JSX içinde listeleri render etmek
-      için JavaScript dizileri ve map() metodunu kullanabilirsiniz.
-    </div>
+  <!-- Liste Render Etme -->
+  <div>
+    <strong>Liste Render Etme : </strong>JSX içinde listeleri render etmek
+    için JavaScript dizileri ve map() metodunu kullanabilirsiniz.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+
 function App() {
   const players = ["Rafa Silva","Tammy Abraham","Vaclav Cerny","El Bilal Toure","Orkun Kökçü","Cengiz Ünder","Jota Silva"];
 
@@ -184,29 +213,33 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));
-    </textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_6.png" alt="" width="80%">
 
-    <!-- JSX Bileşenler -->
-    <h2>JSX Bileşenler</h2>
-    <div>
-      JSX, React bileşenleri ile birleştiğinde güçlü bir yapı sunar. Bileşenler,
-      JSX kullanarak kullanıcı arayüzlerinin farklı parçalarını tanımlar
-    </div>
+  <!-- JSX Bileşenler -->
+  <h2>JSX Bileşenler</h2>
+  <div>
+    JSX, React bileşenleri ile birleştiğinde güçlü bir yapı sunar. Bileşenler,
+    JSX kullanarak kullanıcı arayüzlerinin farklı parçalarını tanımlar
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-function Welcome(props){
-  return <h1>Hello {props.name}!</h1>
-}
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import Welcome from "./components/Welcome";
 
 function App() {
   return (
@@ -215,25 +248,56 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/4_7.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            Welcome.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react'
 
-    <!-- JSX Attributes -->
-    <h2>JSX Attributes</h2>
+function Welcome(props) {
+  return (
     <div>
-      JSX içinde HTML özniteliklerini (attributes) JavaScript değişkenleriyle
-      birleştirebilirsiniz. Ayrıca, JSX'te camelCase sözdizimi kullanılır.
+        <h1>Hello {props.name}</h1>
     </div>
+  )
+}
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+export default Welcome;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_8.png" alt="" width="80%">
+
+  <!-- JSX Attributes -->
+  <h2>JSX Attributes</h2>
+  <div>
+    JSX içinde HTML özniteliklerini (attributes) JavaScript değişkenleriyle
+    birleştirebilirsiniz. Ayrıca, JSX'te camelCase sözdizimi kullanılır.
+  </div>
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+
 function App() {
   const name = "İbrahim Yılmaz"
 
@@ -243,25 +307,33 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_9.png" alt="" width="80%">
 
-    <!-- JSX Event -->
-    <h2>JSX Event</h2>
-    <div>
-      JSX içinde olay işleyicileri (event handlers) eklemek mümkündür. Event
-      isimleri JavaScript'teki camelCase formatında olmalıdır.
-    </div>
+  <!-- JSX Event -->
+  <h2>JSX Event</h2>
+  <div>
+    JSX içinde olay işleyicileri (event handlers) eklemek mümkündür. Event
+    isimleri JavaScript'teki camelCase formatında olmalıdır.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+
 function App() {
   function handleClick(){
     alert("Button clicked!")
@@ -275,26 +347,34 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_10.png" alt="" width="80%">
 
-    <!-- JSX Style -->
-    <h2>JSX Style</h2>
-    <div>
-      JSX içinde stil eklemek için inline stil nesneleri kullanabilirsiniz. Stil
-      özellikleri JavaScript objesi olarak tanımlanır ve camelCase formatında
-      olmalıdır.
-    </div>
+  <!-- JSX Style -->
+  <h2>JSX Style</h2>
+  <div>
+    JSX içinde stil eklemek için inline stil nesneleri kullanabilirsiniz. Stil
+    özellikleri JavaScript objesi olarak tanımlanır ve camelCase formatında
+    olmalıdır.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+
 function App() {
   const style = {
     color:"blue",
@@ -309,27 +389,35 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_11" alt="" width="80%">
 
-    <!-- JSX Formlar -->
-    <h2>JSX Formlar</h2>
-    <div>
-      JSX içinde formlar ve form elemanları oluşturmak mümkündür. Form
-      elemanlarının değerlerini yönetmek için React state'ini kullanabilirsiniz.
-    </div>
+  <!-- JSX Formlar -->
+  <h2>JSX Formlar</h2>
+  <div>
+    JSX içinde formlar ve form elemanları oluşturmak mümkündür. Form
+    elemanlarının değerlerini yönetmek için React state'ini kullanabilirsiniz.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/4_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import { useState } from "react";
+
 function App() {
-  const {useState} = React;
   const [inputValue,setInputValue] = useState("");
 
   function handleChange(event){
@@ -337,7 +425,7 @@ function App() {
   }
 
   function handleSubmit(event){
-    alert("A name was submitted"+inputValue);
+    alert( `A name was submitted ${inputValue}`);
     event.preventDefault();
   }
 
@@ -352,11 +440,15 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/4_12" alt="" width="80%">
 
-    <script src="editor.js"></script>
-  </body>
+  <script src="editor.js"></script>
+</body>
+
 </html>

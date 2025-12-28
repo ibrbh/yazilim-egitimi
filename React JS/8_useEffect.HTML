@@ -1,51 +1,48 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>useEffect</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>useEffect</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>useEffect</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
 
-    <div>
-      React JS’te useEffect, bir bileşen render olduğunda, güncellendiğinde veya
-      ortadan kalktığında (unmount) çalıştırmak istediğimiz yan etkileri (side
-      effects) yönetmemizi sağlayan Hook’tur. Bir component’in: İlk defa ekrana
-      gelince (mount), state veya props değişince, ekrandan kaldırılınca
-      (unmount) çalıştırmak istediğimiz kodları yazdığımız yerdir. Buna yan etki
-      (side effect) denir. Şu durumlarda kullanılır: API’den veri çekmek
-      (fetch), Event listener eklemek / kaldırmak, localStorage’a veri
-      kaydetmek, zamanlayıcı ve interval kullanmak, DOM ile etkileşim (scroll,
-      title değiştirme vs.)
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>useEffect</h1>
+
+  <div>
+    React JS’te useEffect, bir bileşen render olduğunda, güncellendiğinde veya
+    ortadan kalktığında (unmount) çalıştırmak istediğimiz yan etkileri (side
+    effects) yönetmemizi sağlayan Hook’tur. Bir component’in: İlk defa ekrana
+    gelince (mount), state veya props değişince, ekrandan kaldırılınca
+    (unmount) çalıştırmak istediğimiz kodları yazdığımız yerdir. Buna yan etki
+    (side effect) denir. Şu durumlarda kullanılır: API’den veri çekmek
+    (fetch), Event listener eklemek / kaldırmak, localStorage’a veri
+    kaydetmek, zamanlayıcı ve interval kullanmak, DOM ile etkileşim (scroll,
+    title değiştirme vs.)
+  </div>
+
+  <!-- useEffect Syntax -->
+  <div class="react-editor" data-editor>
+    <div class="editor-header">
+      useEffect Syntax
+      <button class="run-btn hide">Çalıştır</button>
     </div>
-
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn hide">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+    <textarea class="react-code">
 useEffect(() => {
   // Bu kodlar sayfa her render edildiğinde çalışır.
 });
@@ -56,23 +53,23 @@ useEffect(() => {
 
 useEffect(() => {
   // Bu kodlar sayfa ilk render edildiğinde ve state1 ve state2 render edildiğinde çalışır. 
-}, [state1,state2]);</textarea
-      >
-      <iframe class="output hide"></iframe>
-    </div>
+}, [state1,state2]);</textarea>
+    <iframe class="output hide"></iframe>
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-// import { useState,useEffect } from "react";
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/8_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import { useState,useEffect } from "react";
 
 function App() {
-  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
-  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
   const [count,setCount] = useState(0);
 
   useEffect(() => {
@@ -80,7 +77,6 @@ function App() {
       setCount(count + 1);
     }, 1000);
   });
-  
 
   return (
     <div className="App">
@@ -88,23 +84,28 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-// import { useState,useEffect } from "react";
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/8_2.png" alt="" width="80%">
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/8_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import { useState,useEffect } from "react";
 
 function App() {
-  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
-  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
   const [count,setCount] = useState(0);
 
   useEffect(() => {
@@ -120,23 +121,28 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-// import { useState,useEffect } from "react";
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/8_3.png" alt="" width="80%">
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/8_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import { useState,useEffect } from "react";
 
 function App() {
-  const {useState} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
-  const {useEffect} = React; // Uygulamalarda yukarıdaki import lu yapı kullanılır.
   const [count,setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
 
@@ -161,11 +167,16 @@ function App() {
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
 
-    <script src="editor.js"></script>
-  </body>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/8_4.png" alt="" width="80%">
+
+  <script src="editor.js"></script>
+</body>
+
 </html>

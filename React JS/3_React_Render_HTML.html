@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>React Render HTML</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>React Render HTML</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>React Render HTML</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
 
-    <!-- index.html -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        index.html
-        <button class="run-btn hide">Çalıştır</button>
-      </div>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>React Render HTML</h1>
 
-      <textarea class="react-code">
+  <!-- index.html -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/3_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            index.html
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">
 <!doctype html>
   <html lang="tr">
     <head>
@@ -45,47 +44,66 @@
       <div id="root"></div>
       <script type="module" src="/src/main.jsx"></script>
     </body>
-  </html></textarea
-      >
-      <iframe class="output hide"></iframe>
-    </div>
+  </html></textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-    <!-- main.jsx -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        main.jsx
-        <button class="run-btn hide">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+  <!-- main.jsx -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/3_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            main.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
+import './index.css'
 
-createRoot(document.getElementById('root')).render(<App />)</textarea
-      >
-      <iframe class="output hide"></iframe>
-    </div>
+createRoot(document.getElementById('root')).render(<App />)</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-    <!-- App.jsx -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        App.jsx
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
+  <!-- App.jsx -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/3_3.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">
+import "./App.css";
+
 function App() {
+  
   return (
-    <div>
-      <h2>Merhaba React!</h2>
+    <div className="App">
+      Hello React
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea
-      >
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-    <script src="editor.js"></script>
-  </body>
+  <!-- Sonuç -->
+  <img src="images/3_4.png" alt="" width="80%">
+
+  <script src="editor.js"></script>
+</body>
+
 </html>

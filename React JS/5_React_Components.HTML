@@ -1,105 +1,170 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>React Components</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>React Components</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>React Components</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
 
-    <div>
-      React bileşenleri, UI'nin belirli bir bölümünü temsil eden bağımsız,
-      tekrar kullanılabilir kod parçalarıdır. Bileşenler, fonksiyon veya sınıf
-      temelli olabilir.
-    </div>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>React Components</h1>
 
-    <h2>Fonksiyonel Bileşenler</h2>
-    <div>
-      En basit ve en yaygın bileşen türüdür. Bir fonksiyon olarak tanımlanırlar
-      ve bir JSX (JavaScript XML) kodu dönerler. JSX, HTML benzeri bir sözdizimi
-      ile JavaScript'te kullanıcı arayüzleri tanımlamaya olanak tanır.
-      Fonksiyonel bileşenler daha hafif ve performanslı olduğundan, modern React
-      uygulamalarında daha sık tercih edilir. Visual Studio Code' de ilk yapıyı
-      oluşturmak için "rafc", ikinci yapıyı oluşturmak için "ffc" kullanılır.
-    </div>
+  <div>
+    React bileşenleri, UI'nin belirli bir bölümünü temsil eden bağımsız,
+    tekrar kullanılabilir kod parçalarıdır. Bileşenler, fonksiyon veya sınıf
+    temelli olabilir.
+  </div>
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-// export const BirinciYapi = () => {
-//   return(
-//     <div>Hello World!</div>
-//   )
-// }
+  <h2>Fonksiyonel Bileşenler</h2>
+  <div>
+    En basit ve en yaygın bileşen türüdür. Bir fonksiyon olarak tanımlanırlar
+    ve bir JSX (JavaScript XML) kodu dönerler. JSX, HTML benzeri bir sözdizimi
+    ile JavaScript'te kullanıcı arayüzleri tanımlamaya olanak tanır.
+    Fonksiyonel bileşenler daha hafif ve performanslı olduğundan, modern React
+    uygulamalarında daha sık tercih edilir. Visual Studio Code' de ilk yapıyı
+    oluşturmak için "rafc" ve "rafce", ikinci yapıyı oluşturmak için "rfc" ve "rfce" kullanılır.
+  </div>
 
-function İkinciYapi(){
-  return(
-    <div>Hello World!</div>
-  )
-}
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/5_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import { FirstComponent } from "./components/FirstComponent";
+import SecondComponent from "./components/SecondComponent";
 
 function App() {
   return (
     <div className="App">
-      <İkinciYapi/>
+      <FirstComponent/>
+      <SecondComponent/>
     </div>
   );
 }
-ReactDOM.render(<App />, document.getElementById('root'));</textarea>
-      <iframe class="output"></iframe>
-    </div>
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/5_2.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            FirstComponent.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react';
 
-    <h2>Sınıf Bileşenleri</h2>
-    <div>
-      Daha karmaşık yapılar için kullanılan bileşen türüdür. React.Component
-      sınıfından türetilirler ve bir render() metodu içerirler. Visual Studio
-      Code' de aşağıdaki yapıyı oluşturmak için "rcc" kullanılır.
-    </div>
+export const FirstComponent = () => {
+  return (
+    <div>FirstComponent</div>
+  )
+}</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/5_3.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            SecondComponent.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React from 'react';
 
-    <!-- Örnek Uygulama -->
-    <div class="react-editor" data-editor>
-      <div class="editor-header">
-        Editör 1
-        <button class="run-btn">Çalıştır</button>
-      </div>
-      <textarea class="react-code">
-//import React,{Componet} from "react";
-//
-//class İkinciYapi extends Component{
-//  render(){
-//    return(
-//      <div>Hello World!</div>
-//    )
-//  }
-//}</textarea>
-      <iframe class="output"></iframe>
-    </div>
+export default function SecondComponent() {
+  return (
+    <div>SecondComponent</div>
+  )
+}</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/5_4.png" alt="" width="80%">
 
-    <script src="editor.js"></script>
-  </body>
+  <h2>Sınıf Bileşenleri</h2>
+  <div>
+    Daha karmaşık yapılar için kullanılan bileşen türüdür. React.Component
+    sınıfından türetilirler ve bir render() metodu içerirler. Visual Studio
+    Code' de aşağıdaki yapıyı oluşturmak için "rcc" kullanılır.
+  </div>
+
+  <!-- Örnek Uygulama -->
+  <table class="noline">
+    <tr class="noline">
+      <td class="noline"><img src="images/5_1.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            App.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import "./App.css";
+import ThirdComponent from "./components/ThirdComponent";
+
+function App() {
+  return (
+    <div className="App">
+      <ThirdComponent/>
+    </div>
+  );
+}
+export default App;</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+    <tr class="noline">
+      <td class="noline"><img src="images/5_5.png" alt=""></td>
+      <td colspan="3" class="noline">
+        <div class="react-editor" data-editor>
+          <div class="editor-header">
+            ThirdComponent.jsx
+            <button class="run-btn hide">Çalıştır</button>
+          </div>
+          <textarea class="react-code">import React, { Component } from 'react'
+
+export default class ThirdComponent extends Component {
+  render() {
+    return (
+      <div>ThirdComponent</div>
+    )
+  }
+}</textarea>
+          <iframe class="output hide"></iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <img src="images/5_6.png" alt="" width="80%">
+
+  <script src="editor.js"></script>
+</body>
+
 </html>
