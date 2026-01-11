@@ -263,7 +263,7 @@
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      overflow
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -275,16 +275,31 @@
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, optio.</div>
+      <div class="two">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, placeat.</div>
+      <div class="three">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, neque.</div>
+      <div class="four">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta.</div>
+      <div class="five">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, vitae.</div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
-}</textarea>
+div{
+  height:90px;
+  width:90px;
+  background-color:red;
+  margin:20px;
+  display:inline-block;
+}
+
+div.one{overflow:visible;}
+div.two{overflow:hidden;}
+div.three{overflow:clip;}
+div.four{overflow:scroll;}
+div.five{overflow:auto;}</textarea>
       </div>
     </div>
     <iframe class="output"></iframe>
@@ -293,7 +308,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      overflow
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -305,16 +320,24 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="one">Lorem ipsum dolor sit amet, consecteturconsecteturconsectetur adipisicing elit. Nulla, optio.</div><hr>
+      <div class="two">Lorem ipsum dolor, sit amet consecteturconsecteturconsectetur adipisicing elit. Eos, placeat.</div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
-}</textarea>
+div{
+  height:90px;
+  width:90px;
+  background-color:red;
+  margin:20px;
+}
+
+div.one{overflow-wrap:normal;}
+div.two{overflow-wrap:break-word;}</textarea>
       </div>
     </div>
     <iframe class="output"></iframe>

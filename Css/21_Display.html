@@ -235,7 +235,7 @@
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      display
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -247,15 +247,38 @@
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="one">One</div><span>Lorem ipsum dolor sit amet.</span><hr>
+      <div class="two">Two</div><span>Lorem ipsum dolor sit amet.</span><hr>
+      <div class="three">Three</div><span>Lorem ipsum dolor sit amet.</span><hr>
+      <div class="four">Four</div><span>Lorem ipsum dolor sit amet.</span>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+div{
+  height:50px;
+  width:50px;
+  background-color:red;
+  margin:20px;
+}
+
+div.one{
+  display:inline;
+}
+
+div.two{
+  display:block;
+}
+
+div.three{
+  display:inline-block;
+}
+
+div.four{
+  display:none;
 }</textarea>
       </div>
     </div>
