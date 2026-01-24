@@ -91,7 +91,7 @@
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      visibility:visible
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -103,15 +103,111 @@
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="one">ONE</div>
+      <div class="two">TWO</div>
+      <div class="three">THREE</div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+div{
+  display:inline-block;
+  border:1px solid black;
+  background-color:yellow;
+  width:100px;
+  height:100px;
+  margin:30px;
+}
+
+div.two{
+  visibility:visible;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      visibility:hidden
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="one">ONE</div>
+      <div class="two">TWO</div>
+      <div class="three">THREE</div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div{
+  display:inline-block;
+  border:1px solid black;
+  background-color:yellow;
+  width:100px;
+  height:100px;
+  margin:30px;
+}
+
+div.two{
+  visibility:hidden;
+}</textarea>
+      </div>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-wrapper" data-editor>
+    <div class="editor-header">
+      display:none;
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="panel-label">HTML</div>
+        <textarea class="html-code">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="one">ONE</div>
+      <div class="two">TWO</div>
+      <div class="three">THREE</div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-label">CSS</div>
+        <textarea class="css-code">
+div{
+  display:inline-block;
+  border:1px solid black;
+  background-color:yellow;
+  width:100px;
+  height:100px;
+  margin:30px;
+}
+
+div.two{
+  display:none;
 }</textarea>
       </div>
     </div>

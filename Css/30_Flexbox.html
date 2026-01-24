@@ -236,7 +236,7 @@
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      display:flex
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -248,15 +248,28 @@
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+div.container{
+  display:flex;
+  background-color:aqua;
+}
+
+div.container>div{
+  background-color:red;
+  margin:10px;
+  padding:20px;
+  font-size:30px;
 }</textarea>
       </div>
     </div>
@@ -675,7 +688,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      flexbox
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -687,15 +700,34 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div></div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+body{
+  background-color:blue;
+}
+
+div.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:200px;
+  background-color:white;
+  border:1px solid black;
+}
+
+div.container>div{
+  background-color:red;
+  width:100px;
+  height:100px;
+  border-radius:50px;
 }</textarea>
       </div>
     </div>
@@ -942,7 +974,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      flex-grow
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -954,15 +986,31 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div style="flex-grow:1">1</div>
+        <div style="flex-grow:2">2</div>
+        <div style="flex-grow:8">3</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+div.container{
+  display:flex;
+  align-items:stretch;
+  background-color:red;
+}
+
+div.container>div{
+  background-color:blue;
+  color:white;
+  margin:10px;
   text-align:center;
+  line-height:75px;
+  font-size:30px;
 }</textarea>
       </div>
     </div>
@@ -972,7 +1020,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      flex-shrink
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -984,15 +1032,39 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-shrink:0">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div  style="flex-shrink:8">8</div>
+        <div>9</div>
+        <div>10</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+div.container{
+  display:flex;
+  align-items:stretch;
+  background-color:red;
+}
+
+div.container>div{
+  background-color:blue;
+  color:white;
+  width:100px;
+  margin:10px;
   text-align:center;
+  line-height:75px;
+  font-size:30px;
 }</textarea>
       </div>
     </div>
@@ -1002,7 +1074,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      flex-basis
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1014,15 +1086,33 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis:200px">3</div>
+        <div>4</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+div.container{
+  display:flex;
+  align-items:stretch;
+  background-color:red;
+}
+
+div.container>div{
+  background-color:blue;
+  color:white;
+  width:100px;
+  margin:10px;
   text-align:center;
+  line-height:75px;
+  font-size:30px;
 }</textarea>
       </div>
     </div>
@@ -1032,7 +1122,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      align-self
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1044,15 +1134,33 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div>1</div>
+        <div style="align-self: flex-start;">2</div>
+        <div style="align-self: flex-end;">3</div>
+        <div>4</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+div.container{
+  display:flex;
+  height:200px;
+  background-color:red;
+}
+
+div.container>div{
+  background-color:blue;
+  color:white;
+  width:100px;
+  margin:10px;
   text-align:center;
+  line-height:75px;
+  font-size:30px;
 }</textarea>
       </div>
     </div>
@@ -1062,7 +1170,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      order
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1074,15 +1182,33 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div style="order:4">1</div>
+        <div style="order:3">2</div>
+        <div style="order:2">3</div>
+        <div style="order:1">4</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+div.container{
+  display:flex;
+  height:200px;
+  background-color:red;
+}
+
+div.container>div{
+  background-color:blue;
+  color:white;
+  width:100px;
+  margin:10px;
   text-align:center;
+  line-height:75px;
+  font-size:30px;
 }</textarea>
       </div>
     </div>

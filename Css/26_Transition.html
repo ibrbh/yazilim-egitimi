@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Transation</title>
+  <title>Transition</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
   <link rel="stylesheet"
@@ -18,7 +18,7 @@
 <body>
   <a href="index.html">Ana Sayfa</a>
   <hr />
-  <h1>Transation</h1>
+  <h1>Transition</h1>
 
   <!-- Transation Özellik Tablosu -->
   <table>
@@ -271,7 +271,7 @@
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      transation
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -283,15 +283,26 @@
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div></div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+div{
+  width:100px;
+  height:100px;
+  background:red;
+  transition-property:width;
+  transition-duration:1s;
+  transition-timing-function:linear;
+  transition-delay:0.1s;
+}
+
+div:hover{
+  width:300px;
 }</textarea>
       </div>
     </div>
@@ -301,7 +312,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      transition
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -313,15 +324,24 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div></div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+div{
+  width:100px;
+  height:100px;
+  background:red;
+  transition:width 1s linear 0.1s;
+  /* property,duration,timing-function,delay */
+}
+
+div:hover{
+  width:300px;
 }</textarea>
       </div>
     </div>

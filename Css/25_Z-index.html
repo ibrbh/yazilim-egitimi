@@ -78,7 +78,7 @@
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      z-index:1
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -90,15 +90,40 @@
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div class="one">ONE</div>
+        <div class="two">TWO</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+div{
+  height:50px;
+  width:50px;
+  padding:10px;
+  margin:10px;
+  background-color:red;
+  color:white;
+  border:5px solid black;
+}
+
+div.container{
+  height:125px;
+  width:125px;
+  background-color:aqua;
+}
+
+div.two{
+  background-color:yellow;
+  color:black;
+  position:absolute;
+  top:50px;
+  left:50px;
+  z-index:1;
 }</textarea>
       </div>
     </div>
@@ -108,7 +133,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      z-index:-1
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -120,15 +145,42 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="container">
+        <div class="one">ONE</div>
+        <div class="two">TWO</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+div{
+  height:50px;
+  width:50px;
+  padding:10px;
+  margin:10px;
+  background-color:red;
+  color:white;
+  border:5px solid black;
+}
+
+div.container{
+  position:relative;
+  height:125px;
+  width:125px;
+  background-color:aqua;
+  z-index:-2;
+}
+
+div.two{
+  background-color:yellow;
+  color:black;
+  position:absolute;
+  top:50px;
+  left:50px;
+  z-index:-1;
 }</textarea>
       </div>
     </div>
