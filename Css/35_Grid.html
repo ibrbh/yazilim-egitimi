@@ -236,7 +236,7 @@
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -248,14 +248,36 @@
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  grid-template-columns:auto auto auto;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
 }</textarea>
       </div>
@@ -1002,7 +1024,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      row-gap
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1014,14 +1036,37 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  row-gap:50px;
+  grid-template-columns:auto auto auto;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
 }</textarea>
       </div>
@@ -1032,7 +1077,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      column-gap
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1044,14 +1089,37 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  column-gap:50px;
+  grid-template-columns:auto auto auto;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
 }</textarea>
       </div>
@@ -1062,7 +1130,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      gap
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1074,14 +1142,37 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  gap:50px 20px;
+  grid-template-columns:auto auto auto;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
 }</textarea>
       </div>
@@ -1095,7 +1186,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-column-start / grid-column-end
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1107,15 +1198,43 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  gap:50px 20px;
+  grid-template-columns:auto auto auto;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
+}
+
+.item1{
+  grid-column-start:1;
+  grid-column-end:3;
 }</textarea>
       </div>
     </div>
@@ -1125,7 +1244,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-row-start / grid-row-end
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1137,15 +1256,43 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  gap:50px 20px;
+  grid-template-columns:auto auto auto;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
+}
+
+.item1{
+  grid-row-start:1;
+  grid-row-end:3;
 }</textarea>
       </div>
     </div>
@@ -1156,7 +1303,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-template
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1168,16 +1315,38 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  grid-template-columns:auto auto auto auto;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
-}</textarea>
+}
+</textarea>
       </div>
     </div>
     <iframe class="output"></iframe>
@@ -1186,7 +1355,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-template
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1198,16 +1367,38 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  grid-template-columns:80px 200px 50px 40px;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
-}</textarea>
+}
+</textarea>
       </div>
     </div>
     <iframe class="output"></iframe>
@@ -1216,7 +1407,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-template
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1228,16 +1419,39 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  grid-template-columns:80px 200px 50px 40px;
+  grid-template-rows:80px 200px;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
-}</textarea>
+}
+</textarea>
       </div>
     </div>
     <iframe class="output"></iframe>
@@ -1248,7 +1462,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-area
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1260,16 +1474,65 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item item8">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+        <div class="grid-item">13</div>
+        <div class="grid-item">14</div>
+        <div class="grid-item">15</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  grid-template-columns:auto auto auto auto auto auto;
+  gap:10px;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-item{
+  background-color:rgba(255,255,255,0.8);
+  border:1px solid rgba(0,0,0,0.8);
+  padding:20px;
+  font-size:30px;
   text-align:center;
-}</textarea>
+}
+
+.item8{
+  grid-area: 1 / 2 / 5 / 6;
+
+  /*
+  Without grid-area:
+
+  grid-row-start:1;
+  grid-column-start:2;
+  grid-row-end:5;
+  grid-column-end:6;
+
+  or
+
+  grid-row:1/5;
+  grid-column:2/6;
+
+  */
+}
+</textarea>
       </div>
     </div>
     <iframe class="output"></iframe>
@@ -1278,7 +1541,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-area
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1290,15 +1553,43 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.item1{grid-area:header;}
+.item2{grid-area:menu;}
+.item3{grid-area:main;}
+.item4{grid-area:right;}
+.item5{grid-area:footer;}
+
+.grid-container{
+  display:grid;
+  grid-template-areas:
+  "header header header header header header"
+  "menu main main main right right"
+  "menu footer footer footer footer footer"
+  ;
+  gap:10px;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-container>div{
+  background-color:rgba(255,255,255,0.8);
   text-align:center;
+  padding:20px 0;
+  font-size:30px;
 }</textarea>
       </div>
     </div>
@@ -1310,7 +1601,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-flow
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1322,15 +1613,42 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container" style="grid-auto-flow:column">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+      </div>
+
+      <br>
+
+      <div class="grid-container" style="grid-auto-flow:row">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.grid-container{
+  display:grid;
+  grid-template-columns:auto auto auto;
+  grid-template-rows:auto auto auto;
+  grid-gap:10px;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-container>div{
+  background-color:rgba(255,255,255,0.8);
   text-align:center;
+  padding:20px 0;
+  font-size:30px;
 }</textarea>
       </div>
     </div>
@@ -1342,7 +1660,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      grid-auto
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -1354,15 +1672,42 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
+.item1{grid-area:1/1/2/2;}
+.item2{grid-area:1/2/2/3;}
+.item3{grid-area:1/3/2/4;}
+.item4{grid-area:2/1/3/2;}
+.item5{grid-area:2/2/3/3;}
+.item6{grid-area:2/3/3/4;}
+
+.grid-container{
+  display:grid;
+  grid-template-columns:100px;
+  grid-template-rows:50px;
+  grid-gap:10px;
+  background-color:#2196F3;
+  padding:10px;
+}
+
+.grid-container>div{
+  background-color:rgba(255,255,255,0.8);
   text-align:center;
+  padding:20px 0;
+  font-size:30px;
 }</textarea>
       </div>
     </div>

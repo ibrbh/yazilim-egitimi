@@ -51,7 +51,7 @@
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      Responsive Design
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -61,18 +61,71 @@
 <!DOCTYPE html>
   <html lang="tr">
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
     </head>
-    <body></body>
+    <body>
+      <div class="header">
+        <h1>Chania</h1>
+        <div class="row">
+          <div class="col-3">
+            <ul>
+              <li>The Flight</li>
+              <li>The City</li>
+              <li>The Island</li>
+              <li>The Food</li>
+            </ul>
+          </div>
+          <div class="col-9">
+            <h1>The City</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima cum nam eligendi at molestias delectus enim magni consectetur. Culpa odit, nisi quidem nesciunt unde eum facilis repellendus velit asperiores veniam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eos, voluptatum totam, qui repellat vero blanditiis esse tempora vitae ut explicabo nam harum maiores temporibus voluptatibus quia eaque error. Numquam?</p>
+          </div>
+        </div>
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
-}</textarea>
+*{
+  box-sizing:border-box;
+}
+
+div{
+  border:1px solid black;
+}
+
+.header{
+  height:100px;
+  background-color:pink;
+}
+
+.row::after{
+  content:"";
+  clear:both;
+  display:table;
+}
+
+[class*="col-"]{
+  float:left;
+  height:100vh;
+  background-color:aqua;
+}
+
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}</textarea>
       </div>
     </div>
     <iframe class="output"></iframe>
@@ -83,6 +136,7 @@ h1{
   <div>Responsive media query bir CSS3 ile gelen bir özelliktir. Belirli bir koşul altında CSS kurallarının geçerli
     olmasını sağlar.</div>
 
+  <!-- Media Query Türleri -->
   <table>
     <thead>
       <tr>
@@ -127,6 +181,7 @@ h1{
     </tbody>
   </table>
 
+  <!-- Media Query Özellikleri -->
   <table>
     <thead>
       <tr>
@@ -286,6 +341,7 @@ h1{
     </tbody>
   </table>
 
+  <!-- Media Query Operatörleri -->
   <table>
     <thead>
       <tr>
@@ -335,7 +391,7 @@ h1{
   <!-- Örnek -->
   <div class="editor-wrapper" data-editor>
     <div class="editor-header">
-      Editör 1
+      Media Query
       <button class="run-btn">Çalıştır</button>
     </div>
     <div class="editor-panels">
@@ -347,45 +403,145 @@ h1{
     <head>
       <title>Document</title>
     </head>
-    <body></body>
-  </html></textarea>
-      </div>
-      <div class="panel">
-        <div class="panel-label">CSS</div>
-        <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
-}</textarea>
-      </div>
-    </div>
-    <iframe class="output"></iframe>
-  </div>
+    <body>
+      <div class="grid-container">
+        <div class="header"><h1>Chania</h1></div>
 
-  <!-- Örnek -->
-  <div class="editor-wrapper" data-editor>
-    <div class="editor-header">
-      Editör 1
-      <button class="run-btn">Çalıştır</button>
-    </div>
-    <div class="editor-panels">
-      <div class="panel">
-        <div class="panel-label">HTML</div>
-        <textarea class="html-code">
-<!DOCTYPE html>
-  <html lang="tr">
-    <head>
-      <title>Document</title>
-    </head>
-    <body></body>
+        <div class="menu">
+          <ul>
+            <li>The Flight</li>
+            <li>The City</li>
+            <li>The Island</li>
+            <li>The Food</li>
+          </ul>
+        </div>
+
+        <div class="content">
+          <h1>The City</h1>
+          <p>Chania is the capital of the Chania region on the island of Crete.</p>
+          <p>The city can be divided in two parts, the old town and the modern city. The old town is situated next to the old         harbour and is the matrix around which the whole urban        area was developed.</p>
+          <p>Chania lies along the north west coast of the island Crete.</p>
+      </div>  
+
+<div class="facts">
+  <h2>Facts:</h2>
+  <ul>
+    <li>Chania is a city on the island of Crete</li>
+    <li>Crete is a Greek island in the Mediterranean Sea</li>
+  </ul>
+</div>
+
+<div class="footer"><p>Resize the browser window to see the responsive effect.</p></div>
+  
+      </div>
+    </body>
   </html></textarea>
       </div>
       <div class="panel">
         <div class="panel-label">CSS</div>
         <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 17px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu'
+    'main'
+    'facts'
+    'footer';
+  background-color: white;
+  gap: 10px;  
+}
+
+.header {
+  grid-area: header;
+  background-color: purple;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header > h1 {
+  font-size: 40px;
+}
+
+.menu {
+  grid-area: menu;
+  }
+  
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+  
+.content {
+  grid-area: main;
+}
+
+.content > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.content > p {
+  margin-bottom: 7px;
+}
+
+.facts {
+  grid-area: facts;
+  border: 1px solid #0099cc;
+  background-color: beige;
+  padding: 10px;
+}
+
+.facts > h2 {
+  font-size: 20px;
+}
+
+.facts li {
+  margin-bottom: 5px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 3 / span 6;}
+  .footer {grid-area: 4 / span 6;}
+}
+
+@media (min-width: 768px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 2 / span 1;}
+  .footer {grid-area: 3 / span 6;}
 }</textarea>
       </div>
     </div>
@@ -396,35 +552,7 @@ h1{
   <div>Responsive resim/video oluşturmanın en kolay yolu, resmin/videonun bulunduğu kutunun içine sığmasını sağlamaktır.
   </div>
 
-  <!-- Örnek -->
-  <div class="editor-wrapper" data-editor>
-    <div class="editor-header">
-      Editör 1
-      <button class="run-btn">Çalıştır</button>
-    </div>
-    <div class="editor-panels">
-      <div class="panel">
-        <div class="panel-label">HTML</div>
-        <textarea class="html-code">
-<!DOCTYPE html>
-  <html lang="tr">
-    <head>
-      <title>Document</title>
-    </head>
-    <body></body>
-  </html></textarea>
-      </div>
-      <div class="panel">
-        <div class="panel-label">CSS</div>
-        <textarea class="css-code">
-h1{
-  color:blue;
-  text-align:center;
-}</textarea>
-      </div>
-    </div>
-    <iframe class="output"></iframe>
-  </div>
+  <img src="./images/GV4.png">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
