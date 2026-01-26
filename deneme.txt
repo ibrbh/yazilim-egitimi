@@ -14,4 +14,13 @@
   </thead>
   <tbody>
 
+<table>
+    <thead>
+        <tr>
+            <th>Sınıf</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+
 width="[^"]*"
