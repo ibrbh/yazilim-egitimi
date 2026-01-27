@@ -15,6 +15,126 @@
   <hr />
   <h1>Alert</h1>
 
+  <!-- Alert Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th>Sınıf</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>.alert</strong></p>
+        </td>
+        <td>
+          <p>Uyarı mesajı tanımlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-success</strong></p>
+        </td>
+        <td rowspan="8">
+          <p>Uyarı mesajının arkaplan rengini belirler.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-info</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-warning</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-danger</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-primary</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-secondary</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-light</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-dark</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-link</strong></p>
+        </td>
+        <td>
+          <p>Uyarı mesajına link tanımlar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.alert-dismissible</strong></p>
+        </td>
+        <td>
+          <p>Uyarı mesajına kapatma tuşu ekler.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>.fade .show</strong></p>
+        </td>
+        <td>
+          <p>Uyarı mesajındaki butonu g&uuml;zel bir şekilde kapatır.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor" data-editor>
+    <div class="editorTextareaGroup">
+      <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+      <div class="alert alert-success">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Success!</strong>
+      </div>
+      <div class="alert alert-info">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Info!</strong>
+      </div>
+      <div class="alert alert-warning alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Warning!</strong>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+  </html>
+    </textarea>
+      <button class="editorButton">Çalıştır</button>
+    </div>
+    <iframe class="editorIframe"></iframe>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>

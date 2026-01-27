@@ -15,6 +15,70 @@
   <hr />
   <h1>Scrollspy</h1>
 
+  <div>Scrollspy, kaydırma konumuna göre bir gezinme listesindeki bağlantıları otomatik olarak güncellemek için
+    kullanılır.</div>
+
+  <!-- Örnek -->
+  <div class="editor" data-editor>
+    <div class="editorTextareaGroup">
+      <textarea class="editorTextarea">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" style="position: relative;">
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#section1">Section 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section2">Section 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section3">Section 3</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+        <h1>Section 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+        the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+        the navigation bar while scrolling!</p>
+      </div>
+
+      <div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+        <h1>Section 2</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+        the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+        the navigation bar while scrolling!</p>
+      </div>
+
+      <div id="section3" class="container-fluid bg-secondary text-white" style="padding:100px 20px;">
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+        the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+        the navigation bar while scrolling!</p>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+  </html>
+    </textarea>
+      <button class="editorButton">Çalıştır</button>
+    </div>
+    <iframe class="editorIframe"></iframe>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
