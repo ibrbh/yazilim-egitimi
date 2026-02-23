@@ -10,10 +10,9 @@
       <title>Document</title>
     </head>
     <body></body>
-  </html>
-</textarea>
+  </html></textarea>
     </div>
-    <div class="panel">
+    <div class="panel hide">
       <div class="label">CSS</div>
       <textarea class="cssCode"></textarea>
     </div>

@@ -1,30 +1,218 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Output</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Output</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Output</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Output</h1>
+
+  <!-- Output Özellik Tablosu -->
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Fonksiyon
+        </th>
+        <th>
+          A&ccedil;ıklama
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+          innerHTML
+        </td>
+        <td>
+          HTML belgesindeki bir &ouml;ğenin i&ccedil;eriğini değiştirmek veya almak i&ccedil;in kullanılan bir
+          &ouml;zelliktir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          document.write()
+        </td>
+        <td>
+          HTML belgesinin i&ccedil;ine dinamik olarak i&ccedil;erik yazmak i&ccedil;in kullanılan bir
+          JavaScript y&ouml;ntemidir. Genellikle sayfa y&uuml;klenirken kullanılır. Ancak, modern web
+          geliştirmede genellikle tercih edilmez &ccedil;&uuml;nk&uuml; mevcut i&ccedil;eriği silebilir ve
+          yeniden y&uuml;klenmesine neden olabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          window.alert()
+        </td>
+        <td rowspan="2">
+          Kullanıcılara bir mesaj g&ouml;stermek i&ccedil;in kullanılan bir y&ouml;ntemdir. Bir uyarı penceresi
+          oluşturur ve bu pencerede verilen metni g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          alert()
+        </td>
+      </tr>
+      <tr>
+        <td>
+          console.log
+        </td>
+        <td>
+          Tarayıcıların geliştirici ara&ccedil;larında (console) bilgi, hata veya değişken değerlerini
+          yazdırmak i&ccedil;in kullanılan bir y&ouml;ntemdir. Bu, genellikle hata ayıklama ve geliştirme
+          s&uuml;recinde kullanılır.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>innerHTML</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <p id="demo"></p>
+
+      <script src=""></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.getElementById("demo").innerHTML = 5 + 6;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>document.write()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <script src="script.js"></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(5 + 6);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>alert()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <script src="script.js"></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">alert(5 + 6);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>console.log()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <script src="script.js"></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">console.log(5 + 6);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

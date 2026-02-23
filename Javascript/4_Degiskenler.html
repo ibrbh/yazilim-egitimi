@@ -1,30 +1,613 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Değişkenler</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Değişkenler</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Değişkenler</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Değişkenler</h1>
+
+  <h2>Değişkenler İsimlendirme Kuralları</h2>
+  <ul>
+    <li>Değişken isimleri her zaman anlamlı olarak kullanılmalıdır.</li>
+    <li>Değişken isimleri harfler ile başlayabilir. (Türkçe karakter kullanılamaz.)</li>
+    <li>Değişken isimleri _ (Alt çizgi) işareti ile başlayabilir.</li>
+    <li>Değişken isimleri $ (Dolar) işareti ile başlayabilir.</li>
+    <li>Değişken isimleri hiçbir zaman bir rakam ile başlayamaz. Fakat rakamlar değişken isimlerinde ilk karakterden
+      sonra kullanılabilir.</li>
+    <li>Değişken isimleri büyük harf / küçük harf duyarlıdır.</li>
+    <li>Aynı değişken isimleri kullanılacaksa, değişkenin değeri her zaman son yazılan değişkenin depoladığı veri
+      olacaktır.</li>
+    <li>Değişken isimleri Javascript tarafından rezerve edilmiş kelimeler olamaz.</li>
+    <li>Aynı değişken adı değişken ifadelerinde kullanılamaz.</li>
+  </ul>
+
+  <h2>Revize Kelimeler</h2>
+  <table>
+    <tr>
+      <td>abstract</td>
+      <td>closed</td>
+      <td>enum</td>
+      <td>history</td>
+      <td>length</td>
+      <td>onkeyup</td>
+      <td>propertyIsEnum</td>
+      <td>taint</td>
+    </tr>
+    <tr>
+      <td>alert</td>
+      <td>confirm</td>
+      <td>escape</td>
+      <td>Infinity</td>
+      <td>let</td>
+      <td>onload</td>
+      <td>protected</td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td>all</td>
+      <td>const</td>
+      <td>eval</td>
+      <td>if</td>
+      <td>link</td>
+      <td>onmousedown</td>
+      <td>prototype</td>
+      <td>textarea</td>
+    </tr>
+    <tr>
+      <td>anchor</td>
+      <td>constructor</td>
+      <td>event</td>
+      <td>image</td>
+      <td>location</td>
+      <td>onmouseover</td>
+      <td>public</td>
+      <td>this</td>
+    </tr>
+    <tr>
+      <td>anchors</td>
+      <td>continue</td>
+      <td>export</td>
+      <td>images</td>
+      <td>long</td>
+      <td>onmouseup</td>
+      <td>radio</td>
+      <td>throw</td>
+    </tr>
+    <tr>
+      <td>area</td>
+      <td>crypto</td>
+      <td>extends</td>
+      <td>implements</td>
+      <td>Math</td>
+      <td>onsubmit</td>
+      <td>reset</td>
+      <td>throws</td>
+    </tr>
+    <tr>
+      <td>arguments</td>
+      <td>Date</td>
+      <td>false</td>
+      <td>import</td>
+      <td>mimeTypes</td>
+      <td>open</td>
+      <td>return</td>
+      <td>top</td>
+    </tr>
+    <tr>
+      <td>Array</td>
+      <td>debugger</td>
+      <td>fileUpload</td>
+      <td>in</td>
+      <td>name</td>
+      <td>opener</td>
+      <td>screenX</td>
+      <td>toString</td>
+    </tr>
+    <tr>
+      <td>assign</td>
+      <td>decodeURI</td>
+      <td>final</td>
+      <td>innerHeight</td>
+      <td>NaN</td>
+      <td>option</td>
+      <td>screenY</td>
+      <td>transient</td>
+    </tr>
+    <tr>
+      <td>blur</td>
+      <td>decodeURIComponent</td>
+      <td>finally</td>
+      <td>innerWidth</td>
+      <td>native</td>
+      <td>outerHeight</td>
+      <td>scroll</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>boolean</td>
+      <td>default</td>
+      <td>float</td>
+      <td>instanceof</td>
+      <td>navigate</td>
+      <td>outerWidth</td>
+      <td>secure</td>
+      <td>try</td>
+    </tr>
+    <tr>
+      <td>break</td>
+      <td>defaultStatus</td>
+      <td>focus</td>
+      <td>int</td>
+      <td>navigator</td>
+      <td>package</td>
+      <td>select</td>
+      <td>typeof</td>
+    </tr>
+    <tr>
+      <td>button</td>
+      <td>delete</td>
+      <td>for</td>
+      <td>interface</td>
+      <td>new</td>
+      <td>packages</td>
+      <td>self</td>
+      <td>undefined</td>
+    </tr>
+    <tr>
+      <td>byte</td>
+      <td>do</td>
+      <td>form</td>
+      <td>isFinite</td>
+      <td>full</td>
+      <td>pageXOffset</td>
+      <td>setInterval</td>
+      <td>untaint</td>
+    </tr>
+    <tr>
+      <td>case</td>
+      <td>document</td>
+      <td>forms</td>
+      <td>isNaN</td>
+      <td>Number</td>
+      <td>pageYOffset</td>
+      <td>setTimeout</td>
+      <td>valueOf</td>
+    </tr>
+    <tr>
+      <td>catch</td>
+      <td>double</td>
+      <td>frame</td>
+      <td>isPrototypeOf</td>
+      <td>Object</td>
+      <td>parent</td>
+      <td>short</td>
+      <td>var</td>
+    </tr>
+    <tr>
+      <td>char</td>
+      <td>element</td>
+      <td>frameRate</td>
+      <td>java</td>
+      <td>offscreenBuffering</td>
+      <td>parseFloat</td>
+      <td>static</td>
+      <td>void</td>
+    </tr>
+    <tr>
+      <td>checkbox</td>
+      <td>elements</td>
+      <td>frames</td>
+      <td>JavaArray</td>
+      <td>onblur</td>
+      <td>parseInt</td>
+      <td>status</td>
+      <td>volatile</td>
+    </tr>
+    <tr>
+      <td>class</td>
+      <td>else</td>
+      <td>function</td>
+      <td>javaClass</td>
+      <td>onclick</td>
+      <td>password</td>
+      <td>String</td>
+      <td>while</td>
+    </tr>
+    <tr>
+      <td>clearInterval</td>
+      <td>embed</td>
+      <td>getClass</td>
+      <td>JavaObject</td>
+      <td>onerror</td>
+      <td>pkcs11</td>
+      <td>submit</td>
+      <td>window</td>
+    </tr>
+    <tr>
+      <td>clearTimeout</td>
+      <td>embeds</td>
+      <td>goto</td>
+      <td>JavaPackage</td>
+      <td>onfocus</td>
+      <td>plugin</td>
+      <td>super</td>
+      <td>with</td>
+    </tr>
+    <tr>
+      <td>clientInformation</td>
+      <td>encodeURI</td>
+      <td>hasOwnProperty</td>
+      <td>layer</td>
+      <td>onkeydown</td>
+      <td>privste</td>
+      <td>switch</td>
+      <td>yield</td>
+    </tr>
+    <tr>
+      <td>close</td>
+      <td>encodeURIComponent</td>
+      <td>hidden</td>
+      <td>layers</td>
+      <td>onkeypress</td>
+      <td>prompt</td>
+      <td>synchronized</td>
+      <td></td>
+    </tr>
+  </table>
+
+  <h2>Değişken Anahtar Kelimeleri</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Anahtar Kelime
+        </th>
+        <th>
+          A&ccedil;ıklama
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+          var
+        </td>
+        <td>
+          JavaScript'te değişken tanımlamak i&ccedil;in kullanılan eski bir anahtar kelimedir. Sadece
+          tanımlandıkları fonksiyon i&ccedil;inde ge&ccedil;erlidir. Eğer fonksiyon dışında tanımlanmışsa, global
+          kapsamda ge&ccedil;erli olur. Kodun &uuml;st kısmına kaldırılır, ancak yalnızca değişken adı kaldırılır;
+          değer ataması olduğu yerde kalır. Aynı kapsam i&ccedil;inde birden fazla kez var ile tanımlama
+          yapılabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          let
+        </td>
+        <td>
+          Değişken tanımlamak i&ccedil;in kullanılan daha modern bir anahtar kelimedir. Yalnızca tanımlandıkları
+          blok (&ouml;rneğin {} i&ccedil;indeki) i&ccedil;inde ge&ccedil;erlidir. Bu, d&ouml;ng&uuml;ler ve koşul
+          ifadeleri i&ccedil;inde kullanılan değişkenlerin etkisini sınırlamak i&ccedil;in faydalıdır. Kodun
+          &uuml;st kısmına kaldırılır ancak "temporal dead zone" (TDZ) olarak bilinen bir alanda erişilemezler,
+          yani tanımlandıkları satıra kadar erişim hatası verirler. Aynı blok i&ccedil;inde bir let değişkeni
+          tekrar tanımlanamaz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          const
+        </td>
+        <td>
+          Değişken tanımlamak i&ccedil;in kullanılan bir anahtar kelimedir. Değişkenin sabit bir değeri olduğunu
+          belirtir. const ile tanımlanan değişkenler, let gibi blok kapsamına sahiptir. Hoisting'e tabidir ancak
+          TDZ nedeniyle tanımlandıkları satıra kadar erişilemezler. Aynı blok i&ccedil;inde tekrar tanımlanamaz.
+          ilk atamadan sonra değiştirilemez. Ancak, eğer değişken bir nesne veya dizi ise, i&ccedil;indeki
+          elemanlar değiştirilebilir.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>var</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="demo"></div>
+
+      <script src="script.js"></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var x = 5;
+var y = 6;
+var z = x + y;
+document.getElementById("demo").innerHTML = z;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>let</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="demo"></div>
+
+      <script src="script.js"></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let x = 5;
+let y = 6;
+let z = x + y;
+document.getElementById("demo").innerHTML = z;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>const</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="demo"></div>
+
+      <script src="script.js"></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">const x = 5;
+const y = 6;
+const z = x + y;
+document.getElementById("demo").innerHTML = z;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>var & let : var</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="demo1"></div>
+      <div id="demo2"></div>
+      <div id="demo3"></div>
+
+      <script src="script.js"></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var x = 10;
+document.getElementById("demo1").innerHTML = x;
+
+{
+  var x = 2;
+  document.getElementById("demo2").innerHTML = x;
+}
+
+document.getElementById("demo3").innerHTML = x;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>var & let : let</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="demo1"></div>
+      <div id="demo2"></div>
+      <div id="demo3"></div>
+
+      <script src="script.js"></script>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let x = 10;
+document.getElementById("demo1").innerHTML = x;
+
+{
+  let x = 2;
+  document.getElementById("demo2").innerHTML = x;
+}
+
+document.getElementById("demo3").innerHTML = x;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <strong>&nbsp;</strong>
+        </td>
+        <td>
+          <strong>Scope</strong>
+        </td>
+        <td>
+          <strong>Redeclare</strong>
+        </td>
+        <td>
+          <strong>Reassign</strong>
+        </td>
+        <td>
+          <strong>Hoisted</strong>
+        </td>
+        <td>
+          <strong>Binds This</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>var</strong>
+        </td>
+        <td>
+          x
+        </td>
+        <td>
+          ✓
+        </td>
+        <td>
+          ✓
+        </td>
+        <td>
+          ✓
+        </td>
+        <td>
+          ✓
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>let</strong>
+        </td>
+        <td>
+          ✓
+        </td>
+        <td>
+          x
+        </td>
+        <td>
+          ✓
+        </td>
+        <td>
+          x
+        </td>
+        <td>
+          x
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>const</strong>
+        </td>
+        <td>
+          ✓
+        </td>
+        <td>
+          x
+        </td>
+        <td>
+          x
+        </td>
+        <td>
+          x
+        </td>
+        <td>
+          x
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

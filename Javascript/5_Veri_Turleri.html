@@ -1,30 +1,162 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Veri Türleri</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Veri Türleri</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Veri Türleri</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Veri Türleri</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Anahtar Kelime
+        </th>
+        <th>
+          A&ccedil;ıklama
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Number
+        </td>
+        <td>
+          Sayıları temsil eder. JavaScript'te int, float, double gibi ayrımlar yoktur; t&uuml;m sayılar Number
+          t&uuml;r&uuml;ndedir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          String
+        </td>
+        <td>
+          Metin verilerini temsil eder. Tek tırnak (' '), &ccedil;ift tırnak (" ") veya geri tırnak ( )
+          i&ccedil;inde tanımlanabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Boolean
+        </td>
+        <td>
+          İki değer alabilir: true veya false. Mantıksal işlemler i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Object
+        </td>
+        <td>
+          Bir grup ilgili veriyi bir arada tutan karmaşık veri t&uuml;r&uuml;d&uuml;r. Anahtar-değer
+          &ccedil;iftleri i&ccedil;erir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Array
+        </td>
+        <td>
+          Aynı veya farklı veri t&uuml;rlerinde bir grup &ouml;ğeyi saklar. Sıralı ve sıfır tabanlı diziler
+          oluşturur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Function
+        </td>
+        <td>
+          İşlevler, JavaScript'te birinci sınıf nesnelerdir. Bir işlev bir nesne gibi davranabilir, yani bir
+          değişkene atanabilir, bir parametre olarak ge&ccedil;irilebilir ve d&ouml;nd&uuml;r&uuml;lebilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Undefined
+        </td>
+        <td>
+          Bir değişken tanımlandığında ama hen&uuml;z bir değer verilmediğinde bu t&uuml;rde olur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Null
+        </td>
+        <td>
+          Bilin&ccedil;li olarak "boş" veya "yok" anlamına gelen bir değeri temsil eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Symbol
+        </td>
+        <td>
+          Benzersiz ve değiştirilemez bir değeri temsil eden bir veri t&uuml;r&uuml;d&uuml;r. Genellikle nesne
+          &ouml;zellikleri i&ccedil;in &ouml;zel anahtarlar oluşturmak amacıyla kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          BigInt
+        </td>
+        <td>
+          &Ccedil;ok b&uuml;y&uuml;k tam sayıları temsil etmek i&ccedil;in kullanılır. Number t&uuml;r&uuml;,
+          b&uuml;y&uuml;k sayıları temsil etmekte yetersiz kalabilir.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="editor-block" data-editor>
+    <h2>Number</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="age"></div>
+      <div id="temperature"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let age = 25;
+let temperature = 36.6;
+document.getElementById("age").innerHTML = age;
+document.getElementById("temperature").innerHTML = temperature;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

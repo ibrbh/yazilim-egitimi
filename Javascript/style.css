@@ -103,3 +103,11 @@ iframe {
     border: none;
     background: white;
 }
+
+.hide{
+    display: none;
+}
+
+.editor-block>h2{
+    color:white;
+}
