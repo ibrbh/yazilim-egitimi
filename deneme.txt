@@ -23,4 +23,14 @@
     </thead>
     <tbody>
 
+<table>
+    <thead>
+        <tr>
+            <th>Operatörler</th>
+            <th>İsim</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+
 width="[^"]*"

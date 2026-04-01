@@ -1,30 +1,1080 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Operatörler</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Operatörler</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Operatörler</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Operatörler</h1>
+
+  <h2>Aritmetik Operatörler</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Operatörler</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>+</strong></p>
+        </td>
+        <td>
+          <p><strong>Toplama</strong></p>
+        </td>
+        <td>
+          <p>İki sayıyı toplar veya iki stringi birleştirir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>-</strong></p>
+        </td>
+        <td>
+          <p><strong>&Ccedil;ıkarma</strong></p>
+        </td>
+        <td>
+          <p>Bir sayıyı diğerinden &ccedil;ıkarır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>*</strong></p>
+        </td>
+        <td>
+          <p><strong>&Ccedil;arpma</strong></p>
+        </td>
+        <td>
+          <p>İki sayıyı &ccedil;arpar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>**</strong></p>
+        </td>
+        <td>
+          <p><strong>&Uuml;s Alma</strong></p>
+        </td>
+        <td>
+          <p>Bir sayıyı &uuml;sl&uuml; olarak hesaplar (ES6 ile birlikte eklenmiştir).</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>/</strong></p>
+        </td>
+        <td>
+          <p><strong>B&ouml;lme</strong></p>
+        </td>
+        <td>
+          <p>Bir sayıyı diğerine b&ouml;ler.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>%</strong></p>
+        </td>
+        <td>
+          <p><strong>Mod&uuml;l</strong></p>
+        </td>
+        <td>
+          <p>Bir sayının diğerine b&ouml;l&uuml;nd&uuml;ğ&uuml;ndeki kalanı d&ouml;nd&uuml;r&uuml;r.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>++</strong></p>
+        </td>
+        <td>
+          <p><strong>Arttırma</strong></p>
+        </td>
+        <td>
+          <p>Değeri 1 artırır. &Ouml;n ek (++x) ve son ek (x++) formları vardır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>--</strong></p>
+        </td>
+        <td>
+          <p><strong>Azaltma</strong></p>
+        </td>
+        <td>
+          <p>Değeri 1 azaltır. &Ouml;n ek (--x) ve son ek (x--) formları vardır.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Aritmetik Operatörler</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(5+3);
+document.write("<br>");
+
+document.write("5"+"3");
+document.write("<br>");
+
+document.write(10-4);
+document.write("<br>");
+
+document.write(7*3);
+document.write("<br>");
+
+document.write(2**3);
+document.write("<br>");
+
+document.write(10/2);
+document.write("<br>");
+
+document.write(7%3);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Aritmetik Operatörler</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let a = 5;
+document.write(a++);
+document.write("<br>");
+document.write(a);
+document.write("<hr>");
+
+let b = 5;
+document.write(++b);
+document.write("<br>");
+document.write(b);
+document.write("<hr>");
+
+let c = 5;
+document.write(c--);
+document.write("<br>");
+document.write(c);
+document.write("<hr>");
+
+let d = 5;
+document.write(--d);
+document.write("<br>");
+document.write(d);
+document.write("<hr>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Atama Operatörleri</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Operatörler</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>=</strong></p>
+        </td>
+        <td>
+          <p><strong>Atama</strong></p>
+        </td>
+        <td>
+          <p>Bir değişkene değer atar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>+=</strong></p>
+        </td>
+        <td>
+          <p><strong>Artırma ve Atama</strong></p>
+        </td>
+        <td>
+          <p>Bir değişkenin mevcut değerine bir sayı ekler ve sonucu aynı değişkene atar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>-=</strong></p>
+        </td>
+        <td>
+          <p><strong>Azaltma ve Atama</strong></p>
+        </td>
+        <td>
+          <p>Bir değişkenin mevcut değerinden bir sayı &ccedil;ıkarır ve sonucu aynı değişkene atar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>*=</strong></p>
+        </td>
+        <td>
+          <p><strong>&Ccedil;arpma ve Atama</strong></p>
+        </td>
+        <td>
+          <p>Bir değişkenin mevcut değeri ile bir sayıyı &ccedil;arpar ve sonucu aynı değişkene atar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>/=</strong></p>
+        </td>
+        <td>
+          <p><strong>B&ouml;lme ve Atama</strong></p>
+        </td>
+        <td>
+          <p>Bir değişkenin mevcut değerini bir sayıya b&ouml;ler ve sonucu aynı değişkene atar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>%=</strong></p>
+        </td>
+        <td>
+          <p><strong>Mod&uuml;l ve Atama</strong></p>
+        </td>
+        <td>
+          <p>Bir değişkenin mevcut değerinin bir sayıya b&ouml;l&uuml;m&uuml;nden kalanı hesaplar ve sonucu aynı
+            değişkene atar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>**=</strong></p>
+        </td>
+        <td>
+          <p><strong>&Uuml;s Alma ve Atama</strong></p>
+        </td>
+        <td>
+          <p>Bir değişkenin mevcut değerinin bir &uuml;ste sahip olduğunu hesaplar ve sonucu aynı değişkene atar.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Atama Operatörler</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let a = 10;
+document.write(a);
+document.write("<br>");
+
+let b = 10;
+document.write(b+=3); //b = b + 3
+document.write("<br>");
+
+let c = 10;
+document.write(c-=3); //c = c - 3
+document.write("<br>");
+
+let d = 10;
+document.write(d*=3); //d = d * 3
+document.write("<br>");
+
+let e = 10;
+document.write(e/=3); //e = e / 3
+document.write("<br>");
+
+let f = 10;
+document.write(f%=3); //f = f % 3
+document.write("<br>");
+
+let g = 10;
+document.write(g**=3); //g = g ** 3
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Karşılaştırma Operatörleri</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Operatörler</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>==</strong></p>
+        </td>
+        <td>
+          <p><strong>Eşitlik</strong></p>
+        </td>
+        <td>
+          <p>İki değeri karşılaştırır ve eşit olup olmadıklarını kontrol eder. T&uuml;r
+            d&ouml;n&uuml;ş&uuml;m&uuml; yapar (type coercion).</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>===</strong></p>
+        </td>
+        <td>
+          <p><strong>Sıkı Eşitlik</strong></p>
+        </td>
+        <td>
+          <p>İki değeri karşılaştırır ve hem değerin hem de t&uuml;r&uuml;n eşit olup olmadığını kontrol eder.
+            T&uuml;r d&ouml;n&uuml;ş&uuml;m&uuml; yapmaz.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>!=</strong></p>
+        </td>
+        <td>
+          <p><strong>Eşit Değil</strong></p>
+        </td>
+        <td>
+          <p>İki değeri karşılaştırır ve eşit olmadıklarını kontrol eder. T&uuml;r d&ouml;n&uuml;ş&uuml;m&uuml;
+            yapar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>!==</strong></p>
+        </td>
+        <td>
+          <p><strong>Sıkı Eşit Değil</strong></p>
+        </td>
+        <td>
+          <p>İki değeri karşılaştırır ve ya değerin ya da t&uuml;r&uuml;n eşit olmadığını kontrol eder. T&uuml;r
+            d&ouml;n&uuml;ş&uuml;m&uuml; yapmaz.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&gt;&nbsp;</strong></p>
+        </td>
+        <td>
+          <p><strong>B&uuml;y&uuml;k</strong></p>
+        </td>
+        <td>
+          <p>Bir değerin diğerinden b&uuml;y&uuml;k olup olmadığını kontrol eder.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&lt;&nbsp;</strong></p>
+        </td>
+        <td>
+          <p><strong>K&uuml;&ccedil;&uuml;k</strong></p>
+        </td>
+        <td>
+          <p>Bir değerin diğerinden k&uuml;&ccedil;&uuml;k olup olmadığını kontrol eder.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&gt;=</strong></p>
+        </td>
+        <td>
+          <p><strong>B&uuml;y&uuml;k Eşit</strong></p>
+        </td>
+        <td>
+          <p>Bir değerin diğerinden b&uuml;y&uuml;k veya eşit olup olmadığını kontrol eder.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&lt;=</strong></p>
+        </td>
+        <td>
+          <p><strong>K&uuml;&ccedil;&uuml;k Eşit</strong></p>
+        </td>
+        <td>
+          <p>Bir değerin diğerinden k&uuml;&ccedil;&uuml;k veya eşit olup olmadığını kontrol eder.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>?</strong></p>
+        </td>
+        <td>
+          <p><strong>Koşul Operat&ouml;r&uuml;</strong></p>
+        </td>
+        <td>
+          <p>Bir koşulu değerlendirir ve sonu&ccedil; olarak iki değerden birini se&ccedil;er. Bu operat&ouml;re
+            genellikle "ternary operator" denir.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Karşılaştırma Operatörleri</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write("5"==5); // true
+document.write("<br>");
+
+document.write("5"===5); // false
+document.write("<br>");
+
+document.write("5"!=5); // false
+document.write("<br>");
+
+document.write("5"!==5); // true
+document.write("<br>");
+
+document.write(7>5); // true
+document.write("<br>");
+
+document.write(7<5); // false
+document.write("<br>");
+
+document.write(7>=5); // true
+document.write("<br>");
+
+document.write(7<=5); // false
+document.write("<br>");
+
+document.write((7>5)?"Yes":"No"); // "Yes"
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Mantıksal Operatörler</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Operatörler</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>&amp;&amp;</strong></p>
+        </td>
+        <td>
+          <p><strong>Ve</strong></p>
+        </td>
+        <td>
+          <p>İki veya daha fazla koşulu kontrol eder ve hepsinin doğru (true) olup olmadığını belirler. Eğer
+            t&uuml;m koşullar doğruysa, sonu&ccedil; doğru olur; aksi halde yanlış olur.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>||</strong></p>
+        </td>
+        <td>
+          <p><strong>Veya</strong></p>
+        </td>
+        <td>
+          <p>İki veya daha fazla koşulu kontrol eder ve herhangi bir koşul doğruysa, sonu&ccedil; doğru olur.
+            Yani, koşullardan en az biri doğru olmalıdır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>!</strong></p>
+        </td>
+        <td>
+          <p><strong>Değil</strong></p>
+        </td>
+        <td>
+          <p>Bir koşulun tersini alır. Koşul doğruysa yanlış yapar, yanlışsa doğru yapar.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Mantıksal Operatörler</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(true && true); // true
+document.write("<br>");
+document.write(true && false); // false
+document.write("<br>");
+document.write(false && false); // false
+document.write("<hr>");
+
+document.write(true || true); // true
+document.write("<br>");
+document.write(true || false); // true
+document.write("<br>");
+document.write(false || false); // false
+document.write("<hr>");
+
+document.write(!true); // false
+document.write("<br>");
+document.write(!false); // true</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Type Operatörleri</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Operatörler</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>typeof</strong></p>
+        </td>
+        <td>
+          <p>Bir değerin veri t&uuml;r&uuml;n&uuml; belirler. JavaScript'teki veri t&uuml;rleri hakkında bilgi
+            sağlar. typeof operat&ouml;r&uuml; null değerleri i&ccedil;in "object" d&ouml;nd&uuml;r&uuml;r, bu
+            biraz kafa karıştırıcı olabilir &ccedil;&uuml;nk&uuml; null aslında bir nesne değil, ancak bu
+            JavaScript'teki eski bir &ouml;zellikten kaynaklanır</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>instanceof</strong></p>
+        </td>
+        <td>
+          <p>Bir nesnenin belirli bir sınıftan (constructor function) veya prototipten t&uuml;retilip
+            t&uuml;retilmediğini kontrol eder. Genellikle bir nesnenin hangi t&uuml;rden olduğunu kontrol etmek
+            i&ccedil;in kullanılır.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Type Operatörleri</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(typeof 42); // number
+document.write("<br>");
+
+document.write(typeof "Hello"); // string
+document.write("<br>");
+
+document.write(typeof true); // boolean
+document.write("<br>");
+
+document.write(typeof ındefined); // undefined
+document.write("<br>");
+
+document.write(typeof {name : "John"}); // object
+document.write("<br>");
+
+document.write(typeof [1,2,3]); // object
+document.write("<br>");
+
+document.write(typeof function(){}); // function
+document.write("<br>");
+
+document.write(typeof null); // object
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Type Operatörleri</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">class Person { }
+let john = new Person();
+let numbers = [1,2,3];
+let str = "Hello";
+          
+document.write(john instanceof Person); // true
+document.write("<br>");
+
+document.write(numbers instanceof Array); // true
+document.write("<br>");
+
+document.write(numbers instanceof Object); // true
+document.write("<br>");
+
+document.write(john instanceof Object); // true
+document.write("<br>");
+
+document.write(str instanceof String); // false
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Bit İşlem Operatörleri</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Operatörler</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>&amp;</strong></p>
+        </td>
+        <td>
+          <p><strong>Bitwise AND</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, iki tam sayı arasındaki bitwise AND işlemini ger&ccedil;ekleştirir. Her iki sayının
+            bitleri karşılaştırılır ve sadece her iki bit de 1 olduğunda sonu&ccedil;ta 1 olur.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>|</strong></p>
+        </td>
+        <td>
+          <p><strong>Bitwise OR</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, iki tam sayı arasındaki bitwise OR işlemini ger&ccedil;ekleştirir. Her iki sayının
+            bitleri karşılaştırılır ve eğer herhangi bir bit 1 ise sonu&ccedil;ta 1 olur.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>^</strong></p>
+        </td>
+        <td>
+          <p><strong>Bitwise XOR</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, iki tam sayı arasındaki bitwise XOR (exclusive OR) işlemini ger&ccedil;ekleştirir.
+            Bitler karşılaştırılır ve sadece bir bit 1 ve diğer bit 0 olduğunda sonu&ccedil;ta 1 olur.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>~</strong></p>
+        </td>
+        <td>
+          <p><strong>Bitwise NOT</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitwise NOT işlemini ger&ccedil;ekleştirir. Her bit tersine
+            &ccedil;evrilir (1'ler 0 olur, 0'lar 1 olur).</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&lt;&lt;&nbsp;</strong></p>
+        </td>
+        <td>
+          <p><strong>Left Shift</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini belirli bir sayıda sola kaydırır. Sağdaki boşluklar 0 ile
+            doldurulur.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&gt;&gt;&nbsp;</strong></p>
+        </td>
+        <td>
+          <p><strong>Right Shift</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini belirli bir sayıda sağa kaydırır. En sağdaki bitler kaybolur
+            ve işaret bitinin kopyalanması sağlanır.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&lt;&lt;&lt;&nbsp;</strong></p>
+        </td>
+        <td>
+          <p><strong>Unsigned Right Shift</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini belirli bir sayıda sağa kaydırır, ancak işaret bitinin
+            kopyalanmasını sağlamaz. Bu, negatif sayılarda pozitif sonu&ccedil;lar verebilir.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Bit İşlem Operatörleri</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var a = 5; // (0101 is binary)
+var b = 3; // (0011 is binary)
+var result = a & b; // (0001 in binary) which is 1 in decimal
+document.write(result); // Output : 1
+document.write("<br>");
+
+var a = 5; // (0101 is binary)
+var b = 3; // (0011 is binary)
+var result = a | b; // (0111 in binary) which is 7 in decimal
+document.write(result); // Output : 7
+document.write("<br>");
+
+var a = 5; // (0101 is binary)
+var b = 3; // (0011 is binary)
+var result = a ^ b; // (0110 in binary) which is 6 in decimal
+document.write(result); // Output : 6
+document.write("<br>");
+
+var a = 5; // (0101 is binary)
+var result = ~a; // (-0110 in binary) which is -6 in decimal
+document.write(result); // Output : -6
+document.write("<br>");
+
+var a = 5; // (0101 is binary)
+var result = a << 1; // (1010 in binary) which is 10 in decimal
+document.write(result); // Output : 10
+document.write("<br>");
+
+var a = 5; // (0101 is binary)
+var result = a >> 1; // (0010 in binary) which is 2 in decimal
+document.write(result); // Output : 2
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Bitsel Operatörler</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Operatörler</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong>&lt;&lt;=</strong></p>
+        </td>
+        <td>
+          <p><strong>Left Shift and Assign</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini belirli bir sayıda sola kaydırır ve sonucunu aynı değişkende
+            saklar. Bu, bitwise sol kaydırma ve atama işlemi olarak d&uuml;ş&uuml;n&uuml;lebilir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&gt;&gt;=</strong></p>
+        </td>
+        <td>
+          <p><strong>Right Shift and Assign</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini belirli bir sayıda sağa kaydırır ve sonucunu aynı değişkende
+            saklar. Bu, bitwise sağ kaydırma ve atama işlemi olarak d&uuml;ş&uuml;n&uuml;lebilir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&gt;&gt;&gt;=</strong></p>
+        </td>
+        <td>
+          <p><strong>Unsigned Right Shift and Assign</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini belirli bir sayıda sağa kaydırır ve sonucunu aynı değişkende
+            saklar, fakat işaret bitini kopyalamaz. Bu, bitwise işaretsiz sağ kaydırma ve atama işlemi olarak
+            d&uuml;ş&uuml;n&uuml;lebilir.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>&amp;=</strong></p>
+        </td>
+        <td>
+          <p><strong>Bitwise AND and Assign</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini diğer bir sayı ile bitwise AND işlemi yapar ve sonucunu aynı
+            değişkende saklar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>|=</strong></p>
+        </td>
+        <td>
+          <p><strong>Bitwise OR and Assign</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini diğer bir sayı ile bitwise OR işlemi yapar ve sonucunu aynı
+            değişkende saklar.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>^=</strong></p>
+        </td>
+        <td>
+          <p><strong>Bitwise XOR and Assign</strong></p>
+        </td>
+        <td>
+          <p>Bu operat&ouml;r, bir sayının bitlerini diğer bir sayı ile bitwise XOR işlemi yapar ve sonucunu aynı
+            değişkende saklar.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Bitsel Operatörler</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var a = 5; // (0101 is binary)
+a <<=1; // (Shift left by 1 position : 1010 in binary)
+document.write(a); // Output : 10
+document.write("<br>");
+
+var a = 10; // (1010 is binary)
+a >>=1; // (Shift left by 1 position : 0101 in binary)
+document.write(a); // Output : 5
+document.write("<br>");
+
+var a = -10; // (11110110 is binary for a 32-bit integer)
+a >>>=1; // (Unsigned right shift by 1 position : 01111011 in binary)
+document.write(a); // Output : 2147483641
+document.write("<br>");
+
+var a = 5; // 0101 in binary
+var b = 3; // 0011 in binary
+a &= b; // Bitwise OR : 0001 in binary
+document.write(a); // Output : 1
+document.write("<br>");
+
+var a = 5; // 0101 in binary
+var b = 3; // 0011 in binary
+a |= b; // Bitwise OR : 0111 in binary
+document.write(a); // Output : 7
+document.write("<br>");
+
+var a = 5; // 0101 in binary
+var b = 3; // 0011 in binary
+a ^= b; // Bitwise XOR : 0111 in binary
+document.write(a); // Output : 6
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

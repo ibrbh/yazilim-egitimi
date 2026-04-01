@@ -117,6 +117,7 @@
     </tbody>
   </table>
 
+  <!-- Örnek -->
   <div class="editor-block" data-editor>
     <h2>Number</h2>
     <div class="editor-panels">
@@ -142,8 +143,244 @@
         <div class="label">JavaScript</div>
         <textarea class="jsCode">let age = 25;
 let temperature = 36.6;
+
 document.getElementById("age").innerHTML = age;
 document.getElementById("temperature").innerHTML = temperature;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>String</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="name"></div>
+      <div id="greeting"></div>
+      <div id="multiline"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let name = "Alice";
+let greeting = "Hello, world";
+let multiline = "This is a multiline string.";
+
+document.getElementById("name").innerHTML = name;
+document.getElementById("greeting").innerHTML = greeting;
+document.getElementById("multiline").innerHTML = multiline;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Boolean</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="isActive"></div>
+      <div id="isFinished"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let isActive = true;
+let isFinished = false;
+
+document.getElementById("isActive").innerHTML = isActive;
+document.getElementById("isFinished").innerHTML = isFinished;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Object</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="name"></div>
+      <div id="age"></div>
+      <div id="isStudent"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let person = {
+  name:"John",
+  age:30,
+  isStudent:false  
+};
+
+document.getElementById("name").innerHTML = person.name;
+document.getElementById("age").innerHTML = person.age;
+document.getElementById("isStudent").innerHTML = person.isStudent;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Array</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="colors"></div>
+      <div id="numbers"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let colors = ["red","green","blue"];
+let numbers = [1,2,3,4,5];
+
+document.getElementById("colors").innerHTML = colors;
+document.getElementById("numbers").innerHTML = numbers;</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Function</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="greet"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">function greet(name){
+  return `Hello, ${name}!`;
+}
+
+document.getElementById("greet").innerHTML = greet("İbrahim");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+    <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Undefined, Null, Symbol, BigInt</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body>
+      <div id="value"></div>
+      <div id="data"></div>
+      <div id="uniqueId"></div>
+      <div id="bigNumber"></div>
+    </body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let value;
+let data = null;
+let uniqueId = Symbol("id");
+let bigNumber = 123456789012345678901234567890;
+
+document.getElementById("value").innerHTML = value;
+document.getElementById("data").innerHTML = data;
+document.getElementById("uniqueId").innerHTML = uniqueId;
+document.getElementById("bigNumber").innerHTML = bigNUmber;</textarea>
       </div>
     </div>
     <div class="button-bar">
