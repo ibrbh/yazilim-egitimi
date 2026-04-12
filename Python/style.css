@@ -14,10 +14,6 @@ td {
     border: 1px solid black;
 }
 
-table .noline {
-    border: none;
-}
-
 th {
     text-align: center;
     font-size: 25px;
@@ -35,13 +31,15 @@ td {
     padding-right: 10px;
 }
 
-div {
-    text-align: justify;
-}
-
 .editor {
     width: 600px;
     margin: 20px auto;
+}
+
+.editorButton {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .CodeMirror {

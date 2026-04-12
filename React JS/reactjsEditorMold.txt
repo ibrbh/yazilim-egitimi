@@ -1,17 +1,3 @@
-  <table class="noline">
-    <tr class="noline">
-      <td class="noline"><img src="" alt=""></td>
-      <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            title
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code"></textarea>
-          <iframe class="output hide"></iframe>
-        </div>
-      </td>
-    </tr>
-  </table>
-
-  <img src="" alt="" width="80%">
+<div class="editor">
+  <textarea id="code1"></textarea>
+</div>

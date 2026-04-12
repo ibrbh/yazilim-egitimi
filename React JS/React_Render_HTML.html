@@ -6,15 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>React Render HTML</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -27,13 +21,8 @@
     <tr class="noline">
       <td class="noline"><img src="images/3_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            index.html
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">
-<!doctype html>
+        <div class="editor">
+          <textarea id="code1"><!doctype html>
   <html lang="tr">
     <head>
       <meta charset="UTF-8" />
@@ -45,7 +34,6 @@
       <script type="module" src="/src/main.jsx"></script>
     </body>
   </html></textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -56,17 +44,12 @@
     <tr class="noline">
       <td class="noline"><img src="images/3_2.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            main.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import { createRoot } from 'react-dom/client'
+        <div class="editor">
+          <textarea id="code2">import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(<App />)</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -77,12 +60,8 @@ createRoot(document.getElementById('root')).render(<App />)</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/3_3.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">
+        <div class="editor">
+          <textarea id="code3">
 import "./App.css";
 
 function App() {
@@ -94,7 +73,6 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -103,6 +81,8 @@ export default App;</textarea>
   <!-- Sonuç -->
   <img src="images/3_4.png" alt="" width="80%">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
   <script src="editor.js"></script>
 </body>
 

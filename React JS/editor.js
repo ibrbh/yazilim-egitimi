@@ -1,42 +1,59 @@
-// Her editör için ayrı CodeMirror oluştur ve React kodunu çalıştır
-document.querySelectorAll("[data-editor]").forEach((editor) => {
-  const textarea = editor.querySelector(".react-code");
-  const runButton = editor.querySelector(".run-btn");
-  const iframe = editor.querySelector(".output");
+const editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+  mode: {
+    name: "javascript",
+    json: false,
+    jsx: true
+  },
+  theme: "dracula",
+  lineNumbers: true,
+  indentUnit: 2,
+  tabSize: 2
+});
 
-  const cm = CodeMirror.fromTextArea(textarea, {
-    mode: "javascript",
-    theme: "material-darker",
-    lineNumbers: true,
-    tabSize: 2,
-  });
+const editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+  mode: {
+    name: "javascript",
+    json: false,
+    jsx: true
+  },
+  theme: "dracula",
+  lineNumbers: true,
+  indentUnit: 2,
+  tabSize: 2
+});
 
-  const runReactCode = () => {
-    const jsCode = cm.getValue();
-    const htmlContent = `
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="UTF-8" />
-              <script src="https://unpkg.com/react@18/umd/react.development.js"><\/script>
-              <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"><\/script>
-              <script src="https://unpkg.com/@babel/standalone/babel.min.js"><\/script>
-              <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-              <script src="https://unpkg.com/redux@4.2.1/dist/redux.js"></script>
-              <script src="https://unpkg.com/@reduxjs/toolkit@1.9.5/dist/redux-toolkit.umd.js"></script>
-              <script src="https://unpkg.com/react-redux@8.0.5/dist/react-redux.js"></script>
-            </head>
-            <body>
-              <div id="root"></div>
-              <script type="text/babel">
-                ${jsCode}
-              <\/script>
-            </body>
-          </html>
-        `;
-    iframe.srcdoc = htmlContent;
-  };
+const editor3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
+  mode: {
+    name: "javascript",
+    json: false,
+    jsx: true
+  },
+  theme: "dracula",
+  lineNumbers: true,
+  indentUnit: 2,
+  tabSize: 2
+});
 
-  runButton.addEventListener("click", runReactCode);
-  runReactCode(); // sayfa yüklenince otomatik çalıştır
+const editor4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
+  mode: {
+    name: "javascript",
+    json: false,
+    jsx: true
+  },
+  theme: "dracula",
+  lineNumbers: true,
+  indentUnit: 2,
+  tabSize: 2
+});
+
+const editor5 = CodeMirror.fromTextArea(document.getElementById("code5"), {
+  mode: {
+    name: "javascript",
+    json: false,
+    jsx: true
+  },
+  theme: "dracula",
+  lineNumbers: true,
+  indentUnit: 2,
+  tabSize: 2
 });
