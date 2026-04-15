@@ -5,24 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>React Components</title>
-
+  <title>Components</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
   <a href="index.html">Ana Sayfa</a>
   <hr />
-  <h1>React Components</h1>
+  <h1>Components</h1>
 
   <div>
     React bileşenleri, UI'nin belirli bir bölümünü temsil eden bağımsız,
@@ -45,12 +37,8 @@
     <tr class="noline">
       <td class="noline"><img src="images/5_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code1">import "./App.css";
 import { FirstComponent } from "./components/FirstComponent";
 import SecondComponent from "./components/SecondComponent";
 
@@ -63,45 +51,34 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
     <tr class="noline">
       <td class="noline"><img src="images/5_2.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            FirstComponent.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import React from 'react';
+        <div class="editor">
+          <textarea id="code2">import React from 'react';
 
 export const FirstComponent = () => {
   return (
     <div>FirstComponent</div>
   )
 }</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
     <tr class="noline">
       <td class="noline"><img src="images/5_3.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            SecondComponent.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import React from 'react';
+        <div class="editor">
+          <textarea id="code3">import React from 'react';
 
 export default function SecondComponent() {
   return (
     <div>SecondComponent</div>
   )
 }</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -120,12 +97,8 @@ export default function SecondComponent() {
     <tr class="noline">
       <td class="noline"><img src="images/5_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code4">import "./App.css";
 import ThirdComponent from "./components/ThirdComponent";
 
 function App() {
@@ -136,19 +109,14 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
     <tr class="noline">
       <td class="noline"><img src="images/5_5.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            ThirdComponent.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import React, { Component } from 'react'
+        <div class="editor">
+          <textarea id="code5">import React, { Component } from 'react'
 
 export default class ThirdComponent extends Component {
   render() {
@@ -157,13 +125,14 @@ export default class ThirdComponent extends Component {
     )
   }
 }</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
   </table>
   <img src="images/5_6.png" alt="" width="80%">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
   <script src="editor.js"></script>
 </body>
 

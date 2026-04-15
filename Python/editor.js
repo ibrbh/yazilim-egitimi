@@ -37,3 +37,43 @@ const editor5 = CodeMirror.fromTextArea(document.getElementById("code5"), {
     indentUnit: 4,
     tabSize: 4
 });
+
+const editor6 = CodeMirror.fromTextArea(document.getElementById("code6"), {
+    mode: "python",
+    theme: "dracula",
+    lineNumbers: true,
+    indentUnit: 4,
+    tabSize: 4
+});
+
+const editor7 = CodeMirror.fromTextArea(document.getElementById("code7"), {
+    mode: "python",
+    theme: "dracula",
+    lineNumbers: true,
+    indentUnit: 4,
+    tabSize: 4
+});
+
+const editor8 = CodeMirror.fromTextArea(document.getElementById("code8"), {
+    mode: "python",
+    theme: "dracula",
+    lineNumbers: true,
+    indentUnit: 4,
+    tabSize: 4
+});
+
+const editor9 = CodeMirror.fromTextArea(document.getElementById("code9"), {
+    mode: "python",
+    theme: "dracula",
+    lineNumbers: true,
+    indentUnit: 4,
+    tabSize: 4
+});
+
+const editor10 = CodeMirror.fromTextArea(document.getElementById("code10"), {
+    mode: "python",
+    theme: "dracula",
+    lineNumbers: true,
+    indentUnit: 4,
+    tabSize: 4
+});

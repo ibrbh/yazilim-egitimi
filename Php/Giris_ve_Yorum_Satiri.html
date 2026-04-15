@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Giriş ve Yorum Satırı</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -14,23 +16,30 @@
   <hr />
   <h1>Giriş ve Yorum Satırı</h1>
 
-  <!-- Örnek -->
-  <div class="editor-box">
-    <div class="editor" contenteditable="true">&lt;?php
-  echo "Merhaba Dünya!";
-  
-  // This is a single-line comment
 
-  /*
-  This is a multi-line comment
-  */
-?&gt;</div>
-    <button class="runBtn">Çalıştır</button>
-    <div class="output"></div>
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code1">
+<?php
+echo "Merhaba Dünya!";
+
+// This is a single-line comment
+
+/*
+This is a multi-line comment
+*/
+>;</textarea>
+  <img src="./images/1_1.png" width="100%">
+
   </div>
 
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/php/php.min.js"></script>
   <script src="editor.js"></script>
 </body>
 

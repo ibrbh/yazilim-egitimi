@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Global Değişkenler</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Global Değişkenler</h1>
+
+  <div>Fonksiyonların dışında oluşturulan değişkenler (önceki sayfalardaki tüm örneklerde olduğu gibi) global
+    değişkenler olarak adlandırılır. Global değişkenler herkes tarafından, hem fonksiyonların içinde hem de dışında
+    kullanılabilir.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code1">x = "awesome"
+
+def myfunc():
+  print("Python is " + x)
+
+myfunc()</textarea>
+    <img src="images/3_1.png" alt="" width="100%">
+  </div>
+
+  <div>Eğer bir fonksiyon içinde aynı isimde bir değişken oluşturursanız, bu değişken yerel (local) olur ve yalnızca o
+    fonksiyon içinde kullanılabilir. Aynı isimdeki global değişken ise değişmeden, orijinal değeriyle global olarak
+    kalır.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code2">x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)</textarea>
+    <img src="images/3_2.png" alt="" width="100%">
+  </div>
+
+  <div>Normalde, bir fonksiyon içinde oluşturulan değişken yereldir ve sadece o fonksiyon içinde kullanılabilir. Bir fonksiyon içinde global bir değişken oluşturmak için "global" anahtar kelimesini kullanabilirsiniz.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code3">def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)</textarea>
+    <img src="images/3_3.png" alt="" width="100%">
+  </div>
+
+  <div>Ayrıca, bir fonksiyon içinde global bir değişkeni değiştirmek istiyorsanız da global anahtar kelimesini kullanmanız gerekir.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code4">x = "awesome"
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)</textarea>
+    <img src="images/3_4.png" alt="" width="100%">
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+
+  <script src="editor.js"></script>
+</body>
+
+</html>

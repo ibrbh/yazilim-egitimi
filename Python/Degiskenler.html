@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Değişkenler</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Değişkenler</h1>
+
+  <h2>Değişken Oluşturma</h2>
+
+  <div>Python’da değişken tanımlamak için özel bir komut yoktur. Bir değişken, ona ilk kez bir değer atandığı anda
+    oluşturulur.</div>
+
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code1">x=7 # int
+y=7.1 #float
+z="Python" # string
+t=True # bool
+
+print(x)
+print(y)
+print(z)
+print(t)</textarea>
+    <img src="images/2_1.png" alt="" width="100%">
+  </div>
+
+  <div>Değişkenlerin belirli bir türle tanımlanmasına gerek yoktur ve atandıktan sonra türleri değiştirilebilir.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code2">x = 4       # x is of type int
+x = "Sally" # x is now of type str
+
+print(x)</textarea>
+    <img src="images/2_2.png" alt="" width="100%">
+  </div>
+
+  <div>Bir değişkenin veri tipini belirtmek istiyorsanız, bunu tür dönüştürme (casting) ile yapabilirsiniz. Bir
+    değişkenin veri tipini ise type() fonksiyonu ile öğrenebilirsiniz.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code3">a=str(7) # string
+b=int(7) # int
+c=float(7) # float
+
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+print(c)
+print(type(c))</textarea>
+    <img src="images/2_3.png" alt="" width="100%">
+  </div>
+
+  <div>Python, tek bir satırda birden fazla değişkene değer atamanıza izin verir.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code4">x, y, z = "Orange", "Banana", "Cherry"
+
+print(x)
+print(y)
+print(z)</textarea>
+    <img src="images/2_4.png" alt="" width="100%">
+  </div>
+
+  <div>Tek bir satırda birden fazla değişkene aynı değeri atayabilirsiniz.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code5">x = y = z = "Orange"
+
+print(x)
+print(y)
+print(z)</textarea>
+    <img src="images/2_5.png" alt="" width="100%">
+  </div>
+
+  <div>Eğer bir liste, demet (tuple) vb. içinde değerler koleksiyonunuz varsa, Python bu değerleri değişkenlere
+    ayırmanıza izin verir. Buna unpacking (ayrıştırma) denir.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code6">fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)</textarea>
+    <img src="images/2_6.png" alt="" width="100%">
+  </div>
+
+  <div>print() fonksiyonu, değişkenleri ekrana yazdırmak için sıklıkla kullanılır. print() fonksiyonu içinde birden fazla değişkeni, aralarına virgül koyarak yazdırabilirsiniz.
+</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code7">x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)</textarea>
+    <img src="images/2_7.png" alt="" width="100%">
+  </div>
+
+  <div>Birden fazla değişkeni yazdırmak için + operatörünü de kullanabilirsiniz: "Python " ve "is " ifadelerinden sonra gelen boşluk karakterine dikkat edin; bu boşluklar olmazsa sonuç "Pythonisawesome" olur. Sayılar için ise + karakteri matematiksel bir işlem (toplama) olarak çalışır.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code8">x = "Python "
+y = "is "
+z = "awesome"
+print(x + y + z)
+
+x = "Python"
+y = "is"
+z = "awesome"
+print(x + y + z)
+
+x = 5
+y = 10
+print(x + y)</textarea>
+    <img src="images/2_8.png" alt="" width="100%">
+  </div>
+
+  <div>print() fonksiyonu içinde, + operatörü ile bir metin (string) ve bir sayıyı birleştirmeye çalıştığınızda, Python hata verir.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code9">x = 5
+y = "John"
+print(x + y)</textarea>
+    <img src="images/2_9.png" alt="" width="100%">
+  </div>
+
+  <div>print() fonksiyonunda birden fazla değişkeni yazdırmanın en iyi yolu, onları virgülle ayırmaktır. Bu yöntem farklı veri tiplerini de destekler.</div>
+
+  <!-- Örnek -->
+  <div class="editor">
+    <textarea id="code10">x = 5
+y = "John"
+print(x, y)</textarea>
+    <img src="images/2_10.png" alt="" width="100%">
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+
+  <script src="editor.js"></script>
+</body>
+
+</html>

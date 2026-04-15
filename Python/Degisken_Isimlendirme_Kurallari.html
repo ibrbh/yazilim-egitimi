@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Değişken İsimlendirme Kuralları</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Değişken İsimlendirme Kuralları</h1>
+
+  <h2>Python Programlamada Değişken Kuralları</h2>
+
+  <ul>
+    <li>Bir variable adı bir harfle veya alt çizgi karakteriyle başlamalıdır.</li>
+    <li>Bir variable adı sayı ile başlayamaz.</li>
+    <li>Bir variable adı yalnızca alfa-sayısal karakterler ve alt çizgiler içerebilir.</li>
+    <li>Variable adları büyük/küçük harfe duyarlıdır.</li>
+    <li>Bir variable adı Python anahtar sözcüklerinden hiçbiri olamaz.</li>
+  </ul>
+
+  <h2>Çok Kelimeli Değişken İsimleri</h2>
+  <ul>
+    <li><strong>Camel Case = </strong> İlk kelime hariç her kelime büyük harfle başlar. (kupunToplamHacmi)</li>
+    <li><strong>Pascal Case <em>(Upper Camel Case)</em> = </strong>Her kelime büyük harfle başlar. (KupunToplamHacmi)
+    </li>
+    <li><strong>Snake Case = </strong>Her kelime bir alt çizgi karakteriyle ayrılır. (kupun_toplam_hacmi)</li>
+  </ul>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+
+  <script src="editor.js"></script>
+</body>
+
+</html>

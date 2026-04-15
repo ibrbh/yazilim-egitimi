@@ -6,17 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>React JSX</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -50,12 +42,8 @@
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code1">import "./App.css";
 
 function App() {
   return (
@@ -65,7 +53,6 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -84,12 +71,9 @@ export default App;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code2">
+import "./App.css";
 
 function App() {
   const name = "İbrahim Yılmaz"
@@ -100,7 +84,6 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -119,12 +102,8 @@ export default App;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code3">import "./App.css";
 
 function App() {
   const control = true;
@@ -135,7 +114,6 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -154,12 +132,8 @@ export default App;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code4">import "./App.css";
 
 function App() {
   const isLoggedIn = true;
@@ -170,7 +144,6 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -188,12 +161,8 @@ export default App;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code5">import "./App.css";
 
 function App() {
   const players = ["Rafa Silva","Tammy Abraham","Vaclav Cerny","El Bilal Toure","Orkun Kökçü","Cengiz Ünder","Jota Silva"];
@@ -214,7 +183,6 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -233,12 +201,8 @@ export default App;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code6">import "./App.css";
 import Welcome from "./components/Welcome";
 
 function App() {
@@ -249,19 +213,14 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
     <tr class="noline">
       <td class="noline"><img src="images/4_7.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            Welcome.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import React from 'react'
+        <div class="editor">
+          <textarea id="code7">import React from 'react'
 
 function Welcome(props) {
   return (
@@ -272,7 +231,6 @@ function Welcome(props) {
 }
 
 export default Welcome;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -291,12 +249,8 @@ export default Welcome;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code8">import "./App.css";
 
 function App() {
   const name = "İbrahim Yılmaz"
@@ -308,7 +262,6 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -327,12 +280,8 @@ export default App;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code9">import "./App.css";
 
 function App() {
   function handleClick(){
@@ -348,7 +297,6 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
@@ -368,12 +316,8 @@ export default App;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code10">import "./App.css";
 
 function App() {
   const style = {
@@ -390,12 +334,11 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
   </table>
-  <img src="images/4_11" alt="" width="80%">
+  <img src="images/4_11.png" alt="" width="80%">
 
   <!-- JSX Formlar -->
   <h2>JSX Formlar</h2>
@@ -409,12 +352,8 @@ export default App;</textarea>
     <tr class="noline">
       <td class="noline"><img src="images/4_1.png" alt=""></td>
       <td colspan="3" class="noline">
-        <div class="react-editor" data-editor>
-          <div class="editor-header">
-            App.jsx
-            <button class="run-btn hide">Çalıştır</button>
-          </div>
-          <textarea class="react-code">import "./App.css";
+        <div class="editor">
+          <textarea id="code11">import "./App.css";
 import { useState } from "react";
 
 function App() {
@@ -441,13 +380,14 @@ function App() {
   );
 }
 export default App;</textarea>
-          <iframe class="output hide"></iframe>
         </div>
       </td>
     </tr>
   </table>
-  <img src="images/4_12" alt="" width="80%">
+  <img src="images/4_12.png" alt="" width="80%">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
   <script src="editor.js"></script>
 </body>
 
