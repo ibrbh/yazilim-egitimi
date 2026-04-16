@@ -22,28 +22,29 @@
     <textarea id="code1">
 using System;
 
-class Program
+namespace HelloWorld
 {
-    static void Main()
+  class Program
+  {
+    static void Main(string[] args)
     {
-        Console.WriteLine("Merhaba Dünya");
+      Console.WriteLine("Hello World!");    
     }
+  }
 }</textarea>
+    <img src="./images/1_1.png" alt="" width="100%">
   </div>
 
-  <!-- Örnek -->
-  <div class="editor">
-    <textarea id="code2">
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine("Merhaba Dünya");
-    }
-}</textarea>
-  </div>
+  <div><strong>Satır 1 : </strong>using System, System ad alanındaki (namespace) sınıfları kullanabileceğimiz anlamına gelir.</div>
+  <div><strong>Satır 2 : </strong>Boş bir satır. C# boşlukları görmezden gelir. Ancak birden fazla satır kullanmak kodun daha okunabilir olmasını sağlar.</div>
+  <div><strong>Satır 3 : </strong>namespace, kodunuzu düzenlemek için kullanılır ve sınıflar ile diğer namespace’ler için bir kapsayıcıdır.</div>
+  <div><strong>Satır 4 : </strong>Süslü parantezler {} bir kod bloğunun başlangıcını ve bitişini belirtir.</div>
+  <div><strong>Satır 5 : </strong>class, veri ve metotları barındıran bir yapıdır ve programınıza işlevsellik kazandırır. C#’ta çalışan her kod bir sınıf içinde bulunmalıdır. Bu örnekte sınıfın adı Program olarak verilmiştir.</div>
+  <div><strong>Satır 7 : </strong>C# programlarında her zaman bulunan bir diğer yapı Main metodudur. Süslü parantezleri {} içindeki tüm kodlar çalıştırılır. Main öncesi ve sonrasındaki anahtar kelimeleri şu an anlamanıza gerek yok; bu eğitimde adım adım öğreneceksiniz.</div>
+  <div><strong>Satır 9 : </strong>Console, System namespace’ine ait bir sınıftır ve WriteLine() metodu metni ekrana yazdırmak için kullanılır. Bu örnekte "Hello World!" yazdırılır.Eğer using System satırını kaldırırsanız, metin yazdırmak için System.Console.WriteLine() yazmanız gerekir.</div>
+  <div><strong>Not : </strong>C#’ta her ifade (statement) noktalı virgül ; ile biter.</div>
+  <div><strong>Not : </strong>C# büyük/küçük harf duyarlıdır; "MyClass" ile "myclass" farklı anlamlara gelir.</div>
+  <div><strong>Not : </strong>Java’nın aksine, C# dosya adı ile sınıf adı aynı olmak zorunda değildir, ancak genellikle düzen açısından aynı yapılır. Dosyayı kaydederken uygun bir isim verip sonuna .cs uzantısı eklemelisiniz. Bu örneği bilgisayarınızda çalıştırmak için C#’ın doğru şekilde kurulu olduğundan emin olun. Kurulum için “Get Started” bölümüne bakabilirsiniz.</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
