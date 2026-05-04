@@ -1,30 +1,995 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>String Metodları</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>String Metodları</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>String Metodları</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>String Metodları</h1>
+
+  <!-- String Methodları -->
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          at()
+        </td>
+        <td>
+          Belirtilen indeksteki karakteri d&ouml;nd&uuml;r&uuml;r. Negatif indeksler, dizenin sonundan başlamayı
+          sağlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          charAt()
+        </td>
+        <td>
+          Belirtilen indeksteki karakteri d&ouml;nd&uuml;r&uuml;r. Negatif indeksleri desteklemez.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          charCodeAt()
+        </td>
+        <td>
+          Belirtilen indeksteki karakterin Unicode kod noktası değerini d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          codePointAt()
+        </td>
+        <td>
+          Belirtilen indeksteki karakterin Unicode kod noktası değerini d&ouml;nd&uuml;r&uuml;r, charCodeAt'den
+          farklı olarak, 16-bit UTF-16 kodlama sınırını aşan karakterleri de destekler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          concat()
+        </td>
+        <td>
+          Birden fazla stringi birleştirir ve yeni bir string d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          constructor
+        </td>
+        <td>
+          String nesnesinin oluşturucusunu d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          decodeURI()
+        </td>
+        <td>
+          URL'deki kodlanmış bileşenleri orijinal haliyle geri d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          decodeURIComponent()
+        </td>
+        <td>
+          URL bileşenini &ccedil;&ouml;zer ve orijinal haline d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          encodeURI()
+        </td>
+        <td>
+          Bir URI i&ccedil;indeki &ouml;zel karakterleri g&uuml;venli bir şekilde kodlar, ancak URI'nin yapısına
+          zarar vermemek i&ccedil;in bazı karakterleri (&ouml;rneğin, ?, &amp;, #) kodlamaz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          encodeURIComponent()
+        </td>
+        <td>
+          URL bileşenini kodlar, bu da g&uuml;venli bir URL karakterleri oluşturur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          endsWith()
+        </td>
+        <td>
+          String'in belirli bir konumda belirli bir string ile bitip bitmediğini kontrol eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          escape()
+        </td>
+        <td>
+          Bir stringi URL'de g&uuml;venli hale getirmek i&ccedil;in kodlar. encodeURIComponent yerine
+          kullanılabilir, ancak g&uuml;ncel kodlama standartlarında kullanılmamalıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          eval()
+        </td>
+        <td>
+          String olarak verilen JavaScript kodunu &ccedil;alıştırır. Genellikle g&uuml;venlik riskleri nedeniyle
+          &ouml;nerilmez.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fromCharCode()
+        </td>
+        <td>
+          Unicode kod noktalarını karakterlere d&ouml;n&uuml;şt&uuml;r&uuml;r ve bir string oluşturur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          includes()
+        </td>
+        <td>
+          String'in belirli bir pozisyondan başlayarak belirli bir string i&ccedil;erip i&ccedil;ermediğini
+          kontrol eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          indexOf()
+        </td>
+        <td>
+          Belirtilen değerin string i&ccedil;indeki ilk konumunu d&ouml;nd&uuml;r&uuml;r. Bulunmazsa -1
+          d&ouml;ner.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          lastIndexOf()
+        </td>
+        <td>
+          Belirtilen değerin string i&ccedil;indeki son konumunu d&ouml;nd&uuml;r&uuml;r. Bulunmazsa -1
+          d&ouml;ner.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          length
+        </td>
+        <td>
+          String'in karakter sayısını d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          localeCompare()
+        </td>
+        <td>
+          İki stringi karşılaştırır ve lexicographic (s&ouml;zl&uuml;k) sıralama a&ccedil;ısından ne kadar farklı
+          olduklarını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          match()
+        </td>
+        <td>
+          String'i bir regex ile eşleştirir ve eşleşmeleri i&ccedil;eren bir dizi d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          padEnd()
+        </td>
+        <td>
+          String'in sonunu belirli bir uzunluğa getirmek i&ccedil;in belirtilen karakterle doldurur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          padStart()
+        </td>
+        <td>
+          String'in başını belirli bir uzunluğa getirmek i&ccedil;in belirtilen karakterle doldurur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          prototype
+        </td>
+        <td>
+          String nesnesinin prototip nesnesine erişim sağlar. &Ouml;zelleştirilmiş string metotları eklemek
+          i&ccedil;in kullanılabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          repeat()
+        </td>
+        <td>
+          String'i belirtilen sayıda tekrar eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          replace()
+        </td>
+        <td>
+          String'deki ilk eşleşen değeri yeni değerle değiştirir. searchValue bir regex veya string olabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          replaceAll()
+        </td>
+        <td>
+          String'deki t&uuml;m eşleşen değerleri yeni değerle değiştirir. searchValue bir regex veya string
+          olabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          search()
+        </td>
+        <td>
+          String'deki t&uuml;m eşleşen değerleri yeni değerle değiştirir. searchValue bir regex veya string
+          olabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          slice()
+        </td>
+        <td>
+          String'in belirtilen başlangı&ccedil; ve bitiş indeksleri arasında kalan kısmını
+          d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          split()
+        </td>
+        <td>
+          String'i belirtilen ayırıcı ile b&ouml;ler ve bir dizi olarak d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          startsWith()
+        </td>
+        <td>
+          String'in belirli bir konumdan başlayarak belirli bir string ile başlayıp başlamadığını kontrol eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          String()
+        </td>
+        <td>
+          Verilen değeri bir stringe d&ouml;n&uuml;şt&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          substr()
+        </td>
+        <td>
+          String'in belirtilen başlangı&ccedil; konumundan başlayarak belirli bir uzunlukta bir alt string
+          d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          substring()
+        </td>
+        <td>
+          String'in belirtilen başlangı&ccedil; ve bitiş indeksleri arasında kalan kısmını
+          d&ouml;nd&uuml;r&uuml;r. Bitiş indeksi dahil değildir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toLocaleLowerCase()
+        </td>
+        <td>
+          String'i yerel ayarlarla k&uuml;&ccedil;&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;r. locales
+          parametresi dil ve b&ouml;lge belirtebilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toLocaleUpperCase()
+        </td>
+        <td>
+          String'i yerel ayarlarla b&uuml;y&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;r. locales parametresi dil
+          ve b&ouml;lge belirtebilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toLowerCase()
+        </td>
+        <td>
+          String'i k&uuml;&ccedil;&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toString()
+        </td>
+        <td>
+          Bir nesneyi stringe d&ouml;n&uuml;şt&uuml;r&uuml;r. Bu metod, t&uuml;m nesneler i&ccedil;in varsayılan
+          toString metodunu d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toUpperCase()
+        </td>
+        <td>
+          String'i b&uuml;y&uuml;k harfe d&ouml;n&uuml;şt&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          trim()
+        </td>
+        <td>
+          String'in başındaki ve sonundaki boşlukları kaldırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          trimEnd()
+        </td>
+        <td>
+          String'in sonundaki boşlukları kaldırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          trimStart()
+        </td>
+        <td>
+          String'in başındaki boşlukları kaldırır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          unescape()
+        </td>
+        <td>
+          escape ile kodlanmış bir stringi &ccedil;&ouml;zer. G&uuml;ncel standartlarda kullanılmamalıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          valueOf()
+        </td>
+        <td>
+          String nesnesinin primitif değerini d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>at(), charAt(), charCodeAt(), codePointAt(), concat(), constructor</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var str = "Javascript";
+document.write(str.at(-1));
+document.write("<br>");
+
+var str = "Javascript";
+document.write(str.charAt(4));
+document.write("<br>");
+
+var str = "Javascript";
+document.write(str.charCodeAt(4));
+document.write("<br>");
+
+var str = "爱";
+document.write(str.codePointAt(0));
+document.write("<br>");
+
+var str1 = "Hello";
+var str2 = "World";
+document.write(str1.concat(" ",str2));
+document.write("<br>");
+
+var str = "example";
+document.write(str.constructor);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>decodeURI(), decodeURIComponent(), encodeURI(), encodeURIComponent(), endsWith(), escape(), eval()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var uri = "https%3A%2F%2Fexample.com";
+document.write(decodeURI(uri));
+document.write("<br>");
+
+var component = "Hello%20World%21";
+document.write(decodeURIComponent(component));
+document.write("<br>");
+
+var uri = "https://example.com/query?name=John Doe";
+document.write(encodeURI(uri));
+document.write("<br>");
+
+var component = "Hello World!";
+document.write(encodeURIComponent(component));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.endsWith("World"));
+document.write("<br>");
+
+var str = "Hello World!";
+document.write(escape(str));
+document.write("<br>");
+
+var code = "2 + 2";
+document.write(eval(code));</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>fromCharCode(), includes(), indexOf(), lastIndexOf(), length, localeCompare()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(String.fromCharCode(65,66,67));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.includes("World"));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.indexOf("World"));
+document.write("<br>");
+
+var str = "Hello World World";
+document.write(str.lastIndexOf("World"));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.length);
+document.write("<br>");
+
+var str1 = "apple";
+var str2 = "banana";
+document.write(str1.localeCompare(str2));</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>match(), padEnd(), padStart(), prototype, reverse(), repeat(), replace()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var str = "The quick brown fox";
+document.write(str.match(/\b\w{5}\b/g));
+document.write("<br>");
+
+var str = "5";
+document.write(str.padEnd(4,"0"));
+document.write("<br>");
+
+var str = "5";
+document.write(str.padStart(4,"0"));
+document.write("<br>");
+
+String.prototype.reverse = function(){
+  return this.split("").reverse().join("");
+};
+
+var str = "Hello";
+document.write(str.reverse());
+document.write("<br>");
+
+var str = "abc";
+document.write(str.repeat(3));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.replace("World","Javascript"));
+document.write("<br>");
+
+</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>replaceAll(), search(), slice(), split(), startsWith(), String()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var str = "Hello World World";
+document.write(str.replaceAll("World","JavaScript"));
+document.write("<br>");
+
+var str = "The quick brown fox";
+document.write(str.search(/\bquick\b/));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.slice(6,11));
+document.write("<br>");
+
+var str = "apple,banana,orange";
+document.write(str.split(","));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.startsWith("Hello"));
+document.write("<br>");
+
+document.write(String(123));
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>substr(), substring(), toLocaleLowerCase(), toLocaleUpperCase(), toLowerCase(), toString(), toUpperCase()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var str = "Hello World World";
+document.write(str.substr(6,5));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.substring(6,11));
+document.write("<br>");
+
+var str = "İstanbul";
+document.write(str.toLocaleLowerCase("tr-TR"));
+document.write("<br>");
+
+var str = "İstanbul";
+document.write(str.toLocaleUpperCase("tr-TR"));
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.toLowerCase());
+document.write("<br>");
+
+var num = 123;
+document.write(num.toString());
+document.write("<br>");
+
+var str = "Hello World";
+document.write(str.toUpperCase());
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>trim(), trimEnd(), trimStart(), unescape(), valueOf()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var str = "   Hello World   ";
+document.write(str.trim());
+document.write("<br>");
+
+var str = "   Hello World   ";
+document.write(str.trimEnd());
+document.write("<br>");
+
+var str = "   Hello World   ";
+document.write(str.trimStart());
+document.write("<br>");
+
+var str = "Hello%20World%21";
+document.write(unescape(str));
+document.write("<br>");
+
+var str = new String("example");
+document.write(str.valueOf);
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Eski String Methodları</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Method
+        </td>
+        <td>
+          A&ccedil;ıklama
+        </td>
+      </tr>
+      <tr>
+        <td>
+          anchor()
+        </td>
+        <td>
+          Metne bir &lt;a&gt; (anchor) etiketi ekler ve bu etiketi belirli bir name ile işaretler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          big()
+        </td>
+        <td>
+          Metni b&uuml;y&uuml;k puntolu (&lt;big&gt;) olarak g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          blink()
+        </td>
+        <td>
+          Metni blink (yanıp s&ouml;nen) efektine sokar (&lt;blink&gt;). Tarayıcı desteği yoktur ve g&uuml;ncel
+          standartlarda kullanılmamalıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          bold()
+        </td>
+        <td>
+          Metni kalın (&lt;b&gt;) olarak g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fixed()
+        </td>
+        <td>
+          Metni sabit (&lt;tt&gt;) olarak g&ouml;sterir, genellikle yazı tipi tabanlı bir g&ouml;r&uuml;n&uuml;m
+          sağlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fontcolor()
+        </td>
+        <td>
+          Metni belirtilen renk (&lt;font color="color"&gt;) ile g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fontsize()
+        </td>
+        <td>
+          Metni belirtilen puntoda (&lt;font size="size"&gt;) g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          italics()
+        </td>
+        <td>
+          Metni italik (&lt;i&gt;) olarak g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          link()
+        </td>
+        <td>
+          Metni bir bağlantı (&lt;a href="href"&gt;) olarak g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          small()
+        </td>
+        <td>
+          Metni k&uuml;&ccedil;&uuml;k puntolu (&lt;small&gt;) olarak g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          strike()
+        </td>
+        <td>
+          Metni &uuml;st&uuml; &ccedil;izili (&lt;strike&gt;) olarak g&ouml;sterir. G&uuml;n&uuml;m&uuml;zde
+          genellikle &lt;del&gt; veya &lt;s&gt; etiketleri tercih edilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sub()
+        </td>
+        <td>
+          Metni alt simge (&lt;sub&gt;) olarak g&ouml;sterir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sup()
+        </td>
+        <td>
+          Metni &uuml;st simge (&lt;sup&gt;) olarak g&ouml;sterir.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Eski String Methodları</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var str = "Link";
+console.log(str.anchor("myAnchor"));
+document.write(str.anchor("myAnchor"));
+document.write("<br>");
+
+var str = "Big Text";
+console.log(str.big());
+document.write(str.big());
+document.write("<br>");
+
+var str = "Blinking Text";
+console.log(str.blink());
+document.write(str.blink());
+document.write("<br>");
+
+var str = "Bold Text";
+console.log(str.bold());
+document.write(str.bold());
+document.write("<br>");
+
+var str = "Fixed Text";
+console.log(str.fixed());
+document.write(str.fixed);
+document.write("<br>");
+
+var str = "Colored Text";
+console.log(str.fontcolor("red"));
+document.write(str.fontcolor("red"));
+document.write("<br>");
+
+var str = "Large Text";
+console.log(str.fontsize(5));
+document.write(str.fontsize(5));
+document.write("<br>");
+
+var str = "Italic Text";
+console.log(str.italics());
+document.write(str.italics);
+document.write("<br>");
+
+var str = "Clickable Link";
+console.log(str.link("https://example.com"));
+document.write(str.link("https://example.com"));
+document.write("<br>");
+
+var str = "Small Text";
+console.log(str.small());
+document.write(str.small());
+document.write("<br>");
+
+var str = "Strikethrougn Text";
+console.log(str.strike());
+document.write(str.strike());
+document.write("<br>");
+
+var x = "2"
+var x = x.sub();
+var str = `H${x}O`;
+console.log(str);
+document.write(str);
+document.write("<br>");
+
+var x = "2"
+var x = x.sup();
+var str = `X${x}`;
+console.log(str);
+document.write(str);
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

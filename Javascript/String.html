@@ -1,30 +1,290 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>String</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>String</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>String</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>String</h1>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>String Yazımı</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let singleQuoteString = 'Bu bir tek tırnaklı string';
+let doubleQuoteString = "Bu bir çift tırnaklı string";
+let templateQuoteString = `Bu bir template string`;
+        
+document.write(singleQuoteString);
+document.write("<br>");
+document.write(doubleQuoteString);
+document.write("<br>");
+document.write(templateQuoteString);
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Indeksler</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let x = "Hello World";
+
+document.write(x[0]);
+document.write("<br>");
+document.write(x[1]);
+document.write("<br>");
+document.write(x[2]);
+document.write("<br>");
+document.write(x[3]);
+document.write("<br>");
+document.write(x[4]);
+document.write("<br>");
+document.write(x[5]);
+document.write("<br>");
+document.write(x[6]);
+document.write("<br>");
+document.write(x[7]);
+document.write("<br>");
+document.write(x[8]);
+document.write("<br>");
+document.write(x[9]);
+document.write("<br>");
+document.write(x[10]);
+document.write("<br>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Template String</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let ad = "İbrahim";
+let soyad = "Yılmaz";
+let yas = 25;
+let yil = 2026;
+let metin = `Bu metin ${yas} yaşındaki ${ad} ${soyad} tarafından ${yil} yılında oluşturulmuştur.`;
+
+document.write(metin);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Kaçırma Operatörleri -->
+  <table>
+    <thead>
+      <tr>
+        <th>Kaçırma Operatörü</th>
+        <th>İsim</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          \
+        </td>
+        <td>
+          Escape
+        </td>
+        <td>
+          Bir ka&ccedil;ış karakteri olarak kullanılır. Bu karakter, normalde &ouml;zel bir anlamı olan veya
+          metin i&ccedil;inde doğrudan kullanılamayan karakterlerin belirtilmesini sağlar. &Ouml;rneğin,
+          &ouml;zel karakterler, kontrol karakterleri veya bazı &ouml;zel diziler bu şekilde tanımlanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          \b
+        </td>
+        <td>
+          Backspace
+        </td>
+        <td>
+          Genellikle bir karakteri silmek i&ccedil;in kullanılır, ancak modern JavaScript motorlarında ve
+          &ccedil;oğu terminalde bu karakter etkisiz olabilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          \f
+        </td>
+        <td>
+          Form Feed
+        </td>
+        <td>
+          Sayfa sonu olarak kullanılır. Bu, eski yazıcılar ve belgeler i&ccedil;in sayfa ge&ccedil;işi işlevi
+          g&ouml;rm&uuml;şt&uuml;r. Modern uygulamalarda genellikle etkisi yoktur.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          \n
+        </td>
+        <td>
+          New Line
+        </td>
+        <td>
+          Satır sonu karakterini temsil eder. Bu karakter, stringin yeni bir satıra ge&ccedil;mesini sağlar.
+          &Ccedil;oğu sistemde \n karakteri yeni bir satır başlatır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          \r
+        </td>
+        <td>
+          Carriage Return
+        </td>
+        <td>
+          Satır başına getirir. Genellikle eski sistemlerde ve bazı dosya formatlarında kullanılır. Modern
+          uygulamalarda genellikle \n ile birlikte kullanılır (\r\n).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          \t
+        </td>
+        <td>
+          Horizontal Tab
+        </td>
+        <td>
+          Yatay sekme karakterini temsil eder. Metin i&ccedil;inde boşluk bırakmak i&ccedil;in kullanılır ve
+          genellikle 4 veya 8 boşluk kadar genişlikte g&ouml;r&uuml;n&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          \v
+        </td>
+        <td>
+          Vertical Tab
+        </td>
+        <td>
+          Dikey boşluk bırakmak i&ccedil;in kullanılır. Modern uygulamalarda genellikle etkisiz olabilir ve pek
+          kullanılmaz.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>Kaçırma Operatörleri</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">let x = "Bu bir \"alıntı\" örneğidir.";
+document.write(x);
+document.write("<br>");
+
+
+let y = "Satır1\nSatır2";
+document.write(y);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>
