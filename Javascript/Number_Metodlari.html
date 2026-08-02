@@ -1,30 +1,431 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Number Metodları</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Number Metodları</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Number Metodları</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Number Metodları</h1>
+
+  <!-- Number Methodları -->
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          constructor
+        </td>
+        <td>
+          Bir nesnenin oluşturulmasında kullanılan fonksiyondur. Genellikle bir sınıfın veya yapının ilk
+          oluşturulmasında &ccedil;ağrılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          EPSILON
+        </td>
+        <td>
+          JavaScript'te sayıların karşılaştırılmasında kullanılan en k&uuml;&ccedil;&uuml;k farkı temsil eder.
+          Float sayılar arasındaki en k&uuml;&ccedil;&uuml;k farkı belirler ve sayısal hesaplamalarda
+          hassasiyet sağlamak i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          isFinite()
+        </td>
+        <td>
+          Bir değerin sonlu (finite) olup olmadığını belirler. Infinity veya -Infinity değerleri sonlu
+          değildir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          isInteger()
+        </td>
+        <td>
+          Bir değerin tam sayı olup olmadığını kontrol eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          isNaN()
+        </td>
+        <td>
+          Bir değerin NaN (Not-a-Number) olup olmadığını kontrol eder. Ancak isNaN fonksiyonu, NaN olmayan
+          ancak NaN'e d&ouml;n&uuml;şt&uuml;r&uuml;lebilen değerlerle de true d&ouml;nd&uuml;rebilir.
+          Genellikle Number.isNaN() kullanımı daha g&uuml;venilirdir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          isSafeInteger()
+        </td>
+        <td>
+          Bir değerin, JavaScript'in g&uuml;venli tam sayılar aralığında olup olmadığını kontrol eder. Bu
+          aralık -2^53 + 1 ile 2^53 - 1 arasındadır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          MAX_SAFE_INTEGER
+        </td>
+        <td>
+          JavaScript'teki en b&uuml;y&uuml;k g&uuml;venli tam sayı olan 2^53 - 1'i temsil eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          MIN_SAFE_INTEGER
+        </td>
+        <td>
+          JavaScript'teki en b&uuml;y&uuml;k g&uuml;venli tam sayı olan 2^53 - 1'i temsil eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          MAX_VALUE
+        </td>
+        <td>
+          JavaScript'teki en b&uuml;y&uuml;k sayıyı temsil eder. Pozitif sonsuzluğa &ccedil;ok yakın bir
+          değerdir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          MIN_VALUE
+        </td>
+        <td>
+          JavaScript'teki en k&uuml;&ccedil;&uuml;k pozitif sayıyı temsil eder. Bu, 0'a &ccedil;ok yakın bir
+          değerdir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          NaN
+        </td>
+        <td>
+          "Not-a-Number" anlamına gelir ve matematiksel işlemlerden ge&ccedil;emeyen bir değeri temsil eder.
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          NEGATIVE_INFINITY
+        </td>
+        <td>
+          Pozitif sonsuzluğun tersidir ve matematiksel işlemlerde negatif sonsuzluğu temsil eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          POSITIVE_INFINITY
+        </td>
+        <td>
+          Pozitif sonsuzluğu temsil eder. Matematiksel işlemlerde b&uuml;y&uuml;k sonu&ccedil;ları ifade eder.
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          parseFloat()
+        </td>
+        <td>
+          Bir string değeri ondalıklı sayıya d&ouml;n&uuml;şt&uuml;r&uuml;r. String'deki ilk sayısal kısmı
+          analiz eder.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          parseInt()
+        </td>
+        <td>
+          Bir string değeri tam sayıya d&ouml;n&uuml;şt&uuml;r&uuml;r. String'deki ilk sayısal kısmı analiz
+          eder ve bir taban (radix) belirleyebilirsiniz.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          prototype
+        </td>
+        <td>
+          JavaScript'te bir nesne t&uuml;r&uuml;n&uuml;n t&uuml;m &ouml;rneklerine eklenen &ouml;zelliklerin ve
+          metotların tanımlandığı bir nesnedir. Her nesne t&uuml;r&uuml;, bir prototype nesnesine sahiptir.
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toExponential(x)
+        </td>
+        <td>
+          Sayıyı &uuml;ssel bi&ccedil;imde d&ouml;nd&uuml;r&uuml;r. x, ondalık basamak sayısını belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toFixed(x)
+        </td>
+        <td>
+          Sayıyı belirli bir ondalık basamak sayısı ile bir string olarak d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toLocaleString()
+        </td>
+        <td>
+          Sayıyı yerel bir bi&ccedil;imde string olarak d&ouml;nd&uuml;r&uuml;r. Yerel ayarları ve bi&ccedil;im
+          se&ccedil;eneklerini destekler.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toPrecision(x)
+        </td>
+        <td>
+          Sayıyı belirli bir kesinlik ile string olarak d&ouml;nd&uuml;r&uuml;r. x, toplam basamak sayısını
+          belirtir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toString()
+        </td>
+        <td>
+          Sayıyı bir string olarak d&ouml;nd&uuml;r&uuml;r. Ayrıca bir taban (radix) belirtilebilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          valueOf()
+        </td>
+        <td>
+          Sayının ilkel değerini d&ouml;nd&uuml;r&uuml;r. Genellikle nesneler i&ccedil;in valueOf metodu,
+          nesnenin ilkel değerini d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>constructor, EPSILON, isFinite(), isInteger(), isNaN(), isSafeInteger(), MAX_SAFE_INTEGER, MIN_SAFE_INTEGER</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">class Person{
+  constructor(name) {
+    this.name = name;
+  }
+}
+let person = new Person("Alice");
+document.write(`constructor : ${person.constructor}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Number.EPSILON : ${Number.EPSILON}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`isFinite(10) : ${isFinite(10)}`);
+document.write("<br>");
+document.write(`isFinite(Infinity) : ${isFinite(Infinity)}`);
+document.write("<br>");
+document.write(`isFinite("10") : ${isFinite("10")}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(` Number.isInteger(10) : ${Number.isInteger(10)}`);
+document.write("<br>");
+document.write(` Number.isInteger(10.5) : ${Number.isInteger(10.5)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`isNaN("string") : ${isNaN("string")}`);
+document.write("<br>");
+document.write(` isNaN(10): ${isNaN(10)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Number.isSafeInteger(9007199254740991) : ${Number.isSafeInteger(9007199254740991)}`);
+document.write("<br>");
+document.write(`Number.isSafeInteger(9007199254740992) : ${Number.isSafeInteger(9007199254740992)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Number.MAX_SAFE_INTEGER : ${Number.MAX_SAFE_INTEGER}`);
+document.write("<br>");
+document.write(`Number.MIN_SAFE_INTEGER : ${Number.MIN_SAFE_INTEGER}`)</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>MAX_VALUE, MIN_VALUE, NaN, NEGATIVE_INFINITY, POSITIVE, INFINITY, parseFloat(), parseInt(), prototype</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(`Number.MAX_VALUE : ${Number.MAX_VALUE}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Number.MIN_VALUE : ${Number.MIN_VALUE}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`NaN : ${NaN}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Number.NEGATIVE_INFINITY : ${Number.NEGATIVE_INFINITY}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Number.POSITIVE_INFINITY : ${Number.POSITIVE_INFINITY}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`parseFloat("3.14abc") : ${parseFloat("3.14abc")}`);
+document.write("<br>");
+document.write(`parseFloat(5) : ${parseFloat(5)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`parseInt("123abc") : ${parseInt("123abc")}`);
+document.write("<br>");
+document.write(`parseInt("1010",2) : ${parseInt("1010",2)}`);
+document.write("<br>");
+document.write("<hr>");
+
+function Person(name){
+  this.name = name;
+};
+Person.prototype.sayHello = function(){
+  document.write(`prototype : Hello ${this.name}`);
+};
+let person = new Person("Alice");
+person.sayHello();</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>toExponential(), toFixed(), toLocaleString(), toPrecision(), toString(), valueOf()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var num = 123456
+document.write(`num.toExponential(2) : ${num.toExponential(2)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var num = 3.14159
+document.write(`num.toFixed(2) : ${num.toFixed(2)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var num = 1234567.89
+document.write(`num.toLocaleString("de-DE") : ${num.toLocaleString("de-DE")}`);
+document.write("<br>");
+document.write("<hr>");
+
+var num = 123.456
+document.write(`num.toPrecision(4) : ${num.toPrecision(4)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var num = 255
+document.write(`num.toString() : ${num.toString()}`);
+document.write("<br>");
+document.write(`num.toString(16) : ${num.toString(16)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var num = new Number(123)
+document.write(`num.valueOf() : ${num.valueOf()}`);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

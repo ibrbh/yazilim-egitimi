@@ -1,30 +1,393 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Array Metodları</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Array Metodları</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Array Metodları</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Array Metodları</h1>
+
+  <!-- Array Methodları -->
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          at()
+        </td>
+        <td>
+          Belirtilen index'teki elemanı d&ouml;nd&uuml;r&uuml;r. Pozitif ve negatif indekslerle &ccedil;alışır.
+          (index)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          concat()
+        </td>
+        <td>
+          Bir veya daha fazla diziyi birleştirir ve yeni bir dizi d&ouml;nd&uuml;r&uuml;r
+        </td>
+      </tr>
+      <tr>
+        <td>
+          constructor
+        </td>
+        <td>
+          Dizinin oluşturulduğu yapıcı fonksiyonu d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          copyWithin()
+        </td>
+        <td>
+          Dizinin bir kısmını kendi i&ccedil;inde kopyalar. (target, start, end)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          delete
+        </td>
+        <td>
+          Bu bir dizi metodu değil, delete anahtar kelimesi bir dizi elemanını silmek i&ccedil;in
+          kullanılabilir ama bu elemanları undefined olarak bırakır
+        </td>
+      </tr>
+      <tr>
+        <td>
+          entries()
+        </td>
+        <td>
+          Dizinin her elemanı i&ccedil;in bir [index, value] &ccedil;iftleri d&ouml;nd&uuml;ren bir iterator
+          d&ouml;nd&uuml;r&uuml;r
+        </td>
+      </tr>
+      <tr>
+        <td>
+          every()
+        </td>
+        <td>
+          Dizinin t&uuml;m elemanları belirtilen test fonksiyonunu ge&ccedil;erse true, aksi takdirde false
+          d&ouml;nd&uuml;r&uuml;r. (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fill()
+        </td>
+        <td>
+          Dizinin belirli bir kısmını value ile doldurur. (value, start, end)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          filter()
+        </td>
+        <td>
+          Belirtilen test fonksiyonunu ge&ccedil;en t&uuml;m elemanları i&ccedil;eren yeni bir dizi
+          d&ouml;nd&uuml;r&uuml;r. (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          find()
+        </td>
+        <td>
+          Belirtilen test fonksiyonunu ge&ccedil;iren ilk elemanı d&ouml;nd&uuml;r&uuml;r. (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          findIndex()
+        </td>
+        <td>
+          Belirtilen test fonksiyonunu ge&ccedil;iren ilk elemanın indeksini d&ouml;nd&uuml;r&uuml;r.
+          (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          findLast()
+        </td>
+        <td>
+          (ES2022'de eklenmiş) Belirtilen test fonksiyonunu ge&ccedil;iren son elemanı d&ouml;nd&uuml;r&uuml;r.
+          (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          findLastIndex()
+        </td>
+        <td>
+          (ES2022'de eklenmiş) Belirtilen test fonksiyonunu ge&ccedil;iren son elemanın indeksini
+          d&ouml;nd&uuml;r&uuml;r. (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flat()
+        </td>
+        <td>
+          Diziyi d&uuml;zleştirir. Varsayılan olarak bir seviye d&uuml;zleştirir. (depth)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          flatMap()
+        </td>
+        <td>
+          Her elemanı işleme tabi tutar ve d&uuml;zleştirir. (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          forEach()
+        </td>
+        <td>
+          Dizinin her elemanı i&ccedil;in belirtilen fonksiyonu uygular. (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          from()
+        </td>
+        <td>
+          Array-like nesnelerden yeni bir dizi oluşturur. (arrayLike, mapFn, thisArg)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          includes()
+        </td>
+        <td>
+          Dizinin belirli bir değeri i&ccedil;erip i&ccedil;ermediğini kontrol eder. (value)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          indexOf()
+        </td>
+        <td>
+          Dizide belirtilen değerin ilk indeksini d&ouml;nd&uuml;r&uuml;r. Bulamazsa -1 d&ouml;ner. (value)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          isArray()
+        </td>
+        <td>
+          (Statik metot) Belirtilen değerin bir dizi olup olmadığını kontrol eder. (value)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          join()
+        </td>
+        <td>
+          Dizinin elemanlarını belirtilen ayırıcı ile birleştirir. (seperator)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          keys()
+        </td>
+        <td>
+          Dizinin her elemanının indekslerini i&ccedil;eren bir iterator d&ouml;nd&uuml;r&uuml;r
+        </td>
+      </tr>
+      <tr>
+        <td>
+          lastIndexOf()
+        </td>
+        <td>
+          Dizide belirtilen değerin son indeksini d&ouml;nd&uuml;r&uuml;r. Bulamazsa -1 d&ouml;ner. (value)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          length
+        </td>
+        <td>
+          Dizinin eleman sayısını d&ouml;nd&uuml;r&uuml;r ve değiştirilebilir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          map()
+        </td>
+        <td>
+          Her elemanı belirtilen fonksiyonla işleyerek yeni bir dizi d&ouml;nd&uuml;r&uuml;r. (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          of()
+        </td>
+        <td>
+          Verilen arg&uuml;manlarla yeni bir dizi oluşturur. (...items)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pop()
+        </td>
+        <td>
+          Dizinin son elemanını kaldırır ve d&ouml;nd&uuml;r&uuml;r
+        </td>
+      </tr>
+      <tr>
+        <td>
+          prototype
+        </td>
+        <td>
+          Dizilerin prototipini temsil eder, yani diziler i&ccedil;in ek metodlar tanımlanabilir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          push()
+        </td>
+        <td>
+          Dizinin sonuna bir veya daha fazla eleman ekler (...items)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          reduce()
+        </td>
+        <td>
+          Dizinin t&uuml;m elemanlarını bir değere indirger (callback, initialValue)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          reduceRight()
+        </td>
+        <td>
+          Dizinin t&uuml;m elemanlarını sağdan sola doğru bir değere indirger (callback, initialValue)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          reverse()
+        </td>
+        <td>
+          Dizinin elemanlarını tersine &ccedil;evirir
+        </td>
+      </tr>
+      <tr>
+        <td>
+          shift()
+        </td>
+        <td>
+          Dizinin başındaki elemanı kaldırır ve d&ouml;nd&uuml;r&uuml;r
+        </td>
+      </tr>
+      <tr>
+        <td>
+          slice()
+        </td>
+        <td>
+          Dizinin belirli bir kısmını alır ve yeni bir dizi d&ouml;nd&uuml;r&uuml;r. (start, end)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          some()
+        </td>
+        <td>
+          Dizinin herhangi bir elemanı belirtilen test fonksiyonunu ge&ccedil;erse true, aksi takdirde false
+          d&ouml;nd&uuml;r&uuml;r. (callback)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sort()
+        </td>
+        <td>
+          Diziyi sıralar. Varsayılan olarak diziyi string olarak sıralar. (compareFunction)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          splice()
+        </td>
+        <td>
+          Diziyi belirli bir konumdan değiştirir. Eleman ekleyebilir veya silebilir. (start, deleteCount,
+          item1, item2, ...)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toReversed()
+        </td>
+        <td>
+          (ES2022'de eklenmiş) Dizinin ters &ccedil;evrilmiş bir kopyasını d&ouml;nd&uuml;r&uuml;r
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toSorted()
+        </td>
+        <td>
+          (ES2022'de eklenmiş) Dizinin sıralanmış bir kopyasını d&ouml;nd&uuml;r&uuml;r. (compareFunction)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toSpliced()
+        </td>
+        <td>
+          (ES2022'de eklenmiş) Diziyi değiştirmeden, belirli bir konumdan değişikliklerle d&ouml;nd&uuml;ren
+          bir kopya d&ouml;nd&uuml;r&uuml;r. (start, deleteCount, item1, item2, ...)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          toString()
+        </td>
+        <td>
+          Diziyi stringe d&ouml;n&uuml;şt&uuml;r&uuml;r
+        </td>
+      </tr>
+      <tr>
+        <td>
+          unshift()
+        </td>
+        <td>
+          Dizinin başına bir veya daha fazla eleman ekler. (...items)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          valueOf()
+        </td>
+        <td>
+          Dizinin kendisini d&ouml;nd&uuml;r&uuml;r
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>

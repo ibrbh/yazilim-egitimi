@@ -1,30 +1,847 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Math Metodları</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css"
-    />
-  </head>
 
-  <body>
-    <a href="index.html">Ana Sayfa</a>
-    <hr />
-    <h1>Math Metodları</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Math Metodları</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/theme/dracula.min.css" />
+</head>
 
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
-    <script src="editor.js"></script>
-  </body>
+<body>
+  <a href="index.html">Ana Sayfa</a>
+  <hr />
+  <h1>Math Metodları</h1>
+
+  <!-- Math Methodları -->
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          abs(x)
+        </td>
+        <td>
+          x'in mutlak değerini d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          acos(x)
+        </td>
+        <td>
+          x'in ark kosin&uuml;s&uuml;n&uuml; (radyan cinsinden) d&ouml;nd&uuml;r&uuml;r. x değeri -1 ile 1
+          arasında olmalıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          acosh(x)
+        </td>
+        <td>
+          x'in ters hiperbolik kosin&uuml;s&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r. x değeri 1 veya daha
+          b&uuml;y&uuml;k olmalıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          asin(x)
+        </td>
+        <td>
+          x'in ark sin&uuml;s&uuml;n&uuml; (radyan cinsinden) d&ouml;nd&uuml;r&uuml;r. x değeri -1 ile 1
+          arasında olmalıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          asinh(x)
+        </td>
+        <td>
+          x'in ters hiperbolik sin&uuml;s&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          atan(x)
+        </td>
+        <td>
+          x'in ark tanjantını (radyan cinsinden) d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          atan2(y, x)
+        </td>
+        <td>
+          y/x oranının ark tanjantını (radyan cinsinden) d&ouml;nd&uuml;r&uuml;r. y ve x ile belirtilen
+          b&ouml;lgedeki a&ccedil;ı hesaplanır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          atanh(x)
+        </td>
+        <td>
+          x'in ters ark tanjantını d&ouml;nd&uuml;r&uuml;r. x değeri -1 ile 1 arasında olmalıdır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cbrt(x)
+        </td>
+        <td>
+          x'in k&uuml;p k&ouml;k&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ceil(x)
+        </td>
+        <td>
+          x'in en k&uuml;&ccedil;&uuml;k tam sayıya yuvarlanmış değerini d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          clz32(x)
+        </td>
+        <td>
+          x'in 32-bit ikili bi&ccedil;iminde &ouml;nde gelen sıfırların sayısını d&ouml;nd&uuml;r&uuml;r.
+          Genellikle sayının bit uzunluğunu hesaplamak i&ccedil;in kullanılır.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cos(x)
+        </td>
+        <td>
+          x'in kosin&uuml;s&uuml;n&uuml; (radyan cinsinden) d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cosh(x)
+        </td>
+        <td>
+          x'in hiperbolik kosin&uuml;s&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          E
+        </td>
+        <td>
+          Euler'in sayısını temsil eder (yaklaşık 2.718).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          exp(x)
+        </td>
+        <td>
+          e &uuml;ss&uuml; x'i hesaplar (Euler'in sayısının x &uuml;ss&uuml;).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          expm1(x)
+        </td>
+        <td>
+          e &uuml;ss&uuml; x'ten 1 &ccedil;ıkarır (&ouml;zellikle k&uuml;&ccedil;&uuml;k x i&ccedil;in daha
+          hassas bir sonu&ccedil; sağlar).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          floor(x)
+        </td>
+        <td>
+          x'in en b&uuml;y&uuml;k tam sayıya yuvarlanmış değerini d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          fround(x)
+        </td>
+        <td>
+          x'in 32-bit floating-point (y&uuml;zen nokta) temsiline yuvarlanmış değerini d&ouml;nd&uuml;r&uuml;r.
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          LN2
+        </td>
+        <td>
+          Doğal logaritmanın 2'ye eşit olan değerini temsil eder (yaklaşık 0.693).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          LN10
+        </td>
+        <td>
+          Doğal logaritmanın 10'a eşit olan değerini temsil eder (yaklaşık 2.302).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          log(x)
+        </td>
+        <td>
+          x'in doğal logaritmasını d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          log10(x)
+        </td>
+        <td>
+          x'in 10 tabanında logaritmasını d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          LOG10E
+        </td>
+        <td>
+          10 tabanında e'nin logaritmasını temsil eder (yaklaşık 0.434).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          log1p(x)
+        </td>
+        <td>
+          1 + x'in doğal logaritmasını d&ouml;nd&uuml;r&uuml;r. K&uuml;&ccedil;&uuml;k x değerleri i&ccedil;in
+          daha hassas sonu&ccedil; verir.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          log2(x)
+        </td>
+        <td>
+          x'in 2 tabanında logaritmasını d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          LOG2E
+        </td>
+        <td>
+          2 tabanında e'nin logaritmasını temsil eder (yaklaşık 1.442).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          max(x1,x2,..)
+        </td>
+        <td>
+          Verilen değerlerden en b&uuml;y&uuml;ğ&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          min(x1,x2,..)
+        </td>
+        <td>
+          Verilen değerlerden en k&uuml;&ccedil;&uuml;ğ&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          PI
+        </td>
+        <td>
+          &pi; (pi) sayısını temsil eder (yaklaşık 3.14159).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pow(x, y)
+        </td>
+        <td>
+          x'in y &uuml;ss&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          random()
+        </td>
+        <td>
+          0 (dahil) ile 1 (hari&ccedil;) arasında rastgele bir sayı d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          round(x)
+        </td>
+        <td>
+          x'i en yakın tam sayıya yuvarlar.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sign(x)
+        </td>
+        <td>
+          x'in işaretini d&ouml;nd&uuml;r&uuml;r. Pozitifse 1, negatifse -1, sıfırsa 0 d&ouml;ner.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sin(x)
+        </td>
+        <td>
+          x'in sin&uuml;s&uuml;n&uuml; (radyan cinsinden) d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sinh(x)
+        </td>
+        <td>
+          x'in hiperbolik sin&uuml;s&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sqrt(x)
+        </td>
+        <td>
+          x'in karek&ouml;k&uuml;n&uuml; d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SQRT1_2
+        </td>
+        <td>
+          1/2'nin karek&ouml;k&uuml;n&uuml; temsil eder (yaklaşık 0.707).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SQRT2
+        </td>
+        <td>
+          2'nin karek&ouml;k&uuml;n&uuml; temsil eder (yaklaşık 1.414).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          tan(x)
+        </td>
+        <td>
+          x'in tanjantını (radyan cinsinden) d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          tanh(x)
+        </td>
+        <td>
+          x'in hiperbolik tanjantını d&ouml;nd&uuml;r&uuml;r.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          trunc(x)
+        </td>
+        <td>
+          x'in tam sayı kısmını d&ouml;nd&uuml;r&uuml;r, ondalık kısmını atar.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Matematiksel Gösterim 1</h2>
+  <!-- Math Metodları Matematiksel Gösterim 1-->
+  <table>
+    <thead>
+      <tr>
+        <th>JavaScript</th>
+        <th>Matematiksel G&ouml;sterim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>sin(x)</td>
+        <td>sin(x)</td>
+      </tr>
+      <tr>
+        <td>cos(x)</td>
+        <td>cos(x)</td>
+      </tr>
+      <tr>
+        <td>tan(x)</td>
+        <td>tan(x)</td>
+      </tr>
+      <tr>
+        <td>asin(x)</td>
+        <td>sin⁻&sup1;(x)</td>
+      </tr>
+      <tr>
+        <td>acos(x)</td>
+        <td>cos⁻&sup1;(x)</td>
+      </tr>
+      <tr>
+        <td>atan(x)</td>
+        <td>tan⁻&sup1;(x)</td>
+      </tr>
+      <tr>
+        <td>atan2(y, x)</td>
+        <td>tan⁻&sup1;(y/x)</td>
+      </tr>
+      <tr>
+        <td>sinh(x)</td>
+        <td>sinh(x)</td>
+      </tr>
+      <tr>
+        <td>cosh(x)</td>
+        <td>cosh(x)</td>
+      </tr>
+      <tr>
+        <td>tanh(x)</td>
+        <td>tanh(x)</td>
+      </tr>
+      <tr>
+        <td>asinh(x)</td>
+        <td>sin⁻&sup1;h(x)</td>
+      </tr>
+      <tr>
+        <td>acosh(x)</td>
+        <td>cos⁻&sup1;h(x)</td>
+      </tr>
+      <tr>
+        <td>atanh(x)</td>
+        <td>tan⁻&sup1;h(x)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>acos(), acosh(), asin(), asinh(), atan(), atan2(), atanh(), cos(), cosh(), sin(), sinh(), tan(), tanh()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(`Math.sin(0) : ${Math.sin(0)}`);
+document.write("<br>");
+document.write(`Math.cos(0) : ${Math.cos(0)}`);
+document.write("<br>");
+document.write(`Math.tan(0) : ${Math.tan(0)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.asin(0) : ${Math.asin(0)}`);
+document.write("<br>");
+document.write(`Math.acos(1) : ${Math.acos(1)}`);
+document.write("<br>");
+document.write(`Math.atan(1) : ${Math.atan(1)}`);
+document.write("<br>");
+document.write(`Math.atan2(1,1) : ${Math.atan2(1,1)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.sinh(0) : ${Math.sinh(0)}`);
+document.write("<br>");
+document.write(`Math.cosh(0) : ${Math.cosh(0)}`);
+document.write("<br>");
+document.write(`Math.tanh(0) : ${Math.tanh(0)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.asinh(0) : ${Math.asinh(0)}`);
+document.write("<br>");
+document.write(`Math.acosh(1) : ${Math.acosh(1)}`);
+document.write("<br>");
+document.write(`Math.atanh(0) : ${Math.atanh(0)}`);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Matematiksel Gösterim 2</h2>
+  <!-- Math Metodları Matematiksel Gösterim 2-->
+  <table>
+    <thead>
+      <tr>
+        <th>JavaScript</th>
+        <th>Matematiksel G&ouml;sterim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ceil(x)</td>
+        <td>&lceil;x&rceil; (Büyük tam sayıya yuvarlar)</td>
+      </tr>
+      <tr>
+        <td>floor(x)</td>
+        <td>&lfloor;x&rfloor; (Küçük tam sayıya yuvarlar)</td>
+      </tr>
+      <tr>
+        <td>round(x)</td>
+        <td>&lfloor;x + 0.5&rfloor; (Ondalıklı kısım 0.5' den küçükse küçük tam sayıya, 0.5 veya 0.5' den büyükse büyük
+          tam sayıya yuvarlar.)</td>
+      </tr>
+      <tr>
+        <td>fround(x)</td>
+        <td>round₃₂(x)</td>
+      </tr>
+      <tr>
+        <td>trunc(x)</td>
+        <td>trunc(x)</td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td>e</td>
+      </tr>
+      <tr>
+        <td>PI</td>
+        <td>&pi;</td>
+      </tr>
+      <tr>
+        <td>exp(x)</td>
+        <td>eˣ</td>
+      </tr>
+      <tr>
+        <td>expm1(x)</td>
+        <td>eˣ &minus; 1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>ceil(), floor(), round(), fround(), trunc(), E, PI, exp(), exmp1()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(`Math.ceil(4.2) : ${Math.ceil(4.2)}`);
+document.write("<br>");
+document.write(`Math.ceil(4.5) : ${Math.ceil(4.5)}`);
+document.write("<br>");
+document.write(`Math.ceil(4.7) : ${Math.ceil(4.7)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.floor(4.2) : ${Math.floor(4.2)}`);
+document.write("<br>");
+document.write(`Math.floor(4.5) : ${Math.floor(4.5)}`);
+document.write("<br>");
+document.write(`Math.floor(4.7) : ${Math.floor(4.7)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.round(4.2) : ${Math.round(4.2)}`);
+document.write("<br>");
+document.write(`Math.round(4.5) : ${Math.round(4.5)}`);
+document.write("<br>");
+document.write(`Math.round(4.7) : ${Math.round(4.7)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.fround(1.337) : ${Math.fround(1.337)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.trunc(4.9) : ${Math.trunc(4.9)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.E : ${Math.E}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.PI : ${Math.PI}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.exp(1) : ${Math.exp(1)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.expm1(1) : ${Math.expm1(1)}`);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Matematiksel Gösterim 3</h2>
+  <!-- Math Metodları Matematiksel Gösterim 3-->
+  <table>
+    <thead>
+      <tr>
+        <th>JavaScript</th>
+        <th>Matematiksel G&ouml;sterim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>abs(x)</td>
+        <td>|x|</td>
+      </tr>
+      <tr>
+        <td>clz32(x)</td>
+        <td>clz₃₂(x)</td>
+      </tr>
+      <tr>
+        <td>max(x1,x2,x3) x1&lt;x2&lt;x3</td>
+        <td>x3</td>
+      </tr>
+      <tr>
+        <td>min(x1,x2,x3) x1&lt;x2&lt;x3</td>
+        <td>x1</td>
+      </tr>
+      <tr>
+        <td>pow(x, y)</td>
+        <td>xʸ</td>
+      </tr>
+      <tr>
+        <td>sqrt(x)</td>
+        <td>&radic;x</td>
+      </tr>
+      <tr>
+        <td>cbrt(x)</td>
+        <td>∛x</td>
+      </tr>
+      <tr>
+        <td>SQRT1_2</td>
+        <td>&radic;(1/2) = 1/&radic;2</td>
+      </tr>
+      <tr>
+        <td>SQRT2</td>
+        <td>&radic;2</td>
+      </tr>
+      <tr>
+        <td>random()</td>
+        <td>U(0,1)</td>
+      </tr>
+      <tr>
+        <td>sign(x)</td>
+        <td>sgn(x)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>abs(), cbrt(), clz32, max(), min(), pow(), random(), sign(), sqrt(), SQRT1_2, SQRT2</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(`Math.abs(-5) : ${Math.abs(-5)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.clz32(1) : ${Math.clz32(1)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.max(1,2,3) : ${Math.max(1,2,3)}`);
+document.write("<br>");
+document.write(`Math.min(1,2,3) : ${Math.min(1,2,3)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.pow(2,3) : ${Math.pow(2,3)}`);
+document.write("<br>");
+document.write(`Math.sqrt(9) : ${Math.sqrt(9)}`);
+document.write("<br>");
+document.write(`Math.cbrt(27) : ${Math.cbrt(27)}`);
+document.write("<br>");
+document.write(`Math.SQRT1_2 : ${Math.SQRT1_2}`);
+document.write("<br>");
+document.write(`Math.SQRT2 : ${Math.SQRT2}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.random() : ${Math.random()}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.sign(-5) : ${Math.sign(-5)}`);
+document.write("<br>");
+document.write(`Math.sign(0) : ${Math.sign(0)}`);
+document.write("<br>");
+document.write(`Math.sign(5) : ${Math.sign(5)}`);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <h2>Matematiksel Gösterim 4</h2>
+  <!-- Math Metodları Matematiksel Gösterim 4-->
+  <table>
+    <thead>
+      <tr>
+        <th>JavaScript</th>
+        <th>Matematiksel G&ouml;sterim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>LN2</td>
+        <td>ln(2)</td>
+      </tr>
+      <tr>
+        <td>LN10</td>
+        <td>ln(10)</td>
+      </tr>
+      <tr>
+        <td>log(x)</td>
+        <td>ln(x)</td>
+      </tr>
+      <tr>
+        <td>log10(x)</td>
+        <td>log₁₀(x)</td>
+      </tr>
+      <tr>
+        <td>LOG10E</td>
+        <td>log₁₀(e)</td>
+      </tr>
+      <tr>
+        <td>log1p(x)</td>
+        <td>ln(1+x)</td>
+      </tr>
+      <tr>
+        <td>log2(x)</td>
+        <td>log₂(x)</td>
+      </tr>
+      <tr>
+        <td>LOG2E</td>
+        <td>log₂(e)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>LN2, LN10, log(), log10, LOG10E, log1p(), log2(), LOG2E</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">document.write(`Math.LN2 : ${Math.LN2}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.LN10 : ${Math.LN10}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.log(1) : ${Math.log(1)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.log10(100) : ${Math.log10(100)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.LOG10E : ${Math.LOG10E}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.log1p(0) : ${Math.log1p(0)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.log2(8) : ${Math.log2(8)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Math.LOG2E : ${Math.LOG2E}`);</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/xml/xml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/css/css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.min.js"></script>
+  <script src="editor.js"></script>
+</body>
+
 </html>
