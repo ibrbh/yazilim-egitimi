@@ -412,28 +412,33 @@
       <div class="panel">
         <div class="label">JavaScript</div>
         <textarea class="jsCode">var str = "Javascript";
-document.write(str.at(-1));
+document.write(`"Javascript" - str.at(-1) : ${str.at(-1)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Javascript";
-document.write(str.charAt(4));
+document.write(`"Javascript" - str.charAt(4) : ${str.charAt(4)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Javascript";
-document.write(str.charCodeAt(4));
+document.write(`"Javascript" - str.charCodeAt(4) : ${str.charCodeAt(4)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "爱";
-document.write(str.codePointAt(0));
+document.write(`"爱" - str.codePointAt(0) : ${str.codePointAt(0)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str1 = "Hello";
 var str2 = "World";
-document.write(str1.concat(" ",str2));
+document.write(`"Hello","World" - str1.concat(" ",str2) : ${str1.concat(" ",str2)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "example";
-document.write(str.constructor);</textarea>
+document.write(`"example" - str.constructor : ${str.constructor}`);</textarea>
       </div>
     </div>
     <div class="button-bar">
@@ -464,31 +469,37 @@ document.write(str.constructor);</textarea>
       <div class="panel">
         <div class="label">JavaScript</div>
         <textarea class="jsCode">var uri = "https%3A%2F%2Fexample.com";
-document.write(decodeURI(uri));
+document.write(`"https%3A%2F%2Fexample.com" - decodeURI(uri) : ${decodeURI(uri)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var component = "Hello%20World%21";
-document.write(decodeURIComponent(component));
+document.write(`"Hello%20World%21" - decodeURIComponent(component) : ${decodeURIComponent(component)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var uri = "https://example.com/query?name=John Doe";
-document.write(encodeURI(uri));
+document.write(`"https://example.com/query?name=John Doe" - encodeURI(uri) : ${encodeURI(uri)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var component = "Hello World!";
-document.write(encodeURIComponent(component));
+document.write(`"Hello World!" - encodeURIComponent(component) : ${encodeURIComponent(component)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.endsWith("World"));
+document.write(`"Hello World" - str.endsWith("World") : ${str.endsWith("World")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World!";
-document.write(escape(str));
+document.write(`"Hello World!" - escape(str) : ${escape(str)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var code = "2 + 2";
-document.write(eval(code));</textarea>
+document.write(`"2 + 2" - eval(code) : ${eval(code)}`);</textarea>
       </div>
     </div>
     <div class="button-bar">
@@ -518,28 +529,33 @@ document.write(eval(code));</textarea>
       </div>
       <div class="panel">
         <div class="label">JavaScript</div>
-        <textarea class="jsCode">document.write(String.fromCharCode(65,66,67));
+        <textarea class="jsCode">document.write(`String.fromCharCode(65,66,67) : ${String.fromCharCode(65,66,67)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.includes("World"));
+document.write(`"Hello World" - str.includes("World") : ${str.includes("World")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.indexOf("World"));
+document.write(`"Hello World" - str.indexOf("World") : ${str.indexOf("World")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World World";
-document.write(str.lastIndexOf("World"));
+document.write(`"Hello World World" - str.lastIndexOf("World") : ${str.lastIndexOf("World")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.length);
+document.write(`"Hello World" - str.length : ${str.length}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str1 = "apple";
 var str2 = "banana";
-document.write(str1.localeCompare(str2));</textarea>
+document.write(`"apple","banana" - str1.localeCompare(str2) : ${str1.localeCompare(str2)}`);</textarea>
       </div>
     </div>
     <div class="button-bar">
@@ -570,34 +586,36 @@ document.write(str1.localeCompare(str2));</textarea>
       <div class="panel">
         <div class="label">JavaScript</div>
         <textarea class="jsCode">var str = "The quick brown fox";
-document.write(str.match(/\b\w{5}\b/g));
+document.write(`"The quick brown fox" - str.match(/\b\w{5}\b/g) : ${str.match(/\b\w{5}\b/g)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "5";
-document.write(str.padEnd(4,"0"));
+document.write(`"5" - str.padEnd(4,"0") : ${str.padEnd(4,"0")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "5";
-document.write(str.padStart(4,"0"));
+document.write(`"5" - str.padStart(4,"0") : ${str.padStart(4,"0")}`);
 document.write("<br>");
+document.write("<hr>");
 
 String.prototype.reverse = function(){
   return this.split("").reverse().join("");
 };
-
 var str = "Hello";
-document.write(str.reverse());
+document.write(`"Hello" - str.reverse() : ${str.reverse()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "abc";
-document.write(str.repeat(3));
+document.write(`"abc" - str.repeat(3) : ${str.repeat(3)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.replace("World","Javascript"));
-document.write("<br>");
-
-</textarea>
+document.write(`"Hello World" - str.replace("World","Javascript") : ${str.replace("World","Javascript")}`);
+document.write("<br>");</textarea>
       </div>
     </div>
     <div class="button-bar">
@@ -628,26 +646,31 @@ document.write("<br>");
       <div class="panel">
         <div class="label">JavaScript</div>
         <textarea class="jsCode">var str = "Hello World World";
-document.write(str.replaceAll("World","JavaScript"));
+document.write(`"Hello World World" - str.replaceAll("World","JavaScript") : ${str.replaceAll("World","JavaScript")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "The quick brown fox";
-document.write(str.search(/\bquick\b/));
+document.write(`"The quick brown fox" - str.search(/\bquick\b/) : ${str.search(/\bquick\b/)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.slice(6,11));
+document.write(`"Hello World" - str.slice(6,11) : ${str.slice(6,11)}`);
 document.write("<br>");
+document.write("<hr>");
 
-var str = "apple,banana,orange";
-document.write(str.split(","));
+var str = "apple-banana-orange";
+document.write(`"apple-banana-orange" - str.split("-") : ${str.split("-")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.startsWith("Hello"));
+document.write(`"Hello World" - str.startsWith("Hello") : ${str.startsWith("Hello")}`);
 document.write("<br>");
+document.write("<hr>");
 
-document.write(String(123));
+document.write(`String(123) : ${String(123)}`);
 document.write("<br>");</textarea>
       </div>
     </div>
@@ -679,31 +702,37 @@ document.write("<br>");</textarea>
       <div class="panel">
         <div class="label">JavaScript</div>
         <textarea class="jsCode">var str = "Hello World World";
-document.write(str.substr(6,5));
+document.write(`"Hello World World" - str.substr(6,5) : ${str.substr(6,5)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.substring(6,11));
+document.write(`"Hello World" - str.substring(6,11) : ${str.substring(6,11)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "İstanbul";
-document.write(str.toLocaleLowerCase("tr-TR"));
+document.write(`"İstanbul" - str.toLocaleLowerCase("tr-TR") : ${str.toLocaleLowerCase("tr-TR")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "İstanbul";
-document.write(str.toLocaleUpperCase("tr-TR"));
+document.write(`"İstanbul" - str.toLocaleUpperCase("tr-TR") : ${str.toLocaleUpperCase("tr-TR")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.toLowerCase());
+document.write(`"Hello World" - str.toLowerCase() : ${str.toLowerCase()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var num = 123;
-document.write(num.toString());
+document.write(`123 - num.toString() : ${num.toString()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello World";
-document.write(str.toUpperCase());
+document.write(`"Hello World" - str.toUpperCase() : ${str.toUpperCase()}`);
 document.write("<br>");</textarea>
       </div>
     </div>
@@ -735,23 +764,27 @@ document.write("<br>");</textarea>
       <div class="panel">
         <div class="label">JavaScript</div>
         <textarea class="jsCode">var str = "   Hello World   ";
-document.write(str.trim());
+document.write(`"   Hello World   " - str.trim() : ${str.trim()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "   Hello World   ";
-document.write(str.trimEnd());
+document.write(`"   Hello World   " - str.trimEnd() : ${str.trimEnd()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "   Hello World   ";
-document.write(str.trimStart());
+document.write(`"   Hello World   " - str.trimStart() : ${str.trimStart()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Hello%20World%21";
-document.write(unescape(str));
+document.write(`"Hello%20World%21" - unescape(str) : ${unescape(str)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = new String("example");
-document.write(str.valueOf);
+document.write(`new String("example") - str.valueOf : ${str.valueOf}`);
 document.write("<br>");</textarea>
       </div>
     </div>
@@ -911,71 +944,83 @@ document.write("<br>");</textarea>
         <div class="label">JavaScript</div>
         <textarea class="jsCode">var str = "Link";
 console.log(str.anchor("myAnchor"));
-document.write(str.anchor("myAnchor"));
+document.write(`"Link" - str.anchor("myAnchor") : ${str.anchor("myAnchor")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Big Text";
 console.log(str.big());
-document.write(str.big());
+document.write(`"Big Text" - str.big() : ${str.big()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Blinking Text";
 console.log(str.blink());
-document.write(str.blink());
+document.write(`"Blinking Text" - str.blink() : ${str.blink()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Bold Text";
 console.log(str.bold());
-document.write(str.bold());
+document.write(`"Bold Text" - str.bold() : ${str.bold()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Fixed Text";
 console.log(str.fixed());
-document.write(str.fixed);
+document.write(`"Fixed Text" - str.fixed : ${str.fixed}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Colored Text";
 console.log(str.fontcolor("red"));
-document.write(str.fontcolor("red"));
+document.write(`"Colored Text" - str.fontcolor("red") : ${str.fontcolor("red")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Large Text";
 console.log(str.fontsize(5));
-document.write(str.fontsize(5));
+document.write(`"Large Text" - str.fontsize(5) : ${str.fontsize(5)}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Italic Text";
 console.log(str.italics());
-document.write(str.italics);
+document.write(`"Italic Text" - str.italics : ${str.italics}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Clickable Link";
 console.log(str.link("https://example.com"));
-document.write(str.link("https://example.com"));
+document.write(`"Clickable Link" - str.link("https://example.com") : ${str.link("https://example.com")}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Small Text";
 console.log(str.small());
-document.write(str.small());
+document.write(`"Small Text" - str.small() : ${str.small()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var str = "Strikethrougn Text";
 console.log(str.strike());
-document.write(str.strike());
+document.write(`"Strikethrougn Text" - str.strike() : ${str.strike()}`);
 document.write("<br>");
+document.write("<hr>");
 
 var x = "2"
 var x = x.sub();
 var str = `H${x}O`;
 console.log(str);
-document.write(str);
+document.write(`H\${2.sub()}O : ${str}`);
 document.write("<br>");
+document.write("<hr>");
 
 var x = "2"
 var x = x.sup();
 var str = `X${x}`;
 console.log(str);
-document.write(str);
+document.write(`X\${2.sup()} : ${str}`);
 document.write("<br>");</textarea>
       </div>
     </div>

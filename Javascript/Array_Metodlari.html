@@ -486,7 +486,8 @@ document.write("<hr>");</textarea>
 
   <!-- Örnek -->
   <div class="editor-block" data-editor>
-    <h2>findIndex(), findLast(), findLastIndex(), flat(), flatMap(), forEach(), from(), includes(), indexOf(), isArray()</h2>
+    <h2>findIndex(), findLast(), findLastIndex(), flat(), flatMap(), forEach(), from(), includes(), indexOf(), isArray()
+    </h2>
     <div class="editor-panels">
       <div class="panel">
         <div class="label">HTML</div>
@@ -539,6 +540,186 @@ document.write("<hr>");
 
 var numbers = [5,12,8,130,44];
 document.write(`[5,12,8,130,44] numbers.find(num => num > 10) : ${numbers.find(num => num > 10)}`);
+document.write("<br>");
+document.write("<hr>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>join(), keys(), lastIndexOf(), length, map(), of(), pop(), prototype, push(), reduce()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var arr = ["a","b","c"];
+document.write(`["a","b","c"] arr.join("-") : ${arr.join("-")}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = ["a","b","c"];
+for (var key of arr.keys()){
+  document.write(`["a","b","c"] arr.keys() : ${key}`);
+  document.write("<br>");
+}
+document.write("<hr>");
+
+var arr = [1,2,3,2];
+document.write(`[1,2,3,2] arr.lastIndexOf(2) : ${arr.lastIndexOf(2)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.length : ${arr.length}`);
+document.write("<br>");
+arr.length = 5;
+document.write(`[1,2,3]; arr.length = 5; arr: ${arr}`);
+document.write("<hr>");
+
+var numbers = [1,2,3];
+document.write(`[1,2,3] numbers.map(num => num*2) : ${numbers.map(num => num*2)}`);
+document.write("<br>");
+document.write("<hr>");
+
+document.write(`Array.of(1,2,3) : ${Array.of(1,2,3)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.pop() : ${arr.pop()}`);
+document.write("<br>");
+document.write("<hr>");
+
+Array.prototype.last = function () {
+  return this[this.length - 1];
+};
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.last() : ${arr.last()}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2];
+document.write(`[1,2] arr.push(3,4) : ${arr.push(3,4)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.reduce((acc,num) => acc + num, 0) : ${arr.reduce((acc,num) => acc + num, 0)}`);
+document.write("<br>");
+document.write("<hr>");</textarea>
+      </div>
+    </div>
+    <div class="button-bar">
+      <button class="run-btn">Çalıştır</button>
+    </div>
+    <iframe class="output"></iframe>
+  </div>
+
+  <!-- Örnek -->
+  <div class="editor-block" data-editor>
+    <h2>reduceRight(), reverse(), shift(), slice(), some(), sort(), splice(), toReversed(), toSorted(), toSpliced(),
+      toString(), unshift(), valueOf()</h2>
+    <div class="editor-panels">
+      <div class="panel">
+        <div class="label">HTML</div>
+        <textarea class="htmlCode">
+<!DOCTYPE html>
+  <html lang="tr">
+    <head>
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html></textarea>
+      </div>
+      <div class="panel hide">
+        <div class="label">CSS</div>
+        <textarea class="cssCode"></textarea>
+      </div>
+      <div class="panel">
+        <div class="label">JavaScript</div>
+        <textarea class="jsCode">var arr = [1,2,3];
+document.write(`[1,2,3] arr.reduceRight((acc,num) => acc + num, 0) : ${arr.reduceRight((acc,num) => acc + num, 0)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.reverse() : ${arr.reverse()}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.shift() : ${arr.shift()}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3,4];
+document.write(`[1,2,3] arr.slice(1,3) : ${arr.slice(1,3)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.some(num => num % 2 === 0) : ${arr.some(num => num % 2 === 0)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [3,1,2];
+document.write(`[3,1,2] arr.sort() : ${arr.sort()}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+arr.splice(1,1,4,5)
+document.write(`[1,2,3] arr.splice(1,1,4,5); arr : ${arr}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.toReversed() : ${arr.toReversed()}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [3,1,2];
+document.write(`[3,1,2] arr.toSorted() : ${arr.toSorted()}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.toSpliced(1,1,4,5) : ${arr.toSpliced(1,1,4,5)}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.toString() : ${arr.toString()}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2];
+arr.unshift(0);
+document.write(`[1,2] arr.unshift(0); arr : ${arr}`);
+document.write("<br>");
+document.write("<hr>");
+
+var arr = [1,2,3];
+document.write(`[1,2,3] arr.valueOf() : ${arr.valueOf()}`);
 document.write("<br>");
 document.write("<hr>");</textarea>
       </div>
